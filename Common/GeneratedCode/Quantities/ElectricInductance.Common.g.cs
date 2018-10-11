@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricInductance))
+                throw new ArgumentException("The given quantity is not of type ElectricInductance.", nameof(right));
+
+            return Add((ElectricInductance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricInductance))
+                throw new ArgumentException("The given quantity is not of type ElectricInductance.", nameof(right));
+
+            return Subtract((ElectricInductance)right);
+        }
+
+        public ElectricInductance Add(ElectricInductance right)
+        {
+            return new ElectricInductance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricInductance Subtract(ElectricInductance right)
+        {
+            return new ElectricInductance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

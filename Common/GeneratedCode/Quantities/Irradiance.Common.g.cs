@@ -205,6 +205,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Irradiance))
+                throw new ArgumentException("The given quantity is not of type Irradiance.", nameof(right));
+
+            return Add((Irradiance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Irradiance))
+                throw new ArgumentException("The given quantity is not of type Irradiance.", nameof(right));
+
+            return Subtract((Irradiance)right);
+        }
+
+        public Irradiance Add(Irradiance right)
+        {
+            return new Irradiance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Irradiance Subtract(Irradiance right)
+        {
+            return new Irradiance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -445,6 +445,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is AmountOfSubstance))
+                throw new ArgumentException("The given quantity is not of type AmountOfSubstance.", nameof(right));
+
+            return Add((AmountOfSubstance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is AmountOfSubstance))
+                throw new ArgumentException("The given quantity is not of type AmountOfSubstance.", nameof(right));
+
+            return Subtract((AmountOfSubstance)right);
+        }
+
+        public AmountOfSubstance Add(AmountOfSubstance right)
+        {
+            return new AmountOfSubstance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public AmountOfSubstance Subtract(AmountOfSubstance right)
+        {
+            return new AmountOfSubstance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

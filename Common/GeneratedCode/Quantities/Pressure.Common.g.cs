@@ -905,6 +905,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Pressure))
+                throw new ArgumentException("The given quantity is not of type Pressure.", nameof(right));
+
+            return Add((Pressure)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Pressure))
+                throw new ArgumentException("The given quantity is not of type Pressure.", nameof(right));
+
+            return Subtract((Pressure)right);
+        }
+
+        public Pressure Add(Pressure right)
+        {
+            return new Pressure(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Pressure Subtract(Pressure right)
+        {
+            return new Pressure(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

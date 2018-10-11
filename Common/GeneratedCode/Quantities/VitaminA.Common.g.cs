@@ -184,6 +184,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is VitaminA))
+                throw new ArgumentException("The given quantity is not of type VitaminA.", nameof(right));
+
+            return Add((VitaminA)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is VitaminA))
+                throw new ArgumentException("The given quantity is not of type VitaminA.", nameof(right));
+
+            return Subtract((VitaminA)right);
+        }
+
+        public VitaminA Add(VitaminA right)
+        {
+            return new VitaminA(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public VitaminA Subtract(VitaminA right)
+        {
+            return new VitaminA(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

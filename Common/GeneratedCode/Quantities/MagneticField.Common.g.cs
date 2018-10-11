@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MagneticField))
+                throw new ArgumentException("The given quantity is not of type MagneticField.", nameof(right));
+
+            return Add((MagneticField)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MagneticField))
+                throw new ArgumentException("The given quantity is not of type MagneticField.", nameof(right));
+
+            return Subtract((MagneticField)right);
+        }
+
+        public MagneticField Add(MagneticField right)
+        {
+            return new MagneticField(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MagneticField Subtract(MagneticField right)
+        {
+            return new MagneticField(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

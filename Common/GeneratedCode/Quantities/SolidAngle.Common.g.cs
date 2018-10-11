@@ -184,6 +184,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is SolidAngle))
+                throw new ArgumentException("The given quantity is not of type SolidAngle.", nameof(right));
+
+            return Add((SolidAngle)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is SolidAngle))
+                throw new ArgumentException("The given quantity is not of type SolidAngle.", nameof(right));
+
+            return Subtract((SolidAngle)right);
+        }
+
+        public SolidAngle Add(SolidAngle right)
+        {
+            return new SolidAngle(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public SolidAngle Subtract(SolidAngle right)
+        {
+            return new SolidAngle(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

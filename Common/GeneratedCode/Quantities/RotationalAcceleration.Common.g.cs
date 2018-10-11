@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is RotationalAcceleration))
+                throw new ArgumentException("The given quantity is not of type RotationalAcceleration.", nameof(right));
+
+            return Add((RotationalAcceleration)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is RotationalAcceleration))
+                throw new ArgumentException("The given quantity is not of type RotationalAcceleration.", nameof(right));
+
+            return Subtract((RotationalAcceleration)right);
+        }
+
+        public RotationalAcceleration Add(RotationalAcceleration right)
+        {
+            return new RotationalAcceleration(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public RotationalAcceleration Subtract(RotationalAcceleration right)
+        {
+            return new RotationalAcceleration(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

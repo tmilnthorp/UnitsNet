@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is LuminousIntensity))
+                throw new ArgumentException("The given quantity is not of type LuminousIntensity.", nameof(right));
+
+            return Add((LuminousIntensity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is LuminousIntensity))
+                throw new ArgumentException("The given quantity is not of type LuminousIntensity.", nameof(right));
+
+            return Subtract((LuminousIntensity)right);
+        }
+
+        public LuminousIntensity Add(LuminousIntensity right)
+        {
+            return new LuminousIntensity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public LuminousIntensity Subtract(LuminousIntensity right)
+        {
+            return new LuminousIntensity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

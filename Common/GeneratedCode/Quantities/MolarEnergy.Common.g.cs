@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MolarEnergy))
+                throw new ArgumentException("The given quantity is not of type MolarEnergy.", nameof(right));
+
+            return Add((MolarEnergy)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MolarEnergy))
+                throw new ArgumentException("The given quantity is not of type MolarEnergy.", nameof(right));
+
+            return Subtract((MolarEnergy)right);
+        }
+
+        public MolarEnergy Add(MolarEnergy right)
+        {
+            return new MolarEnergy(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MolarEnergy Subtract(MolarEnergy right)
+        {
+            return new MolarEnergy(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

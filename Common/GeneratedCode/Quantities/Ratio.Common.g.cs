@@ -284,6 +284,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Ratio))
+                throw new ArgumentException("The given quantity is not of type Ratio.", nameof(right));
+
+            return Add((Ratio)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Ratio))
+                throw new ArgumentException("The given quantity is not of type Ratio.", nameof(right));
+
+            return Subtract((Ratio)right);
+        }
+
+        public Ratio Add(Ratio right)
+        {
+            return new Ratio(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Ratio Subtract(Ratio right)
+        {
+            return new Ratio(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

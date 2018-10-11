@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricField))
+                throw new ArgumentException("The given quantity is not of type ElectricField.", nameof(right));
+
+            return Add((ElectricField)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricField))
+                throw new ArgumentException("The given quantity is not of type ElectricField.", nameof(right));
+
+            return Subtract((ElectricField)right);
+        }
+
+        public ElectricField Add(ElectricField right)
+        {
+            return new ElectricField(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricField Subtract(ElectricField right)
+        {
+            return new ElectricField(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Capacitance))
+                throw new ArgumentException("The given quantity is not of type Capacitance.", nameof(right));
+
+            return Add((Capacitance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Capacitance))
+                throw new ArgumentException("The given quantity is not of type Capacitance.", nameof(right));
+
+            return Subtract((Capacitance)right);
+        }
+
+        public Capacitance Add(Capacitance right)
+        {
+            return new Capacitance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Capacitance Subtract(Capacitance right)
+        {
+            return new Capacitance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

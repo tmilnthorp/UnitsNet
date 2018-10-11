@@ -244,6 +244,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is AmplitudeRatio))
+                throw new ArgumentException("The given quantity is not of type AmplitudeRatio.", nameof(right));
+
+            return Add((AmplitudeRatio)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is AmplitudeRatio))
+                throw new ArgumentException("The given quantity is not of type AmplitudeRatio.", nameof(right));
+
+            return Subtract((AmplitudeRatio)right);
+        }
+
+        public AmplitudeRatio Add(AmplitudeRatio right)
+        {
+            return new AmplitudeRatio(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public AmplitudeRatio Subtract(AmplitudeRatio right)
+        {
+            return new AmplitudeRatio(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

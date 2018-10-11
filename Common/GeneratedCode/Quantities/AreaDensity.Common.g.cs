@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is AreaDensity))
+                throw new ArgumentException("The given quantity is not of type AreaDensity.", nameof(right));
+
+            return Add((AreaDensity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is AreaDensity))
+                throw new ArgumentException("The given quantity is not of type AreaDensity.", nameof(right));
+
+            return Subtract((AreaDensity)right);
+        }
+
+        public AreaDensity Add(AreaDensity right)
+        {
+            return new AreaDensity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public AreaDensity Subtract(AreaDensity right)
+        {
+            return new AreaDensity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

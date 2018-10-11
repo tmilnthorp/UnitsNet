@@ -585,6 +585,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Mass))
+                throw new ArgumentException("The given quantity is not of type Mass.", nameof(right));
+
+            return Add((Mass)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Mass))
+                throw new ArgumentException("The given quantity is not of type Mass.", nameof(right));
+
+            return Subtract((Mass)right);
+        }
+
+        public Mass Add(Mass right)
+        {
+            return new Mass(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Mass Subtract(Mass right)
+        {
+            return new Mass(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

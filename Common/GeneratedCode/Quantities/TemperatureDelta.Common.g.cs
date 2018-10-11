@@ -324,6 +324,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is TemperatureDelta))
+                throw new ArgumentException("The given quantity is not of type TemperatureDelta.", nameof(right));
+
+            return Add((TemperatureDelta)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is TemperatureDelta))
+                throw new ArgumentException("The given quantity is not of type TemperatureDelta.", nameof(right));
+
+            return Subtract((TemperatureDelta)right);
+        }
+
+        public TemperatureDelta Add(TemperatureDelta right)
+        {
+            return new TemperatureDelta(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public TemperatureDelta Subtract(TemperatureDelta right)
+        {
+            return new TemperatureDelta(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

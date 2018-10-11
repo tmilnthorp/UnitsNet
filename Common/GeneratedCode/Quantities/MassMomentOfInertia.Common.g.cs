@@ -685,6 +685,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MassMomentOfInertia))
+                throw new ArgumentException("The given quantity is not of type MassMomentOfInertia.", nameof(right));
+
+            return Add((MassMomentOfInertia)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MassMomentOfInertia))
+                throw new ArgumentException("The given quantity is not of type MassMomentOfInertia.", nameof(right));
+
+            return Subtract((MassMomentOfInertia)right);
+        }
+
+        public MassMomentOfInertia Add(MassMomentOfInertia right)
+        {
+            return new MassMomentOfInertia(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MassMomentOfInertia Subtract(MassMomentOfInertia right)
+        {
+            return new MassMomentOfInertia(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

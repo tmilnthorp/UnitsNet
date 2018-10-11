@@ -485,6 +485,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is HeatFlux))
+                throw new ArgumentException("The given quantity is not of type HeatFlux.", nameof(right));
+
+            return Add((HeatFlux)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is HeatFlux))
+                throw new ArgumentException("The given quantity is not of type HeatFlux.", nameof(right));
+
+            return Subtract((HeatFlux)right);
+        }
+
+        public HeatFlux Add(HeatFlux right)
+        {
+            return new HeatFlux(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public HeatFlux Subtract(HeatFlux right)
+        {
+            return new HeatFlux(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

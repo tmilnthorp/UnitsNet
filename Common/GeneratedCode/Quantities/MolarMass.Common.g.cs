@@ -405,6 +405,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MolarMass))
+                throw new ArgumentException("The given quantity is not of type MolarMass.", nameof(right));
+
+            return Add((MolarMass)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MolarMass))
+                throw new ArgumentException("The given quantity is not of type MolarMass.", nameof(right));
+
+            return Subtract((MolarMass)right);
+        }
+
+        public MolarMass Add(MolarMass right)
+        {
+            return new MolarMass(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MolarMass Subtract(MolarMass right)
+        {
+            return new MolarMass(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

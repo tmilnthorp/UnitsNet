@@ -204,6 +204,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Level))
+                throw new ArgumentException("The given quantity is not of type Level.", nameof(right));
+
+            return Add((Level)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Level))
+                throw new ArgumentException("The given quantity is not of type Level.", nameof(right));
+
+            return Subtract((Level)right);
+        }
+
+        public Level Add(Level right)
+        {
+            return new Level(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Level Subtract(Level right)
+        {
+            return new Level(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

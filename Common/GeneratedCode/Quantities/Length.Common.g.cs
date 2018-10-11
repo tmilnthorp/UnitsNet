@@ -605,6 +605,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Length))
+                throw new ArgumentException("The given quantity is not of type Length.", nameof(right));
+
+            return Add((Length)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Length))
+                throw new ArgumentException("The given quantity is not of type Length.", nameof(right));
+
+            return Subtract((Length)right);
+        }
+
+        public Length Add(Length right)
+        {
+            return new Length(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Length Subtract(Length right)
+        {
+            return new Length(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -265,6 +265,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ThermalResistance))
+                throw new ArgumentException("The given quantity is not of type ThermalResistance.", nameof(right));
+
+            return Add((ThermalResistance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ThermalResistance))
+                throw new ArgumentException("The given quantity is not of type ThermalResistance.", nameof(right));
+
+            return Subtract((ThermalResistance)right);
+        }
+
+        public ThermalResistance Add(ThermalResistance right)
+        {
+            return new ThermalResistance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ThermalResistance Subtract(ThermalResistance right)
+        {
+            return new ThermalResistance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

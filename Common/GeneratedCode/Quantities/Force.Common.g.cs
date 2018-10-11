@@ -365,6 +365,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Force))
+                throw new ArgumentException("The given quantity is not of type Force.", nameof(right));
+
+            return Add((Force)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Force))
+                throw new ArgumentException("The given quantity is not of type Force.", nameof(right));
+
+            return Subtract((Force)right);
+        }
+
+        public Force Add(Force right)
+        {
+            return new Force(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Force Subtract(Force right)
+        {
+            return new Force(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

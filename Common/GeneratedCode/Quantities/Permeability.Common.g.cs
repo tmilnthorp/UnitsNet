@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Permeability))
+                throw new ArgumentException("The given quantity is not of type Permeability.", nameof(right));
+
+            return Add((Permeability)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Permeability))
+                throw new ArgumentException("The given quantity is not of type Permeability.", nameof(right));
+
+            return Subtract((Permeability)right);
+        }
+
+        public Permeability Add(Permeability right)
+        {
+            return new Permeability(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Permeability Subtract(Permeability right)
+        {
+            return new Permeability(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

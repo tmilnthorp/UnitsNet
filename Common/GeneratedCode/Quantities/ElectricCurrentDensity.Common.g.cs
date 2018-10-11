@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricCurrentDensity))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrentDensity.", nameof(right));
+
+            return Add((ElectricCurrentDensity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricCurrentDensity))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrentDensity.", nameof(right));
+
+            return Subtract((ElectricCurrentDensity)right);
+        }
+
+        public ElectricCurrentDensity Add(ElectricCurrentDensity right)
+        {
+            return new ElectricCurrentDensity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricCurrentDensity Subtract(ElectricCurrentDensity right)
+        {
+            return new ElectricCurrentDensity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

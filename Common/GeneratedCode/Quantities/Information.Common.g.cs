@@ -684,6 +684,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Information))
+                throw new ArgumentException("The given quantity is not of type Information.", nameof(right));
+
+            return Add((Information)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Information))
+                throw new ArgumentException("The given quantity is not of type Information.", nameof(right));
+
+            return Subtract((Information)right);
+        }
+
+        public Information Add(Information right)
+        {
+            return new Information(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Information Subtract(Information right)
+        {
+            return new Information(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

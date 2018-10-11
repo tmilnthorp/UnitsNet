@@ -243,6 +243,32 @@ if ($obsoleteAttribute)
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is $quantityName))
+                throw new ArgumentException("The given quantity is not of type $quantityName.", nameof(right));
+
+            return Add(($quantityName)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is $quantityName))
+                throw new ArgumentException("The given quantity is not of type $quantityName.", nameof(right));
+
+            return Subtract(($quantityName)right);
+        }
+
+        public $quantityName Add($quantityName right)
+        {
+            return new $quantityName(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public $quantityName Subtract($quantityName right)
+        {
+            return new $quantityName(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

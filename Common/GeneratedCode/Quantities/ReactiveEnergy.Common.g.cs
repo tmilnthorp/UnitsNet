@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ReactiveEnergy))
+                throw new ArgumentException("The given quantity is not of type ReactiveEnergy.", nameof(right));
+
+            return Add((ReactiveEnergy)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ReactiveEnergy))
+                throw new ArgumentException("The given quantity is not of type ReactiveEnergy.", nameof(right));
+
+            return Subtract((ReactiveEnergy)right);
+        }
+
+        public ReactiveEnergy Add(ReactiveEnergy right)
+        {
+            return new ReactiveEnergy(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ReactiveEnergy Subtract(ReactiveEnergy right)
+        {
+            return new ReactiveEnergy(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

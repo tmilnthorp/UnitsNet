@@ -205,6 +205,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ThermalConductivity))
+                throw new ArgumentException("The given quantity is not of type ThermalConductivity.", nameof(right));
+
+            return Add((ThermalConductivity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ThermalConductivity))
+                throw new ArgumentException("The given quantity is not of type ThermalConductivity.", nameof(right));
+
+            return Subtract((ThermalConductivity)right);
+        }
+
+        public ThermalConductivity Add(ThermalConductivity right)
+        {
+            return new ThermalConductivity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ThermalConductivity Subtract(ThermalConductivity right)
+        {
+            return new ThermalConductivity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

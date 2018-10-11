@@ -245,6 +245,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is PressureChangeRate))
+                throw new ArgumentException("The given quantity is not of type PressureChangeRate.", nameof(right));
+
+            return Add((PressureChangeRate)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is PressureChangeRate))
+                throw new ArgumentException("The given quantity is not of type PressureChangeRate.", nameof(right));
+
+            return Subtract((PressureChangeRate)right);
+        }
+
+        public PressureChangeRate Add(PressureChangeRate right)
+        {
+            return new PressureChangeRate(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public PressureChangeRate Subtract(PressureChangeRate right)
+        {
+            return new PressureChangeRate(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -425,6 +425,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is RotationalSpeed))
+                throw new ArgumentException("The given quantity is not of type RotationalSpeed.", nameof(right));
+
+            return Add((RotationalSpeed)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is RotationalSpeed))
+                throw new ArgumentException("The given quantity is not of type RotationalSpeed.", nameof(right));
+
+            return Subtract((RotationalSpeed)right);
+        }
+
+        public RotationalSpeed Add(RotationalSpeed right)
+        {
+            return new RotationalSpeed(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public RotationalSpeed Subtract(RotationalSpeed right)
+        {
+            return new RotationalSpeed(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

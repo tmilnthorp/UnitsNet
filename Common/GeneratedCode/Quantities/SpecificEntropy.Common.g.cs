@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is SpecificEntropy))
+                throw new ArgumentException("The given quantity is not of type SpecificEntropy.", nameof(right));
+
+            return Add((SpecificEntropy)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is SpecificEntropy))
+                throw new ArgumentException("The given quantity is not of type SpecificEntropy.", nameof(right));
+
+            return Subtract((SpecificEntropy)right);
+        }
+
+        public SpecificEntropy Add(SpecificEntropy right)
+        {
+            return new SpecificEntropy(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public SpecificEntropy Subtract(SpecificEntropy right)
+        {
+            return new SpecificEntropy(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

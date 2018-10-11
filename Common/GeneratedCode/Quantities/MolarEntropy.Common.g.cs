@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MolarEntropy))
+                throw new ArgumentException("The given quantity is not of type MolarEntropy.", nameof(right));
+
+            return Add((MolarEntropy)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MolarEntropy))
+                throw new ArgumentException("The given quantity is not of type MolarEntropy.", nameof(right));
+
+            return Subtract((MolarEntropy)right);
+        }
+
+        public MolarEntropy Add(MolarEntropy right)
+        {
+            return new MolarEntropy(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MolarEntropy Subtract(MolarEntropy right)
+        {
+            return new MolarEntropy(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is KinematicViscosity))
+                throw new ArgumentException("The given quantity is not of type KinematicViscosity.", nameof(right));
+
+            return Add((KinematicViscosity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is KinematicViscosity))
+                throw new ArgumentException("The given quantity is not of type KinematicViscosity.", nameof(right));
+
+            return Subtract((KinematicViscosity)right);
+        }
+
+        public KinematicViscosity Add(KinematicViscosity right)
+        {
+            return new KinematicViscosity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public KinematicViscosity Subtract(KinematicViscosity right)
+        {
+            return new KinematicViscosity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

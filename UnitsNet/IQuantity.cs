@@ -26,6 +26,10 @@ namespace UnitsNet
     /// </summary>
     public interface IQuantity
     {
+        IQuantity Add(IQuantity right);
+
+        IQuantity Subtract(IQuantity right);
+
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
         /// </summary>

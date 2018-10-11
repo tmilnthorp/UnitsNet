@@ -685,6 +685,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is VolumeFlow))
+                throw new ArgumentException("The given quantity is not of type VolumeFlow.", nameof(right));
+
+            return Add((VolumeFlow)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is VolumeFlow))
+                throw new ArgumentException("The given quantity is not of type VolumeFlow.", nameof(right));
+
+            return Subtract((VolumeFlow)right);
+        }
+
+        public VolumeFlow Add(VolumeFlow right)
+        {
+            return new VolumeFlow(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public VolumeFlow Subtract(VolumeFlow right)
+        {
+            return new VolumeFlow(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

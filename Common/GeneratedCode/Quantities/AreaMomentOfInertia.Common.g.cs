@@ -285,6 +285,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is AreaMomentOfInertia))
+                throw new ArgumentException("The given quantity is not of type AreaMomentOfInertia.", nameof(right));
+
+            return Add((AreaMomentOfInertia)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is AreaMomentOfInertia))
+                throw new ArgumentException("The given quantity is not of type AreaMomentOfInertia.", nameof(right));
+
+            return Subtract((AreaMomentOfInertia)right);
+        }
+
+        public AreaMomentOfInertia Add(AreaMomentOfInertia right)
+        {
+            return new AreaMomentOfInertia(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public AreaMomentOfInertia Subtract(AreaMomentOfInertia right)
+        {
+            return new AreaMomentOfInertia(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

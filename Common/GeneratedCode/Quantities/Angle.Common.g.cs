@@ -444,6 +444,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Angle))
+                throw new ArgumentException("The given quantity is not of type Angle.", nameof(right));
+
+            return Add((Angle)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Angle))
+                throw new ArgumentException("The given quantity is not of type Angle.", nameof(right));
+
+            return Subtract((Angle)right);
+        }
+
+        public Angle Add(Angle right)
+        {
+            return new Angle(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Angle Subtract(Angle right)
+        {
+            return new Angle(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is LapseRate))
+                throw new ArgumentException("The given quantity is not of type LapseRate.", nameof(right));
+
+            return Add((LapseRate)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is LapseRate))
+                throw new ArgumentException("The given quantity is not of type LapseRate.", nameof(right));
+
+            return Subtract((LapseRate)right);
+        }
+
+        public LapseRate Add(LapseRate right)
+        {
+            return new LapseRate(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public LapseRate Subtract(LapseRate right)
+        {
+            return new LapseRate(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

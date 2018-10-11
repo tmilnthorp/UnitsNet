@@ -505,6 +505,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is SpecificWeight))
+                throw new ArgumentException("The given quantity is not of type SpecificWeight.", nameof(right));
+
+            return Add((SpecificWeight)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is SpecificWeight))
+                throw new ArgumentException("The given quantity is not of type SpecificWeight.", nameof(right));
+
+            return Subtract((SpecificWeight)right);
+        }
+
+        public SpecificWeight Add(SpecificWeight right)
+        {
+            return new SpecificWeight(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public SpecificWeight Subtract(SpecificWeight right)
+        {
+            return new SpecificWeight(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

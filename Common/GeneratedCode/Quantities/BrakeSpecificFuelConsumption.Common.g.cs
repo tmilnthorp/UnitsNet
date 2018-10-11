@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is BrakeSpecificFuelConsumption))
+                throw new ArgumentException("The given quantity is not of type BrakeSpecificFuelConsumption.", nameof(right));
+
+            return Add((BrakeSpecificFuelConsumption)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is BrakeSpecificFuelConsumption))
+                throw new ArgumentException("The given quantity is not of type BrakeSpecificFuelConsumption.", nameof(right));
+
+            return Subtract((BrakeSpecificFuelConsumption)right);
+        }
+
+        public BrakeSpecificFuelConsumption Add(BrakeSpecificFuelConsumption right)
+        {
+            return new BrakeSpecificFuelConsumption(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public BrakeSpecificFuelConsumption Subtract(BrakeSpecificFuelConsumption right)
+        {
+            return new BrakeSpecificFuelConsumption(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

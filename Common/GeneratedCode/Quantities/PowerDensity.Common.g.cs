@@ -1045,6 +1045,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is PowerDensity))
+                throw new ArgumentException("The given quantity is not of type PowerDensity.", nameof(right));
+
+            return Add((PowerDensity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is PowerDensity))
+                throw new ArgumentException("The given quantity is not of type PowerDensity.", nameof(right));
+
+            return Subtract((PowerDensity)right);
+        }
+
+        public PowerDensity Add(PowerDensity right)
+        {
+            return new PowerDensity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public PowerDensity Subtract(PowerDensity right)
+        {
+            return new PowerDensity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -205,6 +205,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MassFlux))
+                throw new ArgumentException("The given quantity is not of type MassFlux.", nameof(right));
+
+            return Add((MassFlux)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MassFlux))
+                throw new ArgumentException("The given quantity is not of type MassFlux.", nameof(right));
+
+            return Subtract((MassFlux)right);
+        }
+
+        public MassFlux Add(MassFlux right)
+        {
+            return new MassFlux(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MassFlux Subtract(MassFlux right)
+        {
+            return new MassFlux(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

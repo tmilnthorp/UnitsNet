@@ -365,6 +365,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Duration))
+                throw new ArgumentException("The given quantity is not of type Duration.", nameof(right));
+
+            return Add((Duration)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Duration))
+                throw new ArgumentException("The given quantity is not of type Duration.", nameof(right));
+
+            return Subtract((Duration)right);
+        }
+
+        public Duration Add(Duration right)
+        {
+            return new Duration(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Duration Subtract(Duration right)
+        {
+            return new Duration(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

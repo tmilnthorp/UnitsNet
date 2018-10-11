@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is MagneticFlux))
+                throw new ArgumentException("The given quantity is not of type MagneticFlux.", nameof(right));
+
+            return Add((MagneticFlux)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is MagneticFlux))
+                throw new ArgumentException("The given quantity is not of type MagneticFlux.", nameof(right));
+
+            return Subtract((MagneticFlux)right);
+        }
+
+        public MagneticFlux Add(MagneticFlux right)
+        {
+            return new MagneticFlux(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public MagneticFlux Subtract(MagneticFlux right)
+        {
+            return new MagneticFlux(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

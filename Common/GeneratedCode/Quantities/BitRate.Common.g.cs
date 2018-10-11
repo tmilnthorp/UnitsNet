@@ -684,6 +684,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is BitRate))
+                throw new ArgumentException("The given quantity is not of type BitRate.", nameof(right));
+
+            return Add((BitRate)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is BitRate))
+                throw new ArgumentException("The given quantity is not of type BitRate.", nameof(right));
+
+            return Subtract((BitRate)right);
+        }
+
+        public BitRate Add(BitRate right)
+        {
+            return new BitRate(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public BitRate Subtract(BitRate right)
+        {
+            return new BitRate(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

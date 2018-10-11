@@ -585,6 +585,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Torque))
+                throw new ArgumentException("The given quantity is not of type Torque.", nameof(right));
+
+            return Add((Torque)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Torque))
+                throw new ArgumentException("The given quantity is not of type Torque.", nameof(right));
+
+            return Subtract((Torque)right);
+        }
+
+        public Torque Add(Torque right)
+        {
+            return new Torque(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Torque Subtract(Torque right)
+        {
+            return new Torque(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

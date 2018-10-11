@@ -425,6 +425,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Acceleration))
+                throw new ArgumentException("The given quantity is not of type Acceleration.", nameof(right));
+
+            return Add((Acceleration)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Acceleration))
+                throw new ArgumentException("The given quantity is not of type Acceleration.", nameof(right));
+
+            return Subtract((Acceleration)right);
+        }
+
+        public Acceleration Add(Acceleration right)
+        {
+            return new Acceleration(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Acceleration Subtract(Acceleration right)
+        {
+            return new Acceleration(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

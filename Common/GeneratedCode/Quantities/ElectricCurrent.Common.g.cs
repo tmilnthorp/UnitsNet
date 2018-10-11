@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricCurrent))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrent.", nameof(right));
+
+            return Add((ElectricCurrent)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricCurrent))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrent.", nameof(right));
+
+            return Subtract((ElectricCurrent)right);
+        }
+
+        public ElectricCurrent Add(ElectricCurrent right)
+        {
+            return new ElectricCurrent(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricCurrent Subtract(ElectricCurrent right)
+        {
+            return new ElectricCurrent(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

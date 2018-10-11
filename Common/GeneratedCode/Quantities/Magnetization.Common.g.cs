@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Magnetization))
+                throw new ArgumentException("The given quantity is not of type Magnetization.", nameof(right));
+
+            return Add((Magnetization)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Magnetization))
+                throw new ArgumentException("The given quantity is not of type Magnetization.", nameof(right));
+
+            return Subtract((Magnetization)right);
+        }
+
+        public Magnetization Add(Magnetization right)
+        {
+            return new Magnetization(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Magnetization Subtract(Magnetization right)
+        {
+            return new Magnetization(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

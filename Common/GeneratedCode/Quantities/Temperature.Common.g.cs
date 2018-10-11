@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Temperature))
+                throw new ArgumentException("The given quantity is not of type Temperature.", nameof(right));
+
+            return Add((Temperature)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Temperature))
+                throw new ArgumentException("The given quantity is not of type Temperature.", nameof(right));
+
+            return Subtract((Temperature)right);
+        }
+
+        public Temperature Add(Temperature right)
+        {
+            return new Temperature(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Temperature Subtract(Temperature right)
+        {
+            return new Temperature(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

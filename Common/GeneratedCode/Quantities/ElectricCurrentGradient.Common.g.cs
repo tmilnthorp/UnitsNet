@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricCurrentGradient))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrentGradient.", nameof(right));
+
+            return Add((ElectricCurrentGradient)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricCurrentGradient))
+                throw new ArgumentException("The given quantity is not of type ElectricCurrentGradient.", nameof(right));
+
+            return Subtract((ElectricCurrentGradient)right);
+        }
+
+        public ElectricCurrentGradient Add(ElectricCurrentGradient right)
+        {
+            return new ElectricCurrentGradient(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricCurrentGradient Subtract(ElectricCurrentGradient right)
+        {
+            return new ElectricCurrentGradient(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

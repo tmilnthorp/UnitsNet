@@ -565,6 +565,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Power))
+                throw new ArgumentException("The given quantity is not of type Power.", nameof(right));
+
+            return Add((Power)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Power))
+                throw new ArgumentException("The given quantity is not of type Power.", nameof(right));
+
+            return Subtract((Power)right);
+        }
+
+        public Power Add(Power right)
+        {
+            return new Power(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Power Subtract(Power right)
+        {
+            return new Power(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

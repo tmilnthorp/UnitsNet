@@ -204,6 +204,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is PowerRatio))
+                throw new ArgumentException("The given quantity is not of type PowerRatio.", nameof(right));
+
+            return Add((PowerRatio)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is PowerRatio))
+                throw new ArgumentException("The given quantity is not of type PowerRatio.", nameof(right));
+
+            return Subtract((PowerRatio)right);
+        }
+
+        public PowerRatio Add(PowerRatio right)
+        {
+            return new PowerRatio(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public PowerRatio Subtract(PowerRatio right)
+        {
+            return new PowerRatio(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

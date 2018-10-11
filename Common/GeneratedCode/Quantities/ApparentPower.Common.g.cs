@@ -245,6 +245,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ApparentPower))
+                throw new ArgumentException("The given quantity is not of type ApparentPower.", nameof(right));
+
+            return Add((ApparentPower)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ApparentPower))
+                throw new ArgumentException("The given quantity is not of type ApparentPower.", nameof(right));
+
+            return Subtract((ApparentPower)right);
+        }
+
+        public ApparentPower Add(ApparentPower right)
+        {
+            return new ApparentPower(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ApparentPower Subtract(ApparentPower right)
+        {
+            return new ApparentPower(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

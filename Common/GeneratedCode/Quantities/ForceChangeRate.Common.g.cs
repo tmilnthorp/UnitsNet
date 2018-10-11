@@ -385,6 +385,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ForceChangeRate))
+                throw new ArgumentException("The given quantity is not of type ForceChangeRate.", nameof(right));
+
+            return Add((ForceChangeRate)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ForceChangeRate))
+                throw new ArgumentException("The given quantity is not of type ForceChangeRate.", nameof(right));
+
+            return Subtract((ForceChangeRate)right);
+        }
+
+        public ForceChangeRate Add(ForceChangeRate right)
+        {
+            return new ForceChangeRate(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ForceChangeRate Subtract(ForceChangeRate right)
+        {
+            return new ForceChangeRate(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

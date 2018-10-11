@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Permittivity))
+                throw new ArgumentException("The given quantity is not of type Permittivity.", nameof(right));
+
+            return Add((Permittivity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Permittivity))
+                throw new ArgumentException("The given quantity is not of type Permittivity.", nameof(right));
+
+            return Subtract((Permittivity)right);
+        }
+
+        public Permittivity Add(Permittivity right)
+        {
+            return new Permittivity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Permittivity Subtract(Permittivity right)
+        {
+            return new Permittivity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

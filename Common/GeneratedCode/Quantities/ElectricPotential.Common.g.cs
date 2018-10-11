@@ -265,6 +265,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricPotential))
+                throw new ArgumentException("The given quantity is not of type ElectricPotential.", nameof(right));
+
+            return Add((ElectricPotential)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricPotential))
+                throw new ArgumentException("The given quantity is not of type ElectricPotential.", nameof(right));
+
+            return Subtract((ElectricPotential)right);
+        }
+
+        public ElectricPotential Add(ElectricPotential right)
+        {
+            return new ElectricPotential(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricPotential Subtract(ElectricPotential right)
+        {
+            return new ElectricPotential(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

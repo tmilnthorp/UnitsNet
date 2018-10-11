@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is RotationalStiffness))
+                throw new ArgumentException("The given quantity is not of type RotationalStiffness.", nameof(right));
+
+            return Add((RotationalStiffness)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is RotationalStiffness))
+                throw new ArgumentException("The given quantity is not of type RotationalStiffness.", nameof(right));
+
+            return Subtract((RotationalStiffness)right);
+        }
+
+        public RotationalStiffness Add(RotationalStiffness right)
+        {
+            return new RotationalStiffness(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public RotationalStiffness Subtract(RotationalStiffness right)
+        {
+            return new RotationalStiffness(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

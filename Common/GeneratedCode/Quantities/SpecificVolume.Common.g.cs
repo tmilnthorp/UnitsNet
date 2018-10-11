@@ -205,6 +205,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is SpecificVolume))
+                throw new ArgumentException("The given quantity is not of type SpecificVolume.", nameof(right));
+
+            return Add((SpecificVolume)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is SpecificVolume))
+                throw new ArgumentException("The given quantity is not of type SpecificVolume.", nameof(right));
+
+            return Subtract((SpecificVolume)right);
+        }
+
+        public SpecificVolume Add(SpecificVolume right)
+        {
+            return new SpecificVolume(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public SpecificVolume Subtract(SpecificVolume right)
+        {
+            return new SpecificVolume(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

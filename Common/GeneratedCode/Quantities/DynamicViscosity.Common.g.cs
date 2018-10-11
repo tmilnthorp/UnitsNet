@@ -285,6 +285,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is DynamicViscosity))
+                throw new ArgumentException("The given quantity is not of type DynamicViscosity.", nameof(right));
+
+            return Add((DynamicViscosity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is DynamicViscosity))
+                throw new ArgumentException("The given quantity is not of type DynamicViscosity.", nameof(right));
+
+            return Subtract((DynamicViscosity)right);
+        }
+
+        public DynamicViscosity Add(DynamicViscosity right)
+        {
+            return new DynamicViscosity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public DynamicViscosity Subtract(DynamicViscosity right)
+        {
+            return new DynamicViscosity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

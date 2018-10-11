@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Molarity))
+                throw new ArgumentException("The given quantity is not of type Molarity.", nameof(right));
+
+            return Add((Molarity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Molarity))
+                throw new ArgumentException("The given quantity is not of type Molarity.", nameof(right));
+
+            return Subtract((Molarity)right);
+        }
+
+        public Molarity Add(Molarity right)
+        {
+            return new Molarity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Molarity Subtract(Molarity right)
+        {
+            return new Molarity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

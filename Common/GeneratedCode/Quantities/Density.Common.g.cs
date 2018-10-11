@@ -925,6 +925,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Density))
+                throw new ArgumentException("The given quantity is not of type Density.", nameof(right));
+
+            return Add((Density)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Density))
+                throw new ArgumentException("The given quantity is not of type Density.", nameof(right));
+
+            return Subtract((Density)right);
+        }
+
+        public Density Add(Density right)
+        {
+            return new Density(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Density Subtract(Density right)
+        {
+            return new Density(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

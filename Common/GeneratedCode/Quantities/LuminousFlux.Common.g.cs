@@ -185,6 +185,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is LuminousFlux))
+                throw new ArgumentException("The given quantity is not of type LuminousFlux.", nameof(right));
+
+            return Add((LuminousFlux)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is LuminousFlux))
+                throw new ArgumentException("The given quantity is not of type LuminousFlux.", nameof(right));
+
+            return Subtract((LuminousFlux)right);
+        }
+
+        public LuminousFlux Add(LuminousFlux right)
+        {
+            return new LuminousFlux(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public LuminousFlux Subtract(LuminousFlux right)
+        {
+            return new LuminousFlux(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

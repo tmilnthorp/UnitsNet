@@ -205,6 +205,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is HeatTransferCoefficient))
+                throw new ArgumentException("The given quantity is not of type HeatTransferCoefficient.", nameof(right));
+
+            return Add((HeatTransferCoefficient)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is HeatTransferCoefficient))
+                throw new ArgumentException("The given quantity is not of type HeatTransferCoefficient.", nameof(right));
+
+            return Subtract((HeatTransferCoefficient)right);
+        }
+
+        public HeatTransferCoefficient Add(HeatTransferCoefficient right)
+        {
+            return new HeatTransferCoefficient(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public HeatTransferCoefficient Subtract(HeatTransferCoefficient right)
+        {
+            return new HeatTransferCoefficient(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

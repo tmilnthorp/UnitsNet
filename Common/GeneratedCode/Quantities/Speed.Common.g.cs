@@ -805,6 +805,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Speed))
+                throw new ArgumentException("The given quantity is not of type Speed.", nameof(right));
+
+            return Add((Speed)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Speed))
+                throw new ArgumentException("The given quantity is not of type Speed.", nameof(right));
+
+            return Subtract((Speed)right);
+        }
+
+        public Speed Add(Speed right)
+        {
+            return new Speed(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Speed Subtract(Speed right)
+        {
+            return new Speed(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

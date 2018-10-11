@@ -225,6 +225,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is LinearDensity))
+                throw new ArgumentException("The given quantity is not of type LinearDensity.", nameof(right));
+
+            return Add((LinearDensity)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is LinearDensity))
+                throw new ArgumentException("The given quantity is not of type LinearDensity.", nameof(right));
+
+            return Subtract((LinearDensity)right);
+        }
+
+        public LinearDensity Add(LinearDensity right)
+        {
+            return new LinearDensity(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public LinearDensity Subtract(LinearDensity right)
+        {
+            return new LinearDensity(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

@@ -345,6 +345,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ForcePerLength))
+                throw new ArgumentException("The given quantity is not of type ForcePerLength.", nameof(right));
+
+            return Add((ForcePerLength)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ForcePerLength))
+                throw new ArgumentException("The given quantity is not of type ForcePerLength.", nameof(right));
+
+            return Subtract((ForcePerLength)right);
+        }
+
+        public ForcePerLength Add(ForcePerLength right)
+        {
+            return new ForcePerLength(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ForcePerLength Subtract(ForcePerLength right)
+        {
+            return new ForcePerLength(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

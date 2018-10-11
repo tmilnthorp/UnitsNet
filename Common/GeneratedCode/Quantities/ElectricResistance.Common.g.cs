@@ -245,6 +245,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is ElectricResistance))
+                throw new ArgumentException("The given quantity is not of type ElectricResistance.", nameof(right));
+
+            return Add((ElectricResistance)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is ElectricResistance))
+                throw new ArgumentException("The given quantity is not of type ElectricResistance.", nameof(right));
+
+            return Subtract((ElectricResistance)right);
+        }
+
+        public ElectricResistance Add(ElectricResistance right)
+        {
+            return new ElectricResistance(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public ElectricResistance Subtract(ElectricResistance right)
+        {
+            return new ElectricResistance(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

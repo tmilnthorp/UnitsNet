@@ -325,6 +325,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Frequency))
+                throw new ArgumentException("The given quantity is not of type Frequency.", nameof(right));
+
+            return Add((Frequency)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Frequency))
+                throw new ArgumentException("The given quantity is not of type Frequency.", nameof(right));
+
+            return Subtract((Frequency)right);
+        }
+
+        public Frequency Add(Frequency right)
+        {
+            return new Frequency(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Frequency Subtract(Frequency right)
+        {
+            return new Frequency(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

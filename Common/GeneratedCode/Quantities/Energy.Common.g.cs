@@ -605,6 +605,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Energy))
+                throw new ArgumentException("The given quantity is not of type Energy.", nameof(right));
+
+            return Add((Energy)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Energy))
+                throw new ArgumentException("The given quantity is not of type Energy.", nameof(right));
+
+            return Subtract((Energy)right);
+        }
+
+        public Energy Add(Energy right)
+        {
+            return new Energy(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Energy Subtract(Energy right)
+        {
+            return new Energy(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)

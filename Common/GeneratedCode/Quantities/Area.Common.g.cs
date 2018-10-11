@@ -425,6 +425,32 @@ namespace UnitsNet
 
         #endregion
 
+        public IQuantity Add(IQuantity right)
+        {
+            if(!(right is Area))
+                throw new ArgumentException("The given quantity is not of type Area.", nameof(right));
+
+            return Add((Area)right);
+        }
+
+        public IQuantity Subtract(IQuantity right)
+        {
+            if(!(right is Area))
+                throw new ArgumentException("The given quantity is not of type Area.", nameof(right));
+
+            return Subtract((Area)right);
+        }
+
+        public Area Add(Area right)
+        {
+            return new Area(Value + right.AsBaseNumericType(Unit), Unit);
+        }
+
+        public Area Subtract(Area right)
+        {
+            return new Area(Value - right.AsBaseNumericType(Unit), Unit);
+        }
+
         #region Equality / IComparable
 
         public int CompareTo(object obj)
