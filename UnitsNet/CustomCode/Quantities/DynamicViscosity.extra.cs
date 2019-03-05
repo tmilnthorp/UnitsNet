@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct DynamicViscosity
+    public partial class DynamicViscosity
     {
         /// <summary>Get <see cref="KinematicViscosity"/> from <see cref="DynamicViscosity"/> divided by <see cref="Density"/>.</summary>
         public static KinematicViscosity operator /(DynamicViscosity dynamicViscosity, Density density)

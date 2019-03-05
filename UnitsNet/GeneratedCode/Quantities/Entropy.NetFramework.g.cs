@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Entropy is an important concept in the branch of science known as thermodynamics. The idea of "irreversibility" is central to the understanding of entropy.  It is often said that entropy is an expression of the disorder, or randomness of a system, or of our lack of information about it. Entropy is an extensive property. It has the dimension of energy divided by temperature, which has a unit of joules per kelvin (J/K) in the International System of Units
     /// </summary>
-    public partial struct Entropy : IQuantity<EntropyUnit>, IEquatable<Entropy>, IComparable, IComparable<Entropy>, IConvertible, IFormattable
+    public partial class Entropy : Quantity<double>, IQuantity<EntropyUnit>, IEquatable<Entropy>, IComparable, IComparable<Entropy>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -527,7 +527,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Entropy, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(Entropy left, Entropy right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -549,6 +549,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(Entropy other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -566,7 +568,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Entropy, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(Entropy other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

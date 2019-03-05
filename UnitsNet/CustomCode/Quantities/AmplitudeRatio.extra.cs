@@ -6,7 +6,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct AmplitudeRatio
+    public partial class AmplitudeRatio
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="AmplitudeRatio" /> struct from the specified electric potential
@@ -16,7 +16,6 @@ namespace UnitsNet
         /// </summary>
         /// <param name="voltage">The electric potential referenced to one volt.</param>
         public AmplitudeRatio(ElectricPotential voltage)
-            : this()
         {
             if (voltage.Volts <= 0)
                 throw new ArgumentOutOfRangeException(

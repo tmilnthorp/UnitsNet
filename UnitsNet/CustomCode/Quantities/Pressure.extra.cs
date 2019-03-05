@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct Pressure
+    public partial class Pressure
     {
         /// <summary>Get <see cref="Force"/> from <see cref="Pressure"/> times <see cref="Area"/>.</summary>
         public static Force operator *(Pressure pressure, Area area)

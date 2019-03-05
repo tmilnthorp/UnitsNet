@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     The Electric Potential of a system known to use Alternating Current.
     /// </summary>
-    public partial struct ElectricPotentialAc : IQuantity<ElectricPotentialAcUnit>, IEquatable<ElectricPotentialAc>, IComparable, IComparable<ElectricPotentialAc>, IConvertible, IFormattable
+    public partial class ElectricPotentialAc : Quantity<double>, IQuantity<ElectricPotentialAcUnit>, IEquatable<ElectricPotentialAc>, IComparable, IComparable<ElectricPotentialAc>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -497,7 +497,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricPotentialAc, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ElectricPotentialAc left, ElectricPotentialAc right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -519,6 +519,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ElectricPotentialAc other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -536,7 +538,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricPotentialAc, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ElectricPotentialAc other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

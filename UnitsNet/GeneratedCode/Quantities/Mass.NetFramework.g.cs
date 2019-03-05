@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     In physics, mass (from Greek μᾶζα "barley cake, lump [of dough]") is a property of a physical system or body, giving rise to the phenomena of the body's resistance to being accelerated by a force and the strength of its mutual gravitational attraction with other bodies. Instruments such as mass balances or scales use those phenomena to measure mass. The SI unit of mass is the kilogram (kg).
     /// </summary>
-    public partial struct Mass : IQuantity<MassUnit>, IEquatable<Mass>, IComparable, IComparable<Mass>, IConvertible, IFormattable
+    public partial class Mass : Quantity<double>, IQuantity<MassUnit>, IEquatable<Mass>, IComparable, IComparable<Mass>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -767,7 +767,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Mass, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(Mass left, Mass right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -789,6 +789,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(Mass other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -806,7 +808,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Mass, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(Mass other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

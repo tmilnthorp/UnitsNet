@@ -5,7 +5,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Temperature
+    public partial class Temperature
     {
         /// <summary>
         ///     Add a <see cref="Temperature" /> and a <see cref="TemperatureDelta" />.

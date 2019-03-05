@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Rotational speed (sometimes called speed of revolution) is the number of complete rotations, revolutions, cycles, or turns per time unit. Rotational speed is a cyclic frequency, measured in radians per second or in hertz in the SI System by scientists, or in revolutions per minute (rpm or min-1) or revolutions per second in everyday life. The symbol for rotational speed is ω (the Greek lowercase letter "omega").
     /// </summary>
-    public partial struct RotationalSpeed : IQuantity<RotationalSpeedUnit>, IEquatable<RotationalSpeed>, IComparable, IComparable<RotationalSpeed>, IConvertible, IFormattable
+    public partial class RotationalSpeed : Quantity<double>, IQuantity<RotationalSpeedUnit>, IEquatable<RotationalSpeed>, IComparable, IComparable<RotationalSpeed>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -617,7 +617,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalSpeed, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(RotationalSpeed left, RotationalSpeed right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -639,6 +639,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(RotationalSpeed other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -656,7 +658,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalSpeed, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(RotationalSpeed other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

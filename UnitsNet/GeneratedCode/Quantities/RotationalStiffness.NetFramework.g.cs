@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     https://en.wikipedia.org/wiki/Stiffness#Rotational_stiffness
     /// </summary>
-    public partial struct RotationalStiffness : IQuantity<RotationalStiffnessUnit>, IEquatable<RotationalStiffness>, IComparable, IComparable<RotationalStiffness>, IConvertible, IFormattable
+    public partial class RotationalStiffness : Quantity<double>, IQuantity<RotationalStiffnessUnit>, IEquatable<RotationalStiffness>, IComparable, IComparable<RotationalStiffness>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -467,7 +467,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalStiffness, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(RotationalStiffness left, RotationalStiffness right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -489,6 +489,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(RotationalStiffness other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -506,7 +508,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalStiffness, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(RotationalStiffness other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

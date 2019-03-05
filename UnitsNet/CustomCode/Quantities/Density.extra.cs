@@ -5,7 +5,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Density
+    public partial class Density
     {
         /// <summary>
         ///     Gets <see cref="Molarity" /> from this <see cref="Density" />.

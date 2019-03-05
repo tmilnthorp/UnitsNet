@@ -35,7 +35,7 @@ namespace UnitsNet
     /// <remarks>
     ///     https://en.wikipedia.org/wiki/Thermal_Conductivity
     /// </remarks>
-    public partial struct ThermalConductivity : IQuantity<ThermalConductivityUnit>, IEquatable<ThermalConductivity>, IComparable, IComparable<ThermalConductivity>, IConvertible, IFormattable
+    public partial class ThermalConductivity : Quantity<double>, IQuantity<ThermalConductivityUnit>, IEquatable<ThermalConductivity>, IComparable, IComparable<ThermalConductivity>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -455,7 +455,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ThermalConductivity, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ThermalConductivity left, ThermalConductivity right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -477,6 +477,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ThermalConductivity other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -494,7 +496,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ThermalConductivity, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ThermalConductivity other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

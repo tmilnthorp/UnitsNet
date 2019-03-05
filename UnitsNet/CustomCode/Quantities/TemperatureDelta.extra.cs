@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct TemperatureDelta
+    public partial class TemperatureDelta
     {
         /// <summary>Get <see cref="LapseRate"/> from <see cref="TemperatureDelta"/> divided by <see cref="Length"/>.</summary>
         public static LapseRate operator /(TemperatureDelta left, Length right)

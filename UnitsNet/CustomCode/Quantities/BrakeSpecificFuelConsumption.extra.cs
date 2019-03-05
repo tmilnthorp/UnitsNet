@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct BrakeSpecificFuelConsumption
+    public partial class BrakeSpecificFuelConsumption
     {
         /// <summary>Get <see cref="MassFlow"/> from <see cref="BrakeSpecificFuelConsumption"/> times <see cref="Power"/>.</summary>
         public static MassFlow operator *(BrakeSpecificFuelConsumption bsfc, Power power)

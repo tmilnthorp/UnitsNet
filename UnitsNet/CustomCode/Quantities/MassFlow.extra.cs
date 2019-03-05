@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct MassFlow
+    public partial class MassFlow
     {
         /// <summary>Get <see cref="Mass"/> from <see cref="MassFlow"/> times <see cref="TimeSpan"/>.</summary>
         public static Mass operator *(MassFlow massFlow, TimeSpan time)

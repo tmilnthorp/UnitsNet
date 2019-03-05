@@ -7,7 +7,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct AmountOfSubstance
+    public partial class AmountOfSubstance
     {
         /// <summary>
         ///     The Avogadro constant is the number of constituent particles, usually molecules, 

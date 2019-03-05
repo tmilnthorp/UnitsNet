@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct SpecificWeight
+    public partial class SpecificWeight
     {
         /// <summary>Get <see cref="Pressure"/> from <see cref="SpecificWeight"/> times <see cref="Length"/>.</summary>
         public static Pressure operator *(SpecificWeight specificWeight, Length length)

@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct Torque
+    public partial class Torque
     {
         /// <summary>Get <see cref="Force"/> from <see cref="Torque"/> times <see cref="Length"/>.</summary>
         public static Force operator /(Torque torque, Length length)

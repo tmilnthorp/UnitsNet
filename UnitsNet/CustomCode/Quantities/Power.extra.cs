@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Power
+    public partial class Power
     {
         /// <summary>
         ///     Gets a <see cref="PowerRatio" /> from this <see cref="Power" /> relative to one watt.

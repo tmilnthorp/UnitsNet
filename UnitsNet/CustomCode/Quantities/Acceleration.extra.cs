@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct Acceleration
+    public partial class Acceleration
     {
         /// <summary>
         /// Multiply <see cref="Acceleration"/> and <see cref="Density"/> to get <see cref="SpecificWeight"/>.

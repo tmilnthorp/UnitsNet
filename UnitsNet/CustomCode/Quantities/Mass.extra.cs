@@ -9,7 +9,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Mass
+    public partial class Mass
     {
         /// <summary>Get <see cref="Mass"/> from <see cref="Force"/> of gravity.</summary>
         public static Mass FromGravitationalForce(Force f)

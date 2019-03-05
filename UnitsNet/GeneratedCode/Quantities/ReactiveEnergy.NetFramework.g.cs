@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     The Volt-ampere reactive hour (expressed as varh) is the reactive power of one Volt-ampere reactive produced in one hour.
     /// </summary>
-    public partial struct ReactiveEnergy : IQuantity<ReactiveEnergyUnit>, IEquatable<ReactiveEnergy>, IComparable, IComparable<ReactiveEnergy>, IConvertible, IFormattable
+    public partial class ReactiveEnergy : Quantity<double>, IQuantity<ReactiveEnergyUnit>, IEquatable<ReactiveEnergy>, IComparable, IComparable<ReactiveEnergy>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -467,7 +467,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ReactiveEnergy, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ReactiveEnergy left, ReactiveEnergy right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -489,6 +489,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ReactiveEnergy other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -506,7 +508,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ReactiveEnergy, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ReactiveEnergy other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct RotationalStiffness
+    public partial class RotationalStiffness
     {
         /// <summary>Get <see cref="Torque"/> from <see cref="RotationalStiffness"/> times <see cref="Angle"/>.</summary>
         public static Torque operator *(RotationalStiffness rotationalStiffness, Angle angle)

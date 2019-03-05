@@ -65,7 +65,7 @@ namespace UnitsNet.Serialization.JsonNet.Tests
             [Fact]
             public void NonNullNullableValue_ExpectJsonUnaffected()
             {
-                Mass? nullableMass = Mass.FromKilograms(10);
+                Mass nullableMass = Mass.FromKilograms(10);
                 var expectedJson = "{\n  \"Unit\": \"MassUnit.Kilogram\",\n  \"Value\": 10.0\n}";
 
                 string json = SerializeObject(nullableMass);
@@ -145,12 +145,12 @@ namespace UnitsNet.Serialization.JsonNet.Tests
             [Fact]
             public void NonNullNullableValue_ExpectValueDeserializedCorrectly()
             {
-                Mass? nullableMass = Mass.FromKilograms(10);
+                Mass nullableMass = Mass.FromKilograms(10);
                 string json = SerializeObject(nullableMass);
 
-                Mass? deserializedNullableMass = DeserializeObject<Mass?>(json);
+                Mass deserializedNullableMass = DeserializeObject<Mass>(json);
 
-                Assert.Equal(nullableMass.Value, deserializedNullableMass);
+                Assert.Equal(nullableMass.Value, deserializedNullableMass.Value);
             }
 
             [Fact]
@@ -172,7 +172,7 @@ namespace UnitsNet.Serialization.JsonNet.Tests
             public void NullValue_ExpectNullReturned()
             {
                 string json = SerializeObject(null);
-                var deserializedNullMass = DeserializeObject<Mass?>(json);
+                var deserializedNullMass = DeserializeObject<Mass>(json);
 
                 Assert.Null(deserializedNullMass);
             }
@@ -312,7 +312,7 @@ namespace UnitsNet.Serialization.JsonNet.Tests
 
         private class TestObj
         {
-            public Frequency? NullableFrequency { get; set; }
+            public Frequency NullableFrequency { get; set; }
             public Frequency NonNullableFrequency { get; set; }
         }
 

@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Speed
+    public partial class Speed
     {
         /// <summary>Get <see cref="Acceleration"/> from <see cref="Speed"/> divided by <see cref="TimeSpan"/>.</summary>
         public static Acceleration operator /(Speed speed, TimeSpan timeSpan)

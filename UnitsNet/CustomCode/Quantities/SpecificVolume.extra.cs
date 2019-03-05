@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct SpecificVolume
+    public partial class SpecificVolume
     {
         /// <summary>Get <see cref="Density"/> from <see cref="double"/> divided by <see cref="SpecificVolume"/>.</summary>
         public static Density operator /(double constant, SpecificVolume volume)

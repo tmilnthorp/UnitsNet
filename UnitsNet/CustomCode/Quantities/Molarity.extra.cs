@@ -3,7 +3,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Molarity
+    public partial class Molarity
     {
         /// <summary>
         ///     Construct from <see cref="Density"/> divided by <see cref="Mass"/>.
@@ -11,7 +11,6 @@ namespace UnitsNet
         /// <seealso cref="Density.op_Division(UnitsNet.Density,UnitsNet.Mass)"/>
         [Obsolete("This constructor will be removed in favor of operator overload Density.op_Division(UnitsNet.Density,UnitsNet.Mass).")]
         public Molarity(Density density, Mass molecularWeight)
-            : this()
         {
             _value = density.KilogramsPerCubicMeter / molecularWeight.Kilograms;
             _unit = MolarityUnit.MolesPerCubicMeter;

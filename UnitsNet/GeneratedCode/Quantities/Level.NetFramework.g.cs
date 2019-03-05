@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Level is the logarithm of the ratio of a quantity Q to a reference value of that quantity, Q₀, expressed in dimensionless units.
     /// </summary>
-    public partial struct Level : IQuantity<LevelUnit>, IEquatable<Level>, IComparable, IComparable<Level>, IConvertible, IFormattable
+    public partial class Level : Quantity<double>, IQuantity<LevelUnit>, IEquatable<Level>, IComparable, IComparable<Level>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -460,7 +460,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Level, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(Level left, Level right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -482,6 +482,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(Level other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -499,7 +501,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Level, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(Level other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

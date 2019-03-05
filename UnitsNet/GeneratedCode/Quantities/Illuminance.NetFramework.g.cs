@@ -35,7 +35,7 @@ namespace UnitsNet
     /// <remarks>
     ///     https://en.wikipedia.org/wiki/Illuminance
     /// </remarks>
-    public partial struct Illuminance : IQuantity<IlluminanceUnit>, IEquatable<Illuminance>, IComparable, IComparable<Illuminance>, IConvertible, IFormattable
+    public partial class Illuminance : Quantity<double>, IQuantity<IlluminanceUnit>, IEquatable<Illuminance>, IComparable, IComparable<Illuminance>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -485,7 +485,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Illuminance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(Illuminance left, Illuminance right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -507,6 +507,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(Illuminance other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -524,7 +526,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(Illuminance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(Illuminance other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

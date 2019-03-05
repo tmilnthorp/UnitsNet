@@ -35,7 +35,7 @@ namespace UnitsNet
     /// <remarks>
     ///     https://en.wikipedia.org/wiki/Electric_field
     /// </remarks>
-    public partial struct ElectricField : IQuantity<ElectricFieldUnit>, IEquatable<ElectricField>, IComparable, IComparable<ElectricField>, IConvertible, IFormattable
+    public partial class ElectricField : Quantity<double>, IQuantity<ElectricFieldUnit>, IEquatable<ElectricField>, IComparable, IComparable<ElectricField>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -440,7 +440,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricField, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ElectricField left, ElectricField right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -462,6 +462,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ElectricField other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -479,7 +481,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricField, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ElectricField other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

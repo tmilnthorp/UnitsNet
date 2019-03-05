@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Electric admittance is a measure of how easily a circuit or device will allow a current to flow. It is defined as the inverse of impedance. The SI unit of admittance is the siemens (symbol S).
     /// </summary>
-    public partial struct ElectricAdmittance : IQuantity<ElectricAdmittanceUnit>, IEquatable<ElectricAdmittance>, IComparable, IComparable<ElectricAdmittance>, IConvertible, IFormattable
+    public partial class ElectricAdmittance : Quantity<double>, IQuantity<ElectricAdmittanceUnit>, IEquatable<ElectricAdmittance>, IComparable, IComparable<ElectricAdmittance>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -482,7 +482,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricAdmittance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ElectricAdmittance left, ElectricAdmittance right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -504,6 +504,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ElectricAdmittance other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -521,7 +523,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ElectricAdmittance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ElectricAdmittance other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

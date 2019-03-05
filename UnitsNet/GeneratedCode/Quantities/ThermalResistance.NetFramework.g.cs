@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Heat Transfer Coefficient or Thermal conductivity - indicates a materials ability to conduct heat.
     /// </summary>
-    public partial struct ThermalResistance : IQuantity<ThermalResistanceUnit>, IEquatable<ThermalResistance>, IComparable, IComparable<ThermalResistance>, IConvertible, IFormattable
+    public partial class ThermalResistance : Quantity<double>, IQuantity<ThermalResistanceUnit>, IEquatable<ThermalResistance>, IComparable, IComparable<ThermalResistance>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -497,7 +497,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ThermalResistance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(ThermalResistance left, ThermalResistance right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -519,6 +519,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(ThermalResistance other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -536,7 +538,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(ThermalResistance, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(ThermalResistance other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

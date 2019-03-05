@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct SpecificEnergy
+    public partial class SpecificEnergy
     {
         /// <summary>Get <see cref="Energy"/> from <see cref="SpecificEnergy"/> times <see cref="Mass"/>.</summary>
         public static Energy operator *(SpecificEnergy specificEnergy, Mass mass)

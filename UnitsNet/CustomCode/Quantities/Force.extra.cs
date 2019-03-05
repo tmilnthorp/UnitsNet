@@ -5,7 +5,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Force
+    public partial class Force
     {
         /// <summary>Get <see cref="Force"/> from <see cref="Pressure"/> divided by <see cref="Area"/>.</summary>
         public static Force FromPressureByArea(Pressure p, Area area)

@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Duration
+    public partial class Duration
     {
         /// <summary>
         ///     Convert a Duration to a TimeSpan.

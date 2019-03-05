@@ -10,7 +10,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Length
+    public partial class Length
     {
         private const double InchesInOneFoot = 12;
 

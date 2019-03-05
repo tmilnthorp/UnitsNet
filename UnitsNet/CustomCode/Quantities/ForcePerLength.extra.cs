@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct ForcePerLength
+    public partial class ForcePerLength
     {
         /// <summary>Get <see cref="Force"/> from <see cref="ForcePerLength"/> divided by <see cref="Length"/>.</summary>
         public static Force operator *(ForcePerLength forcePerLength, Length length)

@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct KinematicViscosity
+    public partial class KinematicViscosity
     {
         /// <summary>Get <see cref="Speed"/> from <see cref="KinematicViscosity"/> divided by <see cref="Length"/>.</summary>
         public static Speed operator /(KinematicViscosity kinematicViscosity, Length length)

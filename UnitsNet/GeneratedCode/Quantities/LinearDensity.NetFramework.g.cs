@@ -35,7 +35,7 @@ namespace UnitsNet
     /// <remarks>
     ///     http://en.wikipedia.org/wiki/Linear_density
     /// </remarks>
-    public partial struct LinearDensity : IQuantity<LinearDensityUnit>, IEquatable<LinearDensity>, IComparable, IComparable<LinearDensity>, IConvertible, IFormattable
+    public partial class LinearDensity : Quantity<double>, IQuantity<LinearDensityUnit>, IEquatable<LinearDensity>, IComparable, IComparable<LinearDensity>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -470,7 +470,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(LinearDensity, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(LinearDensity left, LinearDensity right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -492,6 +492,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(LinearDensity other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -509,7 +511,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(LinearDensity, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(LinearDensity other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

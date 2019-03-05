@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct ElectricPotential
+    public partial class ElectricPotential
     {
         /// <summary>
         ///     Gets an <see cref="AmplitudeRatio" /> in decibels (dB) relative to 1 volt RMS from this <see cref="ElectricPotential" />.

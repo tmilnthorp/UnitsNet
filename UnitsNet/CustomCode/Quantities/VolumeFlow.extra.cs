@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct VolumeFlow
+    public partial class VolumeFlow
     {
         /// <summary>Get <see cref="Volume"/> from <see cref="VolumeFlow"/> times <see cref="TimeSpan"/>.</summary>
         public static Volume operator *(VolumeFlow volumeFlow, TimeSpan timeSpan)

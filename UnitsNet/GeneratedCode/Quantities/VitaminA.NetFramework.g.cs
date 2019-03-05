@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Vitamin A: 1 IU is the biological equivalent of 0.3 µg retinol, or of 0.6 µg beta-carotene.
     /// </summary>
-    public partial struct VitaminA : IQuantity<VitaminAUnit>, IEquatable<VitaminA>, IComparable, IComparable<VitaminA>, IConvertible, IFormattable
+    public partial class VitaminA : Quantity<double>, IQuantity<VitaminAUnit>, IEquatable<VitaminA>, IComparable, IComparable<VitaminA>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -437,7 +437,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(VitaminA, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(VitaminA left, VitaminA right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -459,6 +459,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(VitaminA other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -476,7 +478,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(VitaminA, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(VitaminA other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

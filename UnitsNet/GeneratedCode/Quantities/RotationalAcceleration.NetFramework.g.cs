@@ -32,7 +32,7 @@ namespace UnitsNet
     /// <summary>
     ///     Angular acceleration is the rate of change of rotational speed.
     /// </summary>
-    public partial struct RotationalAcceleration : IQuantity<RotationalAccelerationUnit>, IEquatable<RotationalAcceleration>, IComparable, IComparable<RotationalAcceleration>, IConvertible, IFormattable
+    public partial class RotationalAcceleration : Quantity<double>, IQuantity<RotationalAccelerationUnit>, IEquatable<RotationalAcceleration>, IComparable, IComparable<RotationalAcceleration>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -467,7 +467,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalAcceleration, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==(RotationalAcceleration left, RotationalAcceleration right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -489,6 +489,8 @@ namespace UnitsNet
         /// <inheritdoc />
         public int CompareTo(RotationalAcceleration other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -506,7 +508,7 @@ namespace UnitsNet
         /// <remarks>Consider using <see cref="Equals(RotationalAcceleration, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals(RotationalAcceleration other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

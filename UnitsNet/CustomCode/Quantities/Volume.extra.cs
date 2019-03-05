@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Volume
+    public partial class Volume
     {
         /// <summary>Get <see cref="Area"/> from <see cref="Volume"/> divided by <see cref="Length"/>.</summary>
         public static Area operator /(Volume volume, Length length)

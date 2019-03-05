@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Area
+    public partial class Area
     {
         #region Static Methods
 

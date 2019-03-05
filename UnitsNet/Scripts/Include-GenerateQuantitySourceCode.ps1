@@ -66,7 +66,7 @@ if ($obsoleteAttribute)
     ///     $($quantity.XmlDocRemarks)
     /// </remarks>
 "@; }@"
-    public partial struct $quantityName : IQuantity<$unitEnumName>, IEquatable<$quantityName>, IComparable, IComparable<$quantityName>, IConvertible, IFormattable
+    public partial class $quantityName : Quantity<$valueType>, IQuantity<$unitEnumName>, IEquatable<$quantityName>, IComparable, IComparable<$quantityName>, IConvertible, IFormattable
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -854,7 +854,7 @@ function GenerateEqualityAndComparison([GeneratorArgs]$genArgs)
         /// <remarks>Consider using <see cref="Equals($quantityName, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public static bool operator ==($quantityName left, $quantityName right)
         {
-            return left.Equals(right);
+            return left is null ? right is null : left.Equals(right);
         }
 
         /// <summary>Returns true if not exactly equal.</summary>
@@ -876,6 +876,8 @@ function GenerateEqualityAndComparison([GeneratorArgs]$genArgs)
         /// <inheritdoc />
         public int CompareTo($quantityName other)
         {
+            if(other is null) throw new ArgumentNullException(nameof(other));
+
             return _value.CompareTo(other.GetValueAs(this.Unit));
         }
 
@@ -893,7 +895,7 @@ function GenerateEqualityAndComparison([GeneratorArgs]$genArgs)
         /// <remarks>Consider using <see cref="Equals($quantityName, double, ComparisonType)"/> for safely comparing floating point values.</remarks>
         public bool Equals($quantityName other)
         {
-            return _value.Equals(other.GetValueAs(this.Unit));
+            return other != null ? _value.Equals(other.GetValueAs(this.Unit)) : false;
         }
 
         /// <summary>

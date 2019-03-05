@@ -4,7 +4,7 @@
 // ReSharper disable once CheckNamespace
 namespace UnitsNet
 {
-    public partial struct RotationalStiffnessPerLength
+    public partial class RotationalStiffnessPerLength
     {
         /// <summary>Get <see cref="RotationalStiffness"/> from <see cref="RotationalStiffnessPerLength"/> times <see cref="Length"/>.</summary>
         public static RotationalStiffness operator *(RotationalStiffnessPerLength rotationalStiffness, Length length)

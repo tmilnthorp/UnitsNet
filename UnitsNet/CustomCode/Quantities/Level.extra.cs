@@ -6,7 +6,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct Level
+    public partial class Level
     {
         /// <summary>
         ///     Initializes a new instance of the logarithmic <see cref="Level" /> struct which is the ratio of a quantity Q to a
@@ -15,7 +15,6 @@ namespace UnitsNet
         /// <param name="quantity">The quantity.</param>
         /// <param name="reference">The reference value that <paramref name="quantity" /> is compared to.</param>
         public Level(double quantity, double reference)
-            : this()
         {
             string errorMessage =
                 $"The base-10 logarithm of a number ≤ 0 is undefined ({quantity}/{reference}).";

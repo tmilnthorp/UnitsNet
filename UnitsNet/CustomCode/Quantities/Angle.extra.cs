@@ -5,7 +5,7 @@ using System;
 
 namespace UnitsNet
 {
-    public partial struct Angle
+    public partial class Angle
     {
         /// <summary>Get <see cref="RotationalSpeed"/> from <see cref="Angle"/> delta over time delta.</summary>
         public static RotationalSpeed operator /(Angle angle, TimeSpan timeSpan)

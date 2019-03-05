@@ -3,7 +3,7 @@
 
 namespace UnitsNet
 {
-    public partial struct MassFlux
+    public partial class MassFlux
     {
         /// <summary>Get <see cref="Density"/> from <see cref="MassFlux"/> divided by <see cref="Speed"/>.</summary>
         public static Density operator /(MassFlux massFlux, Speed speed)

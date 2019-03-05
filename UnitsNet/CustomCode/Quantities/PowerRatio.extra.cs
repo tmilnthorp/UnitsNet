@@ -6,7 +6,7 @@ using UnitsNet.Units;
 
 namespace UnitsNet
 {
-    public partial struct PowerRatio
+    public partial class PowerRatio
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="PowerRatio" /> struct from the specified power referenced to one watt.
@@ -14,7 +14,6 @@ namespace UnitsNet
         /// <param name="power">The power relative to one watt.</param>
 
         public PowerRatio(Power power)
-            : this()
         {
             if (power.Watts <= 0)
                 throw new ArgumentOutOfRangeException(
