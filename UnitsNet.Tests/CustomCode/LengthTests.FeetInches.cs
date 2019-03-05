@@ -67,7 +67,7 @@ namespace UnitsNet.Tests.CustomCode
         public void TryParseFeetInches_GivenInvalidString_ReturnsFalseAndZeroOut(string str)
         {
             Assert.False(Length.TryParseFeetInches(str, out Length result));
-            Assert.Equal(Length.Zero, result);
+            Assert.Null(result);
         }
     }
 }
