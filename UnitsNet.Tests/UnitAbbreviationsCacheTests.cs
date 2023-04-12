@@ -20,6 +20,11 @@ namespace UnitsNet.Tests
         private static readonly IFormatProvider NorwegianCulture = new CultureInfo(NorwegianCultureName);
         private static readonly IFormatProvider RussianCulture = new CultureInfo(RussianCultureName);
 
+        public UnitAbbreviationsCacheTests()
+        {
+            Quantity.TEST_RESET();
+        }
+
         // The default, parameterless ToString() method uses 2 sigifnificant digits after the radix point.
         [Theory]
         [InlineData(0, "0 m")]

@@ -8,27 +8,54 @@ namespace UnitsNet
 {
     public partial class Quantity
     {
-        private static readonly Lazy<QuantityInfo[]> InfosLazy;
-        private static readonly Lazy<Dictionary<(Type, string), UnitInfo>> UnitTypeAndNameToUnitInfoLazy;
+        private static readonly Lazy<QuantityInfo[]> GlobalInfosLazy;
+        private static readonly Lazy<Dictionary<(Type, string), UnitInfo>> GlobalUnitTypeAndNameToUnitInfoLazy;
+
+        private static Lazy<QuantityInfo[]> InfosLazy => TEST_OVERRIDE_QuantityInfosLazy ?? GlobalInfosLazy;
+        private static Lazy<Dictionary<(Type, string), UnitInfo>> UnitTypeAndNameToUnitInfoLazy => TEST_OVERRIDE_UnitInfosLazy ?? GlobalUnitTypeAndNameToUnitInfoLazy;
+
+        /// <summary>
+        ///     For testing purposes only. Resets the static state of this class for this thread only.
+        /// </summary>
+        public static void TEST_RESET()
+        {
+            TEST_OVERRIDE_QuantityInfosLazy = CreateQuantityInfosLazy();
+            TEST_OVERRIDE_UnitInfosLazy = CreateUnitInfosLazy();
+        }
+
+        [ThreadStatic]
+        private static Lazy<Dictionary<(Type, string), UnitInfo>>? TEST_OVERRIDE_UnitInfosLazy;
+
+        [ThreadStatic]
+        private static Lazy<QuantityInfo[]>? TEST_OVERRIDE_QuantityInfosLazy;
 
         static Quantity()
         {
             ICollection<QuantityInfo> quantityInfos = ByName.Values;
             Names = quantityInfos.Select(qt => qt.Name).ToArray();
+            GlobalInfosLazy = CreateQuantityInfosLazy();
+            GlobalUnitTypeAndNameToUnitInfoLazy = CreateUnitInfosLazy();
+        }
 
-            InfosLazy = new Lazy<QuantityInfo[]>(() => quantityInfos
-                .OrderBy(quantityInfo => quantityInfo.Name)
-                .ToArray());
+        private static Lazy<QuantityInfo[]> CreateQuantityInfosLazy()
+        {
+            return new Lazy<QuantityInfo[]>(CreateQuantityInfos);
+        }
 
-            UnitTypeAndNameToUnitInfoLazy = new Lazy<Dictionary<(Type, string), UnitInfo>>(() =>
-            {
-                return Infos
-                    .SelectMany(quantityInfo => quantityInfo.UnitInfos
-                        .Select(unitInfo => new KeyValuePair<(Type, string), UnitInfo>(
-                            (unitInfo.Value.GetType(), unitInfo.Name),
-                            unitInfo)))
-                    .ToDictionary(x => x.Key, x => x.Value);
-            });
+        private static Lazy<Dictionary<(Type, string), UnitInfo>> CreateUnitInfosLazy()
+        {
+            return new Lazy<Dictionary<(Type, string), UnitInfo>>(CreateUnitInfos);
+        }
+
+        private static QuantityInfo[] CreateQuantityInfos()
+        {
+            return ByName.Values.OrderBy(quantityInfo => quantityInfo.Name).ToArray();
+        }
+
+        private static Dictionary<(Type, string), UnitInfo> CreateUnitInfos()
+        {
+            return Infos.SelectMany(quantityInfo => quantityInfo.UnitInfos.Select(unitInfo => new KeyValuePair<(Type, string), UnitInfo>((unitInfo.Value.GetType(), unitInfo.Name), unitInfo)))
+                .ToDictionary(x => x.Key, x => x.Value);
         }
 
         /// <summary>
@@ -53,7 +80,7 @@ namespace UnitsNet
             UnitTypeAndNameToUnitInfoLazy.Value.TryGetValue((unitEnum.GetType(), unitEnum.ToString()), out unitInfo);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="unit"></param>
         /// <param name="unitInfo"></param>

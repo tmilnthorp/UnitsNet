@@ -8,6 +8,11 @@ namespace UnitsNet.Tests
 {
     public class QuantityParserTests
     {
+        public QuantityParserTests()
+        {
+            Quantity.TEST_RESET();
+        }
+
         [Fact]
         public void Parse_WithSingleCaseInsensitiveMatch_ParsesWithMatchedUnit()
         {
