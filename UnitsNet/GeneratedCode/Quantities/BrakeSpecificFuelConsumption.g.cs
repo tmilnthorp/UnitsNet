@@ -118,13 +118,9 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{BrakeSpecificFuelConsumptionUnit}"/> representing the default unit mappings for BrakeSpecificFuelConsumption.</returns>
             public static IEnumerable<UnitDefinition<BrakeSpecificFuelConsumptionUnit>> GetDefaultMappings()
             {
-                yield return new (BrakeSpecificFuelConsumptionUnit.GramPerKiloWattHour, "GramPerKiloWattHour", "GramsPerKiloWattHour", BaseUnits.Undefined,
-                     3600000000
-                );
-                yield return new (BrakeSpecificFuelConsumptionUnit.KilogramPerJoule, "KilogramPerJoule", "KilogramsPerJoule", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Second));
-                yield return new (BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour, "PoundPerMechanicalHorsepowerHour", "PoundsPerMechanicalHorsepowerHour", BaseUnits.Undefined,
-                     new QuantityValue(191751395532579, 32399455)
-                );
+                yield return new (BrakeSpecificFuelConsumptionUnit.GramPerKiloWattHour, BrakeSpecificFuelConsumptionUnits.GramPerKiloWattHour);
+                yield return new (BrakeSpecificFuelConsumptionUnit.KilogramPerJoule, BrakeSpecificFuelConsumptionUnits.KilogramPerJoule);
+                yield return new (BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour, BrakeSpecificFuelConsumptionUnits.PoundPerMechanicalHorsepowerHour);
             }
         }
 

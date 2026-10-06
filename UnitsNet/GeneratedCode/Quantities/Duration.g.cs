@@ -139,43 +139,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{DurationUnit}"/> representing the default unit mappings for Duration.</returns>
             public static IEnumerable<UnitDefinition<DurationUnit>> GetDefaultMappings()
             {
-                yield return new (DurationUnit.Day, "Day", "Days", new BaseUnits(time: DurationUnit.Day),
-                     new QuantityValue(1, 86400)
-                );
-                yield return new (DurationUnit.Hour, "Hour", "Hours", new BaseUnits(time: DurationUnit.Hour),
-                     new QuantityValue(1, 3600)
-                );
-                yield return new (DurationUnit.JulianYear, "JulianYear", "JulianYears", new BaseUnits(time: DurationUnit.JulianYear),
-                     new QuantityValue(1, 31557600)
-                );
-                yield return new (DurationUnit.Microsecond, "Microsecond", "Microseconds", new BaseUnits(time: DurationUnit.Microsecond),
-                     1000000
-                );
-                yield return new (DurationUnit.Millisecond, "Millisecond", "Milliseconds", new BaseUnits(time: DurationUnit.Millisecond),
-                     1000
-                );
-                yield return new (DurationUnit.Minute, "Minute", "Minutes", new BaseUnits(time: DurationUnit.Minute),
-                     new QuantityValue(1, 60)
-                );
-                yield return new (DurationUnit.Month30, "Month30", "Months30", new BaseUnits(time: DurationUnit.Month30),
-                     new QuantityValue(1, 2592000)
-                );
-                yield return new (DurationUnit.Nanosecond, "Nanosecond", "Nanoseconds", new BaseUnits(time: DurationUnit.Nanosecond),
-                     1000000000
-                );
-                yield return new (DurationUnit.Picosecond, "Picosecond", "Picoseconds", new BaseUnits(time: DurationUnit.Picosecond),
-                     1000000000000
-                );
-                yield return new (DurationUnit.Second, "Second", "Seconds", new BaseUnits(time: DurationUnit.Second));
-                yield return new (DurationUnit.Sol, "Sol", "Sols", new BaseUnits(time: DurationUnit.Sol),
-                     new QuantityValue(250, 22193811)
-                );
-                yield return new (DurationUnit.Week, "Week", "Weeks", new BaseUnits(time: DurationUnit.Week),
-                     new QuantityValue(1, 604800)
-                );
-                yield return new (DurationUnit.Year365, "Year365", "Years365", new BaseUnits(time: DurationUnit.Year365),
-                     new QuantityValue(1, 31536000)
-                );
+                yield return new (DurationUnit.Day, DurationUnits.Day);
+                yield return new (DurationUnit.Hour, DurationUnits.Hour);
+                yield return new (DurationUnit.JulianYear, DurationUnits.JulianYear);
+                yield return new (DurationUnit.Microsecond, DurationUnits.Microsecond);
+                yield return new (DurationUnit.Millisecond, DurationUnits.Millisecond);
+                yield return new (DurationUnit.Minute, DurationUnits.Minute);
+                yield return new (DurationUnit.Month30, DurationUnits.Month30);
+                yield return new (DurationUnit.Nanosecond, DurationUnits.Nanosecond);
+                yield return new (DurationUnit.Picosecond, DurationUnits.Picosecond);
+                yield return new (DurationUnit.Second, DurationUnits.Second);
+                yield return new (DurationUnit.Sol, DurationUnits.Sol);
+                yield return new (DurationUnit.Week, DurationUnits.Week);
+                yield return new (DurationUnit.Year365, DurationUnits.Year365);
             }
         }
 

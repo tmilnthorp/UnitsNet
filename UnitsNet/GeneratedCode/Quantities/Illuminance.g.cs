@@ -120,16 +120,10 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{IlluminanceUnit}"/> representing the default unit mappings for Illuminance.</returns>
             public static IEnumerable<UnitDefinition<IlluminanceUnit>> GetDefaultMappings()
             {
-                yield return new (IlluminanceUnit.Kilolux, "Kilolux", "Kilolux", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (IlluminanceUnit.Lux, "Lux", "Lux", new BaseUnits(length: LengthUnit.Meter, luminousIntensity: LuminousIntensityUnit.Candela));
-                yield return new (IlluminanceUnit.Megalux, "Megalux", "Megalux", new BaseUnits(length: LengthUnit.Millimeter, luminousIntensity: LuminousIntensityUnit.Candela),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (IlluminanceUnit.Millilux, "Millilux", "Millilux", BaseUnits.Undefined,
-                     1000
-                );
+                yield return new (IlluminanceUnit.Kilolux, IlluminanceUnits.Kilolux);
+                yield return new (IlluminanceUnit.Lux, IlluminanceUnits.Lux);
+                yield return new (IlluminanceUnit.Megalux, IlluminanceUnits.Megalux);
+                yield return new (IlluminanceUnit.Millilux, IlluminanceUnits.Millilux);
             }
         }
 

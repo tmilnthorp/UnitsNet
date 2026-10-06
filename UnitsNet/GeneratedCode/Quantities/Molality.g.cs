@@ -119,13 +119,9 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolalityUnit}"/> representing the default unit mappings for Molality.</returns>
             public static IEnumerable<UnitDefinition<MolalityUnit>> GetDefaultMappings()
             {
-                yield return new (MolalityUnit.MillimolePerKilogram, "MillimolePerKilogram", "MillimolesPerKilogram", new BaseUnits(mass: MassUnit.Kilogram, amount: AmountOfSubstanceUnit.Millimole),
-                     1000
-                );
-                yield return new (MolalityUnit.MolePerGram, "MolePerGram", "MolesPerGram", new BaseUnits(mass: MassUnit.Gram, amount: AmountOfSubstanceUnit.Mole),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (MolalityUnit.MolePerKilogram, "MolePerKilogram", "MolesPerKilogram", new BaseUnits(mass: MassUnit.Kilogram, amount: AmountOfSubstanceUnit.Mole));
+                yield return new (MolalityUnit.MillimolePerKilogram, MolalityUnits.MillimolePerKilogram);
+                yield return new (MolalityUnit.MolePerGram, MolalityUnits.MolePerGram);
+                yield return new (MolalityUnit.MolePerKilogram, MolalityUnits.MolePerKilogram);
             }
         }
 

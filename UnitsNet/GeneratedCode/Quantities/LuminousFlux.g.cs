@@ -123,7 +123,7 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LuminousFluxUnit}"/> representing the default unit mappings for LuminousFlux.</returns>
             public static IEnumerable<UnitDefinition<LuminousFluxUnit>> GetDefaultMappings()
             {
-                yield return new (LuminousFluxUnit.Lumen, "Lumen", "Lumens", new BaseUnits(luminousIntensity: LuminousIntensityUnit.Candela));
+                yield return new (LuminousFluxUnit.Lumen, LuminousFluxUnits.Lumen);
             }
         }
 

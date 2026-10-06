@@ -120,34 +120,16 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LuminanceUnit}"/> representing the default unit mappings for Luminance.</returns>
             public static IEnumerable<UnitDefinition<LuminanceUnit>> GetDefaultMappings()
             {
-                yield return new (LuminanceUnit.CandelaPerSquareFoot, "CandelaPerSquareFoot", "CandelasPerSquareFoot", BaseUnits.Undefined,
-                     new QuantityValue(145161, 1562500)
-                );
-                yield return new (LuminanceUnit.CandelaPerSquareInch, "CandelaPerSquareInch", "CandelasPerSquareInch", BaseUnits.Undefined,
-                     new QuantityValue(16129, 25000000)
-                );
-                yield return new (LuminanceUnit.CandelaPerSquareMeter, "CandelaPerSquareMeter", "CandelasPerSquareMeter", new BaseUnits(length: LengthUnit.Meter, luminousIntensity: LuminousIntensityUnit.Candela));
-                yield return new (LuminanceUnit.CenticandelaPerSquareMeter, "CenticandelaPerSquareMeter", "CenticandelasPerSquareMeter", new BaseUnits(length: LengthUnit.Decameter, luminousIntensity: LuminousIntensityUnit.Candela),
-                     100
-                );
-                yield return new (LuminanceUnit.DecicandelaPerSquareMeter, "DecicandelaPerSquareMeter", "DecicandelasPerSquareMeter", BaseUnits.Undefined,
-                     10
-                );
-                yield return new (LuminanceUnit.KilocandelaPerSquareMeter, "KilocandelaPerSquareMeter", "KilocandelasPerSquareMeter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (LuminanceUnit.MicrocandelaPerSquareMeter, "MicrocandelaPerSquareMeter", "MicrocandelasPerSquareMeter", new BaseUnits(length: LengthUnit.Kilometer, luminousIntensity: LuminousIntensityUnit.Candela),
-                     1000000
-                );
-                yield return new (LuminanceUnit.MillicandelaPerSquareMeter, "MillicandelaPerSquareMeter", "MillicandelasPerSquareMeter", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (LuminanceUnit.NanocandelaPerSquareMeter, "NanocandelaPerSquareMeter", "NanocandelasPerSquareMeter", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (LuminanceUnit.Nit, "Nit", "Nits", BaseUnits.Undefined,
-                     1
-                );
+                yield return new (LuminanceUnit.CandelaPerSquareFoot, LuminanceUnits.CandelaPerSquareFoot);
+                yield return new (LuminanceUnit.CandelaPerSquareInch, LuminanceUnits.CandelaPerSquareInch);
+                yield return new (LuminanceUnit.CandelaPerSquareMeter, LuminanceUnits.CandelaPerSquareMeter);
+                yield return new (LuminanceUnit.CenticandelaPerSquareMeter, LuminanceUnits.CenticandelaPerSquareMeter);
+                yield return new (LuminanceUnit.DecicandelaPerSquareMeter, LuminanceUnits.DecicandelaPerSquareMeter);
+                yield return new (LuminanceUnit.KilocandelaPerSquareMeter, LuminanceUnits.KilocandelaPerSquareMeter);
+                yield return new (LuminanceUnit.MicrocandelaPerSquareMeter, LuminanceUnits.MicrocandelaPerSquareMeter);
+                yield return new (LuminanceUnit.MillicandelaPerSquareMeter, LuminanceUnits.MillicandelaPerSquareMeter);
+                yield return new (LuminanceUnit.NanocandelaPerSquareMeter, LuminanceUnits.NanocandelaPerSquareMeter);
+                yield return new (LuminanceUnit.Nit, LuminanceUnits.Nit);
             }
         }
 

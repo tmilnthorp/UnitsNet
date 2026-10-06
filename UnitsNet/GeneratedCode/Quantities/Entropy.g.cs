@@ -119,25 +119,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{EntropyUnit}"/> representing the default unit mappings for Entropy.</returns>
             public static IEnumerable<UnitDefinition<EntropyUnit>> GetDefaultMappings()
             {
-                yield return new (EntropyUnit.CaloriePerKelvin, "CaloriePerKelvin", "CaloriesPerKelvin", BaseUnits.Undefined,
-                     new QuantityValue(125, 523)
-                );
-                yield return new (EntropyUnit.JoulePerDegreeCelsius, "JoulePerDegreeCelsius", "JoulesPerDegreeCelsius", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, temperature: TemperatureUnit.DegreeCelsius),
-                     1
-                );
-                yield return new (EntropyUnit.JoulePerKelvin, "JoulePerKelvin", "JoulesPerKelvin", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, temperature: TemperatureUnit.Kelvin));
-                yield return new (EntropyUnit.KilocaloriePerKelvin, "KilocaloriePerKelvin", "KilocaloriesPerKelvin", BaseUnits.Undefined,
-                     new QuantityValue(1, 4184)
-                );
-                yield return new (EntropyUnit.KilojoulePerDegreeCelsius, "KilojoulePerDegreeCelsius", "KilojoulesPerDegreeCelsius", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (EntropyUnit.KilojoulePerKelvin, "KilojoulePerKelvin", "KilojoulesPerKelvin", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (EntropyUnit.MegajoulePerKelvin, "MegajoulePerKelvin", "MegajoulesPerKelvin", new BaseUnits(length: LengthUnit.Kilometer, mass: MassUnit.Kilogram, time: DurationUnit.Second, temperature: TemperatureUnit.Kelvin),
-                     new QuantityValue(1, 1000000)
-                );
+                yield return new (EntropyUnit.CaloriePerKelvin, EntropyUnits.CaloriePerKelvin);
+                yield return new (EntropyUnit.JoulePerDegreeCelsius, EntropyUnits.JoulePerDegreeCelsius);
+                yield return new (EntropyUnit.JoulePerKelvin, EntropyUnits.JoulePerKelvin);
+                yield return new (EntropyUnit.KilocaloriePerKelvin, EntropyUnits.KilocaloriePerKelvin);
+                yield return new (EntropyUnit.KilojoulePerDegreeCelsius, EntropyUnits.KilojoulePerDegreeCelsius);
+                yield return new (EntropyUnit.KilojoulePerKelvin, EntropyUnits.KilojoulePerKelvin);
+                yield return new (EntropyUnit.MegajoulePerKelvin, EntropyUnits.MegajoulePerKelvin);
             }
         }
 

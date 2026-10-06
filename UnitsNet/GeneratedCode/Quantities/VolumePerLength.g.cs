@@ -117,31 +117,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumePerLengthUnit}"/> representing the default unit mappings for VolumePerLength.</returns>
             public static IEnumerable<UnitDefinition<VolumePerLengthUnit>> GetDefaultMappings()
             {
-                yield return new (VolumePerLengthUnit.CubicMeterPerMeter, "CubicMeterPerMeter", "CubicMetersPerMeter", new BaseUnits(length: LengthUnit.Meter));
-                yield return new (VolumePerLengthUnit.CubicYardPerFoot, "CubicYardPerFoot", "CubicYardsPerFoot", BaseUnits.Undefined,
-                     new QuantityValue(1562500, 3919347)
-                );
-                yield return new (VolumePerLengthUnit.CubicYardPerUsSurveyFoot, "CubicYardPerUsSurveyFoot", "CubicYardsPerUsSurveyFoot", BaseUnits.Undefined,
-                     new QuantityValue(781250000000, 1959669580653)
-                );
-                yield return new (VolumePerLengthUnit.ImperialGallonPerMile, "ImperialGallonPerMile", "ImperialGallonsPerMile", BaseUnits.Undefined,
-                     new QuantityValue(160934400000, 454609)
-                );
-                yield return new (VolumePerLengthUnit.LiterPerKilometer, "LiterPerKilometer", "LitersPerKilometer", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (VolumePerLengthUnit.LiterPerMeter, "LiterPerMeter", "LitersPerMeter", new BaseUnits(length: LengthUnit.Decimeter),
-                     1000
-                );
-                yield return new (VolumePerLengthUnit.LiterPerMillimeter, "LiterPerMillimeter", "LitersPerMillimeter", BaseUnits.Undefined,
-                     1
-                );
-                yield return new (VolumePerLengthUnit.OilBarrelPerFoot, "OilBarrelPerFoot", "OilBarrelsPerFoot", BaseUnits.Undefined,
-                     new QuantityValue(50000000, 26080593)
-                );
-                yield return new (VolumePerLengthUnit.UsGallonPerMile, "UsGallonPerMile", "UsGallonsPerMile", BaseUnits.Undefined,
-                     new QuantityValue(48000000000, 112903)
-                );
+                yield return new (VolumePerLengthUnit.CubicMeterPerMeter, VolumePerLengthUnits.CubicMeterPerMeter);
+                yield return new (VolumePerLengthUnit.CubicYardPerFoot, VolumePerLengthUnits.CubicYardPerFoot);
+                yield return new (VolumePerLengthUnit.CubicYardPerUsSurveyFoot, VolumePerLengthUnits.CubicYardPerUsSurveyFoot);
+                yield return new (VolumePerLengthUnit.ImperialGallonPerMile, VolumePerLengthUnits.ImperialGallonPerMile);
+                yield return new (VolumePerLengthUnit.LiterPerKilometer, VolumePerLengthUnits.LiterPerKilometer);
+                yield return new (VolumePerLengthUnit.LiterPerMeter, VolumePerLengthUnits.LiterPerMeter);
+                yield return new (VolumePerLengthUnit.LiterPerMillimeter, VolumePerLengthUnits.LiterPerMillimeter);
+                yield return new (VolumePerLengthUnit.OilBarrelPerFoot, VolumePerLengthUnits.OilBarrelPerFoot);
+                yield return new (VolumePerLengthUnit.UsGallonPerMile, VolumePerLengthUnits.UsGallonPerMile);
             }
         }
 

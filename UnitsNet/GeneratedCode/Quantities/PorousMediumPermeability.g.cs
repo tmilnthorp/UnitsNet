@@ -119,19 +119,11 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PorousMediumPermeabilityUnit}"/> representing the default unit mappings for PorousMediumPermeability.</returns>
             public static IEnumerable<UnitDefinition<PorousMediumPermeabilityUnit>> GetDefaultMappings()
             {
-                yield return new (PorousMediumPermeabilityUnit.Darcy, "Darcy", "Darcys", BaseUnits.Undefined,
-                     new QuantityValue(QuantityValue.PowerOfTen(19), 9869233)
-                );
-                yield return new (PorousMediumPermeabilityUnit.Microdarcy, "Microdarcy", "Microdarcys", BaseUnits.Undefined,
-                     new QuantityValue(QuantityValue.PowerOfTen(25), 9869233)
-                );
-                yield return new (PorousMediumPermeabilityUnit.Millidarcy, "Millidarcy", "Millidarcys", BaseUnits.Undefined,
-                     new QuantityValue(QuantityValue.PowerOfTen(22), 9869233)
-                );
-                yield return new (PorousMediumPermeabilityUnit.SquareCentimeter, "SquareCentimeter", "SquareCentimeters", new BaseUnits(length: LengthUnit.Centimeter),
-                     10000
-                );
-                yield return new (PorousMediumPermeabilityUnit.SquareMeter, "SquareMeter", "SquareMeters", new BaseUnits(length: LengthUnit.Meter));
+                yield return new (PorousMediumPermeabilityUnit.Darcy, PorousMediumPermeabilityUnits.Darcy);
+                yield return new (PorousMediumPermeabilityUnit.Microdarcy, PorousMediumPermeabilityUnits.Microdarcy);
+                yield return new (PorousMediumPermeabilityUnit.Millidarcy, PorousMediumPermeabilityUnits.Millidarcy);
+                yield return new (PorousMediumPermeabilityUnit.SquareCentimeter, PorousMediumPermeabilityUnits.SquareCentimeter);
+                yield return new (PorousMediumPermeabilityUnit.SquareMeter, PorousMediumPermeabilityUnits.SquareMeter);
             }
         }
 

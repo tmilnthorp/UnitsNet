@@ -119,121 +119,45 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{InformationUnit}"/> representing the default unit mappings for Information.</returns>
             public static IEnumerable<UnitDefinition<InformationUnit>> GetDefaultMappings()
             {
-                yield return new (InformationUnit.Bit, "Bit", "Bits", BaseUnits.Undefined);
-                yield return new (InformationUnit.Byte, "Byte", "Bytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8)
-                );
-                yield return new (InformationUnit.Exabit, "Exabit", "Exabits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000000000)
-                );
-                yield return new (InformationUnit.Exabyte, "Exabyte", "Exabytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000000000)
-                );
-                yield return new (InformationUnit.Exaoctet, "Exaoctet", "Exaoctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000000000)
-                );
-                yield return new (InformationUnit.Exbibit, "Exbibit", "Exbibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1152921504606846976)
-                );
-                yield return new (InformationUnit.Exbibyte, "Exbibyte", "Exbibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, BigInteger.Pow(2, 63))
-                );
-                yield return new (InformationUnit.Exbioctet, "Exbioctet", "Exbioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, BigInteger.Pow(2, 63))
-                );
-                yield return new (InformationUnit.Gibibit, "Gibibit", "Gibibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1073741824)
-                );
-                yield return new (InformationUnit.Gibibyte, "Gibibyte", "Gibibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8589934592)
-                );
-                yield return new (InformationUnit.Gibioctet, "Gibioctet", "Gibioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8589934592)
-                );
-                yield return new (InformationUnit.Gigabit, "Gigabit", "Gigabits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (InformationUnit.Gigabyte, "Gigabyte", "Gigabytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000)
-                );
-                yield return new (InformationUnit.Gigaoctet, "Gigaoctet", "Gigaoctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000)
-                );
-                yield return new (InformationUnit.Kibibit, "Kibibit", "Kibibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1024)
-                );
-                yield return new (InformationUnit.Kibibyte, "Kibibyte", "Kibibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8192)
-                );
-                yield return new (InformationUnit.Kibioctet, "Kibioctet", "Kibioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8192)
-                );
-                yield return new (InformationUnit.Kilobit, "Kilobit", "Kilobits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (InformationUnit.Kilobyte, "Kilobyte", "Kilobytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000)
-                );
-                yield return new (InformationUnit.Kilooctet, "Kilooctet", "Kilooctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000)
-                );
-                yield return new (InformationUnit.Mebibit, "Mebibit", "Mebibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1048576)
-                );
-                yield return new (InformationUnit.Mebibyte, "Mebibyte", "Mebibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8388608)
-                );
-                yield return new (InformationUnit.Mebioctet, "Mebioctet", "Mebioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8388608)
-                );
-                yield return new (InformationUnit.Megabit, "Megabit", "Megabits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (InformationUnit.Megabyte, "Megabyte", "Megabytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000)
-                );
-                yield return new (InformationUnit.Megaoctet, "Megaoctet", "Megaoctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000)
-                );
-                yield return new (InformationUnit.Octet, "Octet", "Octets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8)
-                );
-                yield return new (InformationUnit.Pebibit, "Pebibit", "Pebibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1125899906842624)
-                );
-                yield return new (InformationUnit.Pebibyte, "Pebibyte", "Pebibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 9007199254740992)
-                );
-                yield return new (InformationUnit.Pebioctet, "Pebioctet", "Pebioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 9007199254740992)
-                );
-                yield return new (InformationUnit.Petabit, "Petabit", "Petabits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000000)
-                );
-                yield return new (InformationUnit.Petabyte, "Petabyte", "Petabytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000000)
-                );
-                yield return new (InformationUnit.Petaoctet, "Petaoctet", "Petaoctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000000)
-                );
-                yield return new (InformationUnit.Tebibit, "Tebibit", "Tebibits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1099511627776)
-                );
-                yield return new (InformationUnit.Tebibyte, "Tebibyte", "Tebibytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8796093022208)
-                );
-                yield return new (InformationUnit.Tebioctet, "Tebioctet", "Tebioctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8796093022208)
-                );
-                yield return new (InformationUnit.Terabit, "Terabit", "Terabits", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (InformationUnit.Terabyte, "Terabyte", "Terabytes", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000)
-                );
-                yield return new (InformationUnit.Teraoctet, "Teraoctet", "Teraoctets", BaseUnits.Undefined,
-                     new QuantityValue(1, 8000000000000)
-                );
+                yield return new (InformationUnit.Bit, InformationUnits.Bit);
+                yield return new (InformationUnit.Byte, InformationUnits.Byte);
+                yield return new (InformationUnit.Exabit, InformationUnits.Exabit);
+                yield return new (InformationUnit.Exabyte, InformationUnits.Exabyte);
+                yield return new (InformationUnit.Exaoctet, InformationUnits.Exaoctet);
+                yield return new (InformationUnit.Exbibit, InformationUnits.Exbibit);
+                yield return new (InformationUnit.Exbibyte, InformationUnits.Exbibyte);
+                yield return new (InformationUnit.Exbioctet, InformationUnits.Exbioctet);
+                yield return new (InformationUnit.Gibibit, InformationUnits.Gibibit);
+                yield return new (InformationUnit.Gibibyte, InformationUnits.Gibibyte);
+                yield return new (InformationUnit.Gibioctet, InformationUnits.Gibioctet);
+                yield return new (InformationUnit.Gigabit, InformationUnits.Gigabit);
+                yield return new (InformationUnit.Gigabyte, InformationUnits.Gigabyte);
+                yield return new (InformationUnit.Gigaoctet, InformationUnits.Gigaoctet);
+                yield return new (InformationUnit.Kibibit, InformationUnits.Kibibit);
+                yield return new (InformationUnit.Kibibyte, InformationUnits.Kibibyte);
+                yield return new (InformationUnit.Kibioctet, InformationUnits.Kibioctet);
+                yield return new (InformationUnit.Kilobit, InformationUnits.Kilobit);
+                yield return new (InformationUnit.Kilobyte, InformationUnits.Kilobyte);
+                yield return new (InformationUnit.Kilooctet, InformationUnits.Kilooctet);
+                yield return new (InformationUnit.Mebibit, InformationUnits.Mebibit);
+                yield return new (InformationUnit.Mebibyte, InformationUnits.Mebibyte);
+                yield return new (InformationUnit.Mebioctet, InformationUnits.Mebioctet);
+                yield return new (InformationUnit.Megabit, InformationUnits.Megabit);
+                yield return new (InformationUnit.Megabyte, InformationUnits.Megabyte);
+                yield return new (InformationUnit.Megaoctet, InformationUnits.Megaoctet);
+                yield return new (InformationUnit.Octet, InformationUnits.Octet);
+                yield return new (InformationUnit.Pebibit, InformationUnits.Pebibit);
+                yield return new (InformationUnit.Pebibyte, InformationUnits.Pebibyte);
+                yield return new (InformationUnit.Pebioctet, InformationUnits.Pebioctet);
+                yield return new (InformationUnit.Petabit, InformationUnits.Petabit);
+                yield return new (InformationUnit.Petabyte, InformationUnits.Petabyte);
+                yield return new (InformationUnit.Petaoctet, InformationUnits.Petaoctet);
+                yield return new (InformationUnit.Tebibit, InformationUnits.Tebibit);
+                yield return new (InformationUnit.Tebibyte, InformationUnits.Tebibyte);
+                yield return new (InformationUnit.Tebioctet, InformationUnits.Tebioctet);
+                yield return new (InformationUnit.Terabit, InformationUnits.Terabit);
+                yield return new (InformationUnit.Terabyte, InformationUnits.Terabyte);
+                yield return new (InformationUnit.Teraoctet, InformationUnits.Teraoctet);
             }
         }
 

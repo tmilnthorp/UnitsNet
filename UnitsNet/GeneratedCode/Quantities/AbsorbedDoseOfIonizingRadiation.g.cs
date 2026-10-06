@@ -120,55 +120,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AbsorbedDoseOfIonizingRadiationUnit}"/> representing the default unit mappings for AbsorbedDoseOfIonizingRadiation.</returns>
             public static IEnumerable<UnitDefinition<AbsorbedDoseOfIonizingRadiationUnit>> GetDefaultMappings()
             {
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Centigray, "Centigray", "Centigrays", new BaseUnits(length: LengthUnit.Decimeter, time: DurationUnit.Second),
-                     100
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Decigray, "Decigray", "Decigrays", BaseUnits.Undefined,
-                     10
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Femtogray, "Femtogray", "Femtograys", BaseUnits.Undefined,
-                     1000000000000000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Gigagray, "Gigagray", "Gigagrays", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Gray, "Gray", "Grays", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Second));
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Kilogray, "Kilogray", "Kilograys", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Kilorad, "Kilorad", "Kilorads", BaseUnits.Undefined,
-                     new QuantityValue(1, 10)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Megagray, "Megagray", "Megagrays", new BaseUnits(length: LengthUnit.Kilometer, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Megarad, "Megarad", "Megarads", BaseUnits.Undefined,
-                     new QuantityValue(1, 10000)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Microgray, "Microgray", "Micrograys", new BaseUnits(length: LengthUnit.Millimeter, time: DurationUnit.Second),
-                     1000000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Milligray, "Milligray", "Milligrays", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Millirad, "Millirad", "Millirads", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Nanogray, "Nanogray", "Nanograys", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Petagray, "Petagray", "Petagrays", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000000)
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Picogray, "Picogray", "Picograys", new BaseUnits(length: LengthUnit.Micrometer, time: DurationUnit.Second),
-                     1000000000000
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Rad, "Rad", "Rads", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Teragray, "Teragray", "Teragrays", new BaseUnits(length: LengthUnit.Megameter, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000000000)
-                );
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Centigray, AbsorbedDoseOfIonizingRadiationUnits.Centigray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Decigray, AbsorbedDoseOfIonizingRadiationUnits.Decigray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Femtogray, AbsorbedDoseOfIonizingRadiationUnits.Femtogray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Gigagray, AbsorbedDoseOfIonizingRadiationUnits.Gigagray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Gray, AbsorbedDoseOfIonizingRadiationUnits.Gray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Kilogray, AbsorbedDoseOfIonizingRadiationUnits.Kilogray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Kilorad, AbsorbedDoseOfIonizingRadiationUnits.Kilorad);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Megagray, AbsorbedDoseOfIonizingRadiationUnits.Megagray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Megarad, AbsorbedDoseOfIonizingRadiationUnits.Megarad);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Microgray, AbsorbedDoseOfIonizingRadiationUnits.Microgray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Milligray, AbsorbedDoseOfIonizingRadiationUnits.Milligray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Millirad, AbsorbedDoseOfIonizingRadiationUnits.Millirad);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Nanogray, AbsorbedDoseOfIonizingRadiationUnits.Nanogray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Petagray, AbsorbedDoseOfIonizingRadiationUnits.Petagray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Picogray, AbsorbedDoseOfIonizingRadiationUnits.Picogray);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Rad, AbsorbedDoseOfIonizingRadiationUnits.Rad);
+                yield return new (AbsorbedDoseOfIonizingRadiationUnit.Teragray, AbsorbedDoseOfIonizingRadiationUnits.Teragray);
             }
         }
 

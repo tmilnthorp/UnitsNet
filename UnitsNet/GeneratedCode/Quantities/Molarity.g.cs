@@ -124,37 +124,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarityUnit}"/> representing the default unit mappings for Molarity.</returns>
             public static IEnumerable<UnitDefinition<MolarityUnit>> GetDefaultMappings()
             {
-                yield return new (MolarityUnit.CentimolePerLiter, "CentimolePerLiter", "CentimolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Centimole),
-                     new QuantityValue(1, 10)
-                );
-                yield return new (MolarityUnit.DecimolePerLiter, "DecimolePerLiter", "DecimolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Decimole),
-                     new QuantityValue(1, 100)
-                );
-                yield return new (MolarityUnit.FemtomolePerLiter, "FemtomolePerLiter", "FemtomolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Femtomole),
-                     1000000000000
-                );
-                yield return new (MolarityUnit.KilomolePerCubicMeter, "KilomolePerCubicMeter", "KilomolesPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, amount: AmountOfSubstanceUnit.Kilomole),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (MolarityUnit.MicromolePerLiter, "MicromolePerLiter", "MicromolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Micromole),
-                     1000
-                );
-                yield return new (MolarityUnit.MillimolePerLiter, "MillimolePerLiter", "MillimolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Millimole),
-                     1
-                );
-                yield return new (MolarityUnit.MolePerCubicMeter, "MolePerCubicMeter", "MolesPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, amount: AmountOfSubstanceUnit.Mole));
-                yield return new (MolarityUnit.MolePerLiter, "MolePerLiter", "MolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Mole),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (MolarityUnit.NanomolePerLiter, "NanomolePerLiter", "NanomolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Nanomole),
-                     1000000
-                );
-                yield return new (MolarityUnit.PicomolePerLiter, "PicomolePerLiter", "PicomolesPerLiter", new BaseUnits(length: LengthUnit.Decimeter, amount: AmountOfSubstanceUnit.Picomole),
-                     1000000000
-                );
-                yield return new (MolarityUnit.PoundMolePerCubicFoot, "PoundMolePerCubicFoot", "PoundMolesPerCubicFoot", new BaseUnits(length: LengthUnit.Foot, amount: AmountOfSubstanceUnit.PoundMole),
-                     new QuantityValue(221225364, 3543690390625)
-                );
+                yield return new (MolarityUnit.CentimolePerLiter, MolarityUnits.CentimolePerLiter);
+                yield return new (MolarityUnit.DecimolePerLiter, MolarityUnits.DecimolePerLiter);
+                yield return new (MolarityUnit.FemtomolePerLiter, MolarityUnits.FemtomolePerLiter);
+                yield return new (MolarityUnit.KilomolePerCubicMeter, MolarityUnits.KilomolePerCubicMeter);
+                yield return new (MolarityUnit.MicromolePerLiter, MolarityUnits.MicromolePerLiter);
+                yield return new (MolarityUnit.MillimolePerLiter, MolarityUnits.MillimolePerLiter);
+                yield return new (MolarityUnit.MolePerCubicMeter, MolarityUnits.MolePerCubicMeter);
+                yield return new (MolarityUnit.MolePerLiter, MolarityUnits.MolePerLiter);
+                yield return new (MolarityUnit.NanomolePerLiter, MolarityUnits.NanomolePerLiter);
+                yield return new (MolarityUnit.PicomolePerLiter, MolarityUnits.PicomolePerLiter);
+                yield return new (MolarityUnit.PoundMolePerCubicFoot, MolarityUnits.PoundMolePerCubicFoot);
             }
         }
 

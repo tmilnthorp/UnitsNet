@@ -120,52 +120,22 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricConductanceUnit}"/> representing the default unit mappings for ElectricConductance.</returns>
             public static IEnumerable<UnitDefinition<ElectricConductanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricConductanceUnit.Gigamho, "Gigamho", "Gigamhos", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (ElectricConductanceUnit.Gigasiemens, "Gigasiemens", "Gigasiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Microgram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (ElectricConductanceUnit.Kilomho, "Kilomho", "Kilomhos", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricConductanceUnit.Kilosiemens, "Kilosiemens", "Kilosiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricConductanceUnit.Megamho, "Megamho", "Megamhos", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricConductanceUnit.Megasiemens, "Megasiemens", "Megasiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricConductanceUnit.Mho, "Mho", "Mhos", BaseUnits.Undefined,
-                     1
-                );
-                yield return new (ElectricConductanceUnit.Micromho, "Micromho", "Micromhos", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (ElectricConductanceUnit.Microsiemens, "Microsiemens", "Microsiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Milliampere),
-                     1000000
-                );
-                yield return new (ElectricConductanceUnit.Millimho, "Millimho", "Millimhos", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (ElectricConductanceUnit.Millisiemens, "Millisiemens", "Millisiemens", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (ElectricConductanceUnit.Nanomho, "Nanomho", "Nanomhos", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (ElectricConductanceUnit.Nanosiemens, "Nanosiemens", "Nanosiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Millisecond, current: ElectricCurrentUnit.Ampere),
-                     1000000000
-                );
-                yield return new (ElectricConductanceUnit.Siemens, "Siemens", "Siemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere));
-                yield return new (ElectricConductanceUnit.Teramho, "Teramho", "Teramhos", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (ElectricConductanceUnit.Terasiemens, "Terasiemens", "Terasiemens", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Nanogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000000000000)
-                );
+                yield return new (ElectricConductanceUnit.Gigamho, ElectricConductanceUnits.Gigamho);
+                yield return new (ElectricConductanceUnit.Gigasiemens, ElectricConductanceUnits.Gigasiemens);
+                yield return new (ElectricConductanceUnit.Kilomho, ElectricConductanceUnits.Kilomho);
+                yield return new (ElectricConductanceUnit.Kilosiemens, ElectricConductanceUnits.Kilosiemens);
+                yield return new (ElectricConductanceUnit.Megamho, ElectricConductanceUnits.Megamho);
+                yield return new (ElectricConductanceUnit.Megasiemens, ElectricConductanceUnits.Megasiemens);
+                yield return new (ElectricConductanceUnit.Mho, ElectricConductanceUnits.Mho);
+                yield return new (ElectricConductanceUnit.Micromho, ElectricConductanceUnits.Micromho);
+                yield return new (ElectricConductanceUnit.Microsiemens, ElectricConductanceUnits.Microsiemens);
+                yield return new (ElectricConductanceUnit.Millimho, ElectricConductanceUnits.Millimho);
+                yield return new (ElectricConductanceUnit.Millisiemens, ElectricConductanceUnits.Millisiemens);
+                yield return new (ElectricConductanceUnit.Nanomho, ElectricConductanceUnits.Nanomho);
+                yield return new (ElectricConductanceUnit.Nanosiemens, ElectricConductanceUnits.Nanosiemens);
+                yield return new (ElectricConductanceUnit.Siemens, ElectricConductanceUnits.Siemens);
+                yield return new (ElectricConductanceUnit.Teramho, ElectricConductanceUnits.Teramho);
+                yield return new (ElectricConductanceUnit.Terasiemens, ElectricConductanceUnits.Terasiemens);
             }
         }
 

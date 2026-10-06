@@ -129,22 +129,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricPotentialUnit}"/> representing the default unit mappings for ElectricPotential.</returns>
             public static IEnumerable<UnitDefinition<ElectricPotentialUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricPotentialUnit.Kilovolt, "Kilovolt", "Kilovolts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Milliampere),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricPotentialUnit.Megavolt, "Megavolt", "Megavolts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Microampere),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricPotentialUnit.Microvolt, "Microvolt", "Microvolts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     1000000
-                );
-                yield return new (ElectricPotentialUnit.Millivolt, "Millivolt", "Millivolts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     1000
-                );
-                yield return new (ElectricPotentialUnit.Nanovolt, "Nanovolt", "Nanovolts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Microgram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     1000000000
-                );
-                yield return new (ElectricPotentialUnit.Volt, "Volt", "Volts", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere));
+                yield return new (ElectricPotentialUnit.Kilovolt, ElectricPotentialUnits.Kilovolt);
+                yield return new (ElectricPotentialUnit.Megavolt, ElectricPotentialUnits.Megavolt);
+                yield return new (ElectricPotentialUnit.Microvolt, ElectricPotentialUnits.Microvolt);
+                yield return new (ElectricPotentialUnit.Millivolt, ElectricPotentialUnits.Millivolt);
+                yield return new (ElectricPotentialUnit.Nanovolt, ElectricPotentialUnits.Nanovolt);
+                yield return new (ElectricPotentialUnit.Volt, ElectricPotentialUnits.Volt);
             }
         }
 

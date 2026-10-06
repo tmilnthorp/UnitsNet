@@ -120,16 +120,10 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricReactivePowerUnit}"/> representing the default unit mappings for ElectricReactivePower.</returns>
             public static IEnumerable<UnitDefinition<ElectricReactivePowerUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricReactivePowerUnit.GigavoltampereReactive, "GigavoltampereReactive", "GigavoltamperesReactive", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Millisecond),
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (ElectricReactivePowerUnit.KilovoltampereReactive, "KilovoltampereReactive", "KilovoltamperesReactive", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricReactivePowerUnit.MegavoltampereReactive, "MegavoltampereReactive", "MegavoltamperesReactive", new BaseUnits(length: LengthUnit.Kilometer, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricReactivePowerUnit.VoltampereReactive, "VoltampereReactive", "VoltamperesReactive", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second));
+                yield return new (ElectricReactivePowerUnit.GigavoltampereReactive, ElectricReactivePowerUnits.GigavoltampereReactive);
+                yield return new (ElectricReactivePowerUnit.KilovoltampereReactive, ElectricReactivePowerUnits.KilovoltampereReactive);
+                yield return new (ElectricReactivePowerUnit.MegavoltampereReactive, ElectricReactivePowerUnits.MegavoltampereReactive);
+                yield return new (ElectricReactivePowerUnit.VoltampereReactive, ElectricReactivePowerUnits.VoltampereReactive);
             }
         }
 

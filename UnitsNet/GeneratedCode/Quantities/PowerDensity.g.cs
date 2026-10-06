@@ -117,142 +117,52 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PowerDensityUnit}"/> representing the default unit mappings for PowerDensity.</returns>
             public static IEnumerable<UnitDefinition<PowerDensityUnit>> GetDefaultMappings()
             {
-                yield return new (PowerDensityUnit.BtuPerSecondCubicFoot, "BtuPerSecondCubicFoot", "BtusPerSecondCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(884901456, 32970495394375)
-                );
-                yield return new (PowerDensityUnit.BtuPerSecondCubicInch, "BtuPerSecondCubicInch", "BtusPerSecondCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 131881981577500)
-                );
-                yield return new (PowerDensityUnit.DecawattPerCubicFoot, "DecawattPerCubicFoot", "DecawattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 19531250000)
-                );
-                yield return new (PowerDensityUnit.DecawattPerCubicInch, "DecawattPerCubicInch", "DecawattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 1250000000000)
-                );
-                yield return new (PowerDensityUnit.DecawattPerCubicMeter, "DecawattPerCubicMeter", "DecawattsPerCubicMeter", new BaseUnits(length: LengthUnit.Decimeter, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 10)
-                );
-                yield return new (PowerDensityUnit.DecawattPerLiter, "DecawattPerLiter", "DecawattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 10000)
-                );
-                yield return new (PowerDensityUnit.DeciwattPerCubicFoot, "DeciwattPerCubicFoot", "DeciwattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 195312500)
-                );
-                yield return new (PowerDensityUnit.DeciwattPerCubicInch, "DeciwattPerCubicInch", "DeciwattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 12500000000)
-                );
-                yield return new (PowerDensityUnit.DeciwattPerCubicMeter, "DeciwattPerCubicMeter", "DeciwattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Hectogram, time: DurationUnit.Second),
-                     10
-                );
-                yield return new (PowerDensityUnit.DeciwattPerLiter, "DeciwattPerLiter", "DeciwattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 100)
-                );
-                yield return new (PowerDensityUnit.GigawattPerCubicFoot, "GigawattPerCubicFoot", "GigawattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 1953125000000000000)
-                );
-                yield return new (PowerDensityUnit.GigawattPerCubicInch, "GigawattPerCubicInch", "GigawattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, new BigInteger(125) * QuantityValue.PowerOfTen(18))
-                );
-                yield return new (PowerDensityUnit.GigawattPerCubicMeter, "GigawattPerCubicMeter", "GigawattsPerCubicMeter", new BaseUnits(length: LengthUnit.Nanometer, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (PowerDensityUnit.GigawattPerLiter, "GigawattPerLiter", "GigawattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (PowerDensityUnit.KilowattPerCubicFoot, "KilowattPerCubicFoot", "KilowattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 1953125000000)
-                );
-                yield return new (PowerDensityUnit.KilowattPerCubicInch, "KilowattPerCubicInch", "KilowattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125000000000000)
-                );
-                yield return new (PowerDensityUnit.KilowattPerCubicMeter, "KilowattPerCubicMeter", "KilowattsPerCubicMeter", new BaseUnits(length: LengthUnit.Millimeter, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (PowerDensityUnit.KilowattPerLiter, "KilowattPerLiter", "KilowattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (PowerDensityUnit.MegawattPerCubicFoot, "MegawattPerCubicFoot", "MegawattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 1953125000000000)
-                );
-                yield return new (PowerDensityUnit.MegawattPerCubicInch, "MegawattPerCubicInch", "MegawattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125000000000000000)
-                );
-                yield return new (PowerDensityUnit.MegawattPerCubicMeter, "MegawattPerCubicMeter", "MegawattsPerCubicMeter", new BaseUnits(length: LengthUnit.Micrometer, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (PowerDensityUnit.MegawattPerLiter, "MegawattPerLiter", "MegawattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (PowerDensityUnit.MicrowattPerCubicFoot, "MicrowattPerCubicFoot", "MicrowattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(442450728, 15625)
-                );
-                yield return new (PowerDensityUnit.MicrowattPerCubicInch, "MicrowattPerCubicInch", "MicrowattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125000)
-                );
-                yield return new (PowerDensityUnit.MicrowattPerCubicMeter, "MicrowattPerCubicMeter", "MicrowattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Second),
-                     1000000
-                );
-                yield return new (PowerDensityUnit.MicrowattPerLiter, "MicrowattPerLiter", "MicrowattsPerLiter", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (PowerDensityUnit.MilliwattPerCubicFoot, "MilliwattPerCubicFoot", "MilliwattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 1953125)
-                );
-                yield return new (PowerDensityUnit.MilliwattPerCubicInch, "MilliwattPerCubicInch", "MilliwattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125000000)
-                );
-                yield return new (PowerDensityUnit.MilliwattPerCubicMeter, "MilliwattPerCubicMeter", "MilliwattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second),
-                     1000
-                );
-                yield return new (PowerDensityUnit.MilliwattPerLiter, "MilliwattPerLiter", "MilliwattsPerLiter", BaseUnits.Undefined,
-                     1
-                );
-                yield return new (PowerDensityUnit.NanowattPerCubicFoot, "NanowattPerCubicFoot", "NanowattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(3539605824, 125)
-                );
-                yield return new (PowerDensityUnit.NanowattPerCubicInch, "NanowattPerCubicInch", "NanowattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125)
-                );
-                yield return new (PowerDensityUnit.NanowattPerCubicMeter, "NanowattPerCubicMeter", "NanowattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Microgram, time: DurationUnit.Second),
-                     1000000000
-                );
-                yield return new (PowerDensityUnit.NanowattPerLiter, "NanowattPerLiter", "NanowattsPerLiter", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (PowerDensityUnit.PicowattPerCubicFoot, "PicowattPerCubicFoot", "PicowattsPerCubicFoot", BaseUnits.Undefined,
-                     28316846592
-                );
-                yield return new (PowerDensityUnit.PicowattPerCubicInch, "PicowattPerCubicInch", "PicowattsPerCubicInch", BaseUnits.Undefined,
-                     16387064
-                );
-                yield return new (PowerDensityUnit.PicowattPerCubicMeter, "PicowattPerCubicMeter", "PicowattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Nanogram, time: DurationUnit.Second),
-                     1000000000000
-                );
-                yield return new (PowerDensityUnit.PicowattPerLiter, "PicowattPerLiter", "PicowattsPerLiter", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (PowerDensityUnit.TerawattPerCubicFoot, "TerawattPerCubicFoot", "TerawattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, new BigInteger(1953125) * QuantityValue.PowerOfTen(15))
-                );
-                yield return new (PowerDensityUnit.TerawattPerCubicInch, "TerawattPerCubicInch", "TerawattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, new BigInteger(125) * QuantityValue.PowerOfTen(21))
-                );
-                yield return new (PowerDensityUnit.TerawattPerCubicMeter, "TerawattPerCubicMeter", "TerawattsPerCubicMeter", new BaseUnits(length: LengthUnit.Picometer, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (PowerDensityUnit.TerawattPerLiter, "TerawattPerLiter", "TerawattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000000000000000)
-                );
-                yield return new (PowerDensityUnit.WattPerCubicFoot, "WattPerCubicFoot", "WattsPerCubicFoot", BaseUnits.Undefined,
-                     new QuantityValue(55306341, 1953125000)
-                );
-                yield return new (PowerDensityUnit.WattPerCubicInch, "WattPerCubicInch", "WattsPerCubicInch", BaseUnits.Undefined,
-                     new QuantityValue(2048383, 125000000000)
-                );
-                yield return new (PowerDensityUnit.WattPerCubicMeter, "WattPerCubicMeter", "WattsPerCubicMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second));
-                yield return new (PowerDensityUnit.WattPerLiter, "WattPerLiter", "WattsPerLiter", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
+                yield return new (PowerDensityUnit.BtuPerSecondCubicFoot, PowerDensityUnits.BtuPerSecondCubicFoot);
+                yield return new (PowerDensityUnit.BtuPerSecondCubicInch, PowerDensityUnits.BtuPerSecondCubicInch);
+                yield return new (PowerDensityUnit.DecawattPerCubicFoot, PowerDensityUnits.DecawattPerCubicFoot);
+                yield return new (PowerDensityUnit.DecawattPerCubicInch, PowerDensityUnits.DecawattPerCubicInch);
+                yield return new (PowerDensityUnit.DecawattPerCubicMeter, PowerDensityUnits.DecawattPerCubicMeter);
+                yield return new (PowerDensityUnit.DecawattPerLiter, PowerDensityUnits.DecawattPerLiter);
+                yield return new (PowerDensityUnit.DeciwattPerCubicFoot, PowerDensityUnits.DeciwattPerCubicFoot);
+                yield return new (PowerDensityUnit.DeciwattPerCubicInch, PowerDensityUnits.DeciwattPerCubicInch);
+                yield return new (PowerDensityUnit.DeciwattPerCubicMeter, PowerDensityUnits.DeciwattPerCubicMeter);
+                yield return new (PowerDensityUnit.DeciwattPerLiter, PowerDensityUnits.DeciwattPerLiter);
+                yield return new (PowerDensityUnit.GigawattPerCubicFoot, PowerDensityUnits.GigawattPerCubicFoot);
+                yield return new (PowerDensityUnit.GigawattPerCubicInch, PowerDensityUnits.GigawattPerCubicInch);
+                yield return new (PowerDensityUnit.GigawattPerCubicMeter, PowerDensityUnits.GigawattPerCubicMeter);
+                yield return new (PowerDensityUnit.GigawattPerLiter, PowerDensityUnits.GigawattPerLiter);
+                yield return new (PowerDensityUnit.KilowattPerCubicFoot, PowerDensityUnits.KilowattPerCubicFoot);
+                yield return new (PowerDensityUnit.KilowattPerCubicInch, PowerDensityUnits.KilowattPerCubicInch);
+                yield return new (PowerDensityUnit.KilowattPerCubicMeter, PowerDensityUnits.KilowattPerCubicMeter);
+                yield return new (PowerDensityUnit.KilowattPerLiter, PowerDensityUnits.KilowattPerLiter);
+                yield return new (PowerDensityUnit.MegawattPerCubicFoot, PowerDensityUnits.MegawattPerCubicFoot);
+                yield return new (PowerDensityUnit.MegawattPerCubicInch, PowerDensityUnits.MegawattPerCubicInch);
+                yield return new (PowerDensityUnit.MegawattPerCubicMeter, PowerDensityUnits.MegawattPerCubicMeter);
+                yield return new (PowerDensityUnit.MegawattPerLiter, PowerDensityUnits.MegawattPerLiter);
+                yield return new (PowerDensityUnit.MicrowattPerCubicFoot, PowerDensityUnits.MicrowattPerCubicFoot);
+                yield return new (PowerDensityUnit.MicrowattPerCubicInch, PowerDensityUnits.MicrowattPerCubicInch);
+                yield return new (PowerDensityUnit.MicrowattPerCubicMeter, PowerDensityUnits.MicrowattPerCubicMeter);
+                yield return new (PowerDensityUnit.MicrowattPerLiter, PowerDensityUnits.MicrowattPerLiter);
+                yield return new (PowerDensityUnit.MilliwattPerCubicFoot, PowerDensityUnits.MilliwattPerCubicFoot);
+                yield return new (PowerDensityUnit.MilliwattPerCubicInch, PowerDensityUnits.MilliwattPerCubicInch);
+                yield return new (PowerDensityUnit.MilliwattPerCubicMeter, PowerDensityUnits.MilliwattPerCubicMeter);
+                yield return new (PowerDensityUnit.MilliwattPerLiter, PowerDensityUnits.MilliwattPerLiter);
+                yield return new (PowerDensityUnit.NanowattPerCubicFoot, PowerDensityUnits.NanowattPerCubicFoot);
+                yield return new (PowerDensityUnit.NanowattPerCubicInch, PowerDensityUnits.NanowattPerCubicInch);
+                yield return new (PowerDensityUnit.NanowattPerCubicMeter, PowerDensityUnits.NanowattPerCubicMeter);
+                yield return new (PowerDensityUnit.NanowattPerLiter, PowerDensityUnits.NanowattPerLiter);
+                yield return new (PowerDensityUnit.PicowattPerCubicFoot, PowerDensityUnits.PicowattPerCubicFoot);
+                yield return new (PowerDensityUnit.PicowattPerCubicInch, PowerDensityUnits.PicowattPerCubicInch);
+                yield return new (PowerDensityUnit.PicowattPerCubicMeter, PowerDensityUnits.PicowattPerCubicMeter);
+                yield return new (PowerDensityUnit.PicowattPerLiter, PowerDensityUnits.PicowattPerLiter);
+                yield return new (PowerDensityUnit.TerawattPerCubicFoot, PowerDensityUnits.TerawattPerCubicFoot);
+                yield return new (PowerDensityUnit.TerawattPerCubicInch, PowerDensityUnits.TerawattPerCubicInch);
+                yield return new (PowerDensityUnit.TerawattPerCubicMeter, PowerDensityUnits.TerawattPerCubicMeter);
+                yield return new (PowerDensityUnit.TerawattPerLiter, PowerDensityUnits.TerawattPerLiter);
+                yield return new (PowerDensityUnit.WattPerCubicFoot, PowerDensityUnits.WattPerCubicFoot);
+                yield return new (PowerDensityUnit.WattPerCubicInch, PowerDensityUnits.WattPerCubicInch);
+                yield return new (PowerDensityUnit.WattPerCubicMeter, PowerDensityUnits.WattPerCubicMeter);
+                yield return new (PowerDensityUnit.WattPerLiter, PowerDensityUnits.WattPerLiter);
             }
         }
 

@@ -117,10 +117,8 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RatioChangeRateUnit}"/> representing the default unit mappings for RatioChangeRate.</returns>
             public static IEnumerable<UnitDefinition<RatioChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (RatioChangeRateUnit.DecimalFractionPerSecond, "DecimalFractionPerSecond", "DecimalFractionsPerSecond", new BaseUnits(time: DurationUnit.Second));
-                yield return new (RatioChangeRateUnit.PercentPerSecond, "PercentPerSecond", "PercentsPerSecond", BaseUnits.Undefined,
-                     100
-                );
+                yield return new (RatioChangeRateUnit.DecimalFractionPerSecond, RatioChangeRateUnits.DecimalFractionPerSecond);
+                yield return new (RatioChangeRateUnit.PercentPerSecond, RatioChangeRateUnits.PercentPerSecond);
             }
         }
 

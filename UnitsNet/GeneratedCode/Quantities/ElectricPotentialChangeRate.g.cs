@@ -117,64 +117,26 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricPotentialChangeRateUnit}"/> representing the default unit mappings for ElectricPotentialChangeRate.</returns>
             public static IEnumerable<UnitDefinition<ElectricPotentialChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerHour, "KilovoltPerHour", "KilovoltsPerHour", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Hour, current: ElectricCurrentUnit.Milliampere),
-                     new QuantityValue(18, 5)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMicrosecond, "KilovoltPerMicrosecond", "KilovoltsPerMicrosecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Microsecond, current: ElectricCurrentUnit.Milliampere),
-                     new QuantityValue(1, 1000000000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMinute, "KilovoltPerMinute", "KilovoltsPerMinute", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Minute, current: ElectricCurrentUnit.Milliampere),
-                     new QuantityValue(3, 50)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerSecond, "KilovoltPerSecond", "KilovoltsPerSecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Milliampere),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerHour, "MegavoltPerHour", "MegavoltsPerHour", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Hour, current: ElectricCurrentUnit.Microampere),
-                     new QuantityValue(9, 2500)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMicrosecond, "MegavoltPerMicrosecond", "MegavoltsPerMicrosecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Microsecond, current: ElectricCurrentUnit.Microampere),
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMinute, "MegavoltPerMinute", "MegavoltsPerMinute", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Minute, current: ElectricCurrentUnit.Microampere),
-                     new QuantityValue(3, 50000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerSecond, "MegavoltPerSecond", "MegavoltsPerSecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Microampere),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerHour, "MicrovoltPerHour", "MicrovoltsPerHour", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Hour, current: ElectricCurrentUnit.Ampere),
-                     3600000000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMicrosecond, "MicrovoltPerMicrosecond", "MicrovoltsPerMicrosecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Microsecond, current: ElectricCurrentUnit.Ampere),
-                     1
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMinute, "MicrovoltPerMinute", "MicrovoltsPerMinute", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Minute, current: ElectricCurrentUnit.Ampere),
-                     60000000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerSecond, "MicrovoltPerSecond", "MicrovoltsPerSecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Milligram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     1000000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerHour, "MillivoltPerHour", "MillivoltsPerHour", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Hour, current: ElectricCurrentUnit.Ampere),
-                     3600000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMicrosecond, "MillivoltPerMicrosecond", "MillivoltsPerMicrosecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Microsecond, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMinute, "MillivoltPerMinute", "MillivoltsPerMinute", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Minute, current: ElectricCurrentUnit.Ampere),
-                     60000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerSecond, "MillivoltPerSecond", "MillivoltsPerSecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere),
-                     1000
-                );
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerHour, "VoltPerHour", "VoltsPerHour", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Hour, current: ElectricCurrentUnit.Ampere),
-                     3600
-                );
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerMicrosecond, "VoltPerMicrosecond", "VoltsPerMicrosecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Microsecond, current: ElectricCurrentUnit.Ampere),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerMinute, "VoltPerMinute", "VoltsPerMinute", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Minute, current: ElectricCurrentUnit.Ampere),
-                     60
-                );
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerSecond, "VoltPerSecond", "VoltsPerSecond", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere));
+                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerHour, ElectricPotentialChangeRateUnits.KilovoltPerHour);
+                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMicrosecond, ElectricPotentialChangeRateUnits.KilovoltPerMicrosecond);
+                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMinute, ElectricPotentialChangeRateUnits.KilovoltPerMinute);
+                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerSecond, ElectricPotentialChangeRateUnits.KilovoltPerSecond);
+                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerHour, ElectricPotentialChangeRateUnits.MegavoltPerHour);
+                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMicrosecond, ElectricPotentialChangeRateUnits.MegavoltPerMicrosecond);
+                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMinute, ElectricPotentialChangeRateUnits.MegavoltPerMinute);
+                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerSecond, ElectricPotentialChangeRateUnits.MegavoltPerSecond);
+                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerHour, ElectricPotentialChangeRateUnits.MicrovoltPerHour);
+                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMicrosecond, ElectricPotentialChangeRateUnits.MicrovoltPerMicrosecond);
+                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMinute, ElectricPotentialChangeRateUnits.MicrovoltPerMinute);
+                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerSecond, ElectricPotentialChangeRateUnits.MicrovoltPerSecond);
+                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerHour, ElectricPotentialChangeRateUnits.MillivoltPerHour);
+                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMicrosecond, ElectricPotentialChangeRateUnits.MillivoltPerMicrosecond);
+                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMinute, ElectricPotentialChangeRateUnits.MillivoltPerMinute);
+                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerSecond, ElectricPotentialChangeRateUnits.MillivoltPerSecond);
+                yield return new (ElectricPotentialChangeRateUnit.VoltPerHour, ElectricPotentialChangeRateUnits.VoltPerHour);
+                yield return new (ElectricPotentialChangeRateUnit.VoltPerMicrosecond, ElectricPotentialChangeRateUnits.VoltPerMicrosecond);
+                yield return new (ElectricPotentialChangeRateUnit.VoltPerMinute, ElectricPotentialChangeRateUnits.VoltPerMinute);
+                yield return new (ElectricPotentialChangeRateUnit.VoltPerSecond, ElectricPotentialChangeRateUnits.VoltPerSecond);
             }
         }
 

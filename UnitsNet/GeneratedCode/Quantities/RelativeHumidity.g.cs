@@ -116,7 +116,7 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RelativeHumidityUnit}"/> representing the default unit mappings for RelativeHumidity.</returns>
             public static IEnumerable<UnitDefinition<RelativeHumidityUnit>> GetDefaultMappings()
             {
-                yield return new (RelativeHumidityUnit.Percent, "Percent", "Percent", BaseUnits.Undefined);
+                yield return new (RelativeHumidityUnit.Percent, RelativeHumidityUnits.Percent);
             }
         }
 

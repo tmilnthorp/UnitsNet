@@ -122,55 +122,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AmountOfSubstanceUnit}"/> representing the default unit mappings for AmountOfSubstance.</returns>
             public static IEnumerable<UnitDefinition<AmountOfSubstanceUnit>> GetDefaultMappings()
             {
-                yield return new (AmountOfSubstanceUnit.Centimole, "Centimole", "Centimoles", new BaseUnits(amount: AmountOfSubstanceUnit.Centimole),
-                     100
-                );
-                yield return new (AmountOfSubstanceUnit.CentipoundMole, "CentipoundMole", "CentipoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.CentipoundMole),
-                     new QuantityValue(10000000, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Decimole, "Decimole", "Decimoles", new BaseUnits(amount: AmountOfSubstanceUnit.Decimole),
-                     10
-                );
-                yield return new (AmountOfSubstanceUnit.DecipoundMole, "DecipoundMole", "DecipoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.DecipoundMole),
-                     new QuantityValue(1000000, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Femtomole, "Femtomole", "Femtomoles", new BaseUnits(amount: AmountOfSubstanceUnit.Femtomole),
-                     1000000000000000
-                );
-                yield return new (AmountOfSubstanceUnit.Kilomole, "Kilomole", "Kilomoles", new BaseUnits(amount: AmountOfSubstanceUnit.Kilomole),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (AmountOfSubstanceUnit.KilopoundMole, "KilopoundMole", "KilopoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.KilopoundMole),
-                     new QuantityValue(100, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Megamole, "Megamole", "Megamoles", new BaseUnits(amount: AmountOfSubstanceUnit.Megamole),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (AmountOfSubstanceUnit.Micromole, "Micromole", "Micromoles", new BaseUnits(amount: AmountOfSubstanceUnit.Micromole),
-                     1000000
-                );
-                yield return new (AmountOfSubstanceUnit.MicropoundMole, "MicropoundMole", "MicropoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.MicropoundMole),
-                     new QuantityValue(100000000000, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Millimole, "Millimole", "Millimoles", new BaseUnits(amount: AmountOfSubstanceUnit.Millimole),
-                     1000
-                );
-                yield return new (AmountOfSubstanceUnit.MillipoundMole, "MillipoundMole", "MillipoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.MillipoundMole),
-                     new QuantityValue(100000000, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Mole, "Mole", "Moles", new BaseUnits(amount: AmountOfSubstanceUnit.Mole));
-                yield return new (AmountOfSubstanceUnit.Nanomole, "Nanomole", "Nanomoles", new BaseUnits(amount: AmountOfSubstanceUnit.Nanomole),
-                     1000000000
-                );
-                yield return new (AmountOfSubstanceUnit.NanopoundMole, "NanopoundMole", "NanopoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.NanopoundMole),
-                     new QuantityValue(100000000000000, 45359237)
-                );
-                yield return new (AmountOfSubstanceUnit.Picomole, "Picomole", "Picomoles", new BaseUnits(amount: AmountOfSubstanceUnit.Picomole),
-                     1000000000000
-                );
-                yield return new (AmountOfSubstanceUnit.PoundMole, "PoundMole", "PoundMoles", new BaseUnits(amount: AmountOfSubstanceUnit.PoundMole),
-                     new QuantityValue(100000, 45359237)
-                );
+                yield return new (AmountOfSubstanceUnit.Centimole, AmountOfSubstanceUnits.Centimole);
+                yield return new (AmountOfSubstanceUnit.CentipoundMole, AmountOfSubstanceUnits.CentipoundMole);
+                yield return new (AmountOfSubstanceUnit.Decimole, AmountOfSubstanceUnits.Decimole);
+                yield return new (AmountOfSubstanceUnit.DecipoundMole, AmountOfSubstanceUnits.DecipoundMole);
+                yield return new (AmountOfSubstanceUnit.Femtomole, AmountOfSubstanceUnits.Femtomole);
+                yield return new (AmountOfSubstanceUnit.Kilomole, AmountOfSubstanceUnits.Kilomole);
+                yield return new (AmountOfSubstanceUnit.KilopoundMole, AmountOfSubstanceUnits.KilopoundMole);
+                yield return new (AmountOfSubstanceUnit.Megamole, AmountOfSubstanceUnits.Megamole);
+                yield return new (AmountOfSubstanceUnit.Micromole, AmountOfSubstanceUnits.Micromole);
+                yield return new (AmountOfSubstanceUnit.MicropoundMole, AmountOfSubstanceUnits.MicropoundMole);
+                yield return new (AmountOfSubstanceUnit.Millimole, AmountOfSubstanceUnits.Millimole);
+                yield return new (AmountOfSubstanceUnit.MillipoundMole, AmountOfSubstanceUnits.MillipoundMole);
+                yield return new (AmountOfSubstanceUnit.Mole, AmountOfSubstanceUnits.Mole);
+                yield return new (AmountOfSubstanceUnit.Nanomole, AmountOfSubstanceUnits.Nanomole);
+                yield return new (AmountOfSubstanceUnit.NanopoundMole, AmountOfSubstanceUnits.NanopoundMole);
+                yield return new (AmountOfSubstanceUnit.Picomole, AmountOfSubstanceUnits.Picomole);
+                yield return new (AmountOfSubstanceUnit.PoundMole, AmountOfSubstanceUnits.PoundMole);
             }
         }
 

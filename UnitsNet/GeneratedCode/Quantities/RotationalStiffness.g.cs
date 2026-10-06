@@ -119,106 +119,40 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RotationalStiffnessUnit}"/> representing the default unit mappings for RotationalStiffness.</returns>
             public static IEnumerable<UnitDefinition<RotationalStiffnessUnit>> GetDefaultMappings()
             {
-                yield return new (RotationalStiffnessUnit.CentinewtonMeterPerDegree, "CentinewtonMeterPerDegree", "CentinewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 1800000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.CentinewtonMillimeterPerDegree, "CentinewtonMillimeterPerDegree", "CentinewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 1800000000000)
-                );
-                yield return new (RotationalStiffnessUnit.CentinewtonMillimeterPerRadian, "CentinewtonMillimeterPerRadian", "CentinewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (RotationalStiffnessUnit.DecanewtonMeterPerDegree, "DecanewtonMeterPerDegree", "DecanewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 1800000000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.DecanewtonMillimeterPerDegree, "DecanewtonMillimeterPerDegree", "DecanewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 1800000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.DecanewtonMillimeterPerRadian, "DecanewtonMillimeterPerRadian", "DecanewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (RotationalStiffnessUnit.DecinewtonMeterPerDegree, "DecinewtonMeterPerDegree", "DecinewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 18000000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.DecinewtonMillimeterPerDegree, "DecinewtonMillimeterPerDegree", "DecinewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 18000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.DecinewtonMillimeterPerRadian, "DecinewtonMillimeterPerRadian", "DecinewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     10000
-                );
-                yield return new (RotationalStiffnessUnit.KilonewtonMeterPerDegree, "KilonewtonMeterPerDegree", "KilonewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, new BigInteger(18) * QuantityValue.PowerOfTen(19))
-                );
-                yield return new (RotationalStiffnessUnit.KilonewtonMeterPerRadian, "KilonewtonMeterPerRadian", "KilonewtonMetersPerRadian", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (RotationalStiffnessUnit.KilonewtonMillimeterPerDegree, "KilonewtonMillimeterPerDegree", "KilonewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.KilonewtonMillimeterPerRadian, "KilonewtonMillimeterPerRadian", "KilonewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     1
-                );
-                yield return new (RotationalStiffnessUnit.KilopoundForceFootPerDegrees, "KilopoundForceFootPerDegrees", "KilopoundForceFeetPerDegrees", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, QuantityValue.PowerOfTen(3) * new BigInteger(244047230699652072))
-                );
-                yield return new (RotationalStiffnessUnit.KilopoundForceFootPerRadian, "KilopoundForceFootPerRadian", "KilopoundForceFeetPerRadian", BaseUnits.Undefined,
-                     new QuantityValue(2500000000000, 3389544870828501)
-                );
-                yield return new (RotationalStiffnessUnit.MeganewtonMeterPerDegree, "MeganewtonMeterPerDegree", "MeganewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, new BigInteger(18) * QuantityValue.PowerOfTen(22))
-                );
-                yield return new (RotationalStiffnessUnit.MeganewtonMeterPerRadian, "MeganewtonMeterPerRadian", "MeganewtonMetersPerRadian", new BaseUnits(length: LengthUnit.Kilometer, mass: MassUnit.Kilogram, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (RotationalStiffnessUnit.MeganewtonMillimeterPerDegree, "MeganewtonMillimeterPerDegree", "MeganewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, new BigInteger(18) * QuantityValue.PowerOfTen(19))
-                );
-                yield return new (RotationalStiffnessUnit.MeganewtonMillimeterPerRadian, "MeganewtonMillimeterPerRadian", "MeganewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (RotationalStiffnessUnit.MicronewtonMeterPerDegree, "MicronewtonMeterPerDegree", "MicronewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000)
-                );
-                yield return new (RotationalStiffnessUnit.MicronewtonMillimeterPerDegree, "MicronewtonMillimeterPerDegree", "MicronewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000)
-                );
-                yield return new (RotationalStiffnessUnit.MicronewtonMillimeterPerRadian, "MicronewtonMillimeterPerRadian", "MicronewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (RotationalStiffnessUnit.MillinewtonMeterPerDegree, "MillinewtonMeterPerDegree", "MillinewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.MillinewtonMillimeterPerDegree, "MillinewtonMillimeterPerDegree", "MillinewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000)
-                );
-                yield return new (RotationalStiffnessUnit.MillinewtonMillimeterPerRadian, "MillinewtonMillimeterPerRadian", "MillinewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (RotationalStiffnessUnit.NanonewtonMeterPerDegree, "NanonewtonMeterPerDegree", "NanonewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000)
-                );
-                yield return new (RotationalStiffnessUnit.NanonewtonMillimeterPerDegree, "NanonewtonMillimeterPerDegree", "NanonewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000)
-                );
-                yield return new (RotationalStiffnessUnit.NanonewtonMillimeterPerRadian, "NanonewtonMillimeterPerRadian", "NanonewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     1000000000000
-                );
-                yield return new (RotationalStiffnessUnit.NewtonMeterPerDegree, "NewtonMeterPerDegree", "NewtonMetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.NewtonMeterPerRadian, "NewtonMeterPerRadian", "NewtonMetersPerRadian", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second));
-                yield return new (RotationalStiffnessUnit.NewtonMillimeterPerDegree, "NewtonMillimeterPerDegree", "NewtonMillimetersPerDegree", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 180000000000000)
-                );
-                yield return new (RotationalStiffnessUnit.NewtonMillimeterPerRadian, "NewtonMillimeterPerRadian", "NewtonMillimetersPerRadian", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (RotationalStiffnessUnit.PoundForceFeetPerRadian, "PoundForceFeetPerRadian", "PoundForceFeetPerRadian", BaseUnits.Undefined,
-                     new QuantityValue(2500000000000000, 3389544870828501)
-                );
-                yield return new (RotationalStiffnessUnit.PoundForceFootPerDegrees, "PoundForceFootPerDegrees", "PoundForceFeetPerDegrees", BaseUnits.Undefined,
-                     new QuantityValue(3141592653589793, 244047230699652072)
-                );
+                yield return new (RotationalStiffnessUnit.CentinewtonMeterPerDegree, RotationalStiffnessUnits.CentinewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.CentinewtonMillimeterPerDegree, RotationalStiffnessUnits.CentinewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.CentinewtonMillimeterPerRadian, RotationalStiffnessUnits.CentinewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.DecanewtonMeterPerDegree, RotationalStiffnessUnits.DecanewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.DecanewtonMillimeterPerDegree, RotationalStiffnessUnits.DecanewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.DecanewtonMillimeterPerRadian, RotationalStiffnessUnits.DecanewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.DecinewtonMeterPerDegree, RotationalStiffnessUnits.DecinewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.DecinewtonMillimeterPerDegree, RotationalStiffnessUnits.DecinewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.DecinewtonMillimeterPerRadian, RotationalStiffnessUnits.DecinewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.KilonewtonMeterPerDegree, RotationalStiffnessUnits.KilonewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.KilonewtonMeterPerRadian, RotationalStiffnessUnits.KilonewtonMeterPerRadian);
+                yield return new (RotationalStiffnessUnit.KilonewtonMillimeterPerDegree, RotationalStiffnessUnits.KilonewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.KilonewtonMillimeterPerRadian, RotationalStiffnessUnits.KilonewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.KilopoundForceFootPerDegrees, RotationalStiffnessUnits.KilopoundForceFootPerDegrees);
+                yield return new (RotationalStiffnessUnit.KilopoundForceFootPerRadian, RotationalStiffnessUnits.KilopoundForceFootPerRadian);
+                yield return new (RotationalStiffnessUnit.MeganewtonMeterPerDegree, RotationalStiffnessUnits.MeganewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MeganewtonMeterPerRadian, RotationalStiffnessUnits.MeganewtonMeterPerRadian);
+                yield return new (RotationalStiffnessUnit.MeganewtonMillimeterPerDegree, RotationalStiffnessUnits.MeganewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MeganewtonMillimeterPerRadian, RotationalStiffnessUnits.MeganewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.MicronewtonMeterPerDegree, RotationalStiffnessUnits.MicronewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MicronewtonMillimeterPerDegree, RotationalStiffnessUnits.MicronewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MicronewtonMillimeterPerRadian, RotationalStiffnessUnits.MicronewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.MillinewtonMeterPerDegree, RotationalStiffnessUnits.MillinewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MillinewtonMillimeterPerDegree, RotationalStiffnessUnits.MillinewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.MillinewtonMillimeterPerRadian, RotationalStiffnessUnits.MillinewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.NanonewtonMeterPerDegree, RotationalStiffnessUnits.NanonewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.NanonewtonMillimeterPerDegree, RotationalStiffnessUnits.NanonewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.NanonewtonMillimeterPerRadian, RotationalStiffnessUnits.NanonewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.NewtonMeterPerDegree, RotationalStiffnessUnits.NewtonMeterPerDegree);
+                yield return new (RotationalStiffnessUnit.NewtonMeterPerRadian, RotationalStiffnessUnits.NewtonMeterPerRadian);
+                yield return new (RotationalStiffnessUnit.NewtonMillimeterPerDegree, RotationalStiffnessUnits.NewtonMillimeterPerDegree);
+                yield return new (RotationalStiffnessUnit.NewtonMillimeterPerRadian, RotationalStiffnessUnits.NewtonMillimeterPerRadian);
+                yield return new (RotationalStiffnessUnit.PoundForceFeetPerRadian, RotationalStiffnessUnits.PoundForceFeetPerRadian);
+                yield return new (RotationalStiffnessUnit.PoundForceFootPerDegrees, RotationalStiffnessUnits.PoundForceFootPerDegrees);
             }
         }
 

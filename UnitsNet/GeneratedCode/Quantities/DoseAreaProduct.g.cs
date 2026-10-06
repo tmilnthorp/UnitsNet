@@ -121,79 +121,31 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{DoseAreaProductUnit}"/> representing the default unit mappings for DoseAreaProduct.</returns>
             public static IEnumerable<UnitDefinition<DoseAreaProductUnit>> GetDefaultMappings()
             {
-                yield return new (DoseAreaProductUnit.CentigraySquareCentimeter, "CentigraySquareCentimeter", "CentigraySquareCentimeters", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (DoseAreaProductUnit.CentigraySquareDecimeter, "CentigraySquareDecimeter", "CentigraySquareDecimeters", BaseUnits.Undefined,
-                     10000
-                );
-                yield return new (DoseAreaProductUnit.CentigraySquareMeter, "CentigraySquareMeter", "CentigraySquareMeters", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (DoseAreaProductUnit.CentigraySquareMicrometer, "CentigraySquareMicrometer", "CentigraySquareMicrometers", BaseUnits.Undefined,
-                     100000000000000
-                );
-                yield return new (DoseAreaProductUnit.CentigraySquareMillimeter, "CentigraySquareMillimeter", "CentigraySquareMillimeters", BaseUnits.Undefined,
-                     100000000
-                );
-                yield return new (DoseAreaProductUnit.DecigraySquareCentimeter, "DecigraySquareCentimeter", "DecigraySquareCentimeters", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (DoseAreaProductUnit.DecigraySquareDecimeter, "DecigraySquareDecimeter", "DecigraySquareDecimeters", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (DoseAreaProductUnit.DecigraySquareMeter, "DecigraySquareMeter", "DecigraySquareMeters", BaseUnits.Undefined,
-                     10
-                );
-                yield return new (DoseAreaProductUnit.DecigraySquareMicrometer, "DecigraySquareMicrometer", "DecigraySquareMicrometers", BaseUnits.Undefined,
-                     10000000000000
-                );
-                yield return new (DoseAreaProductUnit.DecigraySquareMillimeter, "DecigraySquareMillimeter", "DecigraySquareMillimeters", BaseUnits.Undefined,
-                     10000000
-                );
-                yield return new (DoseAreaProductUnit.GraySquareCentimeter, "GraySquareCentimeter", "GraySquareCentimeters", BaseUnits.Undefined,
-                     10000
-                );
-                yield return new (DoseAreaProductUnit.GraySquareDecimeter, "GraySquareDecimeter", "GraySquareDecimeters", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (DoseAreaProductUnit.GraySquareMeter, "GraySquareMeter", "GraySquareMeters", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Second));
-                yield return new (DoseAreaProductUnit.GraySquareMicrometer, "GraySquareMicrometer", "GraySquareMicrometers", BaseUnits.Undefined,
-                     1000000000000
-                );
-                yield return new (DoseAreaProductUnit.GraySquareMillimeter, "GraySquareMillimeter", "GraySquareMillimeters", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (DoseAreaProductUnit.MicrograySquareCentimeter, "MicrograySquareCentimeter", "MicrograySquareCentimeters", BaseUnits.Undefined,
-                     10000000000
-                );
-                yield return new (DoseAreaProductUnit.MicrograySquareDecimeter, "MicrograySquareDecimeter", "MicrograySquareDecimeters", BaseUnits.Undefined,
-                     100000000
-                );
-                yield return new (DoseAreaProductUnit.MicrograySquareMeter, "MicrograySquareMeter", "MicrograySquareMeters", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (DoseAreaProductUnit.MicrograySquareMicrometer, "MicrograySquareMicrometer", "MicrograySquareMicrometers", BaseUnits.Undefined,
-                     1000000000000000000
-                );
-                yield return new (DoseAreaProductUnit.MicrograySquareMillimeter, "MicrograySquareMillimeter", "MicrograySquareMillimeters", BaseUnits.Undefined,
-                     1000000000000
-                );
-                yield return new (DoseAreaProductUnit.MilligraySquareCentimeter, "MilligraySquareCentimeter", "MilligraySquareCentimeters", BaseUnits.Undefined,
-                     10000000
-                );
-                yield return new (DoseAreaProductUnit.MilligraySquareDecimeter, "MilligraySquareDecimeter", "MilligraySquareDecimeters", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (DoseAreaProductUnit.MilligraySquareMeter, "MilligraySquareMeter", "MilligraySquareMeters", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (DoseAreaProductUnit.MilligraySquareMicrometer, "MilligraySquareMicrometer", "MilligraySquareMicrometers", BaseUnits.Undefined,
-                     1000000000000000
-                );
-                yield return new (DoseAreaProductUnit.MilligraySquareMillimeter, "MilligraySquareMillimeter", "MilligraySquareMillimeters", BaseUnits.Undefined,
-                     1000000000
-                );
+                yield return new (DoseAreaProductUnit.CentigraySquareCentimeter, DoseAreaProductUnits.CentigraySquareCentimeter);
+                yield return new (DoseAreaProductUnit.CentigraySquareDecimeter, DoseAreaProductUnits.CentigraySquareDecimeter);
+                yield return new (DoseAreaProductUnit.CentigraySquareMeter, DoseAreaProductUnits.CentigraySquareMeter);
+                yield return new (DoseAreaProductUnit.CentigraySquareMicrometer, DoseAreaProductUnits.CentigraySquareMicrometer);
+                yield return new (DoseAreaProductUnit.CentigraySquareMillimeter, DoseAreaProductUnits.CentigraySquareMillimeter);
+                yield return new (DoseAreaProductUnit.DecigraySquareCentimeter, DoseAreaProductUnits.DecigraySquareCentimeter);
+                yield return new (DoseAreaProductUnit.DecigraySquareDecimeter, DoseAreaProductUnits.DecigraySquareDecimeter);
+                yield return new (DoseAreaProductUnit.DecigraySquareMeter, DoseAreaProductUnits.DecigraySquareMeter);
+                yield return new (DoseAreaProductUnit.DecigraySquareMicrometer, DoseAreaProductUnits.DecigraySquareMicrometer);
+                yield return new (DoseAreaProductUnit.DecigraySquareMillimeter, DoseAreaProductUnits.DecigraySquareMillimeter);
+                yield return new (DoseAreaProductUnit.GraySquareCentimeter, DoseAreaProductUnits.GraySquareCentimeter);
+                yield return new (DoseAreaProductUnit.GraySquareDecimeter, DoseAreaProductUnits.GraySquareDecimeter);
+                yield return new (DoseAreaProductUnit.GraySquareMeter, DoseAreaProductUnits.GraySquareMeter);
+                yield return new (DoseAreaProductUnit.GraySquareMicrometer, DoseAreaProductUnits.GraySquareMicrometer);
+                yield return new (DoseAreaProductUnit.GraySquareMillimeter, DoseAreaProductUnits.GraySquareMillimeter);
+                yield return new (DoseAreaProductUnit.MicrograySquareCentimeter, DoseAreaProductUnits.MicrograySquareCentimeter);
+                yield return new (DoseAreaProductUnit.MicrograySquareDecimeter, DoseAreaProductUnits.MicrograySquareDecimeter);
+                yield return new (DoseAreaProductUnit.MicrograySquareMeter, DoseAreaProductUnits.MicrograySquareMeter);
+                yield return new (DoseAreaProductUnit.MicrograySquareMicrometer, DoseAreaProductUnits.MicrograySquareMicrometer);
+                yield return new (DoseAreaProductUnit.MicrograySquareMillimeter, DoseAreaProductUnits.MicrograySquareMillimeter);
+                yield return new (DoseAreaProductUnit.MilligraySquareCentimeter, DoseAreaProductUnits.MilligraySquareCentimeter);
+                yield return new (DoseAreaProductUnit.MilligraySquareDecimeter, DoseAreaProductUnits.MilligraySquareDecimeter);
+                yield return new (DoseAreaProductUnit.MilligraySquareMeter, DoseAreaProductUnits.MilligraySquareMeter);
+                yield return new (DoseAreaProductUnit.MilligraySquareMicrometer, DoseAreaProductUnits.MilligraySquareMicrometer);
+                yield return new (DoseAreaProductUnit.MilligraySquareMillimeter, DoseAreaProductUnits.MilligraySquareMillimeter);
             }
         }
 

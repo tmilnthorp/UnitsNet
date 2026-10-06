@@ -124,37 +124,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ReciprocalAreaUnit}"/> representing the default unit mappings for ReciprocalArea.</returns>
             public static IEnumerable<UnitDefinition<ReciprocalAreaUnit>> GetDefaultMappings()
             {
-                yield return new (ReciprocalAreaUnit.InverseSquareCentimeter, "InverseSquareCentimeter", "InverseSquareCentimeters", new BaseUnits(length: LengthUnit.Centimeter),
-                     new QuantityValue(1, 10000)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareDecimeter, "InverseSquareDecimeter", "InverseSquareDecimeters", new BaseUnits(length: LengthUnit.Decimeter),
-                     new QuantityValue(1, 100)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareFoot, "InverseSquareFoot", "InverseSquareFeet", new BaseUnits(length: LengthUnit.Foot),
-                     new QuantityValue(145161, 1562500)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareInch, "InverseSquareInch", "InverseSquareInches", new BaseUnits(length: LengthUnit.Inch),
-                     new QuantityValue(16129, 25000000)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareKilometer, "InverseSquareKilometer", "InverseSquareKilometers", new BaseUnits(length: LengthUnit.Kilometer),
-                     1000000
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareMeter, "InverseSquareMeter", "InverseSquareMeters", new BaseUnits(length: LengthUnit.Meter));
-                yield return new (ReciprocalAreaUnit.InverseSquareMicrometer, "InverseSquareMicrometer", "InverseSquareMicrometers", new BaseUnits(length: LengthUnit.Micrometer),
-                     new QuantityValue(1, 1000000000000)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareMile, "InverseSquareMile", "InverseSquareMiles", new BaseUnits(length: LengthUnit.Mile),
-                     new QuantityValue(40468564224, 15625)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareMillimeter, "InverseSquareMillimeter", "InverseSquareMillimeters", new BaseUnits(length: LengthUnit.Millimeter),
-                     new QuantityValue(1, 1000000)
-                );
-                yield return new (ReciprocalAreaUnit.InverseSquareYard, "InverseSquareYard", "InverseSquareYards", new BaseUnits(length: LengthUnit.Yard),
-                     new QuantityValue(1306449, 1562500)
-                );
-                yield return new (ReciprocalAreaUnit.InverseUsSurveySquareFoot, "InverseUsSurveySquareFoot", "InverseUsSurveySquareFeet", new BaseUnits(length: LengthUnit.UsSurveyFoot),
-                     new QuantityValue(1440000, 15499969)
-                );
+                yield return new (ReciprocalAreaUnit.InverseSquareCentimeter, ReciprocalAreaUnits.InverseSquareCentimeter);
+                yield return new (ReciprocalAreaUnit.InverseSquareDecimeter, ReciprocalAreaUnits.InverseSquareDecimeter);
+                yield return new (ReciprocalAreaUnit.InverseSquareFoot, ReciprocalAreaUnits.InverseSquareFoot);
+                yield return new (ReciprocalAreaUnit.InverseSquareInch, ReciprocalAreaUnits.InverseSquareInch);
+                yield return new (ReciprocalAreaUnit.InverseSquareKilometer, ReciprocalAreaUnits.InverseSquareKilometer);
+                yield return new (ReciprocalAreaUnit.InverseSquareMeter, ReciprocalAreaUnits.InverseSquareMeter);
+                yield return new (ReciprocalAreaUnit.InverseSquareMicrometer, ReciprocalAreaUnits.InverseSquareMicrometer);
+                yield return new (ReciprocalAreaUnit.InverseSquareMile, ReciprocalAreaUnits.InverseSquareMile);
+                yield return new (ReciprocalAreaUnit.InverseSquareMillimeter, ReciprocalAreaUnits.InverseSquareMillimeter);
+                yield return new (ReciprocalAreaUnit.InverseSquareYard, ReciprocalAreaUnits.InverseSquareYard);
+                yield return new (ReciprocalAreaUnit.InverseUsSurveySquareFoot, ReciprocalAreaUnits.InverseUsSurveySquareFoot);
             }
         }
 

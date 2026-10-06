@@ -117,25 +117,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{CompressibilityUnit}"/> representing the default unit mappings for Compressibility.</returns>
             public static IEnumerable<UnitDefinition<CompressibilityUnit>> GetDefaultMappings()
             {
-                yield return new (CompressibilityUnit.InverseAtmosphere, "InverseAtmosphere", "InverseAtmospheres", BaseUnits.Undefined,
-                     101325
-                );
-                yield return new (CompressibilityUnit.InverseBar, "InverseBar", "InverseBars", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (CompressibilityUnit.InverseKilopascal, "InverseKilopascal", "InverseKilopascals", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (CompressibilityUnit.InverseMegapascal, "InverseMegapascal", "InverseMegapascals", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (CompressibilityUnit.InverseMillibar, "InverseMillibar", "InverseMillibars", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (CompressibilityUnit.InversePascal, "InversePascal", "InversePascals", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second));
-                yield return new (CompressibilityUnit.InversePoundForcePerSquareInch, "InversePoundForcePerSquareInch", "InversePoundsForcePerSquareInch", BaseUnits.Undefined,
-                     new QuantityValue(6894757293168361, 1000000000000)
-                );
+                yield return new (CompressibilityUnit.InverseAtmosphere, CompressibilityUnits.InverseAtmosphere);
+                yield return new (CompressibilityUnit.InverseBar, CompressibilityUnits.InverseBar);
+                yield return new (CompressibilityUnit.InverseKilopascal, CompressibilityUnits.InverseKilopascal);
+                yield return new (CompressibilityUnit.InverseMegapascal, CompressibilityUnits.InverseMegapascal);
+                yield return new (CompressibilityUnit.InverseMillibar, CompressibilityUnits.InverseMillibar);
+                yield return new (CompressibilityUnit.InversePascal, CompressibilityUnits.InversePascal);
+                yield return new (CompressibilityUnit.InversePoundForcePerSquareInch, CompressibilityUnits.InversePoundForcePerSquareInch);
             }
         }
 

@@ -123,46 +123,20 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AccelerationUnit}"/> representing the default unit mappings for Acceleration.</returns>
             public static IEnumerable<UnitDefinition<AccelerationUnit>> GetDefaultMappings()
             {
-                yield return new (AccelerationUnit.CentimeterPerSecondSquared, "CentimeterPerSecondSquared", "CentimetersPerSecondSquared", new BaseUnits(length: LengthUnit.Centimeter, time: DurationUnit.Second),
-                     100
-                );
-                yield return new (AccelerationUnit.DecimeterPerSecondSquared, "DecimeterPerSecondSquared", "DecimetersPerSecondSquared", new BaseUnits(length: LengthUnit.Decimeter, time: DurationUnit.Second),
-                     10
-                );
-                yield return new (AccelerationUnit.FootPerSecondSquared, "FootPerSecondSquared", "FeetPerSecondSquared", new BaseUnits(length: LengthUnit.Foot, time: DurationUnit.Second),
-                     new QuantityValue(1250, 381)
-                );
-                yield return new (AccelerationUnit.InchPerSecondSquared, "InchPerSecondSquared", "InchesPerSecondSquared", new BaseUnits(length: LengthUnit.Inch, time: DurationUnit.Second),
-                     new QuantityValue(5000, 127)
-                );
-                yield return new (AccelerationUnit.KilometerPerSecondSquared, "KilometerPerSecondSquared", "KilometersPerSecondSquared", new BaseUnits(length: LengthUnit.Kilometer, time: DurationUnit.Second),
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (AccelerationUnit.KnotPerHour, "KnotPerHour", "KnotsPerHour", new BaseUnits(length: LengthUnit.NauticalMile, time: DurationUnit.Hour),
-                     new QuantityValue(3240000, 463)
-                );
-                yield return new (AccelerationUnit.KnotPerMinute, "KnotPerMinute", "KnotsPerMinute", new BaseUnits(length: LengthUnit.NauticalMile, time: DurationUnit.Minute),
-                     new QuantityValue(54000, 463)
-                );
-                yield return new (AccelerationUnit.KnotPerSecond, "KnotPerSecond", "KnotsPerSecond", new BaseUnits(length: LengthUnit.NauticalMile, time: DurationUnit.Second),
-                     new QuantityValue(900, 463)
-                );
-                yield return new (AccelerationUnit.MeterPerSecondSquared, "MeterPerSecondSquared", "MetersPerSecondSquared", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Second));
-                yield return new (AccelerationUnit.MicrometerPerSecondSquared, "MicrometerPerSecondSquared", "MicrometersPerSecondSquared", new BaseUnits(length: LengthUnit.Micrometer, time: DurationUnit.Second),
-                     1000000
-                );
-                yield return new (AccelerationUnit.MillimeterPerSecondSquared, "MillimeterPerSecondSquared", "MillimetersPerSecondSquared", new BaseUnits(length: LengthUnit.Millimeter, time: DurationUnit.Second),
-                     1000
-                );
-                yield return new (AccelerationUnit.MillistandardGravity, "MillistandardGravity", "MillistandardGravity", BaseUnits.Undefined,
-                     new QuantityValue(20000000, 196133)
-                );
-                yield return new (AccelerationUnit.NanometerPerSecondSquared, "NanometerPerSecondSquared", "NanometersPerSecondSquared", new BaseUnits(length: LengthUnit.Nanometer, time: DurationUnit.Second),
-                     1000000000
-                );
-                yield return new (AccelerationUnit.StandardGravity, "StandardGravity", "StandardGravity", BaseUnits.Undefined,
-                     new QuantityValue(20000, 196133)
-                );
+                yield return new (AccelerationUnit.CentimeterPerSecondSquared, AccelerationUnits.CentimeterPerSecondSquared);
+                yield return new (AccelerationUnit.DecimeterPerSecondSquared, AccelerationUnits.DecimeterPerSecondSquared);
+                yield return new (AccelerationUnit.FootPerSecondSquared, AccelerationUnits.FootPerSecondSquared);
+                yield return new (AccelerationUnit.InchPerSecondSquared, AccelerationUnits.InchPerSecondSquared);
+                yield return new (AccelerationUnit.KilometerPerSecondSquared, AccelerationUnits.KilometerPerSecondSquared);
+                yield return new (AccelerationUnit.KnotPerHour, AccelerationUnits.KnotPerHour);
+                yield return new (AccelerationUnit.KnotPerMinute, AccelerationUnits.KnotPerMinute);
+                yield return new (AccelerationUnit.KnotPerSecond, AccelerationUnits.KnotPerSecond);
+                yield return new (AccelerationUnit.MeterPerSecondSquared, AccelerationUnits.MeterPerSecondSquared);
+                yield return new (AccelerationUnit.MicrometerPerSecondSquared, AccelerationUnits.MicrometerPerSecondSquared);
+                yield return new (AccelerationUnit.MillimeterPerSecondSquared, AccelerationUnits.MillimeterPerSecondSquared);
+                yield return new (AccelerationUnit.MillistandardGravity, AccelerationUnits.MillistandardGravity);
+                yield return new (AccelerationUnit.NanometerPerSecondSquared, AccelerationUnits.NanometerPerSecondSquared);
+                yield return new (AccelerationUnit.StandardGravity, AccelerationUnits.StandardGravity);
             }
         }
 

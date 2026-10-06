@@ -123,238 +123,84 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumeFlowUnit}"/> representing the default unit mappings for VolumeFlow.</returns>
             public static IEnumerable<UnitDefinition<VolumeFlowUnit>> GetDefaultMappings()
             {
-                yield return new (VolumeFlowUnit.AcreFootPerDay, "AcreFootPerDay", "AcreFeetPerDay", BaseUnits.Undefined,
-                     new QuantityValue(156250000000, 2230689087)
-                );
-                yield return new (VolumeFlowUnit.AcreFootPerHour, "AcreFootPerHour", "AcreFeetPerHour", BaseUnits.Undefined,
-                     new QuantityValue(19531250000, 6692067261)
-                );
-                yield return new (VolumeFlowUnit.AcreFootPerMinute, "AcreFootPerMinute", "AcreFeetPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(976562500, 20076201783)
-                );
-                yield return new (VolumeFlowUnit.AcreFootPerSecond, "AcreFootPerSecond", "AcreFeetPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(48828125, 60228605349)
-                );
-                yield return new (VolumeFlowUnit.CentiliterPerDay, "CentiliterPerDay", "CentilitersPerDay", BaseUnits.Undefined,
-                     8640000000
-                );
-                yield return new (VolumeFlowUnit.CentiliterPerHour, "CentiliterPerHour", "CentilitersPerHour", BaseUnits.Undefined,
-                     360000000
-                );
-                yield return new (VolumeFlowUnit.CentiliterPerMinute, "CentiliterPerMinute", "CentilitersPerMinute", BaseUnits.Undefined,
-                     6000000
-                );
-                yield return new (VolumeFlowUnit.CentiliterPerSecond, "CentiliterPerSecond", "CentilitersPerSecond", BaseUnits.Undefined,
-                     100000
-                );
-                yield return new (VolumeFlowUnit.CubicCentimeterPerMinute, "CubicCentimeterPerMinute", "CubicCentimetersPerMinute", new BaseUnits(length: LengthUnit.Centimeter, time: DurationUnit.Minute),
-                     60000000
-                );
-                yield return new (VolumeFlowUnit.CubicDecimeterPerMinute, "CubicDecimeterPerMinute", "CubicDecimetersPerMinute", new BaseUnits(length: LengthUnit.Decimeter, time: DurationUnit.Minute),
-                     60000
-                );
-                yield return new (VolumeFlowUnit.CubicFootPerHour, "CubicFootPerHour", "CubicFeetPerHour", new BaseUnits(length: LengthUnit.Foot, time: DurationUnit.Hour),
-                     new QuantityValue(781250000000, 6145149)
-                );
-                yield return new (VolumeFlowUnit.CubicFootPerMinute, "CubicFootPerMinute", "CubicFeetPerMinute", new BaseUnits(length: LengthUnit.Foot, time: DurationUnit.Minute),
-                     new QuantityValue(39062500000, 18435447)
-                );
-                yield return new (VolumeFlowUnit.CubicFootPerSecond, "CubicFootPerSecond", "CubicFeetPerSecond", new BaseUnits(length: LengthUnit.Foot, time: DurationUnit.Second),
-                     new QuantityValue(1953125000, 55306341)
-                );
-                yield return new (VolumeFlowUnit.CubicInchPerMinute, "CubicInchPerMinute", "CubicInchesPerMinute", new BaseUnits(length: LengthUnit.Inch, time: DurationUnit.Minute),
-                     new QuantityValue(7500000000000, 2048383)
-                );
-                yield return new (VolumeFlowUnit.CubicInchPerSecond, "CubicInchPerSecond", "CubicInchesPerSecond", new BaseUnits(length: LengthUnit.Inch, time: DurationUnit.Second),
-                     new QuantityValue(125000000000, 2048383)
-                );
-                yield return new (VolumeFlowUnit.CubicMeterPerDay, "CubicMeterPerDay", "CubicMetersPerDay", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Day),
-                     86400
-                );
-                yield return new (VolumeFlowUnit.CubicMeterPerHour, "CubicMeterPerHour", "CubicMetersPerHour", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Hour),
-                     3600
-                );
-                yield return new (VolumeFlowUnit.CubicMeterPerMinute, "CubicMeterPerMinute", "CubicMetersPerMinute", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Minute),
-                     60
-                );
-                yield return new (VolumeFlowUnit.CubicMeterPerSecond, "CubicMeterPerSecond", "CubicMetersPerSecond", new BaseUnits(length: LengthUnit.Meter, time: DurationUnit.Second));
-                yield return new (VolumeFlowUnit.CubicMillimeterPerMinute, "CubicMillimeterPerMinute", "CubicMillimetersPerMinute", new BaseUnits(length: LengthUnit.Millimeter, time: DurationUnit.Minute),
-                     60000000000
-                );
-                yield return new (VolumeFlowUnit.CubicMillimeterPerSecond, "CubicMillimeterPerSecond", "CubicMillimetersPerSecond", new BaseUnits(length: LengthUnit.Millimeter, time: DurationUnit.Second),
-                     1000000000
-                );
-                yield return new (VolumeFlowUnit.CubicYardPerDay, "CubicYardPerDay", "CubicYardsPerDay", new BaseUnits(length: LengthUnit.Yard, time: DurationUnit.Day),
-                     new QuantityValue(6250000000000, 55306341)
-                );
-                yield return new (VolumeFlowUnit.CubicYardPerHour, "CubicYardPerHour", "CubicYardsPerHour", new BaseUnits(length: LengthUnit.Yard, time: DurationUnit.Hour),
-                     new QuantityValue(781250000000, 165919023)
-                );
-                yield return new (VolumeFlowUnit.CubicYardPerMinute, "CubicYardPerMinute", "CubicYardsPerMinute", new BaseUnits(length: LengthUnit.Yard, time: DurationUnit.Minute),
-                     new QuantityValue(39062500000, 497757069)
-                );
-                yield return new (VolumeFlowUnit.CubicYardPerSecond, "CubicYardPerSecond", "CubicYardsPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(1953125000, 1493271207)
-                );
-                yield return new (VolumeFlowUnit.DecaliterPerDay, "DecaliterPerDay", "DecalitersPerDay", BaseUnits.Undefined,
-                     8640000
-                );
-                yield return new (VolumeFlowUnit.DecaliterPerHour, "DecaliterPerHour", "DecalitersPerHour", BaseUnits.Undefined,
-                     360000
-                );
-                yield return new (VolumeFlowUnit.DecaliterPerMinute, "DecaliterPerMinute", "DecalitersPerMinute", BaseUnits.Undefined,
-                     6000
-                );
-                yield return new (VolumeFlowUnit.DecaliterPerSecond, "DecaliterPerSecond", "DecalitersPerSecond", BaseUnits.Undefined,
-                     100
-                );
-                yield return new (VolumeFlowUnit.DeciliterPerDay, "DeciliterPerDay", "DecilitersPerDay", BaseUnits.Undefined,
-                     864000000
-                );
-                yield return new (VolumeFlowUnit.DeciliterPerHour, "DeciliterPerHour", "DecilitersPerHour", BaseUnits.Undefined,
-                     36000000
-                );
-                yield return new (VolumeFlowUnit.DeciliterPerMinute, "DeciliterPerMinute", "DecilitersPerMinute", BaseUnits.Undefined,
-                     600000
-                );
-                yield return new (VolumeFlowUnit.DeciliterPerSecond, "DeciliterPerSecond", "DecilitersPerSecond", BaseUnits.Undefined,
-                     10000
-                );
-                yield return new (VolumeFlowUnit.HectoliterPerDay, "HectoliterPerDay", "HectolitersPerDay", BaseUnits.Undefined,
-                     864000
-                );
-                yield return new (VolumeFlowUnit.HectoliterPerHour, "HectoliterPerHour", "HectolitersPerHour", BaseUnits.Undefined,
-                     36000
-                );
-                yield return new (VolumeFlowUnit.HectoliterPerMinute, "HectoliterPerMinute", "HectolitersPerMinute", BaseUnits.Undefined,
-                     600
-                );
-                yield return new (VolumeFlowUnit.HectoliterPerSecond, "HectoliterPerSecond", "HectolitersPerSecond", BaseUnits.Undefined,
-                     10
-                );
-                yield return new (VolumeFlowUnit.KiloliterPerDay, "KiloliterPerDay", "KilolitersPerDay", BaseUnits.Undefined,
-                     86400
-                );
-                yield return new (VolumeFlowUnit.KiloliterPerHour, "KiloliterPerHour", "KilolitersPerHour", BaseUnits.Undefined,
-                     3600
-                );
-                yield return new (VolumeFlowUnit.KiloliterPerMinute, "KiloliterPerMinute", "KilolitersPerMinute", BaseUnits.Undefined,
-                     60
-                );
-                yield return new (VolumeFlowUnit.KiloliterPerSecond, "KiloliterPerSecond", "KilolitersPerSecond", BaseUnits.Undefined,
-                     1
-                );
-                yield return new (VolumeFlowUnit.KilousGallonPerMinute, "KilousGallonPerMinute", "KilousGallonsPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(2500000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.LiterPerDay, "LiterPerDay", "LitersPerDay", BaseUnits.Undefined,
-                     86400000
-                );
-                yield return new (VolumeFlowUnit.LiterPerHour, "LiterPerHour", "LitersPerHour", BaseUnits.Undefined,
-                     3600000
-                );
-                yield return new (VolumeFlowUnit.LiterPerMinute, "LiterPerMinute", "LitersPerMinute", BaseUnits.Undefined,
-                     60000
-                );
-                yield return new (VolumeFlowUnit.LiterPerSecond, "LiterPerSecond", "LitersPerSecond", BaseUnits.Undefined,
-                     1000
-                );
-                yield return new (VolumeFlowUnit.MegaliterPerDay, "MegaliterPerDay", "MegalitersPerDay", BaseUnits.Undefined,
-                     new QuantityValue(432, 5)
-                );
-                yield return new (VolumeFlowUnit.MegaliterPerHour, "MegaliterPerHour", "MegalitersPerHour", BaseUnits.Undefined,
-                     new QuantityValue(18, 5)
-                );
-                yield return new (VolumeFlowUnit.MegaliterPerMinute, "MegaliterPerMinute", "MegalitersPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(3, 50)
-                );
-                yield return new (VolumeFlowUnit.MegaliterPerSecond, "MegaliterPerSecond", "MegalitersPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(1, 1000)
-                );
-                yield return new (VolumeFlowUnit.MegaukGallonPerDay, "MegaukGallonPerDay", "MegaukGallonsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(8640000, 454609)
-                );
-                yield return new (VolumeFlowUnit.MegaukGallonPerSecond, "MegaukGallonPerSecond", "MegaukGallonsPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(100, 454609)
-                );
-                yield return new (VolumeFlowUnit.MegausGallonPerDay, "MegausGallonPerDay", "MegausGallonsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(3600000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.MicroliterPerDay, "MicroliterPerDay", "MicrolitersPerDay", BaseUnits.Undefined,
-                     86400000000000
-                );
-                yield return new (VolumeFlowUnit.MicroliterPerHour, "MicroliterPerHour", "MicrolitersPerHour", BaseUnits.Undefined,
-                     3600000000000
-                );
-                yield return new (VolumeFlowUnit.MicroliterPerMinute, "MicroliterPerMinute", "MicrolitersPerMinute", BaseUnits.Undefined,
-                     60000000000
-                );
-                yield return new (VolumeFlowUnit.MicroliterPerSecond, "MicroliterPerSecond", "MicrolitersPerSecond", BaseUnits.Undefined,
-                     1000000000
-                );
-                yield return new (VolumeFlowUnit.MilliliterPerDay, "MilliliterPerDay", "MillilitersPerDay", BaseUnits.Undefined,
-                     86400000000
-                );
-                yield return new (VolumeFlowUnit.MilliliterPerHour, "MilliliterPerHour", "MillilitersPerHour", BaseUnits.Undefined,
-                     3600000000
-                );
-                yield return new (VolumeFlowUnit.MilliliterPerMinute, "MilliliterPerMinute", "MillilitersPerMinute", BaseUnits.Undefined,
-                     60000000
-                );
-                yield return new (VolumeFlowUnit.MilliliterPerSecond, "MilliliterPerSecond", "MillilitersPerSecond", BaseUnits.Undefined,
-                     1000000
-                );
-                yield return new (VolumeFlowUnit.MillionUsGallonPerDay, "MillionUsGallonPerDay", "MillionUsGallonsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(3600000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.NanoliterPerDay, "NanoliterPerDay", "NanolitersPerDay", BaseUnits.Undefined,
-                     86400000000000000
-                );
-                yield return new (VolumeFlowUnit.NanoliterPerHour, "NanoliterPerHour", "NanolitersPerHour", BaseUnits.Undefined,
-                     3600000000000000
-                );
-                yield return new (VolumeFlowUnit.NanoliterPerMinute, "NanoliterPerMinute", "NanolitersPerMinute", BaseUnits.Undefined,
-                     60000000000000
-                );
-                yield return new (VolumeFlowUnit.NanoliterPerSecond, "NanoliterPerSecond", "NanolitersPerSecond", BaseUnits.Undefined,
-                     1000000000000
-                );
-                yield return new (VolumeFlowUnit.OilBarrelPerDay, "OilBarrelPerDay", "OilBarrelsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(600000000000000, 1104078437)
-                );
-                yield return new (VolumeFlowUnit.OilBarrelPerHour, "OilBarrelPerHour", "OilBarrelsPerHour", BaseUnits.Undefined,
-                     new QuantityValue(25000000000000, 1104078437)
-                );
-                yield return new (VolumeFlowUnit.OilBarrelPerMinute, "OilBarrelPerMinute", "OilBarrelsPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(1250000000000, 3312235311)
-                );
-                yield return new (VolumeFlowUnit.OilBarrelPerSecond, "OilBarrelPerSecond", "OilBarrelsPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(62500000000, 9936705933)
-                );
-                yield return new (VolumeFlowUnit.UkGallonPerDay, "UkGallonPerDay", "UkGallonsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(8640000000000, 454609)
-                );
-                yield return new (VolumeFlowUnit.UkGallonPerHour, "UkGallonPerHour", "UkGallonsPerHour", BaseUnits.Undefined,
-                     new QuantityValue(360000000000, 454609)
-                );
-                yield return new (VolumeFlowUnit.UkGallonPerMinute, "UkGallonPerMinute", "UkGallonsPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(6000000000, 454609)
-                );
-                yield return new (VolumeFlowUnit.UkGallonPerSecond, "UkGallonPerSecond", "UkGallonsPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(100000000, 454609)
-                );
-                yield return new (VolumeFlowUnit.UsGallonPerDay, "UsGallonPerDay", "UsGallonsPerDay", BaseUnits.Undefined,
-                     new QuantityValue(3600000000000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.UsGallonPerHour, "UsGallonPerHour", "UsGallonsPerHour", BaseUnits.Undefined,
-                     new QuantityValue(150000000000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.UsGallonPerMinute, "UsGallonPerMinute", "UsGallonsPerMinute", BaseUnits.Undefined,
-                     new QuantityValue(2500000000000, 157725491)
-                );
-                yield return new (VolumeFlowUnit.UsGallonPerSecond, "UsGallonPerSecond", "UsGallonsPerSecond", BaseUnits.Undefined,
-                     new QuantityValue(125000000000, 473176473)
-                );
+                yield return new (VolumeFlowUnit.AcreFootPerDay, VolumeFlowUnits.AcreFootPerDay);
+                yield return new (VolumeFlowUnit.AcreFootPerHour, VolumeFlowUnits.AcreFootPerHour);
+                yield return new (VolumeFlowUnit.AcreFootPerMinute, VolumeFlowUnits.AcreFootPerMinute);
+                yield return new (VolumeFlowUnit.AcreFootPerSecond, VolumeFlowUnits.AcreFootPerSecond);
+                yield return new (VolumeFlowUnit.CentiliterPerDay, VolumeFlowUnits.CentiliterPerDay);
+                yield return new (VolumeFlowUnit.CentiliterPerHour, VolumeFlowUnits.CentiliterPerHour);
+                yield return new (VolumeFlowUnit.CentiliterPerMinute, VolumeFlowUnits.CentiliterPerMinute);
+                yield return new (VolumeFlowUnit.CentiliterPerSecond, VolumeFlowUnits.CentiliterPerSecond);
+                yield return new (VolumeFlowUnit.CubicCentimeterPerMinute, VolumeFlowUnits.CubicCentimeterPerMinute);
+                yield return new (VolumeFlowUnit.CubicDecimeterPerMinute, VolumeFlowUnits.CubicDecimeterPerMinute);
+                yield return new (VolumeFlowUnit.CubicFootPerHour, VolumeFlowUnits.CubicFootPerHour);
+                yield return new (VolumeFlowUnit.CubicFootPerMinute, VolumeFlowUnits.CubicFootPerMinute);
+                yield return new (VolumeFlowUnit.CubicFootPerSecond, VolumeFlowUnits.CubicFootPerSecond);
+                yield return new (VolumeFlowUnit.CubicInchPerMinute, VolumeFlowUnits.CubicInchPerMinute);
+                yield return new (VolumeFlowUnit.CubicInchPerSecond, VolumeFlowUnits.CubicInchPerSecond);
+                yield return new (VolumeFlowUnit.CubicMeterPerDay, VolumeFlowUnits.CubicMeterPerDay);
+                yield return new (VolumeFlowUnit.CubicMeterPerHour, VolumeFlowUnits.CubicMeterPerHour);
+                yield return new (VolumeFlowUnit.CubicMeterPerMinute, VolumeFlowUnits.CubicMeterPerMinute);
+                yield return new (VolumeFlowUnit.CubicMeterPerSecond, VolumeFlowUnits.CubicMeterPerSecond);
+                yield return new (VolumeFlowUnit.CubicMillimeterPerMinute, VolumeFlowUnits.CubicMillimeterPerMinute);
+                yield return new (VolumeFlowUnit.CubicMillimeterPerSecond, VolumeFlowUnits.CubicMillimeterPerSecond);
+                yield return new (VolumeFlowUnit.CubicYardPerDay, VolumeFlowUnits.CubicYardPerDay);
+                yield return new (VolumeFlowUnit.CubicYardPerHour, VolumeFlowUnits.CubicYardPerHour);
+                yield return new (VolumeFlowUnit.CubicYardPerMinute, VolumeFlowUnits.CubicYardPerMinute);
+                yield return new (VolumeFlowUnit.CubicYardPerSecond, VolumeFlowUnits.CubicYardPerSecond);
+                yield return new (VolumeFlowUnit.DecaliterPerDay, VolumeFlowUnits.DecaliterPerDay);
+                yield return new (VolumeFlowUnit.DecaliterPerHour, VolumeFlowUnits.DecaliterPerHour);
+                yield return new (VolumeFlowUnit.DecaliterPerMinute, VolumeFlowUnits.DecaliterPerMinute);
+                yield return new (VolumeFlowUnit.DecaliterPerSecond, VolumeFlowUnits.DecaliterPerSecond);
+                yield return new (VolumeFlowUnit.DeciliterPerDay, VolumeFlowUnits.DeciliterPerDay);
+                yield return new (VolumeFlowUnit.DeciliterPerHour, VolumeFlowUnits.DeciliterPerHour);
+                yield return new (VolumeFlowUnit.DeciliterPerMinute, VolumeFlowUnits.DeciliterPerMinute);
+                yield return new (VolumeFlowUnit.DeciliterPerSecond, VolumeFlowUnits.DeciliterPerSecond);
+                yield return new (VolumeFlowUnit.HectoliterPerDay, VolumeFlowUnits.HectoliterPerDay);
+                yield return new (VolumeFlowUnit.HectoliterPerHour, VolumeFlowUnits.HectoliterPerHour);
+                yield return new (VolumeFlowUnit.HectoliterPerMinute, VolumeFlowUnits.HectoliterPerMinute);
+                yield return new (VolumeFlowUnit.HectoliterPerSecond, VolumeFlowUnits.HectoliterPerSecond);
+                yield return new (VolumeFlowUnit.KiloliterPerDay, VolumeFlowUnits.KiloliterPerDay);
+                yield return new (VolumeFlowUnit.KiloliterPerHour, VolumeFlowUnits.KiloliterPerHour);
+                yield return new (VolumeFlowUnit.KiloliterPerMinute, VolumeFlowUnits.KiloliterPerMinute);
+                yield return new (VolumeFlowUnit.KiloliterPerSecond, VolumeFlowUnits.KiloliterPerSecond);
+                yield return new (VolumeFlowUnit.KilousGallonPerMinute, VolumeFlowUnits.KilousGallonPerMinute);
+                yield return new (VolumeFlowUnit.LiterPerDay, VolumeFlowUnits.LiterPerDay);
+                yield return new (VolumeFlowUnit.LiterPerHour, VolumeFlowUnits.LiterPerHour);
+                yield return new (VolumeFlowUnit.LiterPerMinute, VolumeFlowUnits.LiterPerMinute);
+                yield return new (VolumeFlowUnit.LiterPerSecond, VolumeFlowUnits.LiterPerSecond);
+                yield return new (VolumeFlowUnit.MegaliterPerDay, VolumeFlowUnits.MegaliterPerDay);
+                yield return new (VolumeFlowUnit.MegaliterPerHour, VolumeFlowUnits.MegaliterPerHour);
+                yield return new (VolumeFlowUnit.MegaliterPerMinute, VolumeFlowUnits.MegaliterPerMinute);
+                yield return new (VolumeFlowUnit.MegaliterPerSecond, VolumeFlowUnits.MegaliterPerSecond);
+                yield return new (VolumeFlowUnit.MegaukGallonPerDay, VolumeFlowUnits.MegaukGallonPerDay);
+                yield return new (VolumeFlowUnit.MegaukGallonPerSecond, VolumeFlowUnits.MegaukGallonPerSecond);
+                yield return new (VolumeFlowUnit.MegausGallonPerDay, VolumeFlowUnits.MegausGallonPerDay);
+                yield return new (VolumeFlowUnit.MicroliterPerDay, VolumeFlowUnits.MicroliterPerDay);
+                yield return new (VolumeFlowUnit.MicroliterPerHour, VolumeFlowUnits.MicroliterPerHour);
+                yield return new (VolumeFlowUnit.MicroliterPerMinute, VolumeFlowUnits.MicroliterPerMinute);
+                yield return new (VolumeFlowUnit.MicroliterPerSecond, VolumeFlowUnits.MicroliterPerSecond);
+                yield return new (VolumeFlowUnit.MilliliterPerDay, VolumeFlowUnits.MilliliterPerDay);
+                yield return new (VolumeFlowUnit.MilliliterPerHour, VolumeFlowUnits.MilliliterPerHour);
+                yield return new (VolumeFlowUnit.MilliliterPerMinute, VolumeFlowUnits.MilliliterPerMinute);
+                yield return new (VolumeFlowUnit.MilliliterPerSecond, VolumeFlowUnits.MilliliterPerSecond);
+                yield return new (VolumeFlowUnit.MillionUsGallonPerDay, VolumeFlowUnits.MillionUsGallonPerDay);
+                yield return new (VolumeFlowUnit.NanoliterPerDay, VolumeFlowUnits.NanoliterPerDay);
+                yield return new (VolumeFlowUnit.NanoliterPerHour, VolumeFlowUnits.NanoliterPerHour);
+                yield return new (VolumeFlowUnit.NanoliterPerMinute, VolumeFlowUnits.NanoliterPerMinute);
+                yield return new (VolumeFlowUnit.NanoliterPerSecond, VolumeFlowUnits.NanoliterPerSecond);
+                yield return new (VolumeFlowUnit.OilBarrelPerDay, VolumeFlowUnits.OilBarrelPerDay);
+                yield return new (VolumeFlowUnit.OilBarrelPerHour, VolumeFlowUnits.OilBarrelPerHour);
+                yield return new (VolumeFlowUnit.OilBarrelPerMinute, VolumeFlowUnits.OilBarrelPerMinute);
+                yield return new (VolumeFlowUnit.OilBarrelPerSecond, VolumeFlowUnits.OilBarrelPerSecond);
+                yield return new (VolumeFlowUnit.UkGallonPerDay, VolumeFlowUnits.UkGallonPerDay);
+                yield return new (VolumeFlowUnit.UkGallonPerHour, VolumeFlowUnits.UkGallonPerHour);
+                yield return new (VolumeFlowUnit.UkGallonPerMinute, VolumeFlowUnits.UkGallonPerMinute);
+                yield return new (VolumeFlowUnit.UkGallonPerSecond, VolumeFlowUnits.UkGallonPerSecond);
+                yield return new (VolumeFlowUnit.UsGallonPerDay, VolumeFlowUnits.UsGallonPerDay);
+                yield return new (VolumeFlowUnit.UsGallonPerHour, VolumeFlowUnits.UsGallonPerHour);
+                yield return new (VolumeFlowUnit.UsGallonPerMinute, VolumeFlowUnits.UsGallonPerMinute);
+                yield return new (VolumeFlowUnit.UsGallonPerSecond, VolumeFlowUnits.UsGallonPerSecond);
             }
         }
 

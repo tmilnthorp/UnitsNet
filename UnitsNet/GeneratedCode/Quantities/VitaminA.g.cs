@@ -116,7 +116,7 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VitaminAUnit}"/> representing the default unit mappings for VitaminA.</returns>
             public static IEnumerable<UnitDefinition<VitaminAUnit>> GetDefaultMappings()
             {
-                yield return new (VitaminAUnit.InternationalUnit, "InternationalUnit", "InternationalUnits", BaseUnits.Undefined);
+                yield return new (VitaminAUnit.InternationalUnit, VitaminAUnits.InternationalUnit);
             }
         }
 
