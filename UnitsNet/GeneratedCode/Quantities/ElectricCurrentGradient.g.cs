@@ -117,13 +117,16 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricCurrentGradientUnit}"/> representing the default unit mappings for ElectricCurrentGradient.</returns>
             public static IEnumerable<UnitDefinition<ElectricCurrentGradientUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricCurrentGradientUnit.AmperePerMicrosecond, ElectricCurrentGradientUnits.AmperePerMicrosecond);
-                yield return new (ElectricCurrentGradientUnit.AmperePerMillisecond, ElectricCurrentGradientUnits.AmperePerMillisecond);
-                yield return new (ElectricCurrentGradientUnit.AmperePerMinute, ElectricCurrentGradientUnits.AmperePerMinute);
-                yield return new (ElectricCurrentGradientUnit.AmperePerNanosecond, ElectricCurrentGradientUnits.AmperePerNanosecond);
-                yield return new (ElectricCurrentGradientUnit.AmperePerSecond, ElectricCurrentGradientUnits.AmperePerSecond);
-                yield return new (ElectricCurrentGradientUnit.MilliamperePerMinute, ElectricCurrentGradientUnits.MilliamperePerMinute);
-                yield return new (ElectricCurrentGradientUnit.MilliamperePerSecond, ElectricCurrentGradientUnits.MilliamperePerSecond);
+                return new UnitDefinition<ElectricCurrentGradientUnit>[]
+                {
+                    new (ElectricCurrentGradientUnit.AmperePerMicrosecond, ElectricCurrentGradientUnits.AmperePerMicrosecond),
+                    new (ElectricCurrentGradientUnit.AmperePerMillisecond, ElectricCurrentGradientUnits.AmperePerMillisecond),
+                    new (ElectricCurrentGradientUnit.AmperePerMinute, ElectricCurrentGradientUnits.AmperePerMinute),
+                    new (ElectricCurrentGradientUnit.AmperePerNanosecond, ElectricCurrentGradientUnits.AmperePerNanosecond),
+                    new (ElectricCurrentGradientUnit.AmperePerSecond, ElectricCurrentGradientUnits.AmperePerSecond),
+                    new (ElectricCurrentGradientUnit.MilliamperePerMinute, ElectricCurrentGradientUnits.MilliamperePerMinute),
+                    new (ElectricCurrentGradientUnit.MilliamperePerSecond, ElectricCurrentGradientUnits.MilliamperePerSecond),
+                };
             }
         }
 

@@ -120,31 +120,34 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{HeatFluxUnit}"/> representing the default unit mappings for HeatFlux.</returns>
             public static IEnumerable<UnitDefinition<HeatFluxUnit>> GetDefaultMappings()
             {
-                yield return new (HeatFluxUnit.BtuPerHourSquareFoot, HeatFluxUnits.BtuPerHourSquareFoot);
-                yield return new (HeatFluxUnit.BtuPerMinuteSquareFoot, HeatFluxUnits.BtuPerMinuteSquareFoot);
-                yield return new (HeatFluxUnit.BtuPerSecondSquareFoot, HeatFluxUnits.BtuPerSecondSquareFoot);
-                yield return new (HeatFluxUnit.BtuPerSecondSquareInch, HeatFluxUnits.BtuPerSecondSquareInch);
-                yield return new (HeatFluxUnit.CaloriePerSecondSquareCentimeter, HeatFluxUnits.CaloriePerSecondSquareCentimeter);
-                yield return new (HeatFluxUnit.CentiwattPerSquareMeter, HeatFluxUnits.CentiwattPerSquareMeter);
-                yield return new (HeatFluxUnit.CentiwattPerSquareMillimeter, HeatFluxUnits.CentiwattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.DeciwattPerSquareMeter, HeatFluxUnits.DeciwattPerSquareMeter);
-                yield return new (HeatFluxUnit.DeciwattPerSquareMillimeter, HeatFluxUnits.DeciwattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.KilocaloriePerHourSquareMeter, HeatFluxUnits.KilocaloriePerHourSquareMeter);
-                yield return new (HeatFluxUnit.KilocaloriePerSecondSquareCentimeter, HeatFluxUnits.KilocaloriePerSecondSquareCentimeter);
-                yield return new (HeatFluxUnit.KilowattPerSquareMeter, HeatFluxUnits.KilowattPerSquareMeter);
-                yield return new (HeatFluxUnit.KilowattPerSquareMillimeter, HeatFluxUnits.KilowattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.MicrowattPerSquareMeter, HeatFluxUnits.MicrowattPerSquareMeter);
-                yield return new (HeatFluxUnit.MicrowattPerSquareMillimeter, HeatFluxUnits.MicrowattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.MilliwattPerSquareMeter, HeatFluxUnits.MilliwattPerSquareMeter);
-                yield return new (HeatFluxUnit.MilliwattPerSquareMillimeter, HeatFluxUnits.MilliwattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.NanowattPerSquareMeter, HeatFluxUnits.NanowattPerSquareMeter);
-                yield return new (HeatFluxUnit.NanowattPerSquareMillimeter, HeatFluxUnits.NanowattPerSquareMillimeter);
-                yield return new (HeatFluxUnit.PoundForcePerFootSecond, HeatFluxUnits.PoundForcePerFootSecond);
-                yield return new (HeatFluxUnit.PoundPerSecondCubed, HeatFluxUnits.PoundPerSecondCubed);
-                yield return new (HeatFluxUnit.WattPerSquareFoot, HeatFluxUnits.WattPerSquareFoot);
-                yield return new (HeatFluxUnit.WattPerSquareInch, HeatFluxUnits.WattPerSquareInch);
-                yield return new (HeatFluxUnit.WattPerSquareMeter, HeatFluxUnits.WattPerSquareMeter);
-                yield return new (HeatFluxUnit.WattPerSquareMillimeter, HeatFluxUnits.WattPerSquareMillimeter);
+                return new UnitDefinition<HeatFluxUnit>[]
+                {
+                    new (HeatFluxUnit.BtuPerHourSquareFoot, HeatFluxUnits.BtuPerHourSquareFoot),
+                    new (HeatFluxUnit.BtuPerMinuteSquareFoot, HeatFluxUnits.BtuPerMinuteSquareFoot),
+                    new (HeatFluxUnit.BtuPerSecondSquareFoot, HeatFluxUnits.BtuPerSecondSquareFoot),
+                    new (HeatFluxUnit.BtuPerSecondSquareInch, HeatFluxUnits.BtuPerSecondSquareInch),
+                    new (HeatFluxUnit.CaloriePerSecondSquareCentimeter, HeatFluxUnits.CaloriePerSecondSquareCentimeter),
+                    new (HeatFluxUnit.CentiwattPerSquareMeter, HeatFluxUnits.CentiwattPerSquareMeter),
+                    new (HeatFluxUnit.CentiwattPerSquareMillimeter, HeatFluxUnits.CentiwattPerSquareMillimeter),
+                    new (HeatFluxUnit.DeciwattPerSquareMeter, HeatFluxUnits.DeciwattPerSquareMeter),
+                    new (HeatFluxUnit.DeciwattPerSquareMillimeter, HeatFluxUnits.DeciwattPerSquareMillimeter),
+                    new (HeatFluxUnit.KilocaloriePerHourSquareMeter, HeatFluxUnits.KilocaloriePerHourSquareMeter),
+                    new (HeatFluxUnit.KilocaloriePerSecondSquareCentimeter, HeatFluxUnits.KilocaloriePerSecondSquareCentimeter),
+                    new (HeatFluxUnit.KilowattPerSquareMeter, HeatFluxUnits.KilowattPerSquareMeter),
+                    new (HeatFluxUnit.KilowattPerSquareMillimeter, HeatFluxUnits.KilowattPerSquareMillimeter),
+                    new (HeatFluxUnit.MicrowattPerSquareMeter, HeatFluxUnits.MicrowattPerSquareMeter),
+                    new (HeatFluxUnit.MicrowattPerSquareMillimeter, HeatFluxUnits.MicrowattPerSquareMillimeter),
+                    new (HeatFluxUnit.MilliwattPerSquareMeter, HeatFluxUnits.MilliwattPerSquareMeter),
+                    new (HeatFluxUnit.MilliwattPerSquareMillimeter, HeatFluxUnits.MilliwattPerSquareMillimeter),
+                    new (HeatFluxUnit.NanowattPerSquareMeter, HeatFluxUnits.NanowattPerSquareMeter),
+                    new (HeatFluxUnit.NanowattPerSquareMillimeter, HeatFluxUnits.NanowattPerSquareMillimeter),
+                    new (HeatFluxUnit.PoundForcePerFootSecond, HeatFluxUnits.PoundForcePerFootSecond),
+                    new (HeatFluxUnit.PoundPerSecondCubed, HeatFluxUnits.PoundPerSecondCubed),
+                    new (HeatFluxUnit.WattPerSquareFoot, HeatFluxUnits.WattPerSquareFoot),
+                    new (HeatFluxUnit.WattPerSquareInch, HeatFluxUnits.WattPerSquareInch),
+                    new (HeatFluxUnit.WattPerSquareMeter, HeatFluxUnits.WattPerSquareMeter),
+                    new (HeatFluxUnit.WattPerSquareMillimeter, HeatFluxUnits.WattPerSquareMillimeter),
+                };
             }
         }
 

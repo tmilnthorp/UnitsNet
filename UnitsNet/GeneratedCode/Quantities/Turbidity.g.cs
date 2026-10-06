@@ -119,7 +119,10 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TurbidityUnit}"/> representing the default unit mappings for Turbidity.</returns>
             public static IEnumerable<UnitDefinition<TurbidityUnit>> GetDefaultMappings()
             {
-                yield return new (TurbidityUnit.NTU, TurbidityUnits.NTU);
+                return new UnitDefinition<TurbidityUnit>[]
+                {
+                    new (TurbidityUnit.NTU, TurbidityUnits.NTU),
+                };
             }
         }
 

@@ -139,19 +139,22 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{DurationUnit}"/> representing the default unit mappings for Duration.</returns>
             public static IEnumerable<UnitDefinition<DurationUnit>> GetDefaultMappings()
             {
-                yield return new (DurationUnit.Day, DurationUnits.Day);
-                yield return new (DurationUnit.Hour, DurationUnits.Hour);
-                yield return new (DurationUnit.JulianYear, DurationUnits.JulianYear);
-                yield return new (DurationUnit.Microsecond, DurationUnits.Microsecond);
-                yield return new (DurationUnit.Millisecond, DurationUnits.Millisecond);
-                yield return new (DurationUnit.Minute, DurationUnits.Minute);
-                yield return new (DurationUnit.Month30, DurationUnits.Month30);
-                yield return new (DurationUnit.Nanosecond, DurationUnits.Nanosecond);
-                yield return new (DurationUnit.Picosecond, DurationUnits.Picosecond);
-                yield return new (DurationUnit.Second, DurationUnits.Second);
-                yield return new (DurationUnit.Sol, DurationUnits.Sol);
-                yield return new (DurationUnit.Week, DurationUnits.Week);
-                yield return new (DurationUnit.Year365, DurationUnits.Year365);
+                return new UnitDefinition<DurationUnit>[]
+                {
+                    new (DurationUnit.Day, DurationUnits.Day),
+                    new (DurationUnit.Hour, DurationUnits.Hour),
+                    new (DurationUnit.JulianYear, DurationUnits.JulianYear),
+                    new (DurationUnit.Microsecond, DurationUnits.Microsecond),
+                    new (DurationUnit.Millisecond, DurationUnits.Millisecond),
+                    new (DurationUnit.Minute, DurationUnits.Minute),
+                    new (DurationUnit.Month30, DurationUnits.Month30),
+                    new (DurationUnit.Nanosecond, DurationUnits.Nanosecond),
+                    new (DurationUnit.Picosecond, DurationUnits.Picosecond),
+                    new (DurationUnit.Second, DurationUnits.Second),
+                    new (DurationUnit.Sol, DurationUnits.Sol),
+                    new (DurationUnit.Week, DurationUnits.Week),
+                    new (DurationUnit.Year365, DurationUnits.Year365),
+                };
             }
         }
 

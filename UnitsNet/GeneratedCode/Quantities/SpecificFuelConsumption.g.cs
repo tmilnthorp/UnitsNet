@@ -119,10 +119,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpecificFuelConsumptionUnit}"/> representing the default unit mappings for SpecificFuelConsumption.</returns>
             public static IEnumerable<UnitDefinition<SpecificFuelConsumptionUnit>> GetDefaultMappings()
             {
-                yield return new (SpecificFuelConsumptionUnit.GramPerKilonewtonSecond, SpecificFuelConsumptionUnits.GramPerKilonewtonSecond);
-                yield return new (SpecificFuelConsumptionUnit.KilogramPerKilogramForceHour, SpecificFuelConsumptionUnits.KilogramPerKilogramForceHour);
-                yield return new (SpecificFuelConsumptionUnit.KilogramPerKilonewtonSecond, SpecificFuelConsumptionUnits.KilogramPerKilonewtonSecond);
-                yield return new (SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour, SpecificFuelConsumptionUnits.PoundMassPerPoundForceHour);
+                return new UnitDefinition<SpecificFuelConsumptionUnit>[]
+                {
+                    new (SpecificFuelConsumptionUnit.GramPerKilonewtonSecond, SpecificFuelConsumptionUnits.GramPerKilonewtonSecond),
+                    new (SpecificFuelConsumptionUnit.KilogramPerKilogramForceHour, SpecificFuelConsumptionUnits.KilogramPerKilogramForceHour),
+                    new (SpecificFuelConsumptionUnit.KilogramPerKilonewtonSecond, SpecificFuelConsumptionUnits.KilogramPerKilonewtonSecond),
+                    new (SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour, SpecificFuelConsumptionUnits.PoundMassPerPoundForceHour),
+                };
             }
         }
 

@@ -140,48 +140,51 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LengthUnit}"/> representing the default unit mappings for Length.</returns>
             public static IEnumerable<UnitDefinition<LengthUnit>> GetDefaultMappings()
             {
-                yield return new (LengthUnit.Angstrom, LengthUnits.Angstrom);
-                yield return new (LengthUnit.AstronomicalUnit, LengthUnits.AstronomicalUnit);
-                yield return new (LengthUnit.Centimeter, LengthUnits.Centimeter);
-                yield return new (LengthUnit.Chain, LengthUnits.Chain);
-                yield return new (LengthUnit.DataMile, LengthUnits.DataMile);
-                yield return new (LengthUnit.Decameter, LengthUnits.Decameter);
-                yield return new (LengthUnit.Decimeter, LengthUnits.Decimeter);
-                yield return new (LengthUnit.DtpPica, LengthUnits.DtpPica);
-                yield return new (LengthUnit.DtpPoint, LengthUnits.DtpPoint);
-                yield return new (LengthUnit.Fathom, LengthUnits.Fathom);
-                yield return new (LengthUnit.Femtometer, LengthUnits.Femtometer);
-                yield return new (LengthUnit.Foot, LengthUnits.Foot);
-                yield return new (LengthUnit.Gigameter, LengthUnits.Gigameter);
-                yield return new (LengthUnit.Hand, LengthUnits.Hand);
-                yield return new (LengthUnit.Hectometer, LengthUnits.Hectometer);
-                yield return new (LengthUnit.Inch, LengthUnits.Inch);
-                yield return new (LengthUnit.Kilofoot, LengthUnits.Kilofoot);
-                yield return new (LengthUnit.KilolightYear, LengthUnits.KilolightYear);
-                yield return new (LengthUnit.Kilometer, LengthUnits.Kilometer);
-                yield return new (LengthUnit.Kiloparsec, LengthUnits.Kiloparsec);
-                yield return new (LengthUnit.Kiloyard, LengthUnits.Kiloyard);
-                yield return new (LengthUnit.LightYear, LengthUnits.LightYear);
-                yield return new (LengthUnit.MegalightYear, LengthUnits.MegalightYear);
-                yield return new (LengthUnit.Megameter, LengthUnits.Megameter);
-                yield return new (LengthUnit.Megaparsec, LengthUnits.Megaparsec);
-                yield return new (LengthUnit.Meter, LengthUnits.Meter);
-                yield return new (LengthUnit.Microinch, LengthUnits.Microinch);
-                yield return new (LengthUnit.Micrometer, LengthUnits.Micrometer);
-                yield return new (LengthUnit.Mil, LengthUnits.Mil);
-                yield return new (LengthUnit.Mile, LengthUnits.Mile);
-                yield return new (LengthUnit.Millimeter, LengthUnits.Millimeter);
-                yield return new (LengthUnit.Nanometer, LengthUnits.Nanometer);
-                yield return new (LengthUnit.NauticalMile, LengthUnits.NauticalMile);
-                yield return new (LengthUnit.Parsec, LengthUnits.Parsec);
-                yield return new (LengthUnit.Picometer, LengthUnits.Picometer);
-                yield return new (LengthUnit.PrinterPica, LengthUnits.PrinterPica);
-                yield return new (LengthUnit.PrinterPoint, LengthUnits.PrinterPoint);
-                yield return new (LengthUnit.Shackle, LengthUnits.Shackle);
-                yield return new (LengthUnit.SolarRadius, LengthUnits.SolarRadius);
-                yield return new (LengthUnit.Twip, LengthUnits.Twip);
-                yield return new (LengthUnit.UsSurveyFoot, LengthUnits.UsSurveyFoot);
-                yield return new (LengthUnit.Yard, LengthUnits.Yard);
+                return new UnitDefinition<LengthUnit>[]
+                {
+                    new (LengthUnit.Angstrom, LengthUnits.Angstrom),
+                    new (LengthUnit.AstronomicalUnit, LengthUnits.AstronomicalUnit),
+                    new (LengthUnit.Centimeter, LengthUnits.Centimeter),
+                    new (LengthUnit.Chain, LengthUnits.Chain),
+                    new (LengthUnit.DataMile, LengthUnits.DataMile),
+                    new (LengthUnit.Decameter, LengthUnits.Decameter),
+                    new (LengthUnit.Decimeter, LengthUnits.Decimeter),
+                    new (LengthUnit.DtpPica, LengthUnits.DtpPica),
+                    new (LengthUnit.DtpPoint, LengthUnits.DtpPoint),
+                    new (LengthUnit.Fathom, LengthUnits.Fathom),
+                    new (LengthUnit.Femtometer, LengthUnits.Femtometer),
+                    new (LengthUnit.Foot, LengthUnits.Foot),
+                    new (LengthUnit.Gigameter, LengthUnits.Gigameter),
+                    new (LengthUnit.Hand, LengthUnits.Hand),
+                    new (LengthUnit.Hectometer, LengthUnits.Hectometer),
+                    new (LengthUnit.Inch, LengthUnits.Inch),
+                    new (LengthUnit.Kilofoot, LengthUnits.Kilofoot),
+                    new (LengthUnit.KilolightYear, LengthUnits.KilolightYear),
+                    new (LengthUnit.Kilometer, LengthUnits.Kilometer),
+                    new (LengthUnit.Kiloparsec, LengthUnits.Kiloparsec),
+                    new (LengthUnit.Kiloyard, LengthUnits.Kiloyard),
+                    new (LengthUnit.LightYear, LengthUnits.LightYear),
+                    new (LengthUnit.MegalightYear, LengthUnits.MegalightYear),
+                    new (LengthUnit.Megameter, LengthUnits.Megameter),
+                    new (LengthUnit.Megaparsec, LengthUnits.Megaparsec),
+                    new (LengthUnit.Meter, LengthUnits.Meter),
+                    new (LengthUnit.Microinch, LengthUnits.Microinch),
+                    new (LengthUnit.Micrometer, LengthUnits.Micrometer),
+                    new (LengthUnit.Mil, LengthUnits.Mil),
+                    new (LengthUnit.Mile, LengthUnits.Mile),
+                    new (LengthUnit.Millimeter, LengthUnits.Millimeter),
+                    new (LengthUnit.Nanometer, LengthUnits.Nanometer),
+                    new (LengthUnit.NauticalMile, LengthUnits.NauticalMile),
+                    new (LengthUnit.Parsec, LengthUnits.Parsec),
+                    new (LengthUnit.Picometer, LengthUnits.Picometer),
+                    new (LengthUnit.PrinterPica, LengthUnits.PrinterPica),
+                    new (LengthUnit.PrinterPoint, LengthUnits.PrinterPoint),
+                    new (LengthUnit.Shackle, LengthUnits.Shackle),
+                    new (LengthUnit.SolarRadius, LengthUnits.SolarRadius),
+                    new (LengthUnit.Twip, LengthUnits.Twip),
+                    new (LengthUnit.UsSurveyFoot, LengthUnits.UsSurveyFoot),
+                    new (LengthUnit.Yard, LengthUnits.Yard),
+                };
             }
         }
 

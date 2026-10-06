@@ -120,16 +120,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LuminanceUnit}"/> representing the default unit mappings for Luminance.</returns>
             public static IEnumerable<UnitDefinition<LuminanceUnit>> GetDefaultMappings()
             {
-                yield return new (LuminanceUnit.CandelaPerSquareFoot, LuminanceUnits.CandelaPerSquareFoot);
-                yield return new (LuminanceUnit.CandelaPerSquareInch, LuminanceUnits.CandelaPerSquareInch);
-                yield return new (LuminanceUnit.CandelaPerSquareMeter, LuminanceUnits.CandelaPerSquareMeter);
-                yield return new (LuminanceUnit.CenticandelaPerSquareMeter, LuminanceUnits.CenticandelaPerSquareMeter);
-                yield return new (LuminanceUnit.DecicandelaPerSquareMeter, LuminanceUnits.DecicandelaPerSquareMeter);
-                yield return new (LuminanceUnit.KilocandelaPerSquareMeter, LuminanceUnits.KilocandelaPerSquareMeter);
-                yield return new (LuminanceUnit.MicrocandelaPerSquareMeter, LuminanceUnits.MicrocandelaPerSquareMeter);
-                yield return new (LuminanceUnit.MillicandelaPerSquareMeter, LuminanceUnits.MillicandelaPerSquareMeter);
-                yield return new (LuminanceUnit.NanocandelaPerSquareMeter, LuminanceUnits.NanocandelaPerSquareMeter);
-                yield return new (LuminanceUnit.Nit, LuminanceUnits.Nit);
+                return new UnitDefinition<LuminanceUnit>[]
+                {
+                    new (LuminanceUnit.CandelaPerSquareFoot, LuminanceUnits.CandelaPerSquareFoot),
+                    new (LuminanceUnit.CandelaPerSquareInch, LuminanceUnits.CandelaPerSquareInch),
+                    new (LuminanceUnit.CandelaPerSquareMeter, LuminanceUnits.CandelaPerSquareMeter),
+                    new (LuminanceUnit.CenticandelaPerSquareMeter, LuminanceUnits.CenticandelaPerSquareMeter),
+                    new (LuminanceUnit.DecicandelaPerSquareMeter, LuminanceUnits.DecicandelaPerSquareMeter),
+                    new (LuminanceUnit.KilocandelaPerSquareMeter, LuminanceUnits.KilocandelaPerSquareMeter),
+                    new (LuminanceUnit.MicrocandelaPerSquareMeter, LuminanceUnits.MicrocandelaPerSquareMeter),
+                    new (LuminanceUnit.MillicandelaPerSquareMeter, LuminanceUnits.MillicandelaPerSquareMeter),
+                    new (LuminanceUnit.NanocandelaPerSquareMeter, LuminanceUnits.NanocandelaPerSquareMeter),
+                    new (LuminanceUnit.Nit, LuminanceUnits.Nit),
+                };
             }
         }
 

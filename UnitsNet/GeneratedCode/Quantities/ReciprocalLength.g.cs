@@ -126,16 +126,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ReciprocalLengthUnit}"/> representing the default unit mappings for ReciprocalLength.</returns>
             public static IEnumerable<UnitDefinition<ReciprocalLengthUnit>> GetDefaultMappings()
             {
-                yield return new (ReciprocalLengthUnit.InverseCentimeter, ReciprocalLengthUnits.InverseCentimeter);
-                yield return new (ReciprocalLengthUnit.InverseFoot, ReciprocalLengthUnits.InverseFoot);
-                yield return new (ReciprocalLengthUnit.InverseInch, ReciprocalLengthUnits.InverseInch);
-                yield return new (ReciprocalLengthUnit.InverseMeter, ReciprocalLengthUnits.InverseMeter);
-                yield return new (ReciprocalLengthUnit.InverseMicroinch, ReciprocalLengthUnits.InverseMicroinch);
-                yield return new (ReciprocalLengthUnit.InverseMil, ReciprocalLengthUnits.InverseMil);
-                yield return new (ReciprocalLengthUnit.InverseMile, ReciprocalLengthUnits.InverseMile);
-                yield return new (ReciprocalLengthUnit.InverseMillimeter, ReciprocalLengthUnits.InverseMillimeter);
-                yield return new (ReciprocalLengthUnit.InverseUsSurveyFoot, ReciprocalLengthUnits.InverseUsSurveyFoot);
-                yield return new (ReciprocalLengthUnit.InverseYard, ReciprocalLengthUnits.InverseYard);
+                return new UnitDefinition<ReciprocalLengthUnit>[]
+                {
+                    new (ReciprocalLengthUnit.InverseCentimeter, ReciprocalLengthUnits.InverseCentimeter),
+                    new (ReciprocalLengthUnit.InverseFoot, ReciprocalLengthUnits.InverseFoot),
+                    new (ReciprocalLengthUnit.InverseInch, ReciprocalLengthUnits.InverseInch),
+                    new (ReciprocalLengthUnit.InverseMeter, ReciprocalLengthUnits.InverseMeter),
+                    new (ReciprocalLengthUnit.InverseMicroinch, ReciprocalLengthUnits.InverseMicroinch),
+                    new (ReciprocalLengthUnit.InverseMil, ReciprocalLengthUnits.InverseMil),
+                    new (ReciprocalLengthUnit.InverseMile, ReciprocalLengthUnits.InverseMile),
+                    new (ReciprocalLengthUnit.InverseMillimeter, ReciprocalLengthUnits.InverseMillimeter),
+                    new (ReciprocalLengthUnit.InverseUsSurveyFoot, ReciprocalLengthUnits.InverseUsSurveyFoot),
+                    new (ReciprocalLengthUnit.InverseYard, ReciprocalLengthUnits.InverseYard),
+                };
             }
         }
 

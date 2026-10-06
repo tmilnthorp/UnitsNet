@@ -116,9 +116,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarEntropyUnit}"/> representing the default unit mappings for MolarEntropy.</returns>
             public static IEnumerable<UnitDefinition<MolarEntropyUnit>> GetDefaultMappings()
             {
-                yield return new (MolarEntropyUnit.JoulePerMoleKelvin, MolarEntropyUnits.JoulePerMoleKelvin);
-                yield return new (MolarEntropyUnit.KilojoulePerMoleKelvin, MolarEntropyUnits.KilojoulePerMoleKelvin);
-                yield return new (MolarEntropyUnit.MegajoulePerMoleKelvin, MolarEntropyUnits.MegajoulePerMoleKelvin);
+                return new UnitDefinition<MolarEntropyUnit>[]
+                {
+                    new (MolarEntropyUnit.JoulePerMoleKelvin, MolarEntropyUnits.JoulePerMoleKelvin),
+                    new (MolarEntropyUnit.KilojoulePerMoleKelvin, MolarEntropyUnits.KilojoulePerMoleKelvin),
+                    new (MolarEntropyUnit.MegajoulePerMoleKelvin, MolarEntropyUnits.MegajoulePerMoleKelvin),
+                };
             }
         }
 

@@ -119,45 +119,48 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{InformationUnit}"/> representing the default unit mappings for Information.</returns>
             public static IEnumerable<UnitDefinition<InformationUnit>> GetDefaultMappings()
             {
-                yield return new (InformationUnit.Bit, InformationUnits.Bit);
-                yield return new (InformationUnit.Byte, InformationUnits.Byte);
-                yield return new (InformationUnit.Exabit, InformationUnits.Exabit);
-                yield return new (InformationUnit.Exabyte, InformationUnits.Exabyte);
-                yield return new (InformationUnit.Exaoctet, InformationUnits.Exaoctet);
-                yield return new (InformationUnit.Exbibit, InformationUnits.Exbibit);
-                yield return new (InformationUnit.Exbibyte, InformationUnits.Exbibyte);
-                yield return new (InformationUnit.Exbioctet, InformationUnits.Exbioctet);
-                yield return new (InformationUnit.Gibibit, InformationUnits.Gibibit);
-                yield return new (InformationUnit.Gibibyte, InformationUnits.Gibibyte);
-                yield return new (InformationUnit.Gibioctet, InformationUnits.Gibioctet);
-                yield return new (InformationUnit.Gigabit, InformationUnits.Gigabit);
-                yield return new (InformationUnit.Gigabyte, InformationUnits.Gigabyte);
-                yield return new (InformationUnit.Gigaoctet, InformationUnits.Gigaoctet);
-                yield return new (InformationUnit.Kibibit, InformationUnits.Kibibit);
-                yield return new (InformationUnit.Kibibyte, InformationUnits.Kibibyte);
-                yield return new (InformationUnit.Kibioctet, InformationUnits.Kibioctet);
-                yield return new (InformationUnit.Kilobit, InformationUnits.Kilobit);
-                yield return new (InformationUnit.Kilobyte, InformationUnits.Kilobyte);
-                yield return new (InformationUnit.Kilooctet, InformationUnits.Kilooctet);
-                yield return new (InformationUnit.Mebibit, InformationUnits.Mebibit);
-                yield return new (InformationUnit.Mebibyte, InformationUnits.Mebibyte);
-                yield return new (InformationUnit.Mebioctet, InformationUnits.Mebioctet);
-                yield return new (InformationUnit.Megabit, InformationUnits.Megabit);
-                yield return new (InformationUnit.Megabyte, InformationUnits.Megabyte);
-                yield return new (InformationUnit.Megaoctet, InformationUnits.Megaoctet);
-                yield return new (InformationUnit.Octet, InformationUnits.Octet);
-                yield return new (InformationUnit.Pebibit, InformationUnits.Pebibit);
-                yield return new (InformationUnit.Pebibyte, InformationUnits.Pebibyte);
-                yield return new (InformationUnit.Pebioctet, InformationUnits.Pebioctet);
-                yield return new (InformationUnit.Petabit, InformationUnits.Petabit);
-                yield return new (InformationUnit.Petabyte, InformationUnits.Petabyte);
-                yield return new (InformationUnit.Petaoctet, InformationUnits.Petaoctet);
-                yield return new (InformationUnit.Tebibit, InformationUnits.Tebibit);
-                yield return new (InformationUnit.Tebibyte, InformationUnits.Tebibyte);
-                yield return new (InformationUnit.Tebioctet, InformationUnits.Tebioctet);
-                yield return new (InformationUnit.Terabit, InformationUnits.Terabit);
-                yield return new (InformationUnit.Terabyte, InformationUnits.Terabyte);
-                yield return new (InformationUnit.Teraoctet, InformationUnits.Teraoctet);
+                return new UnitDefinition<InformationUnit>[]
+                {
+                    new (InformationUnit.Bit, InformationUnits.Bit),
+                    new (InformationUnit.Byte, InformationUnits.Byte),
+                    new (InformationUnit.Exabit, InformationUnits.Exabit),
+                    new (InformationUnit.Exabyte, InformationUnits.Exabyte),
+                    new (InformationUnit.Exaoctet, InformationUnits.Exaoctet),
+                    new (InformationUnit.Exbibit, InformationUnits.Exbibit),
+                    new (InformationUnit.Exbibyte, InformationUnits.Exbibyte),
+                    new (InformationUnit.Exbioctet, InformationUnits.Exbioctet),
+                    new (InformationUnit.Gibibit, InformationUnits.Gibibit),
+                    new (InformationUnit.Gibibyte, InformationUnits.Gibibyte),
+                    new (InformationUnit.Gibioctet, InformationUnits.Gibioctet),
+                    new (InformationUnit.Gigabit, InformationUnits.Gigabit),
+                    new (InformationUnit.Gigabyte, InformationUnits.Gigabyte),
+                    new (InformationUnit.Gigaoctet, InformationUnits.Gigaoctet),
+                    new (InformationUnit.Kibibit, InformationUnits.Kibibit),
+                    new (InformationUnit.Kibibyte, InformationUnits.Kibibyte),
+                    new (InformationUnit.Kibioctet, InformationUnits.Kibioctet),
+                    new (InformationUnit.Kilobit, InformationUnits.Kilobit),
+                    new (InformationUnit.Kilobyte, InformationUnits.Kilobyte),
+                    new (InformationUnit.Kilooctet, InformationUnits.Kilooctet),
+                    new (InformationUnit.Mebibit, InformationUnits.Mebibit),
+                    new (InformationUnit.Mebibyte, InformationUnits.Mebibyte),
+                    new (InformationUnit.Mebioctet, InformationUnits.Mebioctet),
+                    new (InformationUnit.Megabit, InformationUnits.Megabit),
+                    new (InformationUnit.Megabyte, InformationUnits.Megabyte),
+                    new (InformationUnit.Megaoctet, InformationUnits.Megaoctet),
+                    new (InformationUnit.Octet, InformationUnits.Octet),
+                    new (InformationUnit.Pebibit, InformationUnits.Pebibit),
+                    new (InformationUnit.Pebibyte, InformationUnits.Pebibyte),
+                    new (InformationUnit.Pebioctet, InformationUnits.Pebioctet),
+                    new (InformationUnit.Petabit, InformationUnits.Petabit),
+                    new (InformationUnit.Petabyte, InformationUnits.Petabyte),
+                    new (InformationUnit.Petaoctet, InformationUnits.Petaoctet),
+                    new (InformationUnit.Tebibit, InformationUnits.Tebibit),
+                    new (InformationUnit.Tebibyte, InformationUnits.Tebibyte),
+                    new (InformationUnit.Tebioctet, InformationUnits.Tebioctet),
+                    new (InformationUnit.Terabit, InformationUnits.Terabit),
+                    new (InformationUnit.Terabyte, InformationUnits.Terabyte),
+                    new (InformationUnit.Teraoctet, InformationUnits.Teraoctet),
+                };
             }
         }
 

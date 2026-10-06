@@ -120,14 +120,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricImpedanceUnit}"/> representing the default unit mappings for ElectricImpedance.</returns>
             public static IEnumerable<UnitDefinition<ElectricImpedanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricImpedanceUnit.Gigaohm, ElectricImpedanceUnits.Gigaohm);
-                yield return new (ElectricImpedanceUnit.Kiloohm, ElectricImpedanceUnits.Kiloohm);
-                yield return new (ElectricImpedanceUnit.Megaohm, ElectricImpedanceUnits.Megaohm);
-                yield return new (ElectricImpedanceUnit.Microohm, ElectricImpedanceUnits.Microohm);
-                yield return new (ElectricImpedanceUnit.Milliohm, ElectricImpedanceUnits.Milliohm);
-                yield return new (ElectricImpedanceUnit.Nanoohm, ElectricImpedanceUnits.Nanoohm);
-                yield return new (ElectricImpedanceUnit.Ohm, ElectricImpedanceUnits.Ohm);
-                yield return new (ElectricImpedanceUnit.Teraohm, ElectricImpedanceUnits.Teraohm);
+                return new UnitDefinition<ElectricImpedanceUnit>[]
+                {
+                    new (ElectricImpedanceUnit.Gigaohm, ElectricImpedanceUnits.Gigaohm),
+                    new (ElectricImpedanceUnit.Kiloohm, ElectricImpedanceUnits.Kiloohm),
+                    new (ElectricImpedanceUnit.Megaohm, ElectricImpedanceUnits.Megaohm),
+                    new (ElectricImpedanceUnit.Microohm, ElectricImpedanceUnits.Microohm),
+                    new (ElectricImpedanceUnit.Milliohm, ElectricImpedanceUnits.Milliohm),
+                    new (ElectricImpedanceUnit.Nanoohm, ElectricImpedanceUnits.Nanoohm),
+                    new (ElectricImpedanceUnit.Ohm, ElectricImpedanceUnits.Ohm),
+                    new (ElectricImpedanceUnit.Teraohm, ElectricImpedanceUnits.Teraohm),
+                };
             }
         }
 

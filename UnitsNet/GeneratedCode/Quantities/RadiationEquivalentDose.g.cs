@@ -118,12 +118,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RadiationEquivalentDoseUnit}"/> representing the default unit mappings for RadiationEquivalentDose.</returns>
             public static IEnumerable<UnitDefinition<RadiationEquivalentDoseUnit>> GetDefaultMappings()
             {
-                yield return new (RadiationEquivalentDoseUnit.Microsievert, RadiationEquivalentDoseUnits.Microsievert);
-                yield return new (RadiationEquivalentDoseUnit.MilliroentgenEquivalentMan, RadiationEquivalentDoseUnits.MilliroentgenEquivalentMan);
-                yield return new (RadiationEquivalentDoseUnit.Millisievert, RadiationEquivalentDoseUnits.Millisievert);
-                yield return new (RadiationEquivalentDoseUnit.Nanosievert, RadiationEquivalentDoseUnits.Nanosievert);
-                yield return new (RadiationEquivalentDoseUnit.RoentgenEquivalentMan, RadiationEquivalentDoseUnits.RoentgenEquivalentMan);
-                yield return new (RadiationEquivalentDoseUnit.Sievert, RadiationEquivalentDoseUnits.Sievert);
+                return new UnitDefinition<RadiationEquivalentDoseUnit>[]
+                {
+                    new (RadiationEquivalentDoseUnit.Microsievert, RadiationEquivalentDoseUnits.Microsievert),
+                    new (RadiationEquivalentDoseUnit.MilliroentgenEquivalentMan, RadiationEquivalentDoseUnits.MilliroentgenEquivalentMan),
+                    new (RadiationEquivalentDoseUnit.Millisievert, RadiationEquivalentDoseUnits.Millisievert),
+                    new (RadiationEquivalentDoseUnit.Nanosievert, RadiationEquivalentDoseUnits.Nanosievert),
+                    new (RadiationEquivalentDoseUnit.RoentgenEquivalentMan, RadiationEquivalentDoseUnits.RoentgenEquivalentMan),
+                    new (RadiationEquivalentDoseUnit.Sievert, RadiationEquivalentDoseUnits.Sievert),
+                };
             }
         }
 

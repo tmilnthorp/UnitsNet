@@ -119,10 +119,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{FuelEfficiencyUnit}"/> representing the default unit mappings for FuelEfficiency.</returns>
             public static IEnumerable<UnitDefinition<FuelEfficiencyUnit>> GetDefaultMappings()
             {
-                yield return new (FuelEfficiencyUnit.KilometerPerLiter, FuelEfficiencyUnits.KilometerPerLiter);
-                yield return new (FuelEfficiencyUnit.LiterPer100Kilometers, FuelEfficiencyUnits.LiterPer100Kilometers);
-                yield return new (FuelEfficiencyUnit.MilePerUkGallon, FuelEfficiencyUnits.MilePerUkGallon);
-                yield return new (FuelEfficiencyUnit.MilePerUsGallon, FuelEfficiencyUnits.MilePerUsGallon);
+                return new UnitDefinition<FuelEfficiencyUnit>[]
+                {
+                    new (FuelEfficiencyUnit.KilometerPerLiter, FuelEfficiencyUnits.KilometerPerLiter),
+                    new (FuelEfficiencyUnit.LiterPer100Kilometers, FuelEfficiencyUnits.LiterPer100Kilometers),
+                    new (FuelEfficiencyUnit.MilePerUkGallon, FuelEfficiencyUnits.MilePerUkGallon),
+                    new (FuelEfficiencyUnit.MilePerUsGallon, FuelEfficiencyUnits.MilePerUsGallon),
+                };
             }
         }
 

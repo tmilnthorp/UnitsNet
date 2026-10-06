@@ -120,22 +120,25 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricConductanceUnit}"/> representing the default unit mappings for ElectricConductance.</returns>
             public static IEnumerable<UnitDefinition<ElectricConductanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricConductanceUnit.Gigamho, ElectricConductanceUnits.Gigamho);
-                yield return new (ElectricConductanceUnit.Gigasiemens, ElectricConductanceUnits.Gigasiemens);
-                yield return new (ElectricConductanceUnit.Kilomho, ElectricConductanceUnits.Kilomho);
-                yield return new (ElectricConductanceUnit.Kilosiemens, ElectricConductanceUnits.Kilosiemens);
-                yield return new (ElectricConductanceUnit.Megamho, ElectricConductanceUnits.Megamho);
-                yield return new (ElectricConductanceUnit.Megasiemens, ElectricConductanceUnits.Megasiemens);
-                yield return new (ElectricConductanceUnit.Mho, ElectricConductanceUnits.Mho);
-                yield return new (ElectricConductanceUnit.Micromho, ElectricConductanceUnits.Micromho);
-                yield return new (ElectricConductanceUnit.Microsiemens, ElectricConductanceUnits.Microsiemens);
-                yield return new (ElectricConductanceUnit.Millimho, ElectricConductanceUnits.Millimho);
-                yield return new (ElectricConductanceUnit.Millisiemens, ElectricConductanceUnits.Millisiemens);
-                yield return new (ElectricConductanceUnit.Nanomho, ElectricConductanceUnits.Nanomho);
-                yield return new (ElectricConductanceUnit.Nanosiemens, ElectricConductanceUnits.Nanosiemens);
-                yield return new (ElectricConductanceUnit.Siemens, ElectricConductanceUnits.Siemens);
-                yield return new (ElectricConductanceUnit.Teramho, ElectricConductanceUnits.Teramho);
-                yield return new (ElectricConductanceUnit.Terasiemens, ElectricConductanceUnits.Terasiemens);
+                return new UnitDefinition<ElectricConductanceUnit>[]
+                {
+                    new (ElectricConductanceUnit.Gigamho, ElectricConductanceUnits.Gigamho),
+                    new (ElectricConductanceUnit.Gigasiemens, ElectricConductanceUnits.Gigasiemens),
+                    new (ElectricConductanceUnit.Kilomho, ElectricConductanceUnits.Kilomho),
+                    new (ElectricConductanceUnit.Kilosiemens, ElectricConductanceUnits.Kilosiemens),
+                    new (ElectricConductanceUnit.Megamho, ElectricConductanceUnits.Megamho),
+                    new (ElectricConductanceUnit.Megasiemens, ElectricConductanceUnits.Megasiemens),
+                    new (ElectricConductanceUnit.Mho, ElectricConductanceUnits.Mho),
+                    new (ElectricConductanceUnit.Micromho, ElectricConductanceUnits.Micromho),
+                    new (ElectricConductanceUnit.Microsiemens, ElectricConductanceUnits.Microsiemens),
+                    new (ElectricConductanceUnit.Millimho, ElectricConductanceUnits.Millimho),
+                    new (ElectricConductanceUnit.Millisiemens, ElectricConductanceUnits.Millisiemens),
+                    new (ElectricConductanceUnit.Nanomho, ElectricConductanceUnits.Nanomho),
+                    new (ElectricConductanceUnit.Nanosiemens, ElectricConductanceUnits.Nanosiemens),
+                    new (ElectricConductanceUnit.Siemens, ElectricConductanceUnits.Siemens),
+                    new (ElectricConductanceUnit.Teramho, ElectricConductanceUnits.Teramho),
+                    new (ElectricConductanceUnit.Terasiemens, ElectricConductanceUnits.Terasiemens),
+                };
             }
         }
 

@@ -117,13 +117,16 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ThermalInsulanceUnit}"/> representing the default unit mappings for ThermalInsulance.</returns>
             public static IEnumerable<UnitDefinition<ThermalInsulanceUnit>> GetDefaultMappings()
             {
-                yield return new (ThermalInsulanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, ThermalInsulanceUnits.HourSquareFeetDegreeFahrenheitPerBtu);
-                yield return new (ThermalInsulanceUnit.SquareCentimeterHourDegreeCelsiusPerKilocalorie, ThermalInsulanceUnits.SquareCentimeterHourDegreeCelsiusPerKilocalorie);
-                yield return new (ThermalInsulanceUnit.SquareCentimeterKelvinPerWatt, ThermalInsulanceUnits.SquareCentimeterKelvinPerWatt);
-                yield return new (ThermalInsulanceUnit.SquareMeterDegreeCelsiusPerWatt, ThermalInsulanceUnits.SquareMeterDegreeCelsiusPerWatt);
-                yield return new (ThermalInsulanceUnit.SquareMeterKelvinPerKilowatt, ThermalInsulanceUnits.SquareMeterKelvinPerKilowatt);
-                yield return new (ThermalInsulanceUnit.SquareMeterKelvinPerWatt, ThermalInsulanceUnits.SquareMeterKelvinPerWatt);
-                yield return new (ThermalInsulanceUnit.SquareMillimeterKelvinPerWatt, ThermalInsulanceUnits.SquareMillimeterKelvinPerWatt);
+                return new UnitDefinition<ThermalInsulanceUnit>[]
+                {
+                    new (ThermalInsulanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, ThermalInsulanceUnits.HourSquareFeetDegreeFahrenheitPerBtu),
+                    new (ThermalInsulanceUnit.SquareCentimeterHourDegreeCelsiusPerKilocalorie, ThermalInsulanceUnits.SquareCentimeterHourDegreeCelsiusPerKilocalorie),
+                    new (ThermalInsulanceUnit.SquareCentimeterKelvinPerWatt, ThermalInsulanceUnits.SquareCentimeterKelvinPerWatt),
+                    new (ThermalInsulanceUnit.SquareMeterDegreeCelsiusPerWatt, ThermalInsulanceUnits.SquareMeterDegreeCelsiusPerWatt),
+                    new (ThermalInsulanceUnit.SquareMeterKelvinPerKilowatt, ThermalInsulanceUnits.SquareMeterKelvinPerKilowatt),
+                    new (ThermalInsulanceUnit.SquareMeterKelvinPerWatt, ThermalInsulanceUnits.SquareMeterKelvinPerWatt),
+                    new (ThermalInsulanceUnit.SquareMillimeterKelvinPerWatt, ThermalInsulanceUnits.SquareMillimeterKelvinPerWatt),
+                };
             }
         }
 

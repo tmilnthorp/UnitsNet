@@ -120,15 +120,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumetricHeatCapacityUnit}"/> representing the default unit mappings for VolumetricHeatCapacity.</returns>
             public static IEnumerable<UnitDefinition<VolumetricHeatCapacityUnit>> GetDefaultMappings()
             {
-                yield return new (VolumetricHeatCapacityUnit.BtuPerCubicFootDegreeFahrenheit, VolumetricHeatCapacityUnits.BtuPerCubicFootDegreeFahrenheit);
-                yield return new (VolumetricHeatCapacityUnit.CaloriePerCubicCentimeterDegreeCelsius, VolumetricHeatCapacityUnits.CaloriePerCubicCentimeterDegreeCelsius);
-                yield return new (VolumetricHeatCapacityUnit.JoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.JoulePerCubicMeterDegreeCelsius);
-                yield return new (VolumetricHeatCapacityUnit.JoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.JoulePerCubicMeterKelvin);
-                yield return new (VolumetricHeatCapacityUnit.KilocaloriePerCubicCentimeterDegreeCelsius, VolumetricHeatCapacityUnits.KilocaloriePerCubicCentimeterDegreeCelsius);
-                yield return new (VolumetricHeatCapacityUnit.KilojoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.KilojoulePerCubicMeterDegreeCelsius);
-                yield return new (VolumetricHeatCapacityUnit.KilojoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.KilojoulePerCubicMeterKelvin);
-                yield return new (VolumetricHeatCapacityUnit.MegajoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.MegajoulePerCubicMeterDegreeCelsius);
-                yield return new (VolumetricHeatCapacityUnit.MegajoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.MegajoulePerCubicMeterKelvin);
+                return new UnitDefinition<VolumetricHeatCapacityUnit>[]
+                {
+                    new (VolumetricHeatCapacityUnit.BtuPerCubicFootDegreeFahrenheit, VolumetricHeatCapacityUnits.BtuPerCubicFootDegreeFahrenheit),
+                    new (VolumetricHeatCapacityUnit.CaloriePerCubicCentimeterDegreeCelsius, VolumetricHeatCapacityUnits.CaloriePerCubicCentimeterDegreeCelsius),
+                    new (VolumetricHeatCapacityUnit.JoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.JoulePerCubicMeterDegreeCelsius),
+                    new (VolumetricHeatCapacityUnit.JoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.JoulePerCubicMeterKelvin),
+                    new (VolumetricHeatCapacityUnit.KilocaloriePerCubicCentimeterDegreeCelsius, VolumetricHeatCapacityUnits.KilocaloriePerCubicCentimeterDegreeCelsius),
+                    new (VolumetricHeatCapacityUnit.KilojoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.KilojoulePerCubicMeterDegreeCelsius),
+                    new (VolumetricHeatCapacityUnit.KilojoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.KilojoulePerCubicMeterKelvin),
+                    new (VolumetricHeatCapacityUnit.MegajoulePerCubicMeterDegreeCelsius, VolumetricHeatCapacityUnits.MegajoulePerCubicMeterDegreeCelsius),
+                    new (VolumetricHeatCapacityUnit.MegajoulePerCubicMeterKelvin, VolumetricHeatCapacityUnits.MegajoulePerCubicMeterKelvin),
+                };
             }
         }
 

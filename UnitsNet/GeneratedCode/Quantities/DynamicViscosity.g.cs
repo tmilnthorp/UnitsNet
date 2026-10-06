@@ -121,16 +121,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{DynamicViscosityUnit}"/> representing the default unit mappings for DynamicViscosity.</returns>
             public static IEnumerable<UnitDefinition<DynamicViscosityUnit>> GetDefaultMappings()
             {
-                yield return new (DynamicViscosityUnit.Centipoise, DynamicViscosityUnits.Centipoise);
-                yield return new (DynamicViscosityUnit.MicropascalSecond, DynamicViscosityUnits.MicropascalSecond);
-                yield return new (DynamicViscosityUnit.MillipascalSecond, DynamicViscosityUnits.MillipascalSecond);
-                yield return new (DynamicViscosityUnit.NewtonSecondPerMeterSquared, DynamicViscosityUnits.NewtonSecondPerMeterSquared);
-                yield return new (DynamicViscosityUnit.PascalSecond, DynamicViscosityUnits.PascalSecond);
-                yield return new (DynamicViscosityUnit.Poise, DynamicViscosityUnits.Poise);
-                yield return new (DynamicViscosityUnit.PoundForceSecondPerSquareFoot, DynamicViscosityUnits.PoundForceSecondPerSquareFoot);
-                yield return new (DynamicViscosityUnit.PoundForceSecondPerSquareInch, DynamicViscosityUnits.PoundForceSecondPerSquareInch);
-                yield return new (DynamicViscosityUnit.PoundPerFootSecond, DynamicViscosityUnits.PoundPerFootSecond);
-                yield return new (DynamicViscosityUnit.Reyn, DynamicViscosityUnits.Reyn);
+                return new UnitDefinition<DynamicViscosityUnit>[]
+                {
+                    new (DynamicViscosityUnit.Centipoise, DynamicViscosityUnits.Centipoise),
+                    new (DynamicViscosityUnit.MicropascalSecond, DynamicViscosityUnits.MicropascalSecond),
+                    new (DynamicViscosityUnit.MillipascalSecond, DynamicViscosityUnits.MillipascalSecond),
+                    new (DynamicViscosityUnit.NewtonSecondPerMeterSquared, DynamicViscosityUnits.NewtonSecondPerMeterSquared),
+                    new (DynamicViscosityUnit.PascalSecond, DynamicViscosityUnits.PascalSecond),
+                    new (DynamicViscosityUnit.Poise, DynamicViscosityUnits.Poise),
+                    new (DynamicViscosityUnit.PoundForceSecondPerSquareFoot, DynamicViscosityUnits.PoundForceSecondPerSquareFoot),
+                    new (DynamicViscosityUnit.PoundForceSecondPerSquareInch, DynamicViscosityUnits.PoundForceSecondPerSquareInch),
+                    new (DynamicViscosityUnit.PoundPerFootSecond, DynamicViscosityUnits.PoundPerFootSecond),
+                    new (DynamicViscosityUnit.Reyn, DynamicViscosityUnits.Reyn),
+                };
             }
         }
 

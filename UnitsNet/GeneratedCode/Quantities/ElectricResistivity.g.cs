@@ -119,20 +119,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricResistivityUnit}"/> representing the default unit mappings for ElectricResistivity.</returns>
             public static IEnumerable<UnitDefinition<ElectricResistivityUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricResistivityUnit.KiloohmCentimeter, ElectricResistivityUnits.KiloohmCentimeter);
-                yield return new (ElectricResistivityUnit.KiloohmMeter, ElectricResistivityUnits.KiloohmMeter);
-                yield return new (ElectricResistivityUnit.MegaohmCentimeter, ElectricResistivityUnits.MegaohmCentimeter);
-                yield return new (ElectricResistivityUnit.MegaohmMeter, ElectricResistivityUnits.MegaohmMeter);
-                yield return new (ElectricResistivityUnit.MicroohmCentimeter, ElectricResistivityUnits.MicroohmCentimeter);
-                yield return new (ElectricResistivityUnit.MicroohmMeter, ElectricResistivityUnits.MicroohmMeter);
-                yield return new (ElectricResistivityUnit.MilliohmCentimeter, ElectricResistivityUnits.MilliohmCentimeter);
-                yield return new (ElectricResistivityUnit.MilliohmMeter, ElectricResistivityUnits.MilliohmMeter);
-                yield return new (ElectricResistivityUnit.NanoohmCentimeter, ElectricResistivityUnits.NanoohmCentimeter);
-                yield return new (ElectricResistivityUnit.NanoohmMeter, ElectricResistivityUnits.NanoohmMeter);
-                yield return new (ElectricResistivityUnit.OhmCentimeter, ElectricResistivityUnits.OhmCentimeter);
-                yield return new (ElectricResistivityUnit.OhmMeter, ElectricResistivityUnits.OhmMeter);
-                yield return new (ElectricResistivityUnit.PicoohmCentimeter, ElectricResistivityUnits.PicoohmCentimeter);
-                yield return new (ElectricResistivityUnit.PicoohmMeter, ElectricResistivityUnits.PicoohmMeter);
+                return new UnitDefinition<ElectricResistivityUnit>[]
+                {
+                    new (ElectricResistivityUnit.KiloohmCentimeter, ElectricResistivityUnits.KiloohmCentimeter),
+                    new (ElectricResistivityUnit.KiloohmMeter, ElectricResistivityUnits.KiloohmMeter),
+                    new (ElectricResistivityUnit.MegaohmCentimeter, ElectricResistivityUnits.MegaohmCentimeter),
+                    new (ElectricResistivityUnit.MegaohmMeter, ElectricResistivityUnits.MegaohmMeter),
+                    new (ElectricResistivityUnit.MicroohmCentimeter, ElectricResistivityUnits.MicroohmCentimeter),
+                    new (ElectricResistivityUnit.MicroohmMeter, ElectricResistivityUnits.MicroohmMeter),
+                    new (ElectricResistivityUnit.MilliohmCentimeter, ElectricResistivityUnits.MilliohmCentimeter),
+                    new (ElectricResistivityUnit.MilliohmMeter, ElectricResistivityUnits.MilliohmMeter),
+                    new (ElectricResistivityUnit.NanoohmCentimeter, ElectricResistivityUnits.NanoohmCentimeter),
+                    new (ElectricResistivityUnit.NanoohmMeter, ElectricResistivityUnits.NanoohmMeter),
+                    new (ElectricResistivityUnit.OhmCentimeter, ElectricResistivityUnits.OhmCentimeter),
+                    new (ElectricResistivityUnit.OhmMeter, ElectricResistivityUnits.OhmMeter),
+                    new (ElectricResistivityUnit.PicoohmCentimeter, ElectricResistivityUnits.PicoohmCentimeter),
+                    new (ElectricResistivityUnit.PicoohmMeter, ElectricResistivityUnits.PicoohmMeter),
+                };
             }
         }
 

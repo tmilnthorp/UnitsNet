@@ -123,20 +123,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AccelerationUnit}"/> representing the default unit mappings for Acceleration.</returns>
             public static IEnumerable<UnitDefinition<AccelerationUnit>> GetDefaultMappings()
             {
-                yield return new (AccelerationUnit.CentimeterPerSecondSquared, AccelerationUnits.CentimeterPerSecondSquared);
-                yield return new (AccelerationUnit.DecimeterPerSecondSquared, AccelerationUnits.DecimeterPerSecondSquared);
-                yield return new (AccelerationUnit.FootPerSecondSquared, AccelerationUnits.FootPerSecondSquared);
-                yield return new (AccelerationUnit.InchPerSecondSquared, AccelerationUnits.InchPerSecondSquared);
-                yield return new (AccelerationUnit.KilometerPerSecondSquared, AccelerationUnits.KilometerPerSecondSquared);
-                yield return new (AccelerationUnit.KnotPerHour, AccelerationUnits.KnotPerHour);
-                yield return new (AccelerationUnit.KnotPerMinute, AccelerationUnits.KnotPerMinute);
-                yield return new (AccelerationUnit.KnotPerSecond, AccelerationUnits.KnotPerSecond);
-                yield return new (AccelerationUnit.MeterPerSecondSquared, AccelerationUnits.MeterPerSecondSquared);
-                yield return new (AccelerationUnit.MicrometerPerSecondSquared, AccelerationUnits.MicrometerPerSecondSquared);
-                yield return new (AccelerationUnit.MillimeterPerSecondSquared, AccelerationUnits.MillimeterPerSecondSquared);
-                yield return new (AccelerationUnit.MillistandardGravity, AccelerationUnits.MillistandardGravity);
-                yield return new (AccelerationUnit.NanometerPerSecondSquared, AccelerationUnits.NanometerPerSecondSquared);
-                yield return new (AccelerationUnit.StandardGravity, AccelerationUnits.StandardGravity);
+                return new UnitDefinition<AccelerationUnit>[]
+                {
+                    new (AccelerationUnit.CentimeterPerSecondSquared, AccelerationUnits.CentimeterPerSecondSquared),
+                    new (AccelerationUnit.DecimeterPerSecondSquared, AccelerationUnits.DecimeterPerSecondSquared),
+                    new (AccelerationUnit.FootPerSecondSquared, AccelerationUnits.FootPerSecondSquared),
+                    new (AccelerationUnit.InchPerSecondSquared, AccelerationUnits.InchPerSecondSquared),
+                    new (AccelerationUnit.KilometerPerSecondSquared, AccelerationUnits.KilometerPerSecondSquared),
+                    new (AccelerationUnit.KnotPerHour, AccelerationUnits.KnotPerHour),
+                    new (AccelerationUnit.KnotPerMinute, AccelerationUnits.KnotPerMinute),
+                    new (AccelerationUnit.KnotPerSecond, AccelerationUnits.KnotPerSecond),
+                    new (AccelerationUnit.MeterPerSecondSquared, AccelerationUnits.MeterPerSecondSquared),
+                    new (AccelerationUnit.MicrometerPerSecondSquared, AccelerationUnits.MicrometerPerSecondSquared),
+                    new (AccelerationUnit.MillimeterPerSecondSquared, AccelerationUnits.MillimeterPerSecondSquared),
+                    new (AccelerationUnit.MillistandardGravity, AccelerationUnits.MillistandardGravity),
+                    new (AccelerationUnit.NanometerPerSecondSquared, AccelerationUnits.NanometerPerSecondSquared),
+                    new (AccelerationUnit.StandardGravity, AccelerationUnits.StandardGravity),
+                };
             }
         }
 

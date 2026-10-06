@@ -117,21 +117,24 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ForceChangeRateUnit}"/> representing the default unit mappings for ForceChangeRate.</returns>
             public static IEnumerable<UnitDefinition<ForceChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (ForceChangeRateUnit.CentinewtonPerSecond, ForceChangeRateUnits.CentinewtonPerSecond);
-                yield return new (ForceChangeRateUnit.DecanewtonPerMinute, ForceChangeRateUnits.DecanewtonPerMinute);
-                yield return new (ForceChangeRateUnit.DecanewtonPerSecond, ForceChangeRateUnits.DecanewtonPerSecond);
-                yield return new (ForceChangeRateUnit.DecinewtonPerSecond, ForceChangeRateUnits.DecinewtonPerSecond);
-                yield return new (ForceChangeRateUnit.KilonewtonPerMinute, ForceChangeRateUnits.KilonewtonPerMinute);
-                yield return new (ForceChangeRateUnit.KilonewtonPerSecond, ForceChangeRateUnits.KilonewtonPerSecond);
-                yield return new (ForceChangeRateUnit.KilopoundForcePerMinute, ForceChangeRateUnits.KilopoundForcePerMinute);
-                yield return new (ForceChangeRateUnit.KilopoundForcePerSecond, ForceChangeRateUnits.KilopoundForcePerSecond);
-                yield return new (ForceChangeRateUnit.MicronewtonPerSecond, ForceChangeRateUnits.MicronewtonPerSecond);
-                yield return new (ForceChangeRateUnit.MillinewtonPerSecond, ForceChangeRateUnits.MillinewtonPerSecond);
-                yield return new (ForceChangeRateUnit.NanonewtonPerSecond, ForceChangeRateUnits.NanonewtonPerSecond);
-                yield return new (ForceChangeRateUnit.NewtonPerMinute, ForceChangeRateUnits.NewtonPerMinute);
-                yield return new (ForceChangeRateUnit.NewtonPerSecond, ForceChangeRateUnits.NewtonPerSecond);
-                yield return new (ForceChangeRateUnit.PoundForcePerMinute, ForceChangeRateUnits.PoundForcePerMinute);
-                yield return new (ForceChangeRateUnit.PoundForcePerSecond, ForceChangeRateUnits.PoundForcePerSecond);
+                return new UnitDefinition<ForceChangeRateUnit>[]
+                {
+                    new (ForceChangeRateUnit.CentinewtonPerSecond, ForceChangeRateUnits.CentinewtonPerSecond),
+                    new (ForceChangeRateUnit.DecanewtonPerMinute, ForceChangeRateUnits.DecanewtonPerMinute),
+                    new (ForceChangeRateUnit.DecanewtonPerSecond, ForceChangeRateUnits.DecanewtonPerSecond),
+                    new (ForceChangeRateUnit.DecinewtonPerSecond, ForceChangeRateUnits.DecinewtonPerSecond),
+                    new (ForceChangeRateUnit.KilonewtonPerMinute, ForceChangeRateUnits.KilonewtonPerMinute),
+                    new (ForceChangeRateUnit.KilonewtonPerSecond, ForceChangeRateUnits.KilonewtonPerSecond),
+                    new (ForceChangeRateUnit.KilopoundForcePerMinute, ForceChangeRateUnits.KilopoundForcePerMinute),
+                    new (ForceChangeRateUnit.KilopoundForcePerSecond, ForceChangeRateUnits.KilopoundForcePerSecond),
+                    new (ForceChangeRateUnit.MicronewtonPerSecond, ForceChangeRateUnits.MicronewtonPerSecond),
+                    new (ForceChangeRateUnit.MillinewtonPerSecond, ForceChangeRateUnits.MillinewtonPerSecond),
+                    new (ForceChangeRateUnit.NanonewtonPerSecond, ForceChangeRateUnits.NanonewtonPerSecond),
+                    new (ForceChangeRateUnit.NewtonPerMinute, ForceChangeRateUnits.NewtonPerMinute),
+                    new (ForceChangeRateUnit.NewtonPerSecond, ForceChangeRateUnits.NewtonPerSecond),
+                    new (ForceChangeRateUnit.PoundForcePerMinute, ForceChangeRateUnits.PoundForcePerMinute),
+                    new (ForceChangeRateUnit.PoundForcePerSecond, ForceChangeRateUnits.PoundForcePerSecond),
+                };
             }
         }
 

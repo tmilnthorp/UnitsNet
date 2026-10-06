@@ -227,15 +227,18 @@ namespace UnitsNet
             /// </summary>
             /// <returns>An <see cref=""IEnumerable{{T}}""/> of <see cref=""UnitDefinition{{{_unitEnumName}}}""/> representing the default unit mappings for {_quantity.Name}.</returns>
             public static IEnumerable<UnitDefinition<{_unitEnumName}>> GetDefaultMappings()
-            {{");
+            {{
+                return new UnitDefinition<{_unitEnumName}>[]
+                {{");
 
             foreach (Unit unit in _quantity.Units)
             {
                 Writer.WL($@"
-                yield return new ({_unitEnumName}.{unit.SingularName}, {_quantity.Name}Units.{unit.SingularName});");
+                    new ({_unitEnumName}.{unit.SingularName}, {_quantity.Name}Units.{unit.SingularName}),");
             }
 
             Writer.WL($@"
+                }};
             }}
         }}
 ");

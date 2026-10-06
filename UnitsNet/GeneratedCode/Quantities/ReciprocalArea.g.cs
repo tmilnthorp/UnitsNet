@@ -124,17 +124,20 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ReciprocalAreaUnit}"/> representing the default unit mappings for ReciprocalArea.</returns>
             public static IEnumerable<UnitDefinition<ReciprocalAreaUnit>> GetDefaultMappings()
             {
-                yield return new (ReciprocalAreaUnit.InverseSquareCentimeter, ReciprocalAreaUnits.InverseSquareCentimeter);
-                yield return new (ReciprocalAreaUnit.InverseSquareDecimeter, ReciprocalAreaUnits.InverseSquareDecimeter);
-                yield return new (ReciprocalAreaUnit.InverseSquareFoot, ReciprocalAreaUnits.InverseSquareFoot);
-                yield return new (ReciprocalAreaUnit.InverseSquareInch, ReciprocalAreaUnits.InverseSquareInch);
-                yield return new (ReciprocalAreaUnit.InverseSquareKilometer, ReciprocalAreaUnits.InverseSquareKilometer);
-                yield return new (ReciprocalAreaUnit.InverseSquareMeter, ReciprocalAreaUnits.InverseSquareMeter);
-                yield return new (ReciprocalAreaUnit.InverseSquareMicrometer, ReciprocalAreaUnits.InverseSquareMicrometer);
-                yield return new (ReciprocalAreaUnit.InverseSquareMile, ReciprocalAreaUnits.InverseSquareMile);
-                yield return new (ReciprocalAreaUnit.InverseSquareMillimeter, ReciprocalAreaUnits.InverseSquareMillimeter);
-                yield return new (ReciprocalAreaUnit.InverseSquareYard, ReciprocalAreaUnits.InverseSquareYard);
-                yield return new (ReciprocalAreaUnit.InverseUsSurveySquareFoot, ReciprocalAreaUnits.InverseUsSurveySquareFoot);
+                return new UnitDefinition<ReciprocalAreaUnit>[]
+                {
+                    new (ReciprocalAreaUnit.InverseSquareCentimeter, ReciprocalAreaUnits.InverseSquareCentimeter),
+                    new (ReciprocalAreaUnit.InverseSquareDecimeter, ReciprocalAreaUnits.InverseSquareDecimeter),
+                    new (ReciprocalAreaUnit.InverseSquareFoot, ReciprocalAreaUnits.InverseSquareFoot),
+                    new (ReciprocalAreaUnit.InverseSquareInch, ReciprocalAreaUnits.InverseSquareInch),
+                    new (ReciprocalAreaUnit.InverseSquareKilometer, ReciprocalAreaUnits.InverseSquareKilometer),
+                    new (ReciprocalAreaUnit.InverseSquareMeter, ReciprocalAreaUnits.InverseSquareMeter),
+                    new (ReciprocalAreaUnit.InverseSquareMicrometer, ReciprocalAreaUnits.InverseSquareMicrometer),
+                    new (ReciprocalAreaUnit.InverseSquareMile, ReciprocalAreaUnits.InverseSquareMile),
+                    new (ReciprocalAreaUnit.InverseSquareMillimeter, ReciprocalAreaUnits.InverseSquareMillimeter),
+                    new (ReciprocalAreaUnit.InverseSquareYard, ReciprocalAreaUnits.InverseSquareYard),
+                    new (ReciprocalAreaUnit.InverseUsSurveySquareFoot, ReciprocalAreaUnits.InverseUsSurveySquareFoot),
+                };
             }
         }
 

@@ -117,13 +117,16 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{CompressibilityUnit}"/> representing the default unit mappings for Compressibility.</returns>
             public static IEnumerable<UnitDefinition<CompressibilityUnit>> GetDefaultMappings()
             {
-                yield return new (CompressibilityUnit.InverseAtmosphere, CompressibilityUnits.InverseAtmosphere);
-                yield return new (CompressibilityUnit.InverseBar, CompressibilityUnits.InverseBar);
-                yield return new (CompressibilityUnit.InverseKilopascal, CompressibilityUnits.InverseKilopascal);
-                yield return new (CompressibilityUnit.InverseMegapascal, CompressibilityUnits.InverseMegapascal);
-                yield return new (CompressibilityUnit.InverseMillibar, CompressibilityUnits.InverseMillibar);
-                yield return new (CompressibilityUnit.InversePascal, CompressibilityUnits.InversePascal);
-                yield return new (CompressibilityUnit.InversePoundForcePerSquareInch, CompressibilityUnits.InversePoundForcePerSquareInch);
+                return new UnitDefinition<CompressibilityUnit>[]
+                {
+                    new (CompressibilityUnit.InverseAtmosphere, CompressibilityUnits.InverseAtmosphere),
+                    new (CompressibilityUnit.InverseBar, CompressibilityUnits.InverseBar),
+                    new (CompressibilityUnit.InverseKilopascal, CompressibilityUnits.InverseKilopascal),
+                    new (CompressibilityUnit.InverseMegapascal, CompressibilityUnits.InverseMegapascal),
+                    new (CompressibilityUnit.InverseMillibar, CompressibilityUnits.InverseMillibar),
+                    new (CompressibilityUnit.InversePascal, CompressibilityUnits.InversePascal),
+                    new (CompressibilityUnit.InversePoundForcePerSquareInch, CompressibilityUnits.InversePoundForcePerSquareInch),
+                };
             }
         }
 

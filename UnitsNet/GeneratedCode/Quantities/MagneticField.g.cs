@@ -120,12 +120,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MagneticFieldUnit}"/> representing the default unit mappings for MagneticField.</returns>
             public static IEnumerable<UnitDefinition<MagneticFieldUnit>> GetDefaultMappings()
             {
-                yield return new (MagneticFieldUnit.Gauss, MagneticFieldUnits.Gauss);
-                yield return new (MagneticFieldUnit.Microtesla, MagneticFieldUnits.Microtesla);
-                yield return new (MagneticFieldUnit.Milligauss, MagneticFieldUnits.Milligauss);
-                yield return new (MagneticFieldUnit.Millitesla, MagneticFieldUnits.Millitesla);
-                yield return new (MagneticFieldUnit.Nanotesla, MagneticFieldUnits.Nanotesla);
-                yield return new (MagneticFieldUnit.Tesla, MagneticFieldUnits.Tesla);
+                return new UnitDefinition<MagneticFieldUnit>[]
+                {
+                    new (MagneticFieldUnit.Gauss, MagneticFieldUnits.Gauss),
+                    new (MagneticFieldUnit.Microtesla, MagneticFieldUnits.Microtesla),
+                    new (MagneticFieldUnit.Milligauss, MagneticFieldUnits.Milligauss),
+                    new (MagneticFieldUnit.Millitesla, MagneticFieldUnits.Millitesla),
+                    new (MagneticFieldUnit.Nanotesla, MagneticFieldUnits.Nanotesla),
+                    new (MagneticFieldUnit.Tesla, MagneticFieldUnits.Tesla),
+                };
             }
         }
 

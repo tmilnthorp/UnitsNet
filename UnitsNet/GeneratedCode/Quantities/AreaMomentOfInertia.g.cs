@@ -119,12 +119,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AreaMomentOfInertiaUnit}"/> representing the default unit mappings for AreaMomentOfInertia.</returns>
             public static IEnumerable<UnitDefinition<AreaMomentOfInertiaUnit>> GetDefaultMappings()
             {
-                yield return new (AreaMomentOfInertiaUnit.CentimeterToTheFourth, AreaMomentOfInertiaUnits.CentimeterToTheFourth);
-                yield return new (AreaMomentOfInertiaUnit.DecimeterToTheFourth, AreaMomentOfInertiaUnits.DecimeterToTheFourth);
-                yield return new (AreaMomentOfInertiaUnit.FootToTheFourth, AreaMomentOfInertiaUnits.FootToTheFourth);
-                yield return new (AreaMomentOfInertiaUnit.InchToTheFourth, AreaMomentOfInertiaUnits.InchToTheFourth);
-                yield return new (AreaMomentOfInertiaUnit.MeterToTheFourth, AreaMomentOfInertiaUnits.MeterToTheFourth);
-                yield return new (AreaMomentOfInertiaUnit.MillimeterToTheFourth, AreaMomentOfInertiaUnits.MillimeterToTheFourth);
+                return new UnitDefinition<AreaMomentOfInertiaUnit>[]
+                {
+                    new (AreaMomentOfInertiaUnit.CentimeterToTheFourth, AreaMomentOfInertiaUnits.CentimeterToTheFourth),
+                    new (AreaMomentOfInertiaUnit.DecimeterToTheFourth, AreaMomentOfInertiaUnits.DecimeterToTheFourth),
+                    new (AreaMomentOfInertiaUnit.FootToTheFourth, AreaMomentOfInertiaUnits.FootToTheFourth),
+                    new (AreaMomentOfInertiaUnit.InchToTheFourth, AreaMomentOfInertiaUnits.InchToTheFourth),
+                    new (AreaMomentOfInertiaUnit.MeterToTheFourth, AreaMomentOfInertiaUnits.MeterToTheFourth),
+                    new (AreaMomentOfInertiaUnit.MillimeterToTheFourth, AreaMomentOfInertiaUnits.MillimeterToTheFourth),
+                };
             }
         }
 

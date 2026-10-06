@@ -124,39 +124,42 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpeedUnit}"/> representing the default unit mappings for Speed.</returns>
             public static IEnumerable<UnitDefinition<SpeedUnit>> GetDefaultMappings()
             {
-                yield return new (SpeedUnit.CentimeterPerHour, SpeedUnits.CentimeterPerHour);
-                yield return new (SpeedUnit.CentimeterPerMinute, SpeedUnits.CentimeterPerMinute);
-                yield return new (SpeedUnit.CentimeterPerSecond, SpeedUnits.CentimeterPerSecond);
-                yield return new (SpeedUnit.DecimeterPerMinute, SpeedUnits.DecimeterPerMinute);
-                yield return new (SpeedUnit.DecimeterPerSecond, SpeedUnits.DecimeterPerSecond);
-                yield return new (SpeedUnit.FootPerHour, SpeedUnits.FootPerHour);
-                yield return new (SpeedUnit.FootPerMinute, SpeedUnits.FootPerMinute);
-                yield return new (SpeedUnit.FootPerSecond, SpeedUnits.FootPerSecond);
-                yield return new (SpeedUnit.InchPerHour, SpeedUnits.InchPerHour);
-                yield return new (SpeedUnit.InchPerMinute, SpeedUnits.InchPerMinute);
-                yield return new (SpeedUnit.InchPerSecond, SpeedUnits.InchPerSecond);
-                yield return new (SpeedUnit.KilometerPerHour, SpeedUnits.KilometerPerHour);
-                yield return new (SpeedUnit.KilometerPerMinute, SpeedUnits.KilometerPerMinute);
-                yield return new (SpeedUnit.KilometerPerSecond, SpeedUnits.KilometerPerSecond);
-                yield return new (SpeedUnit.Knot, SpeedUnits.Knot);
-                yield return new (SpeedUnit.Mach, SpeedUnits.Mach);
-                yield return new (SpeedUnit.MeterPerHour, SpeedUnits.MeterPerHour);
-                yield return new (SpeedUnit.MeterPerMinute, SpeedUnits.MeterPerMinute);
-                yield return new (SpeedUnit.MeterPerSecond, SpeedUnits.MeterPerSecond);
-                yield return new (SpeedUnit.MicrometerPerMinute, SpeedUnits.MicrometerPerMinute);
-                yield return new (SpeedUnit.MicrometerPerSecond, SpeedUnits.MicrometerPerSecond);
-                yield return new (SpeedUnit.MilePerHour, SpeedUnits.MilePerHour);
-                yield return new (SpeedUnit.MillimeterPerHour, SpeedUnits.MillimeterPerHour);
-                yield return new (SpeedUnit.MillimeterPerMinute, SpeedUnits.MillimeterPerMinute);
-                yield return new (SpeedUnit.MillimeterPerSecond, SpeedUnits.MillimeterPerSecond);
-                yield return new (SpeedUnit.NanometerPerMinute, SpeedUnits.NanometerPerMinute);
-                yield return new (SpeedUnit.NanometerPerSecond, SpeedUnits.NanometerPerSecond);
-                yield return new (SpeedUnit.UsSurveyFootPerHour, SpeedUnits.UsSurveyFootPerHour);
-                yield return new (SpeedUnit.UsSurveyFootPerMinute, SpeedUnits.UsSurveyFootPerMinute);
-                yield return new (SpeedUnit.UsSurveyFootPerSecond, SpeedUnits.UsSurveyFootPerSecond);
-                yield return new (SpeedUnit.YardPerHour, SpeedUnits.YardPerHour);
-                yield return new (SpeedUnit.YardPerMinute, SpeedUnits.YardPerMinute);
-                yield return new (SpeedUnit.YardPerSecond, SpeedUnits.YardPerSecond);
+                return new UnitDefinition<SpeedUnit>[]
+                {
+                    new (SpeedUnit.CentimeterPerHour, SpeedUnits.CentimeterPerHour),
+                    new (SpeedUnit.CentimeterPerMinute, SpeedUnits.CentimeterPerMinute),
+                    new (SpeedUnit.CentimeterPerSecond, SpeedUnits.CentimeterPerSecond),
+                    new (SpeedUnit.DecimeterPerMinute, SpeedUnits.DecimeterPerMinute),
+                    new (SpeedUnit.DecimeterPerSecond, SpeedUnits.DecimeterPerSecond),
+                    new (SpeedUnit.FootPerHour, SpeedUnits.FootPerHour),
+                    new (SpeedUnit.FootPerMinute, SpeedUnits.FootPerMinute),
+                    new (SpeedUnit.FootPerSecond, SpeedUnits.FootPerSecond),
+                    new (SpeedUnit.InchPerHour, SpeedUnits.InchPerHour),
+                    new (SpeedUnit.InchPerMinute, SpeedUnits.InchPerMinute),
+                    new (SpeedUnit.InchPerSecond, SpeedUnits.InchPerSecond),
+                    new (SpeedUnit.KilometerPerHour, SpeedUnits.KilometerPerHour),
+                    new (SpeedUnit.KilometerPerMinute, SpeedUnits.KilometerPerMinute),
+                    new (SpeedUnit.KilometerPerSecond, SpeedUnits.KilometerPerSecond),
+                    new (SpeedUnit.Knot, SpeedUnits.Knot),
+                    new (SpeedUnit.Mach, SpeedUnits.Mach),
+                    new (SpeedUnit.MeterPerHour, SpeedUnits.MeterPerHour),
+                    new (SpeedUnit.MeterPerMinute, SpeedUnits.MeterPerMinute),
+                    new (SpeedUnit.MeterPerSecond, SpeedUnits.MeterPerSecond),
+                    new (SpeedUnit.MicrometerPerMinute, SpeedUnits.MicrometerPerMinute),
+                    new (SpeedUnit.MicrometerPerSecond, SpeedUnits.MicrometerPerSecond),
+                    new (SpeedUnit.MilePerHour, SpeedUnits.MilePerHour),
+                    new (SpeedUnit.MillimeterPerHour, SpeedUnits.MillimeterPerHour),
+                    new (SpeedUnit.MillimeterPerMinute, SpeedUnits.MillimeterPerMinute),
+                    new (SpeedUnit.MillimeterPerSecond, SpeedUnits.MillimeterPerSecond),
+                    new (SpeedUnit.NanometerPerMinute, SpeedUnits.NanometerPerMinute),
+                    new (SpeedUnit.NanometerPerSecond, SpeedUnits.NanometerPerSecond),
+                    new (SpeedUnit.UsSurveyFootPerHour, SpeedUnits.UsSurveyFootPerHour),
+                    new (SpeedUnit.UsSurveyFootPerMinute, SpeedUnits.UsSurveyFootPerMinute),
+                    new (SpeedUnit.UsSurveyFootPerSecond, SpeedUnits.UsSurveyFootPerSecond),
+                    new (SpeedUnit.YardPerHour, SpeedUnits.YardPerHour),
+                    new (SpeedUnit.YardPerMinute, SpeedUnits.YardPerMinute),
+                    new (SpeedUnit.YardPerSecond, SpeedUnits.YardPerSecond),
+                };
             }
         }
 

@@ -120,9 +120,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricSurfaceChargeDensityUnit}"/> representing the default unit mappings for ElectricSurfaceChargeDensity.</returns>
             public static IEnumerable<UnitDefinition<ElectricSurfaceChargeDensityUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareCentimeter, ElectricSurfaceChargeDensityUnits.CoulombPerSquareCentimeter);
-                yield return new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareInch, ElectricSurfaceChargeDensityUnits.CoulombPerSquareInch);
-                yield return new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, ElectricSurfaceChargeDensityUnits.CoulombPerSquareMeter);
+                return new UnitDefinition<ElectricSurfaceChargeDensityUnit>[]
+                {
+                    new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareCentimeter, ElectricSurfaceChargeDensityUnits.CoulombPerSquareCentimeter),
+                    new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareInch, ElectricSurfaceChargeDensityUnits.CoulombPerSquareInch),
+                    new (ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, ElectricSurfaceChargeDensityUnits.CoulombPerSquareMeter),
+                };
             }
         }
 

@@ -120,12 +120,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricApparentPowerUnit}"/> representing the default unit mappings for ElectricApparentPower.</returns>
             public static IEnumerable<UnitDefinition<ElectricApparentPowerUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricApparentPowerUnit.Gigavoltampere, ElectricApparentPowerUnits.Gigavoltampere);
-                yield return new (ElectricApparentPowerUnit.Kilovoltampere, ElectricApparentPowerUnits.Kilovoltampere);
-                yield return new (ElectricApparentPowerUnit.Megavoltampere, ElectricApparentPowerUnits.Megavoltampere);
-                yield return new (ElectricApparentPowerUnit.Microvoltampere, ElectricApparentPowerUnits.Microvoltampere);
-                yield return new (ElectricApparentPowerUnit.Millivoltampere, ElectricApparentPowerUnits.Millivoltampere);
-                yield return new (ElectricApparentPowerUnit.Voltampere, ElectricApparentPowerUnits.Voltampere);
+                return new UnitDefinition<ElectricApparentPowerUnit>[]
+                {
+                    new (ElectricApparentPowerUnit.Gigavoltampere, ElectricApparentPowerUnits.Gigavoltampere),
+                    new (ElectricApparentPowerUnit.Kilovoltampere, ElectricApparentPowerUnits.Kilovoltampere),
+                    new (ElectricApparentPowerUnit.Megavoltampere, ElectricApparentPowerUnits.Megavoltampere),
+                    new (ElectricApparentPowerUnit.Microvoltampere, ElectricApparentPowerUnits.Microvoltampere),
+                    new (ElectricApparentPowerUnit.Millivoltampere, ElectricApparentPowerUnits.Millivoltampere),
+                    new (ElectricApparentPowerUnit.Voltampere, ElectricApparentPowerUnits.Voltampere),
+                };
             }
         }
 

@@ -116,7 +116,10 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ScalarUnit}"/> representing the default unit mappings for Scalar.</returns>
             public static IEnumerable<UnitDefinition<ScalarUnit>> GetDefaultMappings()
             {
-                yield return new (ScalarUnit.Amount, ScalarUnits.Amount);
+                return new UnitDefinition<ScalarUnit>[]
+                {
+                    new (ScalarUnit.Amount, ScalarUnits.Amount),
+                };
             }
         }
 

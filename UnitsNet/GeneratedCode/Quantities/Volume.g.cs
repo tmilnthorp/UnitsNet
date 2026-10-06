@@ -132,60 +132,63 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumeUnit}"/> representing the default unit mappings for Volume.</returns>
             public static IEnumerable<UnitDefinition<VolumeUnit>> GetDefaultMappings()
             {
-                yield return new (VolumeUnit.AcreFoot, VolumeUnits.AcreFoot);
-                yield return new (VolumeUnit.AuTablespoon, VolumeUnits.AuTablespoon);
-                yield return new (VolumeUnit.BoardFoot, VolumeUnits.BoardFoot);
-                yield return new (VolumeUnit.Centiliter, VolumeUnits.Centiliter);
-                yield return new (VolumeUnit.CubicCentimeter, VolumeUnits.CubicCentimeter);
-                yield return new (VolumeUnit.CubicDecimeter, VolumeUnits.CubicDecimeter);
-                yield return new (VolumeUnit.CubicFoot, VolumeUnits.CubicFoot);
-                yield return new (VolumeUnit.CubicHectometer, VolumeUnits.CubicHectometer);
-                yield return new (VolumeUnit.CubicInch, VolumeUnits.CubicInch);
-                yield return new (VolumeUnit.CubicKilometer, VolumeUnits.CubicKilometer);
-                yield return new (VolumeUnit.CubicMeter, VolumeUnits.CubicMeter);
-                yield return new (VolumeUnit.CubicMicrometer, VolumeUnits.CubicMicrometer);
-                yield return new (VolumeUnit.CubicMile, VolumeUnits.CubicMile);
-                yield return new (VolumeUnit.CubicMillimeter, VolumeUnits.CubicMillimeter);
-                yield return new (VolumeUnit.CubicYard, VolumeUnits.CubicYard);
-                yield return new (VolumeUnit.Decaliter, VolumeUnits.Decaliter);
-                yield return new (VolumeUnit.DecausGallon, VolumeUnits.DecausGallon);
-                yield return new (VolumeUnit.Deciliter, VolumeUnits.Deciliter);
-                yield return new (VolumeUnit.DeciusGallon, VolumeUnits.DeciusGallon);
-                yield return new (VolumeUnit.Hectoliter, VolumeUnits.Hectoliter);
-                yield return new (VolumeUnit.HectousGallon, VolumeUnits.HectousGallon);
-                yield return new (VolumeUnit.HundredCubicFoot, VolumeUnits.HundredCubicFoot);
-                yield return new (VolumeUnit.ImperialBeerBarrel, VolumeUnits.ImperialBeerBarrel);
-                yield return new (VolumeUnit.ImperialGallon, VolumeUnits.ImperialGallon);
-                yield return new (VolumeUnit.ImperialOunce, VolumeUnits.ImperialOunce);
-                yield return new (VolumeUnit.ImperialPint, VolumeUnits.ImperialPint);
-                yield return new (VolumeUnit.ImperialQuart, VolumeUnits.ImperialQuart);
-                yield return new (VolumeUnit.KiloimperialGallon, VolumeUnits.KiloimperialGallon);
-                yield return new (VolumeUnit.Kiloliter, VolumeUnits.Kiloliter);
-                yield return new (VolumeUnit.KilousGallon, VolumeUnits.KilousGallon);
-                yield return new (VolumeUnit.Liter, VolumeUnits.Liter);
-                yield return new (VolumeUnit.MegaimperialGallon, VolumeUnits.MegaimperialGallon);
-                yield return new (VolumeUnit.Megaliter, VolumeUnits.Megaliter);
-                yield return new (VolumeUnit.MegausGallon, VolumeUnits.MegausGallon);
-                yield return new (VolumeUnit.MetricCup, VolumeUnits.MetricCup);
-                yield return new (VolumeUnit.MetricTablespoon, VolumeUnits.MetricTablespoon);
-                yield return new (VolumeUnit.MetricTeaspoon, VolumeUnits.MetricTeaspoon);
-                yield return new (VolumeUnit.Microliter, VolumeUnits.Microliter);
-                yield return new (VolumeUnit.Milliliter, VolumeUnits.Milliliter);
-                yield return new (VolumeUnit.MillionCubicFoot, VolumeUnits.MillionCubicFoot);
-                yield return new (VolumeUnit.Nanoliter, VolumeUnits.Nanoliter);
-                yield return new (VolumeUnit.OilBarrel, VolumeUnits.OilBarrel);
-                yield return new (VolumeUnit.ThousandCubicFoot, VolumeUnits.ThousandCubicFoot);
-                yield return new (VolumeUnit.ThousandCubicMeter, VolumeUnits.ThousandCubicMeter);
-                yield return new (VolumeUnit.UkTablespoon, VolumeUnits.UkTablespoon);
-                yield return new (VolumeUnit.UsBeerBarrel, VolumeUnits.UsBeerBarrel);
-                yield return new (VolumeUnit.UsCustomaryCup, VolumeUnits.UsCustomaryCup);
-                yield return new (VolumeUnit.UsGallon, VolumeUnits.UsGallon);
-                yield return new (VolumeUnit.UsLegalCup, VolumeUnits.UsLegalCup);
-                yield return new (VolumeUnit.UsOunce, VolumeUnits.UsOunce);
-                yield return new (VolumeUnit.UsPint, VolumeUnits.UsPint);
-                yield return new (VolumeUnit.UsQuart, VolumeUnits.UsQuart);
-                yield return new (VolumeUnit.UsTablespoon, VolumeUnits.UsTablespoon);
-                yield return new (VolumeUnit.UsTeaspoon, VolumeUnits.UsTeaspoon);
+                return new UnitDefinition<VolumeUnit>[]
+                {
+                    new (VolumeUnit.AcreFoot, VolumeUnits.AcreFoot),
+                    new (VolumeUnit.AuTablespoon, VolumeUnits.AuTablespoon),
+                    new (VolumeUnit.BoardFoot, VolumeUnits.BoardFoot),
+                    new (VolumeUnit.Centiliter, VolumeUnits.Centiliter),
+                    new (VolumeUnit.CubicCentimeter, VolumeUnits.CubicCentimeter),
+                    new (VolumeUnit.CubicDecimeter, VolumeUnits.CubicDecimeter),
+                    new (VolumeUnit.CubicFoot, VolumeUnits.CubicFoot),
+                    new (VolumeUnit.CubicHectometer, VolumeUnits.CubicHectometer),
+                    new (VolumeUnit.CubicInch, VolumeUnits.CubicInch),
+                    new (VolumeUnit.CubicKilometer, VolumeUnits.CubicKilometer),
+                    new (VolumeUnit.CubicMeter, VolumeUnits.CubicMeter),
+                    new (VolumeUnit.CubicMicrometer, VolumeUnits.CubicMicrometer),
+                    new (VolumeUnit.CubicMile, VolumeUnits.CubicMile),
+                    new (VolumeUnit.CubicMillimeter, VolumeUnits.CubicMillimeter),
+                    new (VolumeUnit.CubicYard, VolumeUnits.CubicYard),
+                    new (VolumeUnit.Decaliter, VolumeUnits.Decaliter),
+                    new (VolumeUnit.DecausGallon, VolumeUnits.DecausGallon),
+                    new (VolumeUnit.Deciliter, VolumeUnits.Deciliter),
+                    new (VolumeUnit.DeciusGallon, VolumeUnits.DeciusGallon),
+                    new (VolumeUnit.Hectoliter, VolumeUnits.Hectoliter),
+                    new (VolumeUnit.HectousGallon, VolumeUnits.HectousGallon),
+                    new (VolumeUnit.HundredCubicFoot, VolumeUnits.HundredCubicFoot),
+                    new (VolumeUnit.ImperialBeerBarrel, VolumeUnits.ImperialBeerBarrel),
+                    new (VolumeUnit.ImperialGallon, VolumeUnits.ImperialGallon),
+                    new (VolumeUnit.ImperialOunce, VolumeUnits.ImperialOunce),
+                    new (VolumeUnit.ImperialPint, VolumeUnits.ImperialPint),
+                    new (VolumeUnit.ImperialQuart, VolumeUnits.ImperialQuart),
+                    new (VolumeUnit.KiloimperialGallon, VolumeUnits.KiloimperialGallon),
+                    new (VolumeUnit.Kiloliter, VolumeUnits.Kiloliter),
+                    new (VolumeUnit.KilousGallon, VolumeUnits.KilousGallon),
+                    new (VolumeUnit.Liter, VolumeUnits.Liter),
+                    new (VolumeUnit.MegaimperialGallon, VolumeUnits.MegaimperialGallon),
+                    new (VolumeUnit.Megaliter, VolumeUnits.Megaliter),
+                    new (VolumeUnit.MegausGallon, VolumeUnits.MegausGallon),
+                    new (VolumeUnit.MetricCup, VolumeUnits.MetricCup),
+                    new (VolumeUnit.MetricTablespoon, VolumeUnits.MetricTablespoon),
+                    new (VolumeUnit.MetricTeaspoon, VolumeUnits.MetricTeaspoon),
+                    new (VolumeUnit.Microliter, VolumeUnits.Microliter),
+                    new (VolumeUnit.Milliliter, VolumeUnits.Milliliter),
+                    new (VolumeUnit.MillionCubicFoot, VolumeUnits.MillionCubicFoot),
+                    new (VolumeUnit.Nanoliter, VolumeUnits.Nanoliter),
+                    new (VolumeUnit.OilBarrel, VolumeUnits.OilBarrel),
+                    new (VolumeUnit.ThousandCubicFoot, VolumeUnits.ThousandCubicFoot),
+                    new (VolumeUnit.ThousandCubicMeter, VolumeUnits.ThousandCubicMeter),
+                    new (VolumeUnit.UkTablespoon, VolumeUnits.UkTablespoon),
+                    new (VolumeUnit.UsBeerBarrel, VolumeUnits.UsBeerBarrel),
+                    new (VolumeUnit.UsCustomaryCup, VolumeUnits.UsCustomaryCup),
+                    new (VolumeUnit.UsGallon, VolumeUnits.UsGallon),
+                    new (VolumeUnit.UsLegalCup, VolumeUnits.UsLegalCup),
+                    new (VolumeUnit.UsOunce, VolumeUnits.UsOunce),
+                    new (VolumeUnit.UsPint, VolumeUnits.UsPint),
+                    new (VolumeUnit.UsQuart, VolumeUnits.UsQuart),
+                    new (VolumeUnit.UsTablespoon, VolumeUnits.UsTablespoon),
+                    new (VolumeUnit.UsTeaspoon, VolumeUnits.UsTeaspoon),
+                };
             }
         }
 

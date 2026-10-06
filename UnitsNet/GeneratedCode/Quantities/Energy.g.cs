@@ -129,46 +129,49 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{EnergyUnit}"/> representing the default unit mappings for Energy.</returns>
             public static IEnumerable<UnitDefinition<EnergyUnit>> GetDefaultMappings()
             {
-                yield return new (EnergyUnit.BritishThermalUnit, EnergyUnits.BritishThermalUnit);
-                yield return new (EnergyUnit.Calorie, EnergyUnits.Calorie);
-                yield return new (EnergyUnit.DecathermEc, EnergyUnits.DecathermEc);
-                yield return new (EnergyUnit.DecathermImperial, EnergyUnits.DecathermImperial);
-                yield return new (EnergyUnit.DecathermUs, EnergyUnits.DecathermUs);
-                yield return new (EnergyUnit.ElectronVolt, EnergyUnits.ElectronVolt);
-                yield return new (EnergyUnit.Erg, EnergyUnits.Erg);
-                yield return new (EnergyUnit.FootPound, EnergyUnits.FootPound);
-                yield return new (EnergyUnit.GigabritishThermalUnit, EnergyUnits.GigabritishThermalUnit);
-                yield return new (EnergyUnit.GigaelectronVolt, EnergyUnits.GigaelectronVolt);
-                yield return new (EnergyUnit.Gigajoule, EnergyUnits.Gigajoule);
-                yield return new (EnergyUnit.GigawattDay, EnergyUnits.GigawattDay);
-                yield return new (EnergyUnit.GigawattHour, EnergyUnits.GigawattHour);
-                yield return new (EnergyUnit.HorsepowerHour, EnergyUnits.HorsepowerHour);
-                yield return new (EnergyUnit.Joule, EnergyUnits.Joule);
-                yield return new (EnergyUnit.KilobritishThermalUnit, EnergyUnits.KilobritishThermalUnit);
-                yield return new (EnergyUnit.Kilocalorie, EnergyUnits.Kilocalorie);
-                yield return new (EnergyUnit.KiloelectronVolt, EnergyUnits.KiloelectronVolt);
-                yield return new (EnergyUnit.Kilojoule, EnergyUnits.Kilojoule);
-                yield return new (EnergyUnit.KilowattDay, EnergyUnits.KilowattDay);
-                yield return new (EnergyUnit.KilowattHour, EnergyUnits.KilowattHour);
-                yield return new (EnergyUnit.MegabritishThermalUnit, EnergyUnits.MegabritishThermalUnit);
-                yield return new (EnergyUnit.Megacalorie, EnergyUnits.Megacalorie);
-                yield return new (EnergyUnit.MegaelectronVolt, EnergyUnits.MegaelectronVolt);
-                yield return new (EnergyUnit.Megajoule, EnergyUnits.Megajoule);
-                yield return new (EnergyUnit.MegawattDay, EnergyUnits.MegawattDay);
-                yield return new (EnergyUnit.MegawattHour, EnergyUnits.MegawattHour);
-                yield return new (EnergyUnit.Microjoule, EnergyUnits.Microjoule);
-                yield return new (EnergyUnit.Millijoule, EnergyUnits.Millijoule);
-                yield return new (EnergyUnit.Nanojoule, EnergyUnits.Nanojoule);
-                yield return new (EnergyUnit.Petajoule, EnergyUnits.Petajoule);
-                yield return new (EnergyUnit.TeraelectronVolt, EnergyUnits.TeraelectronVolt);
-                yield return new (EnergyUnit.Terajoule, EnergyUnits.Terajoule);
-                yield return new (EnergyUnit.TerawattDay, EnergyUnits.TerawattDay);
-                yield return new (EnergyUnit.TerawattHour, EnergyUnits.TerawattHour);
-                yield return new (EnergyUnit.ThermEc, EnergyUnits.ThermEc);
-                yield return new (EnergyUnit.ThermImperial, EnergyUnits.ThermImperial);
-                yield return new (EnergyUnit.ThermUs, EnergyUnits.ThermUs);
-                yield return new (EnergyUnit.WattDay, EnergyUnits.WattDay);
-                yield return new (EnergyUnit.WattHour, EnergyUnits.WattHour);
+                return new UnitDefinition<EnergyUnit>[]
+                {
+                    new (EnergyUnit.BritishThermalUnit, EnergyUnits.BritishThermalUnit),
+                    new (EnergyUnit.Calorie, EnergyUnits.Calorie),
+                    new (EnergyUnit.DecathermEc, EnergyUnits.DecathermEc),
+                    new (EnergyUnit.DecathermImperial, EnergyUnits.DecathermImperial),
+                    new (EnergyUnit.DecathermUs, EnergyUnits.DecathermUs),
+                    new (EnergyUnit.ElectronVolt, EnergyUnits.ElectronVolt),
+                    new (EnergyUnit.Erg, EnergyUnits.Erg),
+                    new (EnergyUnit.FootPound, EnergyUnits.FootPound),
+                    new (EnergyUnit.GigabritishThermalUnit, EnergyUnits.GigabritishThermalUnit),
+                    new (EnergyUnit.GigaelectronVolt, EnergyUnits.GigaelectronVolt),
+                    new (EnergyUnit.Gigajoule, EnergyUnits.Gigajoule),
+                    new (EnergyUnit.GigawattDay, EnergyUnits.GigawattDay),
+                    new (EnergyUnit.GigawattHour, EnergyUnits.GigawattHour),
+                    new (EnergyUnit.HorsepowerHour, EnergyUnits.HorsepowerHour),
+                    new (EnergyUnit.Joule, EnergyUnits.Joule),
+                    new (EnergyUnit.KilobritishThermalUnit, EnergyUnits.KilobritishThermalUnit),
+                    new (EnergyUnit.Kilocalorie, EnergyUnits.Kilocalorie),
+                    new (EnergyUnit.KiloelectronVolt, EnergyUnits.KiloelectronVolt),
+                    new (EnergyUnit.Kilojoule, EnergyUnits.Kilojoule),
+                    new (EnergyUnit.KilowattDay, EnergyUnits.KilowattDay),
+                    new (EnergyUnit.KilowattHour, EnergyUnits.KilowattHour),
+                    new (EnergyUnit.MegabritishThermalUnit, EnergyUnits.MegabritishThermalUnit),
+                    new (EnergyUnit.Megacalorie, EnergyUnits.Megacalorie),
+                    new (EnergyUnit.MegaelectronVolt, EnergyUnits.MegaelectronVolt),
+                    new (EnergyUnit.Megajoule, EnergyUnits.Megajoule),
+                    new (EnergyUnit.MegawattDay, EnergyUnits.MegawattDay),
+                    new (EnergyUnit.MegawattHour, EnergyUnits.MegawattHour),
+                    new (EnergyUnit.Microjoule, EnergyUnits.Microjoule),
+                    new (EnergyUnit.Millijoule, EnergyUnits.Millijoule),
+                    new (EnergyUnit.Nanojoule, EnergyUnits.Nanojoule),
+                    new (EnergyUnit.Petajoule, EnergyUnits.Petajoule),
+                    new (EnergyUnit.TeraelectronVolt, EnergyUnits.TeraelectronVolt),
+                    new (EnergyUnit.Terajoule, EnergyUnits.Terajoule),
+                    new (EnergyUnit.TerawattDay, EnergyUnits.TerawattDay),
+                    new (EnergyUnit.TerawattHour, EnergyUnits.TerawattHour),
+                    new (EnergyUnit.ThermEc, EnergyUnits.ThermEc),
+                    new (EnergyUnit.ThermImperial, EnergyUnits.ThermImperial),
+                    new (EnergyUnit.ThermUs, EnergyUnits.ThermUs),
+                    new (EnergyUnit.WattDay, EnergyUnits.WattDay),
+                    new (EnergyUnit.WattHour, EnergyUnits.WattHour),
+                };
             }
         }
 

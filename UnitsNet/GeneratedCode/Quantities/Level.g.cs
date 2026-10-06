@@ -116,8 +116,11 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LevelUnit}"/> representing the default unit mappings for Level.</returns>
             public static IEnumerable<UnitDefinition<LevelUnit>> GetDefaultMappings()
             {
-                yield return new (LevelUnit.Decibel, LevelUnits.Decibel);
-                yield return new (LevelUnit.Neper, LevelUnits.Neper);
+                return new UnitDefinition<LevelUnit>[]
+                {
+                    new (LevelUnit.Decibel, LevelUnits.Decibel),
+                    new (LevelUnit.Neper, LevelUnits.Neper),
+                };
             }
         }
 

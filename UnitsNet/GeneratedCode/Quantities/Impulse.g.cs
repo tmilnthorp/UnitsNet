@@ -118,19 +118,22 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ImpulseUnit}"/> representing the default unit mappings for Impulse.</returns>
             public static IEnumerable<UnitDefinition<ImpulseUnit>> GetDefaultMappings()
             {
-                yield return new (ImpulseUnit.CentinewtonSecond, ImpulseUnits.CentinewtonSecond);
-                yield return new (ImpulseUnit.DecanewtonSecond, ImpulseUnits.DecanewtonSecond);
-                yield return new (ImpulseUnit.DecinewtonSecond, ImpulseUnits.DecinewtonSecond);
-                yield return new (ImpulseUnit.KilogramMeterPerSecond, ImpulseUnits.KilogramMeterPerSecond);
-                yield return new (ImpulseUnit.KilonewtonSecond, ImpulseUnits.KilonewtonSecond);
-                yield return new (ImpulseUnit.MeganewtonSecond, ImpulseUnits.MeganewtonSecond);
-                yield return new (ImpulseUnit.MicronewtonSecond, ImpulseUnits.MicronewtonSecond);
-                yield return new (ImpulseUnit.MillinewtonSecond, ImpulseUnits.MillinewtonSecond);
-                yield return new (ImpulseUnit.NanonewtonSecond, ImpulseUnits.NanonewtonSecond);
-                yield return new (ImpulseUnit.NewtonSecond, ImpulseUnits.NewtonSecond);
-                yield return new (ImpulseUnit.PoundFootPerSecond, ImpulseUnits.PoundFootPerSecond);
-                yield return new (ImpulseUnit.PoundForceSecond, ImpulseUnits.PoundForceSecond);
-                yield return new (ImpulseUnit.SlugFootPerSecond, ImpulseUnits.SlugFootPerSecond);
+                return new UnitDefinition<ImpulseUnit>[]
+                {
+                    new (ImpulseUnit.CentinewtonSecond, ImpulseUnits.CentinewtonSecond),
+                    new (ImpulseUnit.DecanewtonSecond, ImpulseUnits.DecanewtonSecond),
+                    new (ImpulseUnit.DecinewtonSecond, ImpulseUnits.DecinewtonSecond),
+                    new (ImpulseUnit.KilogramMeterPerSecond, ImpulseUnits.KilogramMeterPerSecond),
+                    new (ImpulseUnit.KilonewtonSecond, ImpulseUnits.KilonewtonSecond),
+                    new (ImpulseUnit.MeganewtonSecond, ImpulseUnits.MeganewtonSecond),
+                    new (ImpulseUnit.MicronewtonSecond, ImpulseUnits.MicronewtonSecond),
+                    new (ImpulseUnit.MillinewtonSecond, ImpulseUnits.MillinewtonSecond),
+                    new (ImpulseUnit.NanonewtonSecond, ImpulseUnits.NanonewtonSecond),
+                    new (ImpulseUnit.NewtonSecond, ImpulseUnits.NewtonSecond),
+                    new (ImpulseUnit.PoundFootPerSecond, ImpulseUnits.PoundFootPerSecond),
+                    new (ImpulseUnit.PoundForceSecond, ImpulseUnits.PoundForceSecond),
+                    new (ImpulseUnit.SlugFootPerSecond, ImpulseUnits.SlugFootPerSecond),
+                };
             }
         }
 

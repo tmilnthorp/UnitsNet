@@ -138,20 +138,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AreaUnit}"/> representing the default unit mappings for Area.</returns>
             public static IEnumerable<UnitDefinition<AreaUnit>> GetDefaultMappings()
             {
-                yield return new (AreaUnit.Acre, AreaUnits.Acre);
-                yield return new (AreaUnit.Hectare, AreaUnits.Hectare);
-                yield return new (AreaUnit.SquareCentimeter, AreaUnits.SquareCentimeter);
-                yield return new (AreaUnit.SquareDecimeter, AreaUnits.SquareDecimeter);
-                yield return new (AreaUnit.SquareFoot, AreaUnits.SquareFoot);
-                yield return new (AreaUnit.SquareInch, AreaUnits.SquareInch);
-                yield return new (AreaUnit.SquareKilometer, AreaUnits.SquareKilometer);
-                yield return new (AreaUnit.SquareMeter, AreaUnits.SquareMeter);
-                yield return new (AreaUnit.SquareMicrometer, AreaUnits.SquareMicrometer);
-                yield return new (AreaUnit.SquareMile, AreaUnits.SquareMile);
-                yield return new (AreaUnit.SquareMillimeter, AreaUnits.SquareMillimeter);
-                yield return new (AreaUnit.SquareNauticalMile, AreaUnits.SquareNauticalMile);
-                yield return new (AreaUnit.SquareYard, AreaUnits.SquareYard);
-                yield return new (AreaUnit.UsSurveySquareFoot, AreaUnits.UsSurveySquareFoot);
+                return new UnitDefinition<AreaUnit>[]
+                {
+                    new (AreaUnit.Acre, AreaUnits.Acre),
+                    new (AreaUnit.Hectare, AreaUnits.Hectare),
+                    new (AreaUnit.SquareCentimeter, AreaUnits.SquareCentimeter),
+                    new (AreaUnit.SquareDecimeter, AreaUnits.SquareDecimeter),
+                    new (AreaUnit.SquareFoot, AreaUnits.SquareFoot),
+                    new (AreaUnit.SquareInch, AreaUnits.SquareInch),
+                    new (AreaUnit.SquareKilometer, AreaUnits.SquareKilometer),
+                    new (AreaUnit.SquareMeter, AreaUnits.SquareMeter),
+                    new (AreaUnit.SquareMicrometer, AreaUnits.SquareMicrometer),
+                    new (AreaUnit.SquareMile, AreaUnits.SquareMile),
+                    new (AreaUnit.SquareMillimeter, AreaUnits.SquareMillimeter),
+                    new (AreaUnit.SquareNauticalMile, AreaUnits.SquareNauticalMile),
+                    new (AreaUnit.SquareYard, AreaUnits.SquareYard),
+                    new (AreaUnit.UsSurveySquareFoot, AreaUnits.UsSurveySquareFoot),
+                };
             }
         }
 

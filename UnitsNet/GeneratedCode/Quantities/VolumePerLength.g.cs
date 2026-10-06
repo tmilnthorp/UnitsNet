@@ -117,15 +117,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumePerLengthUnit}"/> representing the default unit mappings for VolumePerLength.</returns>
             public static IEnumerable<UnitDefinition<VolumePerLengthUnit>> GetDefaultMappings()
             {
-                yield return new (VolumePerLengthUnit.CubicMeterPerMeter, VolumePerLengthUnits.CubicMeterPerMeter);
-                yield return new (VolumePerLengthUnit.CubicYardPerFoot, VolumePerLengthUnits.CubicYardPerFoot);
-                yield return new (VolumePerLengthUnit.CubicYardPerUsSurveyFoot, VolumePerLengthUnits.CubicYardPerUsSurveyFoot);
-                yield return new (VolumePerLengthUnit.ImperialGallonPerMile, VolumePerLengthUnits.ImperialGallonPerMile);
-                yield return new (VolumePerLengthUnit.LiterPerKilometer, VolumePerLengthUnits.LiterPerKilometer);
-                yield return new (VolumePerLengthUnit.LiterPerMeter, VolumePerLengthUnits.LiterPerMeter);
-                yield return new (VolumePerLengthUnit.LiterPerMillimeter, VolumePerLengthUnits.LiterPerMillimeter);
-                yield return new (VolumePerLengthUnit.OilBarrelPerFoot, VolumePerLengthUnits.OilBarrelPerFoot);
-                yield return new (VolumePerLengthUnit.UsGallonPerMile, VolumePerLengthUnits.UsGallonPerMile);
+                return new UnitDefinition<VolumePerLengthUnit>[]
+                {
+                    new (VolumePerLengthUnit.CubicMeterPerMeter, VolumePerLengthUnits.CubicMeterPerMeter),
+                    new (VolumePerLengthUnit.CubicYardPerFoot, VolumePerLengthUnits.CubicYardPerFoot),
+                    new (VolumePerLengthUnit.CubicYardPerUsSurveyFoot, VolumePerLengthUnits.CubicYardPerUsSurveyFoot),
+                    new (VolumePerLengthUnit.ImperialGallonPerMile, VolumePerLengthUnits.ImperialGallonPerMile),
+                    new (VolumePerLengthUnit.LiterPerKilometer, VolumePerLengthUnits.LiterPerKilometer),
+                    new (VolumePerLengthUnit.LiterPerMeter, VolumePerLengthUnits.LiterPerMeter),
+                    new (VolumePerLengthUnit.LiterPerMillimeter, VolumePerLengthUnits.LiterPerMillimeter),
+                    new (VolumePerLengthUnit.OilBarrelPerFoot, VolumePerLengthUnits.OilBarrelPerFoot),
+                    new (VolumePerLengthUnit.UsGallonPerMile, VolumePerLengthUnits.UsGallonPerMile),
+                };
             }
         }
 

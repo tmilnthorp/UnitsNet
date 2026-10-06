@@ -121,10 +121,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LeakRateUnit}"/> representing the default unit mappings for LeakRate.</returns>
             public static IEnumerable<UnitDefinition<LeakRateUnit>> GetDefaultMappings()
             {
-                yield return new (LeakRateUnit.AtmCubicCentimeterPerSecond, LeakRateUnits.AtmCubicCentimeterPerSecond);
-                yield return new (LeakRateUnit.MillibarLiterPerSecond, LeakRateUnits.MillibarLiterPerSecond);
-                yield return new (LeakRateUnit.PascalCubicMeterPerSecond, LeakRateUnits.PascalCubicMeterPerSecond);
-                yield return new (LeakRateUnit.TorrLiterPerSecond, LeakRateUnits.TorrLiterPerSecond);
+                return new UnitDefinition<LeakRateUnit>[]
+                {
+                    new (LeakRateUnit.AtmCubicCentimeterPerSecond, LeakRateUnits.AtmCubicCentimeterPerSecond),
+                    new (LeakRateUnit.MillibarLiterPerSecond, LeakRateUnits.MillibarLiterPerSecond),
+                    new (LeakRateUnit.PascalCubicMeterPerSecond, LeakRateUnits.PascalCubicMeterPerSecond),
+                    new (LeakRateUnit.TorrLiterPerSecond, LeakRateUnits.TorrLiterPerSecond),
+                };
             }
         }
 

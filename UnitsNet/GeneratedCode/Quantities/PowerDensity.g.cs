@@ -117,52 +117,55 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PowerDensityUnit}"/> representing the default unit mappings for PowerDensity.</returns>
             public static IEnumerable<UnitDefinition<PowerDensityUnit>> GetDefaultMappings()
             {
-                yield return new (PowerDensityUnit.BtuPerSecondCubicFoot, PowerDensityUnits.BtuPerSecondCubicFoot);
-                yield return new (PowerDensityUnit.BtuPerSecondCubicInch, PowerDensityUnits.BtuPerSecondCubicInch);
-                yield return new (PowerDensityUnit.DecawattPerCubicFoot, PowerDensityUnits.DecawattPerCubicFoot);
-                yield return new (PowerDensityUnit.DecawattPerCubicInch, PowerDensityUnits.DecawattPerCubicInch);
-                yield return new (PowerDensityUnit.DecawattPerCubicMeter, PowerDensityUnits.DecawattPerCubicMeter);
-                yield return new (PowerDensityUnit.DecawattPerLiter, PowerDensityUnits.DecawattPerLiter);
-                yield return new (PowerDensityUnit.DeciwattPerCubicFoot, PowerDensityUnits.DeciwattPerCubicFoot);
-                yield return new (PowerDensityUnit.DeciwattPerCubicInch, PowerDensityUnits.DeciwattPerCubicInch);
-                yield return new (PowerDensityUnit.DeciwattPerCubicMeter, PowerDensityUnits.DeciwattPerCubicMeter);
-                yield return new (PowerDensityUnit.DeciwattPerLiter, PowerDensityUnits.DeciwattPerLiter);
-                yield return new (PowerDensityUnit.GigawattPerCubicFoot, PowerDensityUnits.GigawattPerCubicFoot);
-                yield return new (PowerDensityUnit.GigawattPerCubicInch, PowerDensityUnits.GigawattPerCubicInch);
-                yield return new (PowerDensityUnit.GigawattPerCubicMeter, PowerDensityUnits.GigawattPerCubicMeter);
-                yield return new (PowerDensityUnit.GigawattPerLiter, PowerDensityUnits.GigawattPerLiter);
-                yield return new (PowerDensityUnit.KilowattPerCubicFoot, PowerDensityUnits.KilowattPerCubicFoot);
-                yield return new (PowerDensityUnit.KilowattPerCubicInch, PowerDensityUnits.KilowattPerCubicInch);
-                yield return new (PowerDensityUnit.KilowattPerCubicMeter, PowerDensityUnits.KilowattPerCubicMeter);
-                yield return new (PowerDensityUnit.KilowattPerLiter, PowerDensityUnits.KilowattPerLiter);
-                yield return new (PowerDensityUnit.MegawattPerCubicFoot, PowerDensityUnits.MegawattPerCubicFoot);
-                yield return new (PowerDensityUnit.MegawattPerCubicInch, PowerDensityUnits.MegawattPerCubicInch);
-                yield return new (PowerDensityUnit.MegawattPerCubicMeter, PowerDensityUnits.MegawattPerCubicMeter);
-                yield return new (PowerDensityUnit.MegawattPerLiter, PowerDensityUnits.MegawattPerLiter);
-                yield return new (PowerDensityUnit.MicrowattPerCubicFoot, PowerDensityUnits.MicrowattPerCubicFoot);
-                yield return new (PowerDensityUnit.MicrowattPerCubicInch, PowerDensityUnits.MicrowattPerCubicInch);
-                yield return new (PowerDensityUnit.MicrowattPerCubicMeter, PowerDensityUnits.MicrowattPerCubicMeter);
-                yield return new (PowerDensityUnit.MicrowattPerLiter, PowerDensityUnits.MicrowattPerLiter);
-                yield return new (PowerDensityUnit.MilliwattPerCubicFoot, PowerDensityUnits.MilliwattPerCubicFoot);
-                yield return new (PowerDensityUnit.MilliwattPerCubicInch, PowerDensityUnits.MilliwattPerCubicInch);
-                yield return new (PowerDensityUnit.MilliwattPerCubicMeter, PowerDensityUnits.MilliwattPerCubicMeter);
-                yield return new (PowerDensityUnit.MilliwattPerLiter, PowerDensityUnits.MilliwattPerLiter);
-                yield return new (PowerDensityUnit.NanowattPerCubicFoot, PowerDensityUnits.NanowattPerCubicFoot);
-                yield return new (PowerDensityUnit.NanowattPerCubicInch, PowerDensityUnits.NanowattPerCubicInch);
-                yield return new (PowerDensityUnit.NanowattPerCubicMeter, PowerDensityUnits.NanowattPerCubicMeter);
-                yield return new (PowerDensityUnit.NanowattPerLiter, PowerDensityUnits.NanowattPerLiter);
-                yield return new (PowerDensityUnit.PicowattPerCubicFoot, PowerDensityUnits.PicowattPerCubicFoot);
-                yield return new (PowerDensityUnit.PicowattPerCubicInch, PowerDensityUnits.PicowattPerCubicInch);
-                yield return new (PowerDensityUnit.PicowattPerCubicMeter, PowerDensityUnits.PicowattPerCubicMeter);
-                yield return new (PowerDensityUnit.PicowattPerLiter, PowerDensityUnits.PicowattPerLiter);
-                yield return new (PowerDensityUnit.TerawattPerCubicFoot, PowerDensityUnits.TerawattPerCubicFoot);
-                yield return new (PowerDensityUnit.TerawattPerCubicInch, PowerDensityUnits.TerawattPerCubicInch);
-                yield return new (PowerDensityUnit.TerawattPerCubicMeter, PowerDensityUnits.TerawattPerCubicMeter);
-                yield return new (PowerDensityUnit.TerawattPerLiter, PowerDensityUnits.TerawattPerLiter);
-                yield return new (PowerDensityUnit.WattPerCubicFoot, PowerDensityUnits.WattPerCubicFoot);
-                yield return new (PowerDensityUnit.WattPerCubicInch, PowerDensityUnits.WattPerCubicInch);
-                yield return new (PowerDensityUnit.WattPerCubicMeter, PowerDensityUnits.WattPerCubicMeter);
-                yield return new (PowerDensityUnit.WattPerLiter, PowerDensityUnits.WattPerLiter);
+                return new UnitDefinition<PowerDensityUnit>[]
+                {
+                    new (PowerDensityUnit.BtuPerSecondCubicFoot, PowerDensityUnits.BtuPerSecondCubicFoot),
+                    new (PowerDensityUnit.BtuPerSecondCubicInch, PowerDensityUnits.BtuPerSecondCubicInch),
+                    new (PowerDensityUnit.DecawattPerCubicFoot, PowerDensityUnits.DecawattPerCubicFoot),
+                    new (PowerDensityUnit.DecawattPerCubicInch, PowerDensityUnits.DecawattPerCubicInch),
+                    new (PowerDensityUnit.DecawattPerCubicMeter, PowerDensityUnits.DecawattPerCubicMeter),
+                    new (PowerDensityUnit.DecawattPerLiter, PowerDensityUnits.DecawattPerLiter),
+                    new (PowerDensityUnit.DeciwattPerCubicFoot, PowerDensityUnits.DeciwattPerCubicFoot),
+                    new (PowerDensityUnit.DeciwattPerCubicInch, PowerDensityUnits.DeciwattPerCubicInch),
+                    new (PowerDensityUnit.DeciwattPerCubicMeter, PowerDensityUnits.DeciwattPerCubicMeter),
+                    new (PowerDensityUnit.DeciwattPerLiter, PowerDensityUnits.DeciwattPerLiter),
+                    new (PowerDensityUnit.GigawattPerCubicFoot, PowerDensityUnits.GigawattPerCubicFoot),
+                    new (PowerDensityUnit.GigawattPerCubicInch, PowerDensityUnits.GigawattPerCubicInch),
+                    new (PowerDensityUnit.GigawattPerCubicMeter, PowerDensityUnits.GigawattPerCubicMeter),
+                    new (PowerDensityUnit.GigawattPerLiter, PowerDensityUnits.GigawattPerLiter),
+                    new (PowerDensityUnit.KilowattPerCubicFoot, PowerDensityUnits.KilowattPerCubicFoot),
+                    new (PowerDensityUnit.KilowattPerCubicInch, PowerDensityUnits.KilowattPerCubicInch),
+                    new (PowerDensityUnit.KilowattPerCubicMeter, PowerDensityUnits.KilowattPerCubicMeter),
+                    new (PowerDensityUnit.KilowattPerLiter, PowerDensityUnits.KilowattPerLiter),
+                    new (PowerDensityUnit.MegawattPerCubicFoot, PowerDensityUnits.MegawattPerCubicFoot),
+                    new (PowerDensityUnit.MegawattPerCubicInch, PowerDensityUnits.MegawattPerCubicInch),
+                    new (PowerDensityUnit.MegawattPerCubicMeter, PowerDensityUnits.MegawattPerCubicMeter),
+                    new (PowerDensityUnit.MegawattPerLiter, PowerDensityUnits.MegawattPerLiter),
+                    new (PowerDensityUnit.MicrowattPerCubicFoot, PowerDensityUnits.MicrowattPerCubicFoot),
+                    new (PowerDensityUnit.MicrowattPerCubicInch, PowerDensityUnits.MicrowattPerCubicInch),
+                    new (PowerDensityUnit.MicrowattPerCubicMeter, PowerDensityUnits.MicrowattPerCubicMeter),
+                    new (PowerDensityUnit.MicrowattPerLiter, PowerDensityUnits.MicrowattPerLiter),
+                    new (PowerDensityUnit.MilliwattPerCubicFoot, PowerDensityUnits.MilliwattPerCubicFoot),
+                    new (PowerDensityUnit.MilliwattPerCubicInch, PowerDensityUnits.MilliwattPerCubicInch),
+                    new (PowerDensityUnit.MilliwattPerCubicMeter, PowerDensityUnits.MilliwattPerCubicMeter),
+                    new (PowerDensityUnit.MilliwattPerLiter, PowerDensityUnits.MilliwattPerLiter),
+                    new (PowerDensityUnit.NanowattPerCubicFoot, PowerDensityUnits.NanowattPerCubicFoot),
+                    new (PowerDensityUnit.NanowattPerCubicInch, PowerDensityUnits.NanowattPerCubicInch),
+                    new (PowerDensityUnit.NanowattPerCubicMeter, PowerDensityUnits.NanowattPerCubicMeter),
+                    new (PowerDensityUnit.NanowattPerLiter, PowerDensityUnits.NanowattPerLiter),
+                    new (PowerDensityUnit.PicowattPerCubicFoot, PowerDensityUnits.PicowattPerCubicFoot),
+                    new (PowerDensityUnit.PicowattPerCubicInch, PowerDensityUnits.PicowattPerCubicInch),
+                    new (PowerDensityUnit.PicowattPerCubicMeter, PowerDensityUnits.PicowattPerCubicMeter),
+                    new (PowerDensityUnit.PicowattPerLiter, PowerDensityUnits.PicowattPerLiter),
+                    new (PowerDensityUnit.TerawattPerCubicFoot, PowerDensityUnits.TerawattPerCubicFoot),
+                    new (PowerDensityUnit.TerawattPerCubicInch, PowerDensityUnits.TerawattPerCubicInch),
+                    new (PowerDensityUnit.TerawattPerCubicMeter, PowerDensityUnits.TerawattPerCubicMeter),
+                    new (PowerDensityUnit.TerawattPerLiter, PowerDensityUnits.TerawattPerLiter),
+                    new (PowerDensityUnit.WattPerCubicFoot, PowerDensityUnits.WattPerCubicFoot),
+                    new (PowerDensityUnit.WattPerCubicInch, PowerDensityUnits.WattPerCubicInch),
+                    new (PowerDensityUnit.WattPerCubicMeter, PowerDensityUnits.WattPerCubicMeter),
+                    new (PowerDensityUnit.WattPerLiter, PowerDensityUnits.WattPerLiter),
+                };
             }
         }
 

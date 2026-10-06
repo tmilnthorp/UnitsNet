@@ -116,8 +116,11 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PowerRatioUnit}"/> representing the default unit mappings for PowerRatio.</returns>
             public static IEnumerable<UnitDefinition<PowerRatioUnit>> GetDefaultMappings()
             {
-                yield return new (PowerRatioUnit.DecibelMilliwatt, PowerRatioUnits.DecibelMilliwatt);
-                yield return new (PowerRatioUnit.DecibelWatt, PowerRatioUnits.DecibelWatt);
+                return new UnitDefinition<PowerRatioUnit>[]
+                {
+                    new (PowerRatioUnit.DecibelMilliwatt, PowerRatioUnits.DecibelMilliwatt),
+                    new (PowerRatioUnit.DecibelWatt, PowerRatioUnits.DecibelWatt),
+                };
             }
         }
 

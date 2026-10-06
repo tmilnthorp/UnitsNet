@@ -117,23 +117,26 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TemperatureChangeRateUnit}"/> representing the default unit mappings for TemperatureChangeRate.</returns>
             public static IEnumerable<UnitDefinition<TemperatureChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (TemperatureChangeRateUnit.CentidegreeCelsiusPerSecond, TemperatureChangeRateUnits.CentidegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.DecadegreeCelsiusPerSecond, TemperatureChangeRateUnits.DecadegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.DecidegreeCelsiusPerSecond, TemperatureChangeRateUnits.DecidegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.DegreeCelsiusPerHour, TemperatureChangeRateUnits.DegreeCelsiusPerHour);
-                yield return new (TemperatureChangeRateUnit.DegreeCelsiusPerMinute, TemperatureChangeRateUnits.DegreeCelsiusPerMinute);
-                yield return new (TemperatureChangeRateUnit.DegreeCelsiusPerSecond, TemperatureChangeRateUnits.DegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.DegreeFahrenheitPerHour, TemperatureChangeRateUnits.DegreeFahrenheitPerHour);
-                yield return new (TemperatureChangeRateUnit.DegreeFahrenheitPerMinute, TemperatureChangeRateUnits.DegreeFahrenheitPerMinute);
-                yield return new (TemperatureChangeRateUnit.DegreeFahrenheitPerSecond, TemperatureChangeRateUnits.DegreeFahrenheitPerSecond);
-                yield return new (TemperatureChangeRateUnit.DegreeKelvinPerHour, TemperatureChangeRateUnits.DegreeKelvinPerHour);
-                yield return new (TemperatureChangeRateUnit.DegreeKelvinPerMinute, TemperatureChangeRateUnits.DegreeKelvinPerMinute);
-                yield return new (TemperatureChangeRateUnit.DegreeKelvinPerSecond, TemperatureChangeRateUnits.DegreeKelvinPerSecond);
-                yield return new (TemperatureChangeRateUnit.HectodegreeCelsiusPerSecond, TemperatureChangeRateUnits.HectodegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.KilodegreeCelsiusPerSecond, TemperatureChangeRateUnits.KilodegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.MicrodegreeCelsiusPerSecond, TemperatureChangeRateUnits.MicrodegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.MillidegreeCelsiusPerSecond, TemperatureChangeRateUnits.MillidegreeCelsiusPerSecond);
-                yield return new (TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond, TemperatureChangeRateUnits.NanodegreeCelsiusPerSecond);
+                return new UnitDefinition<TemperatureChangeRateUnit>[]
+                {
+                    new (TemperatureChangeRateUnit.CentidegreeCelsiusPerSecond, TemperatureChangeRateUnits.CentidegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.DecadegreeCelsiusPerSecond, TemperatureChangeRateUnits.DecadegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.DecidegreeCelsiusPerSecond, TemperatureChangeRateUnits.DecidegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.DegreeCelsiusPerHour, TemperatureChangeRateUnits.DegreeCelsiusPerHour),
+                    new (TemperatureChangeRateUnit.DegreeCelsiusPerMinute, TemperatureChangeRateUnits.DegreeCelsiusPerMinute),
+                    new (TemperatureChangeRateUnit.DegreeCelsiusPerSecond, TemperatureChangeRateUnits.DegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.DegreeFahrenheitPerHour, TemperatureChangeRateUnits.DegreeFahrenheitPerHour),
+                    new (TemperatureChangeRateUnit.DegreeFahrenheitPerMinute, TemperatureChangeRateUnits.DegreeFahrenheitPerMinute),
+                    new (TemperatureChangeRateUnit.DegreeFahrenheitPerSecond, TemperatureChangeRateUnits.DegreeFahrenheitPerSecond),
+                    new (TemperatureChangeRateUnit.DegreeKelvinPerHour, TemperatureChangeRateUnits.DegreeKelvinPerHour),
+                    new (TemperatureChangeRateUnit.DegreeKelvinPerMinute, TemperatureChangeRateUnits.DegreeKelvinPerMinute),
+                    new (TemperatureChangeRateUnit.DegreeKelvinPerSecond, TemperatureChangeRateUnits.DegreeKelvinPerSecond),
+                    new (TemperatureChangeRateUnit.HectodegreeCelsiusPerSecond, TemperatureChangeRateUnits.HectodegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.KilodegreeCelsiusPerSecond, TemperatureChangeRateUnits.KilodegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.MicrodegreeCelsiusPerSecond, TemperatureChangeRateUnits.MicrodegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.MillidegreeCelsiusPerSecond, TemperatureChangeRateUnits.MillidegreeCelsiusPerSecond),
+                    new (TemperatureChangeRateUnit.NanodegreeCelsiusPerSecond, TemperatureChangeRateUnits.NanodegreeCelsiusPerSecond),
+                };
             }
         }
 

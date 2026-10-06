@@ -117,16 +117,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RadiationEquivalentDoseRateUnit}"/> representing the default unit mappings for RadiationEquivalentDoseRate.</returns>
             public static IEnumerable<UnitDefinition<RadiationEquivalentDoseRateUnit>> GetDefaultMappings()
             {
-                yield return new (RadiationEquivalentDoseRateUnit.MicrosievertPerHour, RadiationEquivalentDoseRateUnits.MicrosievertPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.MicrosievertPerSecond, RadiationEquivalentDoseRateUnits.MicrosievertPerSecond);
-                yield return new (RadiationEquivalentDoseRateUnit.MilliroentgenEquivalentManPerHour, RadiationEquivalentDoseRateUnits.MilliroentgenEquivalentManPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.MillisievertPerHour, RadiationEquivalentDoseRateUnits.MillisievertPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.MillisievertPerSecond, RadiationEquivalentDoseRateUnits.MillisievertPerSecond);
-                yield return new (RadiationEquivalentDoseRateUnit.NanosievertPerHour, RadiationEquivalentDoseRateUnits.NanosievertPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.NanosievertPerSecond, RadiationEquivalentDoseRateUnits.NanosievertPerSecond);
-                yield return new (RadiationEquivalentDoseRateUnit.RoentgenEquivalentManPerHour, RadiationEquivalentDoseRateUnits.RoentgenEquivalentManPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.SievertPerHour, RadiationEquivalentDoseRateUnits.SievertPerHour);
-                yield return new (RadiationEquivalentDoseRateUnit.SievertPerSecond, RadiationEquivalentDoseRateUnits.SievertPerSecond);
+                return new UnitDefinition<RadiationEquivalentDoseRateUnit>[]
+                {
+                    new (RadiationEquivalentDoseRateUnit.MicrosievertPerHour, RadiationEquivalentDoseRateUnits.MicrosievertPerHour),
+                    new (RadiationEquivalentDoseRateUnit.MicrosievertPerSecond, RadiationEquivalentDoseRateUnits.MicrosievertPerSecond),
+                    new (RadiationEquivalentDoseRateUnit.MilliroentgenEquivalentManPerHour, RadiationEquivalentDoseRateUnits.MilliroentgenEquivalentManPerHour),
+                    new (RadiationEquivalentDoseRateUnit.MillisievertPerHour, RadiationEquivalentDoseRateUnits.MillisievertPerHour),
+                    new (RadiationEquivalentDoseRateUnit.MillisievertPerSecond, RadiationEquivalentDoseRateUnits.MillisievertPerSecond),
+                    new (RadiationEquivalentDoseRateUnit.NanosievertPerHour, RadiationEquivalentDoseRateUnits.NanosievertPerHour),
+                    new (RadiationEquivalentDoseRateUnit.NanosievertPerSecond, RadiationEquivalentDoseRateUnits.NanosievertPerSecond),
+                    new (RadiationEquivalentDoseRateUnit.RoentgenEquivalentManPerHour, RadiationEquivalentDoseRateUnits.RoentgenEquivalentManPerHour),
+                    new (RadiationEquivalentDoseRateUnit.SievertPerHour, RadiationEquivalentDoseRateUnits.SievertPerHour),
+                    new (RadiationEquivalentDoseRateUnit.SievertPerSecond, RadiationEquivalentDoseRateUnits.SievertPerSecond),
+                };
             }
         }
 

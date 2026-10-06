@@ -117,8 +117,11 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumeFlowPerAreaUnit}"/> representing the default unit mappings for VolumeFlowPerArea.</returns>
             public static IEnumerable<UnitDefinition<VolumeFlowPerAreaUnit>> GetDefaultMappings()
             {
-                yield return new (VolumeFlowPerAreaUnit.CubicFootPerMinutePerSquareFoot, VolumeFlowPerAreaUnits.CubicFootPerMinutePerSquareFoot);
-                yield return new (VolumeFlowPerAreaUnit.CubicMeterPerSecondPerSquareMeter, VolumeFlowPerAreaUnits.CubicMeterPerSecondPerSquareMeter);
+                return new UnitDefinition<VolumeFlowPerAreaUnit>[]
+                {
+                    new (VolumeFlowPerAreaUnit.CubicFootPerMinutePerSquareFoot, VolumeFlowPerAreaUnits.CubicFootPerMinutePerSquareFoot),
+                    new (VolumeFlowPerAreaUnit.CubicMeterPerSecondPerSquareMeter, VolumeFlowPerAreaUnits.CubicMeterPerSecondPerSquareMeter),
+                };
             }
         }
 

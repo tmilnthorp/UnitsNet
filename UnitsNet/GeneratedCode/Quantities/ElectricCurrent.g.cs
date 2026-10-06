@@ -128,15 +128,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricCurrentUnit}"/> representing the default unit mappings for ElectricCurrent.</returns>
             public static IEnumerable<UnitDefinition<ElectricCurrentUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricCurrentUnit.Ampere, ElectricCurrentUnits.Ampere);
-                yield return new (ElectricCurrentUnit.Centiampere, ElectricCurrentUnits.Centiampere);
-                yield return new (ElectricCurrentUnit.Femtoampere, ElectricCurrentUnits.Femtoampere);
-                yield return new (ElectricCurrentUnit.Kiloampere, ElectricCurrentUnits.Kiloampere);
-                yield return new (ElectricCurrentUnit.Megaampere, ElectricCurrentUnits.Megaampere);
-                yield return new (ElectricCurrentUnit.Microampere, ElectricCurrentUnits.Microampere);
-                yield return new (ElectricCurrentUnit.Milliampere, ElectricCurrentUnits.Milliampere);
-                yield return new (ElectricCurrentUnit.Nanoampere, ElectricCurrentUnits.Nanoampere);
-                yield return new (ElectricCurrentUnit.Picoampere, ElectricCurrentUnits.Picoampere);
+                return new UnitDefinition<ElectricCurrentUnit>[]
+                {
+                    new (ElectricCurrentUnit.Ampere, ElectricCurrentUnits.Ampere),
+                    new (ElectricCurrentUnit.Centiampere, ElectricCurrentUnits.Centiampere),
+                    new (ElectricCurrentUnit.Femtoampere, ElectricCurrentUnits.Femtoampere),
+                    new (ElectricCurrentUnit.Kiloampere, ElectricCurrentUnits.Kiloampere),
+                    new (ElectricCurrentUnit.Megaampere, ElectricCurrentUnits.Megaampere),
+                    new (ElectricCurrentUnit.Microampere, ElectricCurrentUnits.Microampere),
+                    new (ElectricCurrentUnit.Milliampere, ElectricCurrentUnits.Milliampere),
+                    new (ElectricCurrentUnit.Nanoampere, ElectricCurrentUnits.Nanoampere),
+                    new (ElectricCurrentUnit.Picoampere, ElectricCurrentUnits.Picoampere),
+                };
             }
         }
 

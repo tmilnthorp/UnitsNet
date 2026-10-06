@@ -116,10 +116,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AmplitudeRatioUnit}"/> representing the default unit mappings for AmplitudeRatio.</returns>
             public static IEnumerable<UnitDefinition<AmplitudeRatioUnit>> GetDefaultMappings()
             {
-                yield return new (AmplitudeRatioUnit.DecibelMicrovolt, AmplitudeRatioUnits.DecibelMicrovolt);
-                yield return new (AmplitudeRatioUnit.DecibelMillivolt, AmplitudeRatioUnits.DecibelMillivolt);
-                yield return new (AmplitudeRatioUnit.DecibelUnloaded, AmplitudeRatioUnits.DecibelUnloaded);
-                yield return new (AmplitudeRatioUnit.DecibelVolt, AmplitudeRatioUnits.DecibelVolt);
+                return new UnitDefinition<AmplitudeRatioUnit>[]
+                {
+                    new (AmplitudeRatioUnit.DecibelMicrovolt, AmplitudeRatioUnits.DecibelMicrovolt),
+                    new (AmplitudeRatioUnit.DecibelMillivolt, AmplitudeRatioUnits.DecibelMillivolt),
+                    new (AmplitudeRatioUnit.DecibelUnloaded, AmplitudeRatioUnits.DecibelUnloaded),
+                    new (AmplitudeRatioUnit.DecibelVolt, AmplitudeRatioUnits.DecibelVolt),
+                };
             }
         }
 

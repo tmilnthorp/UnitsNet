@@ -119,12 +119,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricConductivityUnit}"/> representing the default unit mappings for ElectricConductivity.</returns>
             public static IEnumerable<UnitDefinition<ElectricConductivityUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricConductivityUnit.MicrosiemensPerCentimeter, ElectricConductivityUnits.MicrosiemensPerCentimeter);
-                yield return new (ElectricConductivityUnit.MillisiemensPerCentimeter, ElectricConductivityUnits.MillisiemensPerCentimeter);
-                yield return new (ElectricConductivityUnit.SiemensPerCentimeter, ElectricConductivityUnits.SiemensPerCentimeter);
-                yield return new (ElectricConductivityUnit.SiemensPerFoot, ElectricConductivityUnits.SiemensPerFoot);
-                yield return new (ElectricConductivityUnit.SiemensPerInch, ElectricConductivityUnits.SiemensPerInch);
-                yield return new (ElectricConductivityUnit.SiemensPerMeter, ElectricConductivityUnits.SiemensPerMeter);
+                return new UnitDefinition<ElectricConductivityUnit>[]
+                {
+                    new (ElectricConductivityUnit.MicrosiemensPerCentimeter, ElectricConductivityUnits.MicrosiemensPerCentimeter),
+                    new (ElectricConductivityUnit.MillisiemensPerCentimeter, ElectricConductivityUnits.MillisiemensPerCentimeter),
+                    new (ElectricConductivityUnit.SiemensPerCentimeter, ElectricConductivityUnits.SiemensPerCentimeter),
+                    new (ElectricConductivityUnit.SiemensPerFoot, ElectricConductivityUnits.SiemensPerFoot),
+                    new (ElectricConductivityUnit.SiemensPerInch, ElectricConductivityUnits.SiemensPerInch),
+                    new (ElectricConductivityUnit.SiemensPerMeter, ElectricConductivityUnits.SiemensPerMeter),
+                };
             }
         }
 

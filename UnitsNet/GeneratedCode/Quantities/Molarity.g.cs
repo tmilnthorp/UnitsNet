@@ -124,17 +124,20 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarityUnit}"/> representing the default unit mappings for Molarity.</returns>
             public static IEnumerable<UnitDefinition<MolarityUnit>> GetDefaultMappings()
             {
-                yield return new (MolarityUnit.CentimolePerLiter, MolarityUnits.CentimolePerLiter);
-                yield return new (MolarityUnit.DecimolePerLiter, MolarityUnits.DecimolePerLiter);
-                yield return new (MolarityUnit.FemtomolePerLiter, MolarityUnits.FemtomolePerLiter);
-                yield return new (MolarityUnit.KilomolePerCubicMeter, MolarityUnits.KilomolePerCubicMeter);
-                yield return new (MolarityUnit.MicromolePerLiter, MolarityUnits.MicromolePerLiter);
-                yield return new (MolarityUnit.MillimolePerLiter, MolarityUnits.MillimolePerLiter);
-                yield return new (MolarityUnit.MolePerCubicMeter, MolarityUnits.MolePerCubicMeter);
-                yield return new (MolarityUnit.MolePerLiter, MolarityUnits.MolePerLiter);
-                yield return new (MolarityUnit.NanomolePerLiter, MolarityUnits.NanomolePerLiter);
-                yield return new (MolarityUnit.PicomolePerLiter, MolarityUnits.PicomolePerLiter);
-                yield return new (MolarityUnit.PoundMolePerCubicFoot, MolarityUnits.PoundMolePerCubicFoot);
+                return new UnitDefinition<MolarityUnit>[]
+                {
+                    new (MolarityUnit.CentimolePerLiter, MolarityUnits.CentimolePerLiter),
+                    new (MolarityUnit.DecimolePerLiter, MolarityUnits.DecimolePerLiter),
+                    new (MolarityUnit.FemtomolePerLiter, MolarityUnits.FemtomolePerLiter),
+                    new (MolarityUnit.KilomolePerCubicMeter, MolarityUnits.KilomolePerCubicMeter),
+                    new (MolarityUnit.MicromolePerLiter, MolarityUnits.MicromolePerLiter),
+                    new (MolarityUnit.MillimolePerLiter, MolarityUnits.MillimolePerLiter),
+                    new (MolarityUnit.MolePerCubicMeter, MolarityUnits.MolePerCubicMeter),
+                    new (MolarityUnit.MolePerLiter, MolarityUnits.MolePerLiter),
+                    new (MolarityUnit.NanomolePerLiter, MolarityUnits.NanomolePerLiter),
+                    new (MolarityUnit.PicomolePerLiter, MolarityUnits.PicomolePerLiter),
+                    new (MolarityUnit.PoundMolePerCubicFoot, MolarityUnits.PoundMolePerCubicFoot),
+                };
             }
         }
 

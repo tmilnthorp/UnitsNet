@@ -119,21 +119,24 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AngleUnit}"/> representing the default unit mappings for Angle.</returns>
             public static IEnumerable<UnitDefinition<AngleUnit>> GetDefaultMappings()
             {
-                yield return new (AngleUnit.Arcminute, AngleUnits.Arcminute);
-                yield return new (AngleUnit.Arcsecond, AngleUnits.Arcsecond);
-                yield return new (AngleUnit.Centiradian, AngleUnits.Centiradian);
-                yield return new (AngleUnit.Deciradian, AngleUnits.Deciradian);
-                yield return new (AngleUnit.Degree, AngleUnits.Degree);
-                yield return new (AngleUnit.Gradian, AngleUnits.Gradian);
-                yield return new (AngleUnit.Microdegree, AngleUnits.Microdegree);
-                yield return new (AngleUnit.Microradian, AngleUnits.Microradian);
-                yield return new (AngleUnit.Millidegree, AngleUnits.Millidegree);
-                yield return new (AngleUnit.Milliradian, AngleUnits.Milliradian);
-                yield return new (AngleUnit.Nanodegree, AngleUnits.Nanodegree);
-                yield return new (AngleUnit.Nanoradian, AngleUnits.Nanoradian);
-                yield return new (AngleUnit.NatoMil, AngleUnits.NatoMil);
-                yield return new (AngleUnit.Radian, AngleUnits.Radian);
-                yield return new (AngleUnit.Revolution, AngleUnits.Revolution);
+                return new UnitDefinition<AngleUnit>[]
+                {
+                    new (AngleUnit.Arcminute, AngleUnits.Arcminute),
+                    new (AngleUnit.Arcsecond, AngleUnits.Arcsecond),
+                    new (AngleUnit.Centiradian, AngleUnits.Centiradian),
+                    new (AngleUnit.Deciradian, AngleUnits.Deciradian),
+                    new (AngleUnit.Degree, AngleUnits.Degree),
+                    new (AngleUnit.Gradian, AngleUnits.Gradian),
+                    new (AngleUnit.Microdegree, AngleUnits.Microdegree),
+                    new (AngleUnit.Microradian, AngleUnits.Microradian),
+                    new (AngleUnit.Millidegree, AngleUnits.Millidegree),
+                    new (AngleUnit.Milliradian, AngleUnits.Milliradian),
+                    new (AngleUnit.Nanodegree, AngleUnits.Nanodegree),
+                    new (AngleUnit.Nanoradian, AngleUnits.Nanoradian),
+                    new (AngleUnit.NatoMil, AngleUnits.NatoMil),
+                    new (AngleUnit.Radian, AngleUnits.Radian),
+                    new (AngleUnit.Revolution, AngleUnits.Revolution),
+                };
             }
         }
 

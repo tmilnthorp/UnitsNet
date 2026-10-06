@@ -117,20 +117,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{IrradianceUnit}"/> representing the default unit mappings for Irradiance.</returns>
             public static IEnumerable<UnitDefinition<IrradianceUnit>> GetDefaultMappings()
             {
-                yield return new (IrradianceUnit.KilowattPerSquareCentimeter, IrradianceUnits.KilowattPerSquareCentimeter);
-                yield return new (IrradianceUnit.KilowattPerSquareMeter, IrradianceUnits.KilowattPerSquareMeter);
-                yield return new (IrradianceUnit.MegawattPerSquareCentimeter, IrradianceUnits.MegawattPerSquareCentimeter);
-                yield return new (IrradianceUnit.MegawattPerSquareMeter, IrradianceUnits.MegawattPerSquareMeter);
-                yield return new (IrradianceUnit.MicrowattPerSquareCentimeter, IrradianceUnits.MicrowattPerSquareCentimeter);
-                yield return new (IrradianceUnit.MicrowattPerSquareMeter, IrradianceUnits.MicrowattPerSquareMeter);
-                yield return new (IrradianceUnit.MilliwattPerSquareCentimeter, IrradianceUnits.MilliwattPerSquareCentimeter);
-                yield return new (IrradianceUnit.MilliwattPerSquareMeter, IrradianceUnits.MilliwattPerSquareMeter);
-                yield return new (IrradianceUnit.NanowattPerSquareCentimeter, IrradianceUnits.NanowattPerSquareCentimeter);
-                yield return new (IrradianceUnit.NanowattPerSquareMeter, IrradianceUnits.NanowattPerSquareMeter);
-                yield return new (IrradianceUnit.PicowattPerSquareCentimeter, IrradianceUnits.PicowattPerSquareCentimeter);
-                yield return new (IrradianceUnit.PicowattPerSquareMeter, IrradianceUnits.PicowattPerSquareMeter);
-                yield return new (IrradianceUnit.WattPerSquareCentimeter, IrradianceUnits.WattPerSquareCentimeter);
-                yield return new (IrradianceUnit.WattPerSquareMeter, IrradianceUnits.WattPerSquareMeter);
+                return new UnitDefinition<IrradianceUnit>[]
+                {
+                    new (IrradianceUnit.KilowattPerSquareCentimeter, IrradianceUnits.KilowattPerSquareCentimeter),
+                    new (IrradianceUnit.KilowattPerSquareMeter, IrradianceUnits.KilowattPerSquareMeter),
+                    new (IrradianceUnit.MegawattPerSquareCentimeter, IrradianceUnits.MegawattPerSquareCentimeter),
+                    new (IrradianceUnit.MegawattPerSquareMeter, IrradianceUnits.MegawattPerSquareMeter),
+                    new (IrradianceUnit.MicrowattPerSquareCentimeter, IrradianceUnits.MicrowattPerSquareCentimeter),
+                    new (IrradianceUnit.MicrowattPerSquareMeter, IrradianceUnits.MicrowattPerSquareMeter),
+                    new (IrradianceUnit.MilliwattPerSquareCentimeter, IrradianceUnits.MilliwattPerSquareCentimeter),
+                    new (IrradianceUnit.MilliwattPerSquareMeter, IrradianceUnits.MilliwattPerSquareMeter),
+                    new (IrradianceUnit.NanowattPerSquareCentimeter, IrradianceUnits.NanowattPerSquareCentimeter),
+                    new (IrradianceUnit.NanowattPerSquareMeter, IrradianceUnits.NanowattPerSquareMeter),
+                    new (IrradianceUnit.PicowattPerSquareCentimeter, IrradianceUnits.PicowattPerSquareCentimeter),
+                    new (IrradianceUnit.PicowattPerSquareMeter, IrradianceUnits.PicowattPerSquareMeter),
+                    new (IrradianceUnit.WattPerSquareCentimeter, IrradianceUnits.WattPerSquareCentimeter),
+                    new (IrradianceUnit.WattPerSquareMeter, IrradianceUnits.WattPerSquareMeter),
+                };
             }
         }
 

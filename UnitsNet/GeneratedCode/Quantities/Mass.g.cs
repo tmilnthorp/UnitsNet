@@ -132,37 +132,40 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MassUnit}"/> representing the default unit mappings for Mass.</returns>
             public static IEnumerable<UnitDefinition<MassUnit>> GetDefaultMappings()
             {
-                yield return new (MassUnit.Centigram, MassUnits.Centigram);
-                yield return new (MassUnit.Dalton, MassUnits.Dalton);
-                yield return new (MassUnit.Decagram, MassUnits.Decagram);
-                yield return new (MassUnit.Decigram, MassUnits.Decigram);
-                yield return new (MassUnit.EarthMass, MassUnits.EarthMass);
-                yield return new (MassUnit.Femtogram, MassUnits.Femtogram);
-                yield return new (MassUnit.Gigadalton, MassUnits.Gigadalton);
-                yield return new (MassUnit.Grain, MassUnits.Grain);
-                yield return new (MassUnit.Gram, MassUnits.Gram);
-                yield return new (MassUnit.Hectogram, MassUnits.Hectogram);
-                yield return new (MassUnit.Kilodalton, MassUnits.Kilodalton);
-                yield return new (MassUnit.Kilogram, MassUnits.Kilogram);
-                yield return new (MassUnit.Kilopound, MassUnits.Kilopound);
-                yield return new (MassUnit.Kilotonne, MassUnits.Kilotonne);
-                yield return new (MassUnit.LongHundredweight, MassUnits.LongHundredweight);
-                yield return new (MassUnit.LongTon, MassUnits.LongTon);
-                yield return new (MassUnit.Megadalton, MassUnits.Megadalton);
-                yield return new (MassUnit.Megapound, MassUnits.Megapound);
-                yield return new (MassUnit.Megatonne, MassUnits.Megatonne);
-                yield return new (MassUnit.Microgram, MassUnits.Microgram);
-                yield return new (MassUnit.Milligram, MassUnits.Milligram);
-                yield return new (MassUnit.Nanogram, MassUnits.Nanogram);
-                yield return new (MassUnit.Ounce, MassUnits.Ounce);
-                yield return new (MassUnit.Picogram, MassUnits.Picogram);
-                yield return new (MassUnit.Pound, MassUnits.Pound);
-                yield return new (MassUnit.ShortHundredweight, MassUnits.ShortHundredweight);
-                yield return new (MassUnit.ShortTon, MassUnits.ShortTon);
-                yield return new (MassUnit.Slug, MassUnits.Slug);
-                yield return new (MassUnit.SolarMass, MassUnits.SolarMass);
-                yield return new (MassUnit.Stone, MassUnits.Stone);
-                yield return new (MassUnit.Tonne, MassUnits.Tonne);
+                return new UnitDefinition<MassUnit>[]
+                {
+                    new (MassUnit.Centigram, MassUnits.Centigram),
+                    new (MassUnit.Dalton, MassUnits.Dalton),
+                    new (MassUnit.Decagram, MassUnits.Decagram),
+                    new (MassUnit.Decigram, MassUnits.Decigram),
+                    new (MassUnit.EarthMass, MassUnits.EarthMass),
+                    new (MassUnit.Femtogram, MassUnits.Femtogram),
+                    new (MassUnit.Gigadalton, MassUnits.Gigadalton),
+                    new (MassUnit.Grain, MassUnits.Grain),
+                    new (MassUnit.Gram, MassUnits.Gram),
+                    new (MassUnit.Hectogram, MassUnits.Hectogram),
+                    new (MassUnit.Kilodalton, MassUnits.Kilodalton),
+                    new (MassUnit.Kilogram, MassUnits.Kilogram),
+                    new (MassUnit.Kilopound, MassUnits.Kilopound),
+                    new (MassUnit.Kilotonne, MassUnits.Kilotonne),
+                    new (MassUnit.LongHundredweight, MassUnits.LongHundredweight),
+                    new (MassUnit.LongTon, MassUnits.LongTon),
+                    new (MassUnit.Megadalton, MassUnits.Megadalton),
+                    new (MassUnit.Megapound, MassUnits.Megapound),
+                    new (MassUnit.Megatonne, MassUnits.Megatonne),
+                    new (MassUnit.Microgram, MassUnits.Microgram),
+                    new (MassUnit.Milligram, MassUnits.Milligram),
+                    new (MassUnit.Nanogram, MassUnits.Nanogram),
+                    new (MassUnit.Ounce, MassUnits.Ounce),
+                    new (MassUnit.Picogram, MassUnits.Picogram),
+                    new (MassUnit.Pound, MassUnits.Pound),
+                    new (MassUnit.ShortHundredweight, MassUnits.ShortHundredweight),
+                    new (MassUnit.ShortTon, MassUnits.ShortTon),
+                    new (MassUnit.Slug, MassUnits.Slug),
+                    new (MassUnit.SolarMass, MassUnits.SolarMass),
+                    new (MassUnit.Stone, MassUnits.Stone),
+                    new (MassUnit.Tonne, MassUnits.Tonne),
+                };
             }
         }
 

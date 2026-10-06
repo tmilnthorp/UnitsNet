@@ -117,9 +117,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarEnergyUnit}"/> representing the default unit mappings for MolarEnergy.</returns>
             public static IEnumerable<UnitDefinition<MolarEnergyUnit>> GetDefaultMappings()
             {
-                yield return new (MolarEnergyUnit.JoulePerMole, MolarEnergyUnits.JoulePerMole);
-                yield return new (MolarEnergyUnit.KilojoulePerMole, MolarEnergyUnits.KilojoulePerMole);
-                yield return new (MolarEnergyUnit.MegajoulePerMole, MolarEnergyUnits.MegajoulePerMole);
+                return new UnitDefinition<MolarEnergyUnit>[]
+                {
+                    new (MolarEnergyUnit.JoulePerMole, MolarEnergyUnits.JoulePerMole),
+                    new (MolarEnergyUnit.KilojoulePerMole, MolarEnergyUnits.KilojoulePerMole),
+                    new (MolarEnergyUnit.MegajoulePerMole, MolarEnergyUnits.MegajoulePerMole),
+                };
             }
         }
 

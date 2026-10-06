@@ -117,26 +117,29 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricPotentialChangeRateUnit}"/> representing the default unit mappings for ElectricPotentialChangeRate.</returns>
             public static IEnumerable<UnitDefinition<ElectricPotentialChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerHour, ElectricPotentialChangeRateUnits.KilovoltPerHour);
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMicrosecond, ElectricPotentialChangeRateUnits.KilovoltPerMicrosecond);
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerMinute, ElectricPotentialChangeRateUnits.KilovoltPerMinute);
-                yield return new (ElectricPotentialChangeRateUnit.KilovoltPerSecond, ElectricPotentialChangeRateUnits.KilovoltPerSecond);
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerHour, ElectricPotentialChangeRateUnits.MegavoltPerHour);
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMicrosecond, ElectricPotentialChangeRateUnits.MegavoltPerMicrosecond);
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerMinute, ElectricPotentialChangeRateUnits.MegavoltPerMinute);
-                yield return new (ElectricPotentialChangeRateUnit.MegavoltPerSecond, ElectricPotentialChangeRateUnits.MegavoltPerSecond);
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerHour, ElectricPotentialChangeRateUnits.MicrovoltPerHour);
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMicrosecond, ElectricPotentialChangeRateUnits.MicrovoltPerMicrosecond);
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerMinute, ElectricPotentialChangeRateUnits.MicrovoltPerMinute);
-                yield return new (ElectricPotentialChangeRateUnit.MicrovoltPerSecond, ElectricPotentialChangeRateUnits.MicrovoltPerSecond);
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerHour, ElectricPotentialChangeRateUnits.MillivoltPerHour);
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMicrosecond, ElectricPotentialChangeRateUnits.MillivoltPerMicrosecond);
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerMinute, ElectricPotentialChangeRateUnits.MillivoltPerMinute);
-                yield return new (ElectricPotentialChangeRateUnit.MillivoltPerSecond, ElectricPotentialChangeRateUnits.MillivoltPerSecond);
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerHour, ElectricPotentialChangeRateUnits.VoltPerHour);
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerMicrosecond, ElectricPotentialChangeRateUnits.VoltPerMicrosecond);
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerMinute, ElectricPotentialChangeRateUnits.VoltPerMinute);
-                yield return new (ElectricPotentialChangeRateUnit.VoltPerSecond, ElectricPotentialChangeRateUnits.VoltPerSecond);
+                return new UnitDefinition<ElectricPotentialChangeRateUnit>[]
+                {
+                    new (ElectricPotentialChangeRateUnit.KilovoltPerHour, ElectricPotentialChangeRateUnits.KilovoltPerHour),
+                    new (ElectricPotentialChangeRateUnit.KilovoltPerMicrosecond, ElectricPotentialChangeRateUnits.KilovoltPerMicrosecond),
+                    new (ElectricPotentialChangeRateUnit.KilovoltPerMinute, ElectricPotentialChangeRateUnits.KilovoltPerMinute),
+                    new (ElectricPotentialChangeRateUnit.KilovoltPerSecond, ElectricPotentialChangeRateUnits.KilovoltPerSecond),
+                    new (ElectricPotentialChangeRateUnit.MegavoltPerHour, ElectricPotentialChangeRateUnits.MegavoltPerHour),
+                    new (ElectricPotentialChangeRateUnit.MegavoltPerMicrosecond, ElectricPotentialChangeRateUnits.MegavoltPerMicrosecond),
+                    new (ElectricPotentialChangeRateUnit.MegavoltPerMinute, ElectricPotentialChangeRateUnits.MegavoltPerMinute),
+                    new (ElectricPotentialChangeRateUnit.MegavoltPerSecond, ElectricPotentialChangeRateUnits.MegavoltPerSecond),
+                    new (ElectricPotentialChangeRateUnit.MicrovoltPerHour, ElectricPotentialChangeRateUnits.MicrovoltPerHour),
+                    new (ElectricPotentialChangeRateUnit.MicrovoltPerMicrosecond, ElectricPotentialChangeRateUnits.MicrovoltPerMicrosecond),
+                    new (ElectricPotentialChangeRateUnit.MicrovoltPerMinute, ElectricPotentialChangeRateUnits.MicrovoltPerMinute),
+                    new (ElectricPotentialChangeRateUnit.MicrovoltPerSecond, ElectricPotentialChangeRateUnits.MicrovoltPerSecond),
+                    new (ElectricPotentialChangeRateUnit.MillivoltPerHour, ElectricPotentialChangeRateUnits.MillivoltPerHour),
+                    new (ElectricPotentialChangeRateUnit.MillivoltPerMicrosecond, ElectricPotentialChangeRateUnits.MillivoltPerMicrosecond),
+                    new (ElectricPotentialChangeRateUnit.MillivoltPerMinute, ElectricPotentialChangeRateUnits.MillivoltPerMinute),
+                    new (ElectricPotentialChangeRateUnit.MillivoltPerSecond, ElectricPotentialChangeRateUnits.MillivoltPerSecond),
+                    new (ElectricPotentialChangeRateUnit.VoltPerHour, ElectricPotentialChangeRateUnits.VoltPerHour),
+                    new (ElectricPotentialChangeRateUnit.VoltPerMicrosecond, ElectricPotentialChangeRateUnits.VoltPerMicrosecond),
+                    new (ElectricPotentialChangeRateUnit.VoltPerMinute, ElectricPotentialChangeRateUnits.VoltPerMinute),
+                    new (ElectricPotentialChangeRateUnit.VoltPerSecond, ElectricPotentialChangeRateUnits.VoltPerSecond),
+                };
             }
         }
 

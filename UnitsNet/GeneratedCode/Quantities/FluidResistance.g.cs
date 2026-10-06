@@ -120,25 +120,28 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{FluidResistanceUnit}"/> representing the default unit mappings for FluidResistance.</returns>
             public static IEnumerable<UnitDefinition<FluidResistanceUnit>> GetDefaultMappings()
             {
-                yield return new (FluidResistanceUnit.DyneSecondPerCentimeterToTheFifth, FluidResistanceUnits.DyneSecondPerCentimeterToTheFifth);
-                yield return new (FluidResistanceUnit.MegapascalSecondPerCubicMeter, FluidResistanceUnits.MegapascalSecondPerCubicMeter);
-                yield return new (FluidResistanceUnit.MillimeterMercuryMinutePerCubicCentimeter, FluidResistanceUnits.MillimeterMercuryMinutePerCubicCentimeter);
-                yield return new (FluidResistanceUnit.MillimeterMercuryMinutePerCubicMeter, FluidResistanceUnits.MillimeterMercuryMinutePerCubicMeter);
-                yield return new (FluidResistanceUnit.MillimeterMercuryMinutePerLiter, FluidResistanceUnits.MillimeterMercuryMinutePerLiter);
-                yield return new (FluidResistanceUnit.MillimeterMercuryMinutePerMilliliter, FluidResistanceUnits.MillimeterMercuryMinutePerMilliliter);
-                yield return new (FluidResistanceUnit.MillimeterMercurySecondPerCubicCentimeter, FluidResistanceUnits.MillimeterMercurySecondPerCubicCentimeter);
-                yield return new (FluidResistanceUnit.MillimeterMercurySecondPerCubicMeter, FluidResistanceUnits.MillimeterMercurySecondPerCubicMeter);
-                yield return new (FluidResistanceUnit.MillimeterMercurySecondPerLiter, FluidResistanceUnits.MillimeterMercurySecondPerLiter);
-                yield return new (FluidResistanceUnit.MillimeterMercurySecondPerMilliliter, FluidResistanceUnits.MillimeterMercurySecondPerMilliliter);
-                yield return new (FluidResistanceUnit.PascalMinutePerCubicCentimeter, FluidResistanceUnits.PascalMinutePerCubicCentimeter);
-                yield return new (FluidResistanceUnit.PascalMinutePerCubicMeter, FluidResistanceUnits.PascalMinutePerCubicMeter);
-                yield return new (FluidResistanceUnit.PascalMinutePerLiter, FluidResistanceUnits.PascalMinutePerLiter);
-                yield return new (FluidResistanceUnit.PascalMinutePerMilliliter, FluidResistanceUnits.PascalMinutePerMilliliter);
-                yield return new (FluidResistanceUnit.PascalSecondPerCubicCentimeter, FluidResistanceUnits.PascalSecondPerCubicCentimeter);
-                yield return new (FluidResistanceUnit.PascalSecondPerCubicMeter, FluidResistanceUnits.PascalSecondPerCubicMeter);
-                yield return new (FluidResistanceUnit.PascalSecondPerLiter, FluidResistanceUnits.PascalSecondPerLiter);
-                yield return new (FluidResistanceUnit.PascalSecondPerMilliliter, FluidResistanceUnits.PascalSecondPerMilliliter);
-                yield return new (FluidResistanceUnit.WoodUnit, FluidResistanceUnits.WoodUnit);
+                return new UnitDefinition<FluidResistanceUnit>[]
+                {
+                    new (FluidResistanceUnit.DyneSecondPerCentimeterToTheFifth, FluidResistanceUnits.DyneSecondPerCentimeterToTheFifth),
+                    new (FluidResistanceUnit.MegapascalSecondPerCubicMeter, FluidResistanceUnits.MegapascalSecondPerCubicMeter),
+                    new (FluidResistanceUnit.MillimeterMercuryMinutePerCubicCentimeter, FluidResistanceUnits.MillimeterMercuryMinutePerCubicCentimeter),
+                    new (FluidResistanceUnit.MillimeterMercuryMinutePerCubicMeter, FluidResistanceUnits.MillimeterMercuryMinutePerCubicMeter),
+                    new (FluidResistanceUnit.MillimeterMercuryMinutePerLiter, FluidResistanceUnits.MillimeterMercuryMinutePerLiter),
+                    new (FluidResistanceUnit.MillimeterMercuryMinutePerMilliliter, FluidResistanceUnits.MillimeterMercuryMinutePerMilliliter),
+                    new (FluidResistanceUnit.MillimeterMercurySecondPerCubicCentimeter, FluidResistanceUnits.MillimeterMercurySecondPerCubicCentimeter),
+                    new (FluidResistanceUnit.MillimeterMercurySecondPerCubicMeter, FluidResistanceUnits.MillimeterMercurySecondPerCubicMeter),
+                    new (FluidResistanceUnit.MillimeterMercurySecondPerLiter, FluidResistanceUnits.MillimeterMercurySecondPerLiter),
+                    new (FluidResistanceUnit.MillimeterMercurySecondPerMilliliter, FluidResistanceUnits.MillimeterMercurySecondPerMilliliter),
+                    new (FluidResistanceUnit.PascalMinutePerCubicCentimeter, FluidResistanceUnits.PascalMinutePerCubicCentimeter),
+                    new (FluidResistanceUnit.PascalMinutePerCubicMeter, FluidResistanceUnits.PascalMinutePerCubicMeter),
+                    new (FluidResistanceUnit.PascalMinutePerLiter, FluidResistanceUnits.PascalMinutePerLiter),
+                    new (FluidResistanceUnit.PascalMinutePerMilliliter, FluidResistanceUnits.PascalMinutePerMilliliter),
+                    new (FluidResistanceUnit.PascalSecondPerCubicCentimeter, FluidResistanceUnits.PascalSecondPerCubicCentimeter),
+                    new (FluidResistanceUnit.PascalSecondPerCubicMeter, FluidResistanceUnits.PascalSecondPerCubicMeter),
+                    new (FluidResistanceUnit.PascalSecondPerLiter, FluidResistanceUnits.PascalSecondPerLiter),
+                    new (FluidResistanceUnit.PascalSecondPerMilliliter, FluidResistanceUnits.PascalSecondPerMilliliter),
+                    new (FluidResistanceUnit.WoodUnit, FluidResistanceUnits.WoodUnit),
+                };
             }
         }
 

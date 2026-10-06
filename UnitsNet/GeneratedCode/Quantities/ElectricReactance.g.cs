@@ -119,14 +119,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricReactanceUnit}"/> representing the default unit mappings for ElectricReactance.</returns>
             public static IEnumerable<UnitDefinition<ElectricReactanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricReactanceUnit.Gigaohm, ElectricReactanceUnits.Gigaohm);
-                yield return new (ElectricReactanceUnit.Kiloohm, ElectricReactanceUnits.Kiloohm);
-                yield return new (ElectricReactanceUnit.Megaohm, ElectricReactanceUnits.Megaohm);
-                yield return new (ElectricReactanceUnit.Microohm, ElectricReactanceUnits.Microohm);
-                yield return new (ElectricReactanceUnit.Milliohm, ElectricReactanceUnits.Milliohm);
-                yield return new (ElectricReactanceUnit.Nanoohm, ElectricReactanceUnits.Nanoohm);
-                yield return new (ElectricReactanceUnit.Ohm, ElectricReactanceUnits.Ohm);
-                yield return new (ElectricReactanceUnit.Teraohm, ElectricReactanceUnits.Teraohm);
+                return new UnitDefinition<ElectricReactanceUnit>[]
+                {
+                    new (ElectricReactanceUnit.Gigaohm, ElectricReactanceUnits.Gigaohm),
+                    new (ElectricReactanceUnit.Kiloohm, ElectricReactanceUnits.Kiloohm),
+                    new (ElectricReactanceUnit.Megaohm, ElectricReactanceUnits.Megaohm),
+                    new (ElectricReactanceUnit.Microohm, ElectricReactanceUnits.Microohm),
+                    new (ElectricReactanceUnit.Milliohm, ElectricReactanceUnits.Milliohm),
+                    new (ElectricReactanceUnit.Nanoohm, ElectricReactanceUnits.Nanoohm),
+                    new (ElectricReactanceUnit.Ohm, ElectricReactanceUnits.Ohm),
+                    new (ElectricReactanceUnit.Teraohm, ElectricReactanceUnits.Teraohm),
+                };
             }
         }
 

@@ -135,33 +135,36 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PowerUnit}"/> representing the default unit mappings for Power.</returns>
             public static IEnumerable<UnitDefinition<PowerUnit>> GetDefaultMappings()
             {
-                yield return new (PowerUnit.BoilerHorsepower, PowerUnits.BoilerHorsepower);
-                yield return new (PowerUnit.BritishThermalUnitPerHour, PowerUnits.BritishThermalUnitPerHour);
-                yield return new (PowerUnit.Decawatt, PowerUnits.Decawatt);
-                yield return new (PowerUnit.Deciwatt, PowerUnits.Deciwatt);
-                yield return new (PowerUnit.ElectricalHorsepower, PowerUnits.ElectricalHorsepower);
-                yield return new (PowerUnit.Femtowatt, PowerUnits.Femtowatt);
-                yield return new (PowerUnit.GigajoulePerHour, PowerUnits.GigajoulePerHour);
-                yield return new (PowerUnit.Gigawatt, PowerUnits.Gigawatt);
-                yield return new (PowerUnit.HydraulicHorsepower, PowerUnits.HydraulicHorsepower);
-                yield return new (PowerUnit.JoulePerHour, PowerUnits.JoulePerHour);
-                yield return new (PowerUnit.KilobritishThermalUnitPerHour, PowerUnits.KilobritishThermalUnitPerHour);
-                yield return new (PowerUnit.KilojoulePerHour, PowerUnits.KilojoulePerHour);
-                yield return new (PowerUnit.Kilowatt, PowerUnits.Kilowatt);
-                yield return new (PowerUnit.MechanicalHorsepower, PowerUnits.MechanicalHorsepower);
-                yield return new (PowerUnit.MegabritishThermalUnitPerHour, PowerUnits.MegabritishThermalUnitPerHour);
-                yield return new (PowerUnit.MegajoulePerHour, PowerUnits.MegajoulePerHour);
-                yield return new (PowerUnit.Megawatt, PowerUnits.Megawatt);
-                yield return new (PowerUnit.MetricHorsepower, PowerUnits.MetricHorsepower);
-                yield return new (PowerUnit.Microwatt, PowerUnits.Microwatt);
-                yield return new (PowerUnit.MillijoulePerHour, PowerUnits.MillijoulePerHour);
-                yield return new (PowerUnit.Milliwatt, PowerUnits.Milliwatt);
-                yield return new (PowerUnit.Nanowatt, PowerUnits.Nanowatt);
-                yield return new (PowerUnit.Petawatt, PowerUnits.Petawatt);
-                yield return new (PowerUnit.Picowatt, PowerUnits.Picowatt);
-                yield return new (PowerUnit.Terawatt, PowerUnits.Terawatt);
-                yield return new (PowerUnit.TonOfRefrigeration, PowerUnits.TonOfRefrigeration);
-                yield return new (PowerUnit.Watt, PowerUnits.Watt);
+                return new UnitDefinition<PowerUnit>[]
+                {
+                    new (PowerUnit.BoilerHorsepower, PowerUnits.BoilerHorsepower),
+                    new (PowerUnit.BritishThermalUnitPerHour, PowerUnits.BritishThermalUnitPerHour),
+                    new (PowerUnit.Decawatt, PowerUnits.Decawatt),
+                    new (PowerUnit.Deciwatt, PowerUnits.Deciwatt),
+                    new (PowerUnit.ElectricalHorsepower, PowerUnits.ElectricalHorsepower),
+                    new (PowerUnit.Femtowatt, PowerUnits.Femtowatt),
+                    new (PowerUnit.GigajoulePerHour, PowerUnits.GigajoulePerHour),
+                    new (PowerUnit.Gigawatt, PowerUnits.Gigawatt),
+                    new (PowerUnit.HydraulicHorsepower, PowerUnits.HydraulicHorsepower),
+                    new (PowerUnit.JoulePerHour, PowerUnits.JoulePerHour),
+                    new (PowerUnit.KilobritishThermalUnitPerHour, PowerUnits.KilobritishThermalUnitPerHour),
+                    new (PowerUnit.KilojoulePerHour, PowerUnits.KilojoulePerHour),
+                    new (PowerUnit.Kilowatt, PowerUnits.Kilowatt),
+                    new (PowerUnit.MechanicalHorsepower, PowerUnits.MechanicalHorsepower),
+                    new (PowerUnit.MegabritishThermalUnitPerHour, PowerUnits.MegabritishThermalUnitPerHour),
+                    new (PowerUnit.MegajoulePerHour, PowerUnits.MegajoulePerHour),
+                    new (PowerUnit.Megawatt, PowerUnits.Megawatt),
+                    new (PowerUnit.MetricHorsepower, PowerUnits.MetricHorsepower),
+                    new (PowerUnit.Microwatt, PowerUnits.Microwatt),
+                    new (PowerUnit.MillijoulePerHour, PowerUnits.MillijoulePerHour),
+                    new (PowerUnit.Milliwatt, PowerUnits.Milliwatt),
+                    new (PowerUnit.Nanowatt, PowerUnits.Nanowatt),
+                    new (PowerUnit.Petawatt, PowerUnits.Petawatt),
+                    new (PowerUnit.Picowatt, PowerUnits.Picowatt),
+                    new (PowerUnit.Terawatt, PowerUnits.Terawatt),
+                    new (PowerUnit.TonOfRefrigeration, PowerUnits.TonOfRefrigeration),
+                    new (PowerUnit.Watt, PowerUnits.Watt),
+                };
             }
         }
 

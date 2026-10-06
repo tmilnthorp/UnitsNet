@@ -117,24 +117,27 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PressureChangeRateUnit}"/> representing the default unit mappings for PressureChangeRate.</returns>
             public static IEnumerable<UnitDefinition<PressureChangeRateUnit>> GetDefaultMappings()
             {
-                yield return new (PressureChangeRateUnit.AtmospherePerSecond, PressureChangeRateUnits.AtmospherePerSecond);
-                yield return new (PressureChangeRateUnit.BarPerMinute, PressureChangeRateUnits.BarPerMinute);
-                yield return new (PressureChangeRateUnit.BarPerSecond, PressureChangeRateUnits.BarPerSecond);
-                yield return new (PressureChangeRateUnit.KilopascalPerMinute, PressureChangeRateUnits.KilopascalPerMinute);
-                yield return new (PressureChangeRateUnit.KilopascalPerSecond, PressureChangeRateUnits.KilopascalPerSecond);
-                yield return new (PressureChangeRateUnit.KilopoundForcePerSquareInchPerMinute, PressureChangeRateUnits.KilopoundForcePerSquareInchPerMinute);
-                yield return new (PressureChangeRateUnit.KilopoundForcePerSquareInchPerSecond, PressureChangeRateUnits.KilopoundForcePerSquareInchPerSecond);
-                yield return new (PressureChangeRateUnit.MegapascalPerMinute, PressureChangeRateUnits.MegapascalPerMinute);
-                yield return new (PressureChangeRateUnit.MegapascalPerSecond, PressureChangeRateUnits.MegapascalPerSecond);
-                yield return new (PressureChangeRateUnit.MegapoundForcePerSquareInchPerMinute, PressureChangeRateUnits.MegapoundForcePerSquareInchPerMinute);
-                yield return new (PressureChangeRateUnit.MegapoundForcePerSquareInchPerSecond, PressureChangeRateUnits.MegapoundForcePerSquareInchPerSecond);
-                yield return new (PressureChangeRateUnit.MillibarPerMinute, PressureChangeRateUnits.MillibarPerMinute);
-                yield return new (PressureChangeRateUnit.MillibarPerSecond, PressureChangeRateUnits.MillibarPerSecond);
-                yield return new (PressureChangeRateUnit.MillimeterOfMercuryPerSecond, PressureChangeRateUnits.MillimeterOfMercuryPerSecond);
-                yield return new (PressureChangeRateUnit.PascalPerMinute, PressureChangeRateUnits.PascalPerMinute);
-                yield return new (PressureChangeRateUnit.PascalPerSecond, PressureChangeRateUnits.PascalPerSecond);
-                yield return new (PressureChangeRateUnit.PoundForcePerSquareInchPerMinute, PressureChangeRateUnits.PoundForcePerSquareInchPerMinute);
-                yield return new (PressureChangeRateUnit.PoundForcePerSquareInchPerSecond, PressureChangeRateUnits.PoundForcePerSquareInchPerSecond);
+                return new UnitDefinition<PressureChangeRateUnit>[]
+                {
+                    new (PressureChangeRateUnit.AtmospherePerSecond, PressureChangeRateUnits.AtmospherePerSecond),
+                    new (PressureChangeRateUnit.BarPerMinute, PressureChangeRateUnits.BarPerMinute),
+                    new (PressureChangeRateUnit.BarPerSecond, PressureChangeRateUnits.BarPerSecond),
+                    new (PressureChangeRateUnit.KilopascalPerMinute, PressureChangeRateUnits.KilopascalPerMinute),
+                    new (PressureChangeRateUnit.KilopascalPerSecond, PressureChangeRateUnits.KilopascalPerSecond),
+                    new (PressureChangeRateUnit.KilopoundForcePerSquareInchPerMinute, PressureChangeRateUnits.KilopoundForcePerSquareInchPerMinute),
+                    new (PressureChangeRateUnit.KilopoundForcePerSquareInchPerSecond, PressureChangeRateUnits.KilopoundForcePerSquareInchPerSecond),
+                    new (PressureChangeRateUnit.MegapascalPerMinute, PressureChangeRateUnits.MegapascalPerMinute),
+                    new (PressureChangeRateUnit.MegapascalPerSecond, PressureChangeRateUnits.MegapascalPerSecond),
+                    new (PressureChangeRateUnit.MegapoundForcePerSquareInchPerMinute, PressureChangeRateUnits.MegapoundForcePerSquareInchPerMinute),
+                    new (PressureChangeRateUnit.MegapoundForcePerSquareInchPerSecond, PressureChangeRateUnits.MegapoundForcePerSquareInchPerSecond),
+                    new (PressureChangeRateUnit.MillibarPerMinute, PressureChangeRateUnits.MillibarPerMinute),
+                    new (PressureChangeRateUnit.MillibarPerSecond, PressureChangeRateUnits.MillibarPerSecond),
+                    new (PressureChangeRateUnit.MillimeterOfMercuryPerSecond, PressureChangeRateUnits.MillimeterOfMercuryPerSecond),
+                    new (PressureChangeRateUnit.PascalPerMinute, PressureChangeRateUnits.PascalPerMinute),
+                    new (PressureChangeRateUnit.PascalPerSecond, PressureChangeRateUnits.PascalPerSecond),
+                    new (PressureChangeRateUnit.PoundForcePerSquareInchPerMinute, PressureChangeRateUnits.PoundForcePerSquareInchPerMinute),
+                    new (PressureChangeRateUnit.PoundForcePerSquareInchPerSecond, PressureChangeRateUnits.PoundForcePerSquareInchPerSecond),
+                };
             }
         }
 

@@ -119,9 +119,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ThermalConductivityUnit}"/> representing the default unit mappings for ThermalConductivity.</returns>
             public static IEnumerable<UnitDefinition<ThermalConductivityUnit>> GetDefaultMappings()
             {
-                yield return new (ThermalConductivityUnit.BtuPerHourFootFahrenheit, ThermalConductivityUnits.BtuPerHourFootFahrenheit);
-                yield return new (ThermalConductivityUnit.BtuPerSecondInchFahrenheit, ThermalConductivityUnits.BtuPerSecondInchFahrenheit);
-                yield return new (ThermalConductivityUnit.WattPerMeterKelvin, ThermalConductivityUnits.WattPerMeterKelvin);
+                return new UnitDefinition<ThermalConductivityUnit>[]
+                {
+                    new (ThermalConductivityUnit.BtuPerHourFootFahrenheit, ThermalConductivityUnits.BtuPerHourFootFahrenheit),
+                    new (ThermalConductivityUnit.BtuPerSecondInchFahrenheit, ThermalConductivityUnits.BtuPerSecondInchFahrenheit),
+                    new (ThermalConductivityUnit.WattPerMeterKelvin, ThermalConductivityUnits.WattPerMeterKelvin),
+                };
             }
         }
 

@@ -121,11 +121,14 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AreaDensityUnit}"/> representing the default unit mappings for AreaDensity.</returns>
             public static IEnumerable<UnitDefinition<AreaDensityUnit>> GetDefaultMappings()
             {
-                yield return new (AreaDensityUnit.GramPerSquareMeter, AreaDensityUnits.GramPerSquareMeter);
-                yield return new (AreaDensityUnit.KilogramPerSquareMeter, AreaDensityUnits.KilogramPerSquareMeter);
-                yield return new (AreaDensityUnit.MilligramPerSquareMeter, AreaDensityUnits.MilligramPerSquareMeter);
-                yield return new (AreaDensityUnit.PoundPerSquareFoot, AreaDensityUnits.PoundPerSquareFoot);
-                yield return new (AreaDensityUnit.PoundPerThousandSquareFeet, AreaDensityUnits.PoundPerThousandSquareFeet);
+                return new UnitDefinition<AreaDensityUnit>[]
+                {
+                    new (AreaDensityUnit.GramPerSquareMeter, AreaDensityUnits.GramPerSquareMeter),
+                    new (AreaDensityUnit.KilogramPerSquareMeter, AreaDensityUnits.KilogramPerSquareMeter),
+                    new (AreaDensityUnit.MilligramPerSquareMeter, AreaDensityUnits.MilligramPerSquareMeter),
+                    new (AreaDensityUnit.PoundPerSquareFoot, AreaDensityUnits.PoundPerSquareFoot),
+                    new (AreaDensityUnit.PoundPerThousandSquareFeet, AreaDensityUnits.PoundPerThousandSquareFeet),
+                };
             }
         }
 

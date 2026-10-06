@@ -120,22 +120,25 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricAdmittanceUnit}"/> representing the default unit mappings for ElectricAdmittance.</returns>
             public static IEnumerable<UnitDefinition<ElectricAdmittanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricAdmittanceUnit.Gigamho, ElectricAdmittanceUnits.Gigamho);
-                yield return new (ElectricAdmittanceUnit.Gigasiemens, ElectricAdmittanceUnits.Gigasiemens);
-                yield return new (ElectricAdmittanceUnit.Kilomho, ElectricAdmittanceUnits.Kilomho);
-                yield return new (ElectricAdmittanceUnit.Kilosiemens, ElectricAdmittanceUnits.Kilosiemens);
-                yield return new (ElectricAdmittanceUnit.Megamho, ElectricAdmittanceUnits.Megamho);
-                yield return new (ElectricAdmittanceUnit.Megasiemens, ElectricAdmittanceUnits.Megasiemens);
-                yield return new (ElectricAdmittanceUnit.Mho, ElectricAdmittanceUnits.Mho);
-                yield return new (ElectricAdmittanceUnit.Micromho, ElectricAdmittanceUnits.Micromho);
-                yield return new (ElectricAdmittanceUnit.Microsiemens, ElectricAdmittanceUnits.Microsiemens);
-                yield return new (ElectricAdmittanceUnit.Millimho, ElectricAdmittanceUnits.Millimho);
-                yield return new (ElectricAdmittanceUnit.Millisiemens, ElectricAdmittanceUnits.Millisiemens);
-                yield return new (ElectricAdmittanceUnit.Nanomho, ElectricAdmittanceUnits.Nanomho);
-                yield return new (ElectricAdmittanceUnit.Nanosiemens, ElectricAdmittanceUnits.Nanosiemens);
-                yield return new (ElectricAdmittanceUnit.Siemens, ElectricAdmittanceUnits.Siemens);
-                yield return new (ElectricAdmittanceUnit.Teramho, ElectricAdmittanceUnits.Teramho);
-                yield return new (ElectricAdmittanceUnit.Terasiemens, ElectricAdmittanceUnits.Terasiemens);
+                return new UnitDefinition<ElectricAdmittanceUnit>[]
+                {
+                    new (ElectricAdmittanceUnit.Gigamho, ElectricAdmittanceUnits.Gigamho),
+                    new (ElectricAdmittanceUnit.Gigasiemens, ElectricAdmittanceUnits.Gigasiemens),
+                    new (ElectricAdmittanceUnit.Kilomho, ElectricAdmittanceUnits.Kilomho),
+                    new (ElectricAdmittanceUnit.Kilosiemens, ElectricAdmittanceUnits.Kilosiemens),
+                    new (ElectricAdmittanceUnit.Megamho, ElectricAdmittanceUnits.Megamho),
+                    new (ElectricAdmittanceUnit.Megasiemens, ElectricAdmittanceUnits.Megasiemens),
+                    new (ElectricAdmittanceUnit.Mho, ElectricAdmittanceUnits.Mho),
+                    new (ElectricAdmittanceUnit.Micromho, ElectricAdmittanceUnits.Micromho),
+                    new (ElectricAdmittanceUnit.Microsiemens, ElectricAdmittanceUnits.Microsiemens),
+                    new (ElectricAdmittanceUnit.Millimho, ElectricAdmittanceUnits.Millimho),
+                    new (ElectricAdmittanceUnit.Millisiemens, ElectricAdmittanceUnits.Millisiemens),
+                    new (ElectricAdmittanceUnit.Nanomho, ElectricAdmittanceUnits.Nanomho),
+                    new (ElectricAdmittanceUnit.Nanosiemens, ElectricAdmittanceUnits.Nanosiemens),
+                    new (ElectricAdmittanceUnit.Siemens, ElectricAdmittanceUnits.Siemens),
+                    new (ElectricAdmittanceUnit.Teramho, ElectricAdmittanceUnits.Teramho),
+                    new (ElectricAdmittanceUnit.Terasiemens, ElectricAdmittanceUnits.Terasiemens),
+                };
             }
         }
 

@@ -122,45 +122,48 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{BitRateUnit}"/> representing the default unit mappings for BitRate.</returns>
             public static IEnumerable<UnitDefinition<BitRateUnit>> GetDefaultMappings()
             {
-                yield return new (BitRateUnit.BitPerSecond, BitRateUnits.BitPerSecond);
-                yield return new (BitRateUnit.BytePerSecond, BitRateUnits.BytePerSecond);
-                yield return new (BitRateUnit.ExabitPerSecond, BitRateUnits.ExabitPerSecond);
-                yield return new (BitRateUnit.ExabytePerSecond, BitRateUnits.ExabytePerSecond);
-                yield return new (BitRateUnit.ExaoctetPerSecond, BitRateUnits.ExaoctetPerSecond);
-                yield return new (BitRateUnit.ExbibitPerSecond, BitRateUnits.ExbibitPerSecond);
-                yield return new (BitRateUnit.ExbibytePerSecond, BitRateUnits.ExbibytePerSecond);
-                yield return new (BitRateUnit.ExbioctetPerSecond, BitRateUnits.ExbioctetPerSecond);
-                yield return new (BitRateUnit.GibibitPerSecond, BitRateUnits.GibibitPerSecond);
-                yield return new (BitRateUnit.GibibytePerSecond, BitRateUnits.GibibytePerSecond);
-                yield return new (BitRateUnit.GibioctetPerSecond, BitRateUnits.GibioctetPerSecond);
-                yield return new (BitRateUnit.GigabitPerSecond, BitRateUnits.GigabitPerSecond);
-                yield return new (BitRateUnit.GigabytePerSecond, BitRateUnits.GigabytePerSecond);
-                yield return new (BitRateUnit.GigaoctetPerSecond, BitRateUnits.GigaoctetPerSecond);
-                yield return new (BitRateUnit.KibibitPerSecond, BitRateUnits.KibibitPerSecond);
-                yield return new (BitRateUnit.KibibytePerSecond, BitRateUnits.KibibytePerSecond);
-                yield return new (BitRateUnit.KibioctetPerSecond, BitRateUnits.KibioctetPerSecond);
-                yield return new (BitRateUnit.KilobitPerSecond, BitRateUnits.KilobitPerSecond);
-                yield return new (BitRateUnit.KilobytePerSecond, BitRateUnits.KilobytePerSecond);
-                yield return new (BitRateUnit.KilooctetPerSecond, BitRateUnits.KilooctetPerSecond);
-                yield return new (BitRateUnit.MebibitPerSecond, BitRateUnits.MebibitPerSecond);
-                yield return new (BitRateUnit.MebibytePerSecond, BitRateUnits.MebibytePerSecond);
-                yield return new (BitRateUnit.MebioctetPerSecond, BitRateUnits.MebioctetPerSecond);
-                yield return new (BitRateUnit.MegabitPerSecond, BitRateUnits.MegabitPerSecond);
-                yield return new (BitRateUnit.MegabytePerSecond, BitRateUnits.MegabytePerSecond);
-                yield return new (BitRateUnit.MegaoctetPerSecond, BitRateUnits.MegaoctetPerSecond);
-                yield return new (BitRateUnit.OctetPerSecond, BitRateUnits.OctetPerSecond);
-                yield return new (BitRateUnit.PebibitPerSecond, BitRateUnits.PebibitPerSecond);
-                yield return new (BitRateUnit.PebibytePerSecond, BitRateUnits.PebibytePerSecond);
-                yield return new (BitRateUnit.PebioctetPerSecond, BitRateUnits.PebioctetPerSecond);
-                yield return new (BitRateUnit.PetabitPerSecond, BitRateUnits.PetabitPerSecond);
-                yield return new (BitRateUnit.PetabytePerSecond, BitRateUnits.PetabytePerSecond);
-                yield return new (BitRateUnit.PetaoctetPerSecond, BitRateUnits.PetaoctetPerSecond);
-                yield return new (BitRateUnit.TebibitPerSecond, BitRateUnits.TebibitPerSecond);
-                yield return new (BitRateUnit.TebibytePerSecond, BitRateUnits.TebibytePerSecond);
-                yield return new (BitRateUnit.TebioctetPerSecond, BitRateUnits.TebioctetPerSecond);
-                yield return new (BitRateUnit.TerabitPerSecond, BitRateUnits.TerabitPerSecond);
-                yield return new (BitRateUnit.TerabytePerSecond, BitRateUnits.TerabytePerSecond);
-                yield return new (BitRateUnit.TeraoctetPerSecond, BitRateUnits.TeraoctetPerSecond);
+                return new UnitDefinition<BitRateUnit>[]
+                {
+                    new (BitRateUnit.BitPerSecond, BitRateUnits.BitPerSecond),
+                    new (BitRateUnit.BytePerSecond, BitRateUnits.BytePerSecond),
+                    new (BitRateUnit.ExabitPerSecond, BitRateUnits.ExabitPerSecond),
+                    new (BitRateUnit.ExabytePerSecond, BitRateUnits.ExabytePerSecond),
+                    new (BitRateUnit.ExaoctetPerSecond, BitRateUnits.ExaoctetPerSecond),
+                    new (BitRateUnit.ExbibitPerSecond, BitRateUnits.ExbibitPerSecond),
+                    new (BitRateUnit.ExbibytePerSecond, BitRateUnits.ExbibytePerSecond),
+                    new (BitRateUnit.ExbioctetPerSecond, BitRateUnits.ExbioctetPerSecond),
+                    new (BitRateUnit.GibibitPerSecond, BitRateUnits.GibibitPerSecond),
+                    new (BitRateUnit.GibibytePerSecond, BitRateUnits.GibibytePerSecond),
+                    new (BitRateUnit.GibioctetPerSecond, BitRateUnits.GibioctetPerSecond),
+                    new (BitRateUnit.GigabitPerSecond, BitRateUnits.GigabitPerSecond),
+                    new (BitRateUnit.GigabytePerSecond, BitRateUnits.GigabytePerSecond),
+                    new (BitRateUnit.GigaoctetPerSecond, BitRateUnits.GigaoctetPerSecond),
+                    new (BitRateUnit.KibibitPerSecond, BitRateUnits.KibibitPerSecond),
+                    new (BitRateUnit.KibibytePerSecond, BitRateUnits.KibibytePerSecond),
+                    new (BitRateUnit.KibioctetPerSecond, BitRateUnits.KibioctetPerSecond),
+                    new (BitRateUnit.KilobitPerSecond, BitRateUnits.KilobitPerSecond),
+                    new (BitRateUnit.KilobytePerSecond, BitRateUnits.KilobytePerSecond),
+                    new (BitRateUnit.KilooctetPerSecond, BitRateUnits.KilooctetPerSecond),
+                    new (BitRateUnit.MebibitPerSecond, BitRateUnits.MebibitPerSecond),
+                    new (BitRateUnit.MebibytePerSecond, BitRateUnits.MebibytePerSecond),
+                    new (BitRateUnit.MebioctetPerSecond, BitRateUnits.MebioctetPerSecond),
+                    new (BitRateUnit.MegabitPerSecond, BitRateUnits.MegabitPerSecond),
+                    new (BitRateUnit.MegabytePerSecond, BitRateUnits.MegabytePerSecond),
+                    new (BitRateUnit.MegaoctetPerSecond, BitRateUnits.MegaoctetPerSecond),
+                    new (BitRateUnit.OctetPerSecond, BitRateUnits.OctetPerSecond),
+                    new (BitRateUnit.PebibitPerSecond, BitRateUnits.PebibitPerSecond),
+                    new (BitRateUnit.PebibytePerSecond, BitRateUnits.PebibytePerSecond),
+                    new (BitRateUnit.PebioctetPerSecond, BitRateUnits.PebioctetPerSecond),
+                    new (BitRateUnit.PetabitPerSecond, BitRateUnits.PetabitPerSecond),
+                    new (BitRateUnit.PetabytePerSecond, BitRateUnits.PetabytePerSecond),
+                    new (BitRateUnit.PetaoctetPerSecond, BitRateUnits.PetaoctetPerSecond),
+                    new (BitRateUnit.TebibitPerSecond, BitRateUnits.TebibitPerSecond),
+                    new (BitRateUnit.TebibytePerSecond, BitRateUnits.TebibytePerSecond),
+                    new (BitRateUnit.TebioctetPerSecond, BitRateUnits.TebioctetPerSecond),
+                    new (BitRateUnit.TerabitPerSecond, BitRateUnits.TerabitPerSecond),
+                    new (BitRateUnit.TerabytePerSecond, BitRateUnits.TerabytePerSecond),
+                    new (BitRateUnit.TeraoctetPerSecond, BitRateUnits.TeraoctetPerSecond),
+                };
             }
         }
 

@@ -120,30 +120,33 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MassFractionUnit}"/> representing the default unit mappings for MassFraction.</returns>
             public static IEnumerable<UnitDefinition<MassFractionUnit>> GetDefaultMappings()
             {
-                yield return new (MassFractionUnit.CentigramPerGram, MassFractionUnits.CentigramPerGram);
-                yield return new (MassFractionUnit.CentigramPerKilogram, MassFractionUnits.CentigramPerKilogram);
-                yield return new (MassFractionUnit.DecagramPerGram, MassFractionUnits.DecagramPerGram);
-                yield return new (MassFractionUnit.DecagramPerKilogram, MassFractionUnits.DecagramPerKilogram);
-                yield return new (MassFractionUnit.DecigramPerGram, MassFractionUnits.DecigramPerGram);
-                yield return new (MassFractionUnit.DecigramPerKilogram, MassFractionUnits.DecigramPerKilogram);
-                yield return new (MassFractionUnit.DecimalFraction, MassFractionUnits.DecimalFraction);
-                yield return new (MassFractionUnit.GramPerGram, MassFractionUnits.GramPerGram);
-                yield return new (MassFractionUnit.GramPerKilogram, MassFractionUnits.GramPerKilogram);
-                yield return new (MassFractionUnit.HectogramPerGram, MassFractionUnits.HectogramPerGram);
-                yield return new (MassFractionUnit.HectogramPerKilogram, MassFractionUnits.HectogramPerKilogram);
-                yield return new (MassFractionUnit.KilogramPerGram, MassFractionUnits.KilogramPerGram);
-                yield return new (MassFractionUnit.KilogramPerKilogram, MassFractionUnits.KilogramPerKilogram);
-                yield return new (MassFractionUnit.MicrogramPerGram, MassFractionUnits.MicrogramPerGram);
-                yield return new (MassFractionUnit.MicrogramPerKilogram, MassFractionUnits.MicrogramPerKilogram);
-                yield return new (MassFractionUnit.MilligramPerGram, MassFractionUnits.MilligramPerGram);
-                yield return new (MassFractionUnit.MilligramPerKilogram, MassFractionUnits.MilligramPerKilogram);
-                yield return new (MassFractionUnit.NanogramPerGram, MassFractionUnits.NanogramPerGram);
-                yield return new (MassFractionUnit.NanogramPerKilogram, MassFractionUnits.NanogramPerKilogram);
-                yield return new (MassFractionUnit.PartPerBillion, MassFractionUnits.PartPerBillion);
-                yield return new (MassFractionUnit.PartPerMillion, MassFractionUnits.PartPerMillion);
-                yield return new (MassFractionUnit.PartPerThousand, MassFractionUnits.PartPerThousand);
-                yield return new (MassFractionUnit.PartPerTrillion, MassFractionUnits.PartPerTrillion);
-                yield return new (MassFractionUnit.Percent, MassFractionUnits.Percent);
+                return new UnitDefinition<MassFractionUnit>[]
+                {
+                    new (MassFractionUnit.CentigramPerGram, MassFractionUnits.CentigramPerGram),
+                    new (MassFractionUnit.CentigramPerKilogram, MassFractionUnits.CentigramPerKilogram),
+                    new (MassFractionUnit.DecagramPerGram, MassFractionUnits.DecagramPerGram),
+                    new (MassFractionUnit.DecagramPerKilogram, MassFractionUnits.DecagramPerKilogram),
+                    new (MassFractionUnit.DecigramPerGram, MassFractionUnits.DecigramPerGram),
+                    new (MassFractionUnit.DecigramPerKilogram, MassFractionUnits.DecigramPerKilogram),
+                    new (MassFractionUnit.DecimalFraction, MassFractionUnits.DecimalFraction),
+                    new (MassFractionUnit.GramPerGram, MassFractionUnits.GramPerGram),
+                    new (MassFractionUnit.GramPerKilogram, MassFractionUnits.GramPerKilogram),
+                    new (MassFractionUnit.HectogramPerGram, MassFractionUnits.HectogramPerGram),
+                    new (MassFractionUnit.HectogramPerKilogram, MassFractionUnits.HectogramPerKilogram),
+                    new (MassFractionUnit.KilogramPerGram, MassFractionUnits.KilogramPerGram),
+                    new (MassFractionUnit.KilogramPerKilogram, MassFractionUnits.KilogramPerKilogram),
+                    new (MassFractionUnit.MicrogramPerGram, MassFractionUnits.MicrogramPerGram),
+                    new (MassFractionUnit.MicrogramPerKilogram, MassFractionUnits.MicrogramPerKilogram),
+                    new (MassFractionUnit.MilligramPerGram, MassFractionUnits.MilligramPerGram),
+                    new (MassFractionUnit.MilligramPerKilogram, MassFractionUnits.MilligramPerKilogram),
+                    new (MassFractionUnit.NanogramPerGram, MassFractionUnits.NanogramPerGram),
+                    new (MassFractionUnit.NanogramPerKilogram, MassFractionUnits.NanogramPerKilogram),
+                    new (MassFractionUnit.PartPerBillion, MassFractionUnits.PartPerBillion),
+                    new (MassFractionUnit.PartPerMillion, MassFractionUnits.PartPerMillion),
+                    new (MassFractionUnit.PartPerThousand, MassFractionUnits.PartPerThousand),
+                    new (MassFractionUnit.PartPerTrillion, MassFractionUnits.PartPerTrillion),
+                    new (MassFractionUnit.Percent, MassFractionUnits.Percent),
+                };
             }
         }
 

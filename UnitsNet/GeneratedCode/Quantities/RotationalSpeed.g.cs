@@ -120,19 +120,22 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RotationalSpeedUnit}"/> representing the default unit mappings for RotationalSpeed.</returns>
             public static IEnumerable<UnitDefinition<RotationalSpeedUnit>> GetDefaultMappings()
             {
-                yield return new (RotationalSpeedUnit.CentiradianPerSecond, RotationalSpeedUnits.CentiradianPerSecond);
-                yield return new (RotationalSpeedUnit.DeciradianPerSecond, RotationalSpeedUnits.DeciradianPerSecond);
-                yield return new (RotationalSpeedUnit.DegreePerMinute, RotationalSpeedUnits.DegreePerMinute);
-                yield return new (RotationalSpeedUnit.DegreePerSecond, RotationalSpeedUnits.DegreePerSecond);
-                yield return new (RotationalSpeedUnit.MicrodegreePerSecond, RotationalSpeedUnits.MicrodegreePerSecond);
-                yield return new (RotationalSpeedUnit.MicroradianPerSecond, RotationalSpeedUnits.MicroradianPerSecond);
-                yield return new (RotationalSpeedUnit.MillidegreePerSecond, RotationalSpeedUnits.MillidegreePerSecond);
-                yield return new (RotationalSpeedUnit.MilliradianPerSecond, RotationalSpeedUnits.MilliradianPerSecond);
-                yield return new (RotationalSpeedUnit.NanodegreePerSecond, RotationalSpeedUnits.NanodegreePerSecond);
-                yield return new (RotationalSpeedUnit.NanoradianPerSecond, RotationalSpeedUnits.NanoradianPerSecond);
-                yield return new (RotationalSpeedUnit.RadianPerSecond, RotationalSpeedUnits.RadianPerSecond);
-                yield return new (RotationalSpeedUnit.RevolutionPerMinute, RotationalSpeedUnits.RevolutionPerMinute);
-                yield return new (RotationalSpeedUnit.RevolutionPerSecond, RotationalSpeedUnits.RevolutionPerSecond);
+                return new UnitDefinition<RotationalSpeedUnit>[]
+                {
+                    new (RotationalSpeedUnit.CentiradianPerSecond, RotationalSpeedUnits.CentiradianPerSecond),
+                    new (RotationalSpeedUnit.DeciradianPerSecond, RotationalSpeedUnits.DeciradianPerSecond),
+                    new (RotationalSpeedUnit.DegreePerMinute, RotationalSpeedUnits.DegreePerMinute),
+                    new (RotationalSpeedUnit.DegreePerSecond, RotationalSpeedUnits.DegreePerSecond),
+                    new (RotationalSpeedUnit.MicrodegreePerSecond, RotationalSpeedUnits.MicrodegreePerSecond),
+                    new (RotationalSpeedUnit.MicroradianPerSecond, RotationalSpeedUnits.MicroradianPerSecond),
+                    new (RotationalSpeedUnit.MillidegreePerSecond, RotationalSpeedUnits.MillidegreePerSecond),
+                    new (RotationalSpeedUnit.MilliradianPerSecond, RotationalSpeedUnits.MilliradianPerSecond),
+                    new (RotationalSpeedUnit.NanodegreePerSecond, RotationalSpeedUnits.NanodegreePerSecond),
+                    new (RotationalSpeedUnit.NanoradianPerSecond, RotationalSpeedUnits.NanoradianPerSecond),
+                    new (RotationalSpeedUnit.RadianPerSecond, RotationalSpeedUnits.RadianPerSecond),
+                    new (RotationalSpeedUnit.RevolutionPerMinute, RotationalSpeedUnits.RevolutionPerMinute),
+                    new (RotationalSpeedUnit.RevolutionPerSecond, RotationalSpeedUnits.RevolutionPerSecond),
+                };
             }
         }
 

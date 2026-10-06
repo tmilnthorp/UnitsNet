@@ -120,12 +120,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RatioUnit}"/> representing the default unit mappings for Ratio.</returns>
             public static IEnumerable<UnitDefinition<RatioUnit>> GetDefaultMappings()
             {
-                yield return new (RatioUnit.DecimalFraction, RatioUnits.DecimalFraction);
-                yield return new (RatioUnit.PartPerBillion, RatioUnits.PartPerBillion);
-                yield return new (RatioUnit.PartPerMillion, RatioUnits.PartPerMillion);
-                yield return new (RatioUnit.PartPerThousand, RatioUnits.PartPerThousand);
-                yield return new (RatioUnit.PartPerTrillion, RatioUnits.PartPerTrillion);
-                yield return new (RatioUnit.Percent, RatioUnits.Percent);
+                return new UnitDefinition<RatioUnit>[]
+                {
+                    new (RatioUnit.DecimalFraction, RatioUnits.DecimalFraction),
+                    new (RatioUnit.PartPerBillion, RatioUnits.PartPerBillion),
+                    new (RatioUnit.PartPerMillion, RatioUnits.PartPerMillion),
+                    new (RatioUnit.PartPerThousand, RatioUnits.PartPerThousand),
+                    new (RatioUnit.PartPerTrillion, RatioUnits.PartPerTrillion),
+                    new (RatioUnit.Percent, RatioUnits.Percent),
+                };
             }
         }
 

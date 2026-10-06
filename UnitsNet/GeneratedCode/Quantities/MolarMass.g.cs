@@ -119,20 +119,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarMassUnit}"/> representing the default unit mappings for MolarMass.</returns>
             public static IEnumerable<UnitDefinition<MolarMassUnit>> GetDefaultMappings()
             {
-                yield return new (MolarMassUnit.CentigramPerMole, MolarMassUnits.CentigramPerMole);
-                yield return new (MolarMassUnit.DecagramPerMole, MolarMassUnits.DecagramPerMole);
-                yield return new (MolarMassUnit.DecigramPerMole, MolarMassUnits.DecigramPerMole);
-                yield return new (MolarMassUnit.GramPerMole, MolarMassUnits.GramPerMole);
-                yield return new (MolarMassUnit.HectogramPerMole, MolarMassUnits.HectogramPerMole);
-                yield return new (MolarMassUnit.KilogramPerKilomole, MolarMassUnits.KilogramPerKilomole);
-                yield return new (MolarMassUnit.KilogramPerMole, MolarMassUnits.KilogramPerMole);
-                yield return new (MolarMassUnit.KilopoundPerMole, MolarMassUnits.KilopoundPerMole);
-                yield return new (MolarMassUnit.MegapoundPerMole, MolarMassUnits.MegapoundPerMole);
-                yield return new (MolarMassUnit.MicrogramPerMole, MolarMassUnits.MicrogramPerMole);
-                yield return new (MolarMassUnit.MilligramPerMole, MolarMassUnits.MilligramPerMole);
-                yield return new (MolarMassUnit.NanogramPerMole, MolarMassUnits.NanogramPerMole);
-                yield return new (MolarMassUnit.PoundPerMole, MolarMassUnits.PoundPerMole);
-                yield return new (MolarMassUnit.PoundPerPoundMole, MolarMassUnits.PoundPerPoundMole);
+                return new UnitDefinition<MolarMassUnit>[]
+                {
+                    new (MolarMassUnit.CentigramPerMole, MolarMassUnits.CentigramPerMole),
+                    new (MolarMassUnit.DecagramPerMole, MolarMassUnits.DecagramPerMole),
+                    new (MolarMassUnit.DecigramPerMole, MolarMassUnits.DecigramPerMole),
+                    new (MolarMassUnit.GramPerMole, MolarMassUnits.GramPerMole),
+                    new (MolarMassUnit.HectogramPerMole, MolarMassUnits.HectogramPerMole),
+                    new (MolarMassUnit.KilogramPerKilomole, MolarMassUnits.KilogramPerKilomole),
+                    new (MolarMassUnit.KilogramPerMole, MolarMassUnits.KilogramPerMole),
+                    new (MolarMassUnit.KilopoundPerMole, MolarMassUnits.KilopoundPerMole),
+                    new (MolarMassUnit.MegapoundPerMole, MolarMassUnits.MegapoundPerMole),
+                    new (MolarMassUnit.MicrogramPerMole, MolarMassUnits.MicrogramPerMole),
+                    new (MolarMassUnit.MilligramPerMole, MolarMassUnits.MilligramPerMole),
+                    new (MolarMassUnit.NanogramPerMole, MolarMassUnits.NanogramPerMole),
+                    new (MolarMassUnit.PoundPerMole, MolarMassUnits.PoundPerMole),
+                    new (MolarMassUnit.PoundPerPoundMole, MolarMassUnits.PoundPerPoundMole),
+                };
             }
         }
 

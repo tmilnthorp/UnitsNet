@@ -117,12 +117,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AreaPerLengthUnit}"/> representing the default unit mappings for AreaPerLength.</returns>
             public static IEnumerable<UnitDefinition<AreaPerLengthUnit>> GetDefaultMappings()
             {
-                yield return new (AreaPerLengthUnit.SquareCentimeterPerMeter, AreaPerLengthUnits.SquareCentimeterPerMeter);
-                yield return new (AreaPerLengthUnit.SquareFootPerFoot, AreaPerLengthUnits.SquareFootPerFoot);
-                yield return new (AreaPerLengthUnit.SquareInchPerFoot, AreaPerLengthUnits.SquareInchPerFoot);
-                yield return new (AreaPerLengthUnit.SquareInchPerInch, AreaPerLengthUnits.SquareInchPerInch);
-                yield return new (AreaPerLengthUnit.SquareMeterPerMeter, AreaPerLengthUnits.SquareMeterPerMeter);
-                yield return new (AreaPerLengthUnit.SquareMillimeterPerMeter, AreaPerLengthUnits.SquareMillimeterPerMeter);
+                return new UnitDefinition<AreaPerLengthUnit>[]
+                {
+                    new (AreaPerLengthUnit.SquareCentimeterPerMeter, AreaPerLengthUnits.SquareCentimeterPerMeter),
+                    new (AreaPerLengthUnit.SquareFootPerFoot, AreaPerLengthUnits.SquareFootPerFoot),
+                    new (AreaPerLengthUnit.SquareInchPerFoot, AreaPerLengthUnits.SquareInchPerFoot),
+                    new (AreaPerLengthUnit.SquareInchPerInch, AreaPerLengthUnits.SquareInchPerInch),
+                    new (AreaPerLengthUnit.SquareMeterPerMeter, AreaPerLengthUnits.SquareMeterPerMeter),
+                    new (AreaPerLengthUnit.SquareMillimeterPerMeter, AreaPerLengthUnits.SquareMillimeterPerMeter),
+                };
             }
         }
 

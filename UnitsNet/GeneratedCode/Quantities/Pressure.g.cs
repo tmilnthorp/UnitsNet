@@ -132,56 +132,59 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{PressureUnit}"/> representing the default unit mappings for Pressure.</returns>
             public static IEnumerable<UnitDefinition<PressureUnit>> GetDefaultMappings()
             {
-                yield return new (PressureUnit.Atmosphere, PressureUnits.Atmosphere);
-                yield return new (PressureUnit.Bar, PressureUnits.Bar);
-                yield return new (PressureUnit.Centibar, PressureUnits.Centibar);
-                yield return new (PressureUnit.CentimeterOfWaterColumn, PressureUnits.CentimeterOfWaterColumn);
-                yield return new (PressureUnit.Decapascal, PressureUnits.Decapascal);
-                yield return new (PressureUnit.Decibar, PressureUnits.Decibar);
-                yield return new (PressureUnit.DynePerSquareCentimeter, PressureUnits.DynePerSquareCentimeter);
-                yield return new (PressureUnit.FootOfHead, PressureUnits.FootOfHead);
-                yield return new (PressureUnit.Gigapascal, PressureUnits.Gigapascal);
-                yield return new (PressureUnit.Hectopascal, PressureUnits.Hectopascal);
-                yield return new (PressureUnit.InchOfMercury, PressureUnits.InchOfMercury);
-                yield return new (PressureUnit.InchOfWaterColumn, PressureUnits.InchOfWaterColumn);
-                yield return new (PressureUnit.Kilobar, PressureUnits.Kilobar);
-                yield return new (PressureUnit.KilogramForcePerSquareCentimeter, PressureUnits.KilogramForcePerSquareCentimeter);
-                yield return new (PressureUnit.KilogramForcePerSquareMeter, PressureUnits.KilogramForcePerSquareMeter);
-                yield return new (PressureUnit.KilogramForcePerSquareMillimeter, PressureUnits.KilogramForcePerSquareMillimeter);
-                yield return new (PressureUnit.KilonewtonPerSquareCentimeter, PressureUnits.KilonewtonPerSquareCentimeter);
-                yield return new (PressureUnit.KilonewtonPerSquareMeter, PressureUnits.KilonewtonPerSquareMeter);
-                yield return new (PressureUnit.KilonewtonPerSquareMillimeter, PressureUnits.KilonewtonPerSquareMillimeter);
-                yield return new (PressureUnit.Kilopascal, PressureUnits.Kilopascal);
-                yield return new (PressureUnit.KilopoundForcePerSquareFoot, PressureUnits.KilopoundForcePerSquareFoot);
-                yield return new (PressureUnit.KilopoundForcePerSquareInch, PressureUnits.KilopoundForcePerSquareInch);
-                yield return new (PressureUnit.KilopoundForcePerSquareMil, PressureUnits.KilopoundForcePerSquareMil);
-                yield return new (PressureUnit.Megabar, PressureUnits.Megabar);
-                yield return new (PressureUnit.MeganewtonPerSquareMeter, PressureUnits.MeganewtonPerSquareMeter);
-                yield return new (PressureUnit.Megapascal, PressureUnits.Megapascal);
-                yield return new (PressureUnit.MeterOfHead, PressureUnits.MeterOfHead);
-                yield return new (PressureUnit.MeterOfWaterColumn, PressureUnits.MeterOfWaterColumn);
-                yield return new (PressureUnit.Microbar, PressureUnits.Microbar);
-                yield return new (PressureUnit.Micropascal, PressureUnits.Micropascal);
-                yield return new (PressureUnit.Millibar, PressureUnits.Millibar);
-                yield return new (PressureUnit.MilligramForcePerSquareFoot, PressureUnits.MilligramForcePerSquareFoot);
-                yield return new (PressureUnit.MilligramForcePerSquareMeter, PressureUnits.MilligramForcePerSquareMeter);
-                yield return new (PressureUnit.MillimeterOfMercury, PressureUnits.MillimeterOfMercury);
-                yield return new (PressureUnit.MillimeterOfWaterColumn, PressureUnits.MillimeterOfWaterColumn);
-                yield return new (PressureUnit.Millipascal, PressureUnits.Millipascal);
-                yield return new (PressureUnit.Millitorr, PressureUnits.Millitorr);
-                yield return new (PressureUnit.NewtonPerSquareCentimeter, PressureUnits.NewtonPerSquareCentimeter);
-                yield return new (PressureUnit.NewtonPerSquareMeter, PressureUnits.NewtonPerSquareMeter);
-                yield return new (PressureUnit.NewtonPerSquareMillimeter, PressureUnits.NewtonPerSquareMillimeter);
-                yield return new (PressureUnit.Pascal, PressureUnits.Pascal);
-                yield return new (PressureUnit.PoundForcePerSquareFoot, PressureUnits.PoundForcePerSquareFoot);
-                yield return new (PressureUnit.PoundForcePerSquareInch, PressureUnits.PoundForcePerSquareInch);
-                yield return new (PressureUnit.PoundForcePerSquareMil, PressureUnits.PoundForcePerSquareMil);
-                yield return new (PressureUnit.PoundPerInchSecondSquared, PressureUnits.PoundPerInchSecondSquared);
-                yield return new (PressureUnit.TechnicalAtmosphere, PressureUnits.TechnicalAtmosphere);
-                yield return new (PressureUnit.TonneForcePerSquareCentimeter, PressureUnits.TonneForcePerSquareCentimeter);
-                yield return new (PressureUnit.TonneForcePerSquareMeter, PressureUnits.TonneForcePerSquareMeter);
-                yield return new (PressureUnit.TonneForcePerSquareMillimeter, PressureUnits.TonneForcePerSquareMillimeter);
-                yield return new (PressureUnit.Torr, PressureUnits.Torr);
+                return new UnitDefinition<PressureUnit>[]
+                {
+                    new (PressureUnit.Atmosphere, PressureUnits.Atmosphere),
+                    new (PressureUnit.Bar, PressureUnits.Bar),
+                    new (PressureUnit.Centibar, PressureUnits.Centibar),
+                    new (PressureUnit.CentimeterOfWaterColumn, PressureUnits.CentimeterOfWaterColumn),
+                    new (PressureUnit.Decapascal, PressureUnits.Decapascal),
+                    new (PressureUnit.Decibar, PressureUnits.Decibar),
+                    new (PressureUnit.DynePerSquareCentimeter, PressureUnits.DynePerSquareCentimeter),
+                    new (PressureUnit.FootOfHead, PressureUnits.FootOfHead),
+                    new (PressureUnit.Gigapascal, PressureUnits.Gigapascal),
+                    new (PressureUnit.Hectopascal, PressureUnits.Hectopascal),
+                    new (PressureUnit.InchOfMercury, PressureUnits.InchOfMercury),
+                    new (PressureUnit.InchOfWaterColumn, PressureUnits.InchOfWaterColumn),
+                    new (PressureUnit.Kilobar, PressureUnits.Kilobar),
+                    new (PressureUnit.KilogramForcePerSquareCentimeter, PressureUnits.KilogramForcePerSquareCentimeter),
+                    new (PressureUnit.KilogramForcePerSquareMeter, PressureUnits.KilogramForcePerSquareMeter),
+                    new (PressureUnit.KilogramForcePerSquareMillimeter, PressureUnits.KilogramForcePerSquareMillimeter),
+                    new (PressureUnit.KilonewtonPerSquareCentimeter, PressureUnits.KilonewtonPerSquareCentimeter),
+                    new (PressureUnit.KilonewtonPerSquareMeter, PressureUnits.KilonewtonPerSquareMeter),
+                    new (PressureUnit.KilonewtonPerSquareMillimeter, PressureUnits.KilonewtonPerSquareMillimeter),
+                    new (PressureUnit.Kilopascal, PressureUnits.Kilopascal),
+                    new (PressureUnit.KilopoundForcePerSquareFoot, PressureUnits.KilopoundForcePerSquareFoot),
+                    new (PressureUnit.KilopoundForcePerSquareInch, PressureUnits.KilopoundForcePerSquareInch),
+                    new (PressureUnit.KilopoundForcePerSquareMil, PressureUnits.KilopoundForcePerSquareMil),
+                    new (PressureUnit.Megabar, PressureUnits.Megabar),
+                    new (PressureUnit.MeganewtonPerSquareMeter, PressureUnits.MeganewtonPerSquareMeter),
+                    new (PressureUnit.Megapascal, PressureUnits.Megapascal),
+                    new (PressureUnit.MeterOfHead, PressureUnits.MeterOfHead),
+                    new (PressureUnit.MeterOfWaterColumn, PressureUnits.MeterOfWaterColumn),
+                    new (PressureUnit.Microbar, PressureUnits.Microbar),
+                    new (PressureUnit.Micropascal, PressureUnits.Micropascal),
+                    new (PressureUnit.Millibar, PressureUnits.Millibar),
+                    new (PressureUnit.MilligramForcePerSquareFoot, PressureUnits.MilligramForcePerSquareFoot),
+                    new (PressureUnit.MilligramForcePerSquareMeter, PressureUnits.MilligramForcePerSquareMeter),
+                    new (PressureUnit.MillimeterOfMercury, PressureUnits.MillimeterOfMercury),
+                    new (PressureUnit.MillimeterOfWaterColumn, PressureUnits.MillimeterOfWaterColumn),
+                    new (PressureUnit.Millipascal, PressureUnits.Millipascal),
+                    new (PressureUnit.Millitorr, PressureUnits.Millitorr),
+                    new (PressureUnit.NewtonPerSquareCentimeter, PressureUnits.NewtonPerSquareCentimeter),
+                    new (PressureUnit.NewtonPerSquareMeter, PressureUnits.NewtonPerSquareMeter),
+                    new (PressureUnit.NewtonPerSquareMillimeter, PressureUnits.NewtonPerSquareMillimeter),
+                    new (PressureUnit.Pascal, PressureUnits.Pascal),
+                    new (PressureUnit.PoundForcePerSquareFoot, PressureUnits.PoundForcePerSquareFoot),
+                    new (PressureUnit.PoundForcePerSquareInch, PressureUnits.PoundForcePerSquareInch),
+                    new (PressureUnit.PoundForcePerSquareMil, PressureUnits.PoundForcePerSquareMil),
+                    new (PressureUnit.PoundPerInchSecondSquared, PressureUnits.PoundPerInchSecondSquared),
+                    new (PressureUnit.TechnicalAtmosphere, PressureUnits.TechnicalAtmosphere),
+                    new (PressureUnit.TonneForcePerSquareCentimeter, PressureUnits.TonneForcePerSquareCentimeter),
+                    new (PressureUnit.TonneForcePerSquareMeter, PressureUnits.TonneForcePerSquareMeter),
+                    new (PressureUnit.TonneForcePerSquareMillimeter, PressureUnits.TonneForcePerSquareMillimeter),
+                    new (PressureUnit.Torr, PressureUnits.Torr),
+                };
             }
         }
 

@@ -127,44 +127,47 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ForcePerLengthUnit}"/> representing the default unit mappings for ForcePerLength.</returns>
             public static IEnumerable<UnitDefinition<ForcePerLengthUnit>> GetDefaultMappings()
             {
-                yield return new (ForcePerLengthUnit.CentinewtonPerCentimeter, ForcePerLengthUnits.CentinewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.CentinewtonPerMeter, ForcePerLengthUnits.CentinewtonPerMeter);
-                yield return new (ForcePerLengthUnit.CentinewtonPerMillimeter, ForcePerLengthUnits.CentinewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.DecanewtonPerCentimeter, ForcePerLengthUnits.DecanewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.DecanewtonPerMeter, ForcePerLengthUnits.DecanewtonPerMeter);
-                yield return new (ForcePerLengthUnit.DecanewtonPerMillimeter, ForcePerLengthUnits.DecanewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.DecinewtonPerCentimeter, ForcePerLengthUnits.DecinewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.DecinewtonPerMeter, ForcePerLengthUnits.DecinewtonPerMeter);
-                yield return new (ForcePerLengthUnit.DecinewtonPerMillimeter, ForcePerLengthUnits.DecinewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.KilogramForcePerCentimeter, ForcePerLengthUnits.KilogramForcePerCentimeter);
-                yield return new (ForcePerLengthUnit.KilogramForcePerMeter, ForcePerLengthUnits.KilogramForcePerMeter);
-                yield return new (ForcePerLengthUnit.KilogramForcePerMillimeter, ForcePerLengthUnits.KilogramForcePerMillimeter);
-                yield return new (ForcePerLengthUnit.KilonewtonPerCentimeter, ForcePerLengthUnits.KilonewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.KilonewtonPerMeter, ForcePerLengthUnits.KilonewtonPerMeter);
-                yield return new (ForcePerLengthUnit.KilonewtonPerMillimeter, ForcePerLengthUnits.KilonewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.KilopoundForcePerFoot, ForcePerLengthUnits.KilopoundForcePerFoot);
-                yield return new (ForcePerLengthUnit.KilopoundForcePerInch, ForcePerLengthUnits.KilopoundForcePerInch);
-                yield return new (ForcePerLengthUnit.MeganewtonPerCentimeter, ForcePerLengthUnits.MeganewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.MeganewtonPerMeter, ForcePerLengthUnits.MeganewtonPerMeter);
-                yield return new (ForcePerLengthUnit.MeganewtonPerMillimeter, ForcePerLengthUnits.MeganewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.MicronewtonPerCentimeter, ForcePerLengthUnits.MicronewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.MicronewtonPerMeter, ForcePerLengthUnits.MicronewtonPerMeter);
-                yield return new (ForcePerLengthUnit.MicronewtonPerMillimeter, ForcePerLengthUnits.MicronewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.MillinewtonPerCentimeter, ForcePerLengthUnits.MillinewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.MillinewtonPerMeter, ForcePerLengthUnits.MillinewtonPerMeter);
-                yield return new (ForcePerLengthUnit.MillinewtonPerMillimeter, ForcePerLengthUnits.MillinewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.NanonewtonPerCentimeter, ForcePerLengthUnits.NanonewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.NanonewtonPerMeter, ForcePerLengthUnits.NanonewtonPerMeter);
-                yield return new (ForcePerLengthUnit.NanonewtonPerMillimeter, ForcePerLengthUnits.NanonewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.NewtonPerCentimeter, ForcePerLengthUnits.NewtonPerCentimeter);
-                yield return new (ForcePerLengthUnit.NewtonPerMeter, ForcePerLengthUnits.NewtonPerMeter);
-                yield return new (ForcePerLengthUnit.NewtonPerMillimeter, ForcePerLengthUnits.NewtonPerMillimeter);
-                yield return new (ForcePerLengthUnit.PoundForcePerFoot, ForcePerLengthUnits.PoundForcePerFoot);
-                yield return new (ForcePerLengthUnit.PoundForcePerInch, ForcePerLengthUnits.PoundForcePerInch);
-                yield return new (ForcePerLengthUnit.PoundForcePerYard, ForcePerLengthUnits.PoundForcePerYard);
-                yield return new (ForcePerLengthUnit.TonneForcePerCentimeter, ForcePerLengthUnits.TonneForcePerCentimeter);
-                yield return new (ForcePerLengthUnit.TonneForcePerMeter, ForcePerLengthUnits.TonneForcePerMeter);
-                yield return new (ForcePerLengthUnit.TonneForcePerMillimeter, ForcePerLengthUnits.TonneForcePerMillimeter);
+                return new UnitDefinition<ForcePerLengthUnit>[]
+                {
+                    new (ForcePerLengthUnit.CentinewtonPerCentimeter, ForcePerLengthUnits.CentinewtonPerCentimeter),
+                    new (ForcePerLengthUnit.CentinewtonPerMeter, ForcePerLengthUnits.CentinewtonPerMeter),
+                    new (ForcePerLengthUnit.CentinewtonPerMillimeter, ForcePerLengthUnits.CentinewtonPerMillimeter),
+                    new (ForcePerLengthUnit.DecanewtonPerCentimeter, ForcePerLengthUnits.DecanewtonPerCentimeter),
+                    new (ForcePerLengthUnit.DecanewtonPerMeter, ForcePerLengthUnits.DecanewtonPerMeter),
+                    new (ForcePerLengthUnit.DecanewtonPerMillimeter, ForcePerLengthUnits.DecanewtonPerMillimeter),
+                    new (ForcePerLengthUnit.DecinewtonPerCentimeter, ForcePerLengthUnits.DecinewtonPerCentimeter),
+                    new (ForcePerLengthUnit.DecinewtonPerMeter, ForcePerLengthUnits.DecinewtonPerMeter),
+                    new (ForcePerLengthUnit.DecinewtonPerMillimeter, ForcePerLengthUnits.DecinewtonPerMillimeter),
+                    new (ForcePerLengthUnit.KilogramForcePerCentimeter, ForcePerLengthUnits.KilogramForcePerCentimeter),
+                    new (ForcePerLengthUnit.KilogramForcePerMeter, ForcePerLengthUnits.KilogramForcePerMeter),
+                    new (ForcePerLengthUnit.KilogramForcePerMillimeter, ForcePerLengthUnits.KilogramForcePerMillimeter),
+                    new (ForcePerLengthUnit.KilonewtonPerCentimeter, ForcePerLengthUnits.KilonewtonPerCentimeter),
+                    new (ForcePerLengthUnit.KilonewtonPerMeter, ForcePerLengthUnits.KilonewtonPerMeter),
+                    new (ForcePerLengthUnit.KilonewtonPerMillimeter, ForcePerLengthUnits.KilonewtonPerMillimeter),
+                    new (ForcePerLengthUnit.KilopoundForcePerFoot, ForcePerLengthUnits.KilopoundForcePerFoot),
+                    new (ForcePerLengthUnit.KilopoundForcePerInch, ForcePerLengthUnits.KilopoundForcePerInch),
+                    new (ForcePerLengthUnit.MeganewtonPerCentimeter, ForcePerLengthUnits.MeganewtonPerCentimeter),
+                    new (ForcePerLengthUnit.MeganewtonPerMeter, ForcePerLengthUnits.MeganewtonPerMeter),
+                    new (ForcePerLengthUnit.MeganewtonPerMillimeter, ForcePerLengthUnits.MeganewtonPerMillimeter),
+                    new (ForcePerLengthUnit.MicronewtonPerCentimeter, ForcePerLengthUnits.MicronewtonPerCentimeter),
+                    new (ForcePerLengthUnit.MicronewtonPerMeter, ForcePerLengthUnits.MicronewtonPerMeter),
+                    new (ForcePerLengthUnit.MicronewtonPerMillimeter, ForcePerLengthUnits.MicronewtonPerMillimeter),
+                    new (ForcePerLengthUnit.MillinewtonPerCentimeter, ForcePerLengthUnits.MillinewtonPerCentimeter),
+                    new (ForcePerLengthUnit.MillinewtonPerMeter, ForcePerLengthUnits.MillinewtonPerMeter),
+                    new (ForcePerLengthUnit.MillinewtonPerMillimeter, ForcePerLengthUnits.MillinewtonPerMillimeter),
+                    new (ForcePerLengthUnit.NanonewtonPerCentimeter, ForcePerLengthUnits.NanonewtonPerCentimeter),
+                    new (ForcePerLengthUnit.NanonewtonPerMeter, ForcePerLengthUnits.NanonewtonPerMeter),
+                    new (ForcePerLengthUnit.NanonewtonPerMillimeter, ForcePerLengthUnits.NanonewtonPerMillimeter),
+                    new (ForcePerLengthUnit.NewtonPerCentimeter, ForcePerLengthUnits.NewtonPerCentimeter),
+                    new (ForcePerLengthUnit.NewtonPerMeter, ForcePerLengthUnits.NewtonPerMeter),
+                    new (ForcePerLengthUnit.NewtonPerMillimeter, ForcePerLengthUnits.NewtonPerMillimeter),
+                    new (ForcePerLengthUnit.PoundForcePerFoot, ForcePerLengthUnits.PoundForcePerFoot),
+                    new (ForcePerLengthUnit.PoundForcePerInch, ForcePerLengthUnits.PoundForcePerInch),
+                    new (ForcePerLengthUnit.PoundForcePerYard, ForcePerLengthUnits.PoundForcePerYard),
+                    new (ForcePerLengthUnit.TonneForcePerCentimeter, ForcePerLengthUnits.TonneForcePerCentimeter),
+                    new (ForcePerLengthUnit.TonneForcePerMeter, ForcePerLengthUnits.TonneForcePerMeter),
+                    new (ForcePerLengthUnit.TonneForcePerMillimeter, ForcePerLengthUnits.TonneForcePerMillimeter),
+                };
             }
         }
 

@@ -129,15 +129,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TemperatureDeltaUnit}"/> representing the default unit mappings for TemperatureDelta.</returns>
             public static IEnumerable<UnitDefinition<TemperatureDeltaUnit>> GetDefaultMappings()
             {
-                yield return new (TemperatureDeltaUnit.DegreeCelsius, TemperatureDeltaUnits.DegreeCelsius);
-                yield return new (TemperatureDeltaUnit.DegreeDelisle, TemperatureDeltaUnits.DegreeDelisle);
-                yield return new (TemperatureDeltaUnit.DegreeFahrenheit, TemperatureDeltaUnits.DegreeFahrenheit);
-                yield return new (TemperatureDeltaUnit.DegreeNewton, TemperatureDeltaUnits.DegreeNewton);
-                yield return new (TemperatureDeltaUnit.DegreeRankine, TemperatureDeltaUnits.DegreeRankine);
-                yield return new (TemperatureDeltaUnit.DegreeReaumur, TemperatureDeltaUnits.DegreeReaumur);
-                yield return new (TemperatureDeltaUnit.DegreeRoemer, TemperatureDeltaUnits.DegreeRoemer);
-                yield return new (TemperatureDeltaUnit.Kelvin, TemperatureDeltaUnits.Kelvin);
-                yield return new (TemperatureDeltaUnit.MillidegreeCelsius, TemperatureDeltaUnits.MillidegreeCelsius);
+                return new UnitDefinition<TemperatureDeltaUnit>[]
+                {
+                    new (TemperatureDeltaUnit.DegreeCelsius, TemperatureDeltaUnits.DegreeCelsius),
+                    new (TemperatureDeltaUnit.DegreeDelisle, TemperatureDeltaUnits.DegreeDelisle),
+                    new (TemperatureDeltaUnit.DegreeFahrenheit, TemperatureDeltaUnits.DegreeFahrenheit),
+                    new (TemperatureDeltaUnit.DegreeNewton, TemperatureDeltaUnits.DegreeNewton),
+                    new (TemperatureDeltaUnit.DegreeRankine, TemperatureDeltaUnits.DegreeRankine),
+                    new (TemperatureDeltaUnit.DegreeReaumur, TemperatureDeltaUnits.DegreeReaumur),
+                    new (TemperatureDeltaUnit.DegreeRoemer, TemperatureDeltaUnits.DegreeRoemer),
+                    new (TemperatureDeltaUnit.Kelvin, TemperatureDeltaUnits.Kelvin),
+                    new (TemperatureDeltaUnit.MillidegreeCelsius, TemperatureDeltaUnits.MillidegreeCelsius),
+                };
             }
         }
 

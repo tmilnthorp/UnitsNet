@@ -117,12 +117,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{HeatTransferCoefficientUnit}"/> representing the default unit mappings for HeatTransferCoefficient.</returns>
             public static IEnumerable<UnitDefinition<HeatTransferCoefficientUnit>> GetDefaultMappings()
             {
-                yield return new (HeatTransferCoefficientUnit.BtuPerHourSquareFootDegreeFahrenheit, HeatTransferCoefficientUnits.BtuPerHourSquareFootDegreeFahrenheit);
-                yield return new (HeatTransferCoefficientUnit.BtuPerSecondSquareInchDegreeFahrenheit, HeatTransferCoefficientUnits.BtuPerSecondSquareInchDegreeFahrenheit);
-                yield return new (HeatTransferCoefficientUnit.CaloriePerHourSquareMeterDegreeCelsius, HeatTransferCoefficientUnits.CaloriePerHourSquareMeterDegreeCelsius);
-                yield return new (HeatTransferCoefficientUnit.KilocaloriePerHourSquareMeterDegreeCelsius, HeatTransferCoefficientUnits.KilocaloriePerHourSquareMeterDegreeCelsius);
-                yield return new (HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, HeatTransferCoefficientUnits.WattPerSquareMeterCelsius);
-                yield return new (HeatTransferCoefficientUnit.WattPerSquareMeterKelvin, HeatTransferCoefficientUnits.WattPerSquareMeterKelvin);
+                return new UnitDefinition<HeatTransferCoefficientUnit>[]
+                {
+                    new (HeatTransferCoefficientUnit.BtuPerHourSquareFootDegreeFahrenheit, HeatTransferCoefficientUnits.BtuPerHourSquareFootDegreeFahrenheit),
+                    new (HeatTransferCoefficientUnit.BtuPerSecondSquareInchDegreeFahrenheit, HeatTransferCoefficientUnits.BtuPerSecondSquareInchDegreeFahrenheit),
+                    new (HeatTransferCoefficientUnit.CaloriePerHourSquareMeterDegreeCelsius, HeatTransferCoefficientUnits.CaloriePerHourSquareMeterDegreeCelsius),
+                    new (HeatTransferCoefficientUnit.KilocaloriePerHourSquareMeterDegreeCelsius, HeatTransferCoefficientUnits.KilocaloriePerHourSquareMeterDegreeCelsius),
+                    new (HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, HeatTransferCoefficientUnits.WattPerSquareMeterCelsius),
+                    new (HeatTransferCoefficientUnit.WattPerSquareMeterKelvin, HeatTransferCoefficientUnits.WattPerSquareMeterKelvin),
+                };
             }
         }
 

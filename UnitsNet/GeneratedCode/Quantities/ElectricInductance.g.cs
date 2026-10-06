@@ -119,11 +119,14 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricInductanceUnit}"/> representing the default unit mappings for ElectricInductance.</returns>
             public static IEnumerable<UnitDefinition<ElectricInductanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricInductanceUnit.Henry, ElectricInductanceUnits.Henry);
-                yield return new (ElectricInductanceUnit.Microhenry, ElectricInductanceUnits.Microhenry);
-                yield return new (ElectricInductanceUnit.Millihenry, ElectricInductanceUnits.Millihenry);
-                yield return new (ElectricInductanceUnit.Nanohenry, ElectricInductanceUnits.Nanohenry);
-                yield return new (ElectricInductanceUnit.Picohenry, ElectricInductanceUnits.Picohenry);
+                return new UnitDefinition<ElectricInductanceUnit>[]
+                {
+                    new (ElectricInductanceUnit.Henry, ElectricInductanceUnits.Henry),
+                    new (ElectricInductanceUnit.Microhenry, ElectricInductanceUnits.Microhenry),
+                    new (ElectricInductanceUnit.Millihenry, ElectricInductanceUnits.Millihenry),
+                    new (ElectricInductanceUnit.Nanohenry, ElectricInductanceUnits.Nanohenry),
+                    new (ElectricInductanceUnit.Picohenry, ElectricInductanceUnits.Picohenry),
+                };
             }
         }
 

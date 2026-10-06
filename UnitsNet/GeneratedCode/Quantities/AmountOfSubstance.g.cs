@@ -122,23 +122,26 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{AmountOfSubstanceUnit}"/> representing the default unit mappings for AmountOfSubstance.</returns>
             public static IEnumerable<UnitDefinition<AmountOfSubstanceUnit>> GetDefaultMappings()
             {
-                yield return new (AmountOfSubstanceUnit.Centimole, AmountOfSubstanceUnits.Centimole);
-                yield return new (AmountOfSubstanceUnit.CentipoundMole, AmountOfSubstanceUnits.CentipoundMole);
-                yield return new (AmountOfSubstanceUnit.Decimole, AmountOfSubstanceUnits.Decimole);
-                yield return new (AmountOfSubstanceUnit.DecipoundMole, AmountOfSubstanceUnits.DecipoundMole);
-                yield return new (AmountOfSubstanceUnit.Femtomole, AmountOfSubstanceUnits.Femtomole);
-                yield return new (AmountOfSubstanceUnit.Kilomole, AmountOfSubstanceUnits.Kilomole);
-                yield return new (AmountOfSubstanceUnit.KilopoundMole, AmountOfSubstanceUnits.KilopoundMole);
-                yield return new (AmountOfSubstanceUnit.Megamole, AmountOfSubstanceUnits.Megamole);
-                yield return new (AmountOfSubstanceUnit.Micromole, AmountOfSubstanceUnits.Micromole);
-                yield return new (AmountOfSubstanceUnit.MicropoundMole, AmountOfSubstanceUnits.MicropoundMole);
-                yield return new (AmountOfSubstanceUnit.Millimole, AmountOfSubstanceUnits.Millimole);
-                yield return new (AmountOfSubstanceUnit.MillipoundMole, AmountOfSubstanceUnits.MillipoundMole);
-                yield return new (AmountOfSubstanceUnit.Mole, AmountOfSubstanceUnits.Mole);
-                yield return new (AmountOfSubstanceUnit.Nanomole, AmountOfSubstanceUnits.Nanomole);
-                yield return new (AmountOfSubstanceUnit.NanopoundMole, AmountOfSubstanceUnits.NanopoundMole);
-                yield return new (AmountOfSubstanceUnit.Picomole, AmountOfSubstanceUnits.Picomole);
-                yield return new (AmountOfSubstanceUnit.PoundMole, AmountOfSubstanceUnits.PoundMole);
+                return new UnitDefinition<AmountOfSubstanceUnit>[]
+                {
+                    new (AmountOfSubstanceUnit.Centimole, AmountOfSubstanceUnits.Centimole),
+                    new (AmountOfSubstanceUnit.CentipoundMole, AmountOfSubstanceUnits.CentipoundMole),
+                    new (AmountOfSubstanceUnit.Decimole, AmountOfSubstanceUnits.Decimole),
+                    new (AmountOfSubstanceUnit.DecipoundMole, AmountOfSubstanceUnits.DecipoundMole),
+                    new (AmountOfSubstanceUnit.Femtomole, AmountOfSubstanceUnits.Femtomole),
+                    new (AmountOfSubstanceUnit.Kilomole, AmountOfSubstanceUnits.Kilomole),
+                    new (AmountOfSubstanceUnit.KilopoundMole, AmountOfSubstanceUnits.KilopoundMole),
+                    new (AmountOfSubstanceUnit.Megamole, AmountOfSubstanceUnits.Megamole),
+                    new (AmountOfSubstanceUnit.Micromole, AmountOfSubstanceUnits.Micromole),
+                    new (AmountOfSubstanceUnit.MicropoundMole, AmountOfSubstanceUnits.MicropoundMole),
+                    new (AmountOfSubstanceUnit.Millimole, AmountOfSubstanceUnits.Millimole),
+                    new (AmountOfSubstanceUnit.MillipoundMole, AmountOfSubstanceUnits.MillipoundMole),
+                    new (AmountOfSubstanceUnit.Mole, AmountOfSubstanceUnits.Mole),
+                    new (AmountOfSubstanceUnit.Nanomole, AmountOfSubstanceUnits.Nanomole),
+                    new (AmountOfSubstanceUnit.NanopoundMole, AmountOfSubstanceUnits.NanopoundMole),
+                    new (AmountOfSubstanceUnit.Picomole, AmountOfSubstanceUnits.Picomole),
+                    new (AmountOfSubstanceUnit.PoundMole, AmountOfSubstanceUnits.PoundMole),
+                };
             }
         }
 

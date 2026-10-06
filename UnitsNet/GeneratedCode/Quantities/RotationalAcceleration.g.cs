@@ -117,10 +117,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RotationalAccelerationUnit}"/> representing the default unit mappings for RotationalAcceleration.</returns>
             public static IEnumerable<UnitDefinition<RotationalAccelerationUnit>> GetDefaultMappings()
             {
-                yield return new (RotationalAccelerationUnit.DegreePerSecondSquared, RotationalAccelerationUnits.DegreePerSecondSquared);
-                yield return new (RotationalAccelerationUnit.RadianPerSecondSquared, RotationalAccelerationUnits.RadianPerSecondSquared);
-                yield return new (RotationalAccelerationUnit.RevolutionPerMinutePerSecond, RotationalAccelerationUnits.RevolutionPerMinutePerSecond);
-                yield return new (RotationalAccelerationUnit.RevolutionPerSecondSquared, RotationalAccelerationUnits.RevolutionPerSecondSquared);
+                return new UnitDefinition<RotationalAccelerationUnit>[]
+                {
+                    new (RotationalAccelerationUnit.DegreePerSecondSquared, RotationalAccelerationUnits.DegreePerSecondSquared),
+                    new (RotationalAccelerationUnit.RadianPerSecondSquared, RotationalAccelerationUnits.RadianPerSecondSquared),
+                    new (RotationalAccelerationUnit.RevolutionPerMinutePerSecond, RotationalAccelerationUnits.RevolutionPerMinutePerSecond),
+                    new (RotationalAccelerationUnit.RevolutionPerSecondSquared, RotationalAccelerationUnits.RevolutionPerSecondSquared),
+                };
             }
         }
 

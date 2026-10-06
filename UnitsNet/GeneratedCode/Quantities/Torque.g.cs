@@ -123,33 +123,36 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TorqueUnit}"/> representing the default unit mappings for Torque.</returns>
             public static IEnumerable<UnitDefinition<TorqueUnit>> GetDefaultMappings()
             {
-                yield return new (TorqueUnit.GramForceCentimeter, TorqueUnits.GramForceCentimeter);
-                yield return new (TorqueUnit.GramForceMeter, TorqueUnits.GramForceMeter);
-                yield return new (TorqueUnit.GramForceMillimeter, TorqueUnits.GramForceMillimeter);
-                yield return new (TorqueUnit.KilogramForceCentimeter, TorqueUnits.KilogramForceCentimeter);
-                yield return new (TorqueUnit.KilogramForceMeter, TorqueUnits.KilogramForceMeter);
-                yield return new (TorqueUnit.KilogramForceMillimeter, TorqueUnits.KilogramForceMillimeter);
-                yield return new (TorqueUnit.KilonewtonCentimeter, TorqueUnits.KilonewtonCentimeter);
-                yield return new (TorqueUnit.KilonewtonMeter, TorqueUnits.KilonewtonMeter);
-                yield return new (TorqueUnit.KilonewtonMillimeter, TorqueUnits.KilonewtonMillimeter);
-                yield return new (TorqueUnit.KilopoundForceFoot, TorqueUnits.KilopoundForceFoot);
-                yield return new (TorqueUnit.KilopoundForceInch, TorqueUnits.KilopoundForceInch);
-                yield return new (TorqueUnit.MeganewtonCentimeter, TorqueUnits.MeganewtonCentimeter);
-                yield return new (TorqueUnit.MeganewtonMeter, TorqueUnits.MeganewtonMeter);
-                yield return new (TorqueUnit.MeganewtonMillimeter, TorqueUnits.MeganewtonMillimeter);
-                yield return new (TorqueUnit.MegapoundForceFoot, TorqueUnits.MegapoundForceFoot);
-                yield return new (TorqueUnit.MegapoundForceInch, TorqueUnits.MegapoundForceInch);
-                yield return new (TorqueUnit.NewtonCentimeter, TorqueUnits.NewtonCentimeter);
-                yield return new (TorqueUnit.NewtonMeter, TorqueUnits.NewtonMeter);
-                yield return new (TorqueUnit.NewtonMillimeter, TorqueUnits.NewtonMillimeter);
-                yield return new (TorqueUnit.OunceForceFoot, TorqueUnits.OunceForceFoot);
-                yield return new (TorqueUnit.OunceForceInch, TorqueUnits.OunceForceInch);
-                yield return new (TorqueUnit.PoundalFoot, TorqueUnits.PoundalFoot);
-                yield return new (TorqueUnit.PoundForceFoot, TorqueUnits.PoundForceFoot);
-                yield return new (TorqueUnit.PoundForceInch, TorqueUnits.PoundForceInch);
-                yield return new (TorqueUnit.TonneForceCentimeter, TorqueUnits.TonneForceCentimeter);
-                yield return new (TorqueUnit.TonneForceMeter, TorqueUnits.TonneForceMeter);
-                yield return new (TorqueUnit.TonneForceMillimeter, TorqueUnits.TonneForceMillimeter);
+                return new UnitDefinition<TorqueUnit>[]
+                {
+                    new (TorqueUnit.GramForceCentimeter, TorqueUnits.GramForceCentimeter),
+                    new (TorqueUnit.GramForceMeter, TorqueUnits.GramForceMeter),
+                    new (TorqueUnit.GramForceMillimeter, TorqueUnits.GramForceMillimeter),
+                    new (TorqueUnit.KilogramForceCentimeter, TorqueUnits.KilogramForceCentimeter),
+                    new (TorqueUnit.KilogramForceMeter, TorqueUnits.KilogramForceMeter),
+                    new (TorqueUnit.KilogramForceMillimeter, TorqueUnits.KilogramForceMillimeter),
+                    new (TorqueUnit.KilonewtonCentimeter, TorqueUnits.KilonewtonCentimeter),
+                    new (TorqueUnit.KilonewtonMeter, TorqueUnits.KilonewtonMeter),
+                    new (TorqueUnit.KilonewtonMillimeter, TorqueUnits.KilonewtonMillimeter),
+                    new (TorqueUnit.KilopoundForceFoot, TorqueUnits.KilopoundForceFoot),
+                    new (TorqueUnit.KilopoundForceInch, TorqueUnits.KilopoundForceInch),
+                    new (TorqueUnit.MeganewtonCentimeter, TorqueUnits.MeganewtonCentimeter),
+                    new (TorqueUnit.MeganewtonMeter, TorqueUnits.MeganewtonMeter),
+                    new (TorqueUnit.MeganewtonMillimeter, TorqueUnits.MeganewtonMillimeter),
+                    new (TorqueUnit.MegapoundForceFoot, TorqueUnits.MegapoundForceFoot),
+                    new (TorqueUnit.MegapoundForceInch, TorqueUnits.MegapoundForceInch),
+                    new (TorqueUnit.NewtonCentimeter, TorqueUnits.NewtonCentimeter),
+                    new (TorqueUnit.NewtonMeter, TorqueUnits.NewtonMeter),
+                    new (TorqueUnit.NewtonMillimeter, TorqueUnits.NewtonMillimeter),
+                    new (TorqueUnit.OunceForceFoot, TorqueUnits.OunceForceFoot),
+                    new (TorqueUnit.OunceForceInch, TorqueUnits.OunceForceInch),
+                    new (TorqueUnit.PoundalFoot, TorqueUnits.PoundalFoot),
+                    new (TorqueUnit.PoundForceFoot, TorqueUnits.PoundForceFoot),
+                    new (TorqueUnit.PoundForceInch, TorqueUnits.PoundForceInch),
+                    new (TorqueUnit.TonneForceCentimeter, TorqueUnits.TonneForceCentimeter),
+                    new (TorqueUnit.TonneForceMeter, TorqueUnits.TonneForceMeter),
+                    new (TorqueUnit.TonneForceMillimeter, TorqueUnits.TonneForceMillimeter),
+                };
             }
         }
 

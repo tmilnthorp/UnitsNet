@@ -120,15 +120,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MolarFlowUnit}"/> representing the default unit mappings for MolarFlow.</returns>
             public static IEnumerable<UnitDefinition<MolarFlowUnit>> GetDefaultMappings()
             {
-                yield return new (MolarFlowUnit.KilomolePerHour, MolarFlowUnits.KilomolePerHour);
-                yield return new (MolarFlowUnit.KilomolePerMinute, MolarFlowUnits.KilomolePerMinute);
-                yield return new (MolarFlowUnit.KilomolePerSecond, MolarFlowUnits.KilomolePerSecond);
-                yield return new (MolarFlowUnit.MolePerHour, MolarFlowUnits.MolePerHour);
-                yield return new (MolarFlowUnit.MolePerMinute, MolarFlowUnits.MolePerMinute);
-                yield return new (MolarFlowUnit.MolePerSecond, MolarFlowUnits.MolePerSecond);
-                yield return new (MolarFlowUnit.PoundMolePerHour, MolarFlowUnits.PoundMolePerHour);
-                yield return new (MolarFlowUnit.PoundMolePerMinute, MolarFlowUnits.PoundMolePerMinute);
-                yield return new (MolarFlowUnit.PoundMolePerSecond, MolarFlowUnits.PoundMolePerSecond);
+                return new UnitDefinition<MolarFlowUnit>[]
+                {
+                    new (MolarFlowUnit.KilomolePerHour, MolarFlowUnits.KilomolePerHour),
+                    new (MolarFlowUnit.KilomolePerMinute, MolarFlowUnits.KilomolePerMinute),
+                    new (MolarFlowUnit.KilomolePerSecond, MolarFlowUnits.KilomolePerSecond),
+                    new (MolarFlowUnit.MolePerHour, MolarFlowUnits.MolePerHour),
+                    new (MolarFlowUnit.MolePerMinute, MolarFlowUnits.MolePerMinute),
+                    new (MolarFlowUnit.MolePerSecond, MolarFlowUnits.MolePerSecond),
+                    new (MolarFlowUnit.PoundMolePerHour, MolarFlowUnits.PoundMolePerHour),
+                    new (MolarFlowUnit.PoundMolePerMinute, MolarFlowUnits.PoundMolePerMinute),
+                    new (MolarFlowUnit.PoundMolePerSecond, MolarFlowUnits.PoundMolePerSecond),
+                };
             }
         }
 

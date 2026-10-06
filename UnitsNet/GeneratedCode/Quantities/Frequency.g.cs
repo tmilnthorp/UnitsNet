@@ -118,18 +118,21 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{FrequencyUnit}"/> representing the default unit mappings for Frequency.</returns>
             public static IEnumerable<UnitDefinition<FrequencyUnit>> GetDefaultMappings()
             {
-                yield return new (FrequencyUnit.BeatPerMinute, FrequencyUnits.BeatPerMinute);
-                yield return new (FrequencyUnit.CyclePerHour, FrequencyUnits.CyclePerHour);
-                yield return new (FrequencyUnit.CyclePerMinute, FrequencyUnits.CyclePerMinute);
-                yield return new (FrequencyUnit.Gigahertz, FrequencyUnits.Gigahertz);
-                yield return new (FrequencyUnit.Hertz, FrequencyUnits.Hertz);
-                yield return new (FrequencyUnit.Kilohertz, FrequencyUnits.Kilohertz);
-                yield return new (FrequencyUnit.Megahertz, FrequencyUnits.Megahertz);
-                yield return new (FrequencyUnit.Microhertz, FrequencyUnits.Microhertz);
-                yield return new (FrequencyUnit.Millihertz, FrequencyUnits.Millihertz);
-                yield return new (FrequencyUnit.PerSecond, FrequencyUnits.PerSecond);
-                yield return new (FrequencyUnit.RadianPerSecond, FrequencyUnits.RadianPerSecond);
-                yield return new (FrequencyUnit.Terahertz, FrequencyUnits.Terahertz);
+                return new UnitDefinition<FrequencyUnit>[]
+                {
+                    new (FrequencyUnit.BeatPerMinute, FrequencyUnits.BeatPerMinute),
+                    new (FrequencyUnit.CyclePerHour, FrequencyUnits.CyclePerHour),
+                    new (FrequencyUnit.CyclePerMinute, FrequencyUnits.CyclePerMinute),
+                    new (FrequencyUnit.Gigahertz, FrequencyUnits.Gigahertz),
+                    new (FrequencyUnit.Hertz, FrequencyUnits.Hertz),
+                    new (FrequencyUnit.Kilohertz, FrequencyUnits.Kilohertz),
+                    new (FrequencyUnit.Megahertz, FrequencyUnits.Megahertz),
+                    new (FrequencyUnit.Microhertz, FrequencyUnits.Microhertz),
+                    new (FrequencyUnit.Millihertz, FrequencyUnits.Millihertz),
+                    new (FrequencyUnit.PerSecond, FrequencyUnits.PerSecond),
+                    new (FrequencyUnit.RadianPerSecond, FrequencyUnits.RadianPerSecond),
+                    new (FrequencyUnit.Terahertz, FrequencyUnits.Terahertz),
+                };
             }
         }
 

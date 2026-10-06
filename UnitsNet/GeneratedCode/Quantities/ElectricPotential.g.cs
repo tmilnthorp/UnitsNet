@@ -129,12 +129,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricPotentialUnit}"/> representing the default unit mappings for ElectricPotential.</returns>
             public static IEnumerable<UnitDefinition<ElectricPotentialUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricPotentialUnit.Kilovolt, ElectricPotentialUnits.Kilovolt);
-                yield return new (ElectricPotentialUnit.Megavolt, ElectricPotentialUnits.Megavolt);
-                yield return new (ElectricPotentialUnit.Microvolt, ElectricPotentialUnits.Microvolt);
-                yield return new (ElectricPotentialUnit.Millivolt, ElectricPotentialUnits.Millivolt);
-                yield return new (ElectricPotentialUnit.Nanovolt, ElectricPotentialUnits.Nanovolt);
-                yield return new (ElectricPotentialUnit.Volt, ElectricPotentialUnits.Volt);
+                return new UnitDefinition<ElectricPotentialUnit>[]
+                {
+                    new (ElectricPotentialUnit.Kilovolt, ElectricPotentialUnits.Kilovolt),
+                    new (ElectricPotentialUnit.Megavolt, ElectricPotentialUnits.Megavolt),
+                    new (ElectricPotentialUnit.Microvolt, ElectricPotentialUnits.Microvolt),
+                    new (ElectricPotentialUnit.Millivolt, ElectricPotentialUnits.Millivolt),
+                    new (ElectricPotentialUnit.Nanovolt, ElectricPotentialUnits.Nanovolt),
+                    new (ElectricPotentialUnit.Volt, ElectricPotentialUnits.Volt),
+                };
             }
         }
 

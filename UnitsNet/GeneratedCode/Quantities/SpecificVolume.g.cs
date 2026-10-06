@@ -117,9 +117,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpecificVolumeUnit}"/> representing the default unit mappings for SpecificVolume.</returns>
             public static IEnumerable<UnitDefinition<SpecificVolumeUnit>> GetDefaultMappings()
             {
-                yield return new (SpecificVolumeUnit.CubicFootPerPound, SpecificVolumeUnits.CubicFootPerPound);
-                yield return new (SpecificVolumeUnit.CubicMeterPerKilogram, SpecificVolumeUnits.CubicMeterPerKilogram);
-                yield return new (SpecificVolumeUnit.CubicMillimeterPerKilogram, SpecificVolumeUnits.CubicMillimeterPerKilogram);
+                return new UnitDefinition<SpecificVolumeUnit>[]
+                {
+                    new (SpecificVolumeUnit.CubicFootPerPound, SpecificVolumeUnits.CubicFootPerPound),
+                    new (SpecificVolumeUnit.CubicMeterPerKilogram, SpecificVolumeUnits.CubicMeterPerKilogram),
+                    new (SpecificVolumeUnit.CubicMillimeterPerKilogram, SpecificVolumeUnits.CubicMillimeterPerKilogram),
+                };
             }
         }
 

@@ -120,7 +120,10 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricFieldUnit}"/> representing the default unit mappings for ElectricField.</returns>
             public static IEnumerable<UnitDefinition<ElectricFieldUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricFieldUnit.VoltPerMeter, ElectricFieldUnits.VoltPerMeter);
+                return new UnitDefinition<ElectricFieldUnit>[]
+                {
+                    new (ElectricFieldUnit.VoltPerMeter, ElectricFieldUnits.VoltPerMeter),
+                };
             }
         }
 

@@ -125,24 +125,27 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LinearDensityUnit}"/> representing the default unit mappings for LinearDensity.</returns>
             public static IEnumerable<UnitDefinition<LinearDensityUnit>> GetDefaultMappings()
             {
-                yield return new (LinearDensityUnit.GramPerCentimeter, LinearDensityUnits.GramPerCentimeter);
-                yield return new (LinearDensityUnit.GramPerFoot, LinearDensityUnits.GramPerFoot);
-                yield return new (LinearDensityUnit.GramPerMeter, LinearDensityUnits.GramPerMeter);
-                yield return new (LinearDensityUnit.GramPerMillimeter, LinearDensityUnits.GramPerMillimeter);
-                yield return new (LinearDensityUnit.KilogramPerCentimeter, LinearDensityUnits.KilogramPerCentimeter);
-                yield return new (LinearDensityUnit.KilogramPerFoot, LinearDensityUnits.KilogramPerFoot);
-                yield return new (LinearDensityUnit.KilogramPerMeter, LinearDensityUnits.KilogramPerMeter);
-                yield return new (LinearDensityUnit.KilogramPerMillimeter, LinearDensityUnits.KilogramPerMillimeter);
-                yield return new (LinearDensityUnit.MicrogramPerCentimeter, LinearDensityUnits.MicrogramPerCentimeter);
-                yield return new (LinearDensityUnit.MicrogramPerFoot, LinearDensityUnits.MicrogramPerFoot);
-                yield return new (LinearDensityUnit.MicrogramPerMeter, LinearDensityUnits.MicrogramPerMeter);
-                yield return new (LinearDensityUnit.MicrogramPerMillimeter, LinearDensityUnits.MicrogramPerMillimeter);
-                yield return new (LinearDensityUnit.MilligramPerCentimeter, LinearDensityUnits.MilligramPerCentimeter);
-                yield return new (LinearDensityUnit.MilligramPerFoot, LinearDensityUnits.MilligramPerFoot);
-                yield return new (LinearDensityUnit.MilligramPerMeter, LinearDensityUnits.MilligramPerMeter);
-                yield return new (LinearDensityUnit.MilligramPerMillimeter, LinearDensityUnits.MilligramPerMillimeter);
-                yield return new (LinearDensityUnit.PoundPerFoot, LinearDensityUnits.PoundPerFoot);
-                yield return new (LinearDensityUnit.PoundPerInch, LinearDensityUnits.PoundPerInch);
+                return new UnitDefinition<LinearDensityUnit>[]
+                {
+                    new (LinearDensityUnit.GramPerCentimeter, LinearDensityUnits.GramPerCentimeter),
+                    new (LinearDensityUnit.GramPerFoot, LinearDensityUnits.GramPerFoot),
+                    new (LinearDensityUnit.GramPerMeter, LinearDensityUnits.GramPerMeter),
+                    new (LinearDensityUnit.GramPerMillimeter, LinearDensityUnits.GramPerMillimeter),
+                    new (LinearDensityUnit.KilogramPerCentimeter, LinearDensityUnits.KilogramPerCentimeter),
+                    new (LinearDensityUnit.KilogramPerFoot, LinearDensityUnits.KilogramPerFoot),
+                    new (LinearDensityUnit.KilogramPerMeter, LinearDensityUnits.KilogramPerMeter),
+                    new (LinearDensityUnit.KilogramPerMillimeter, LinearDensityUnits.KilogramPerMillimeter),
+                    new (LinearDensityUnit.MicrogramPerCentimeter, LinearDensityUnits.MicrogramPerCentimeter),
+                    new (LinearDensityUnit.MicrogramPerFoot, LinearDensityUnits.MicrogramPerFoot),
+                    new (LinearDensityUnit.MicrogramPerMeter, LinearDensityUnits.MicrogramPerMeter),
+                    new (LinearDensityUnit.MicrogramPerMillimeter, LinearDensityUnits.MicrogramPerMillimeter),
+                    new (LinearDensityUnit.MilligramPerCentimeter, LinearDensityUnits.MilligramPerCentimeter),
+                    new (LinearDensityUnit.MilligramPerFoot, LinearDensityUnits.MilligramPerFoot),
+                    new (LinearDensityUnit.MilligramPerMeter, LinearDensityUnits.MilligramPerMeter),
+                    new (LinearDensityUnit.MilligramPerMillimeter, LinearDensityUnits.MilligramPerMillimeter),
+                    new (LinearDensityUnit.PoundPerFoot, LinearDensityUnits.PoundPerFoot),
+                    new (LinearDensityUnit.PoundPerInch, LinearDensityUnits.PoundPerInch),
+                };
             }
         }
 

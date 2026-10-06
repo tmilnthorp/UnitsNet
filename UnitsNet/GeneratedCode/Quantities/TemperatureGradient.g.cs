@@ -117,10 +117,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TemperatureGradientUnit}"/> representing the default unit mappings for TemperatureGradient.</returns>
             public static IEnumerable<UnitDefinition<TemperatureGradientUnit>> GetDefaultMappings()
             {
-                yield return new (TemperatureGradientUnit.DegreeCelsiusPerKilometer, TemperatureGradientUnits.DegreeCelsiusPerKilometer);
-                yield return new (TemperatureGradientUnit.DegreeCelsiusPerMeter, TemperatureGradientUnits.DegreeCelsiusPerMeter);
-                yield return new (TemperatureGradientUnit.DegreeFahrenheitPerFoot, TemperatureGradientUnits.DegreeFahrenheitPerFoot);
-                yield return new (TemperatureGradientUnit.KelvinPerMeter, TemperatureGradientUnits.KelvinPerMeter);
+                return new UnitDefinition<TemperatureGradientUnit>[]
+                {
+                    new (TemperatureGradientUnit.DegreeCelsiusPerKilometer, TemperatureGradientUnits.DegreeCelsiusPerKilometer),
+                    new (TemperatureGradientUnit.DegreeCelsiusPerMeter, TemperatureGradientUnits.DegreeCelsiusPerMeter),
+                    new (TemperatureGradientUnit.DegreeFahrenheitPerFoot, TemperatureGradientUnits.DegreeFahrenheitPerFoot),
+                    new (TemperatureGradientUnit.KelvinPerMeter, TemperatureGradientUnits.KelvinPerMeter),
+                };
             }
         }
 

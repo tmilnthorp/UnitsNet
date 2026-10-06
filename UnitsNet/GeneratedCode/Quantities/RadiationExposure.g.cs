@@ -116,14 +116,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RadiationExposureUnit}"/> representing the default unit mappings for RadiationExposure.</returns>
             public static IEnumerable<UnitDefinition<RadiationExposureUnit>> GetDefaultMappings()
             {
-                yield return new (RadiationExposureUnit.CoulombPerKilogram, RadiationExposureUnits.CoulombPerKilogram);
-                yield return new (RadiationExposureUnit.MicrocoulombPerKilogram, RadiationExposureUnits.MicrocoulombPerKilogram);
-                yield return new (RadiationExposureUnit.Microroentgen, RadiationExposureUnits.Microroentgen);
-                yield return new (RadiationExposureUnit.MillicoulombPerKilogram, RadiationExposureUnits.MillicoulombPerKilogram);
-                yield return new (RadiationExposureUnit.Milliroentgen, RadiationExposureUnits.Milliroentgen);
-                yield return new (RadiationExposureUnit.NanocoulombPerKilogram, RadiationExposureUnits.NanocoulombPerKilogram);
-                yield return new (RadiationExposureUnit.PicocoulombPerKilogram, RadiationExposureUnits.PicocoulombPerKilogram);
-                yield return new (RadiationExposureUnit.Roentgen, RadiationExposureUnits.Roentgen);
+                return new UnitDefinition<RadiationExposureUnit>[]
+                {
+                    new (RadiationExposureUnit.CoulombPerKilogram, RadiationExposureUnits.CoulombPerKilogram),
+                    new (RadiationExposureUnit.MicrocoulombPerKilogram, RadiationExposureUnits.MicrocoulombPerKilogram),
+                    new (RadiationExposureUnit.Microroentgen, RadiationExposureUnits.Microroentgen),
+                    new (RadiationExposureUnit.MillicoulombPerKilogram, RadiationExposureUnits.MillicoulombPerKilogram),
+                    new (RadiationExposureUnit.Milliroentgen, RadiationExposureUnits.Milliroentgen),
+                    new (RadiationExposureUnit.NanocoulombPerKilogram, RadiationExposureUnits.NanocoulombPerKilogram),
+                    new (RadiationExposureUnit.PicocoulombPerKilogram, RadiationExposureUnits.PicocoulombPerKilogram),
+                    new (RadiationExposureUnit.Roentgen, RadiationExposureUnits.Roentgen),
+                };
             }
         }
 

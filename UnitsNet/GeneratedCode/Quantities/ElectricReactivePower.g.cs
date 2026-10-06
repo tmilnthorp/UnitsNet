@@ -120,10 +120,13 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricReactivePowerUnit}"/> representing the default unit mappings for ElectricReactivePower.</returns>
             public static IEnumerable<UnitDefinition<ElectricReactivePowerUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricReactivePowerUnit.GigavoltampereReactive, ElectricReactivePowerUnits.GigavoltampereReactive);
-                yield return new (ElectricReactivePowerUnit.KilovoltampereReactive, ElectricReactivePowerUnits.KilovoltampereReactive);
-                yield return new (ElectricReactivePowerUnit.MegavoltampereReactive, ElectricReactivePowerUnits.MegavoltampereReactive);
-                yield return new (ElectricReactivePowerUnit.VoltampereReactive, ElectricReactivePowerUnits.VoltampereReactive);
+                return new UnitDefinition<ElectricReactivePowerUnit>[]
+                {
+                    new (ElectricReactivePowerUnit.GigavoltampereReactive, ElectricReactivePowerUnits.GigavoltampereReactive),
+                    new (ElectricReactivePowerUnit.KilovoltampereReactive, ElectricReactivePowerUnits.KilovoltampereReactive),
+                    new (ElectricReactivePowerUnit.MegavoltampereReactive, ElectricReactivePowerUnits.MegavoltampereReactive),
+                    new (ElectricReactivePowerUnit.VoltampereReactive, ElectricReactivePowerUnits.VoltampereReactive),
+                };
             }
         }
 

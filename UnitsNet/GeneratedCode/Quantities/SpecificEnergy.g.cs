@@ -125,36 +125,39 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpecificEnergyUnit}"/> representing the default unit mappings for SpecificEnergy.</returns>
             public static IEnumerable<UnitDefinition<SpecificEnergyUnit>> GetDefaultMappings()
             {
-                yield return new (SpecificEnergyUnit.BtuPerPound, SpecificEnergyUnits.BtuPerPound);
-                yield return new (SpecificEnergyUnit.CaloriePerGram, SpecificEnergyUnits.CaloriePerGram);
-                yield return new (SpecificEnergyUnit.GigawattDayPerKilogram, SpecificEnergyUnits.GigawattDayPerKilogram);
-                yield return new (SpecificEnergyUnit.GigawattDayPerShortTon, SpecificEnergyUnits.GigawattDayPerShortTon);
-                yield return new (SpecificEnergyUnit.GigawattDayPerTonne, SpecificEnergyUnits.GigawattDayPerTonne);
-                yield return new (SpecificEnergyUnit.GigawattHourPerKilogram, SpecificEnergyUnits.GigawattHourPerKilogram);
-                yield return new (SpecificEnergyUnit.GigawattHourPerPound, SpecificEnergyUnits.GigawattHourPerPound);
-                yield return new (SpecificEnergyUnit.JoulePerKilogram, SpecificEnergyUnits.JoulePerKilogram);
-                yield return new (SpecificEnergyUnit.KilocaloriePerGram, SpecificEnergyUnits.KilocaloriePerGram);
-                yield return new (SpecificEnergyUnit.KilojoulePerKilogram, SpecificEnergyUnits.KilojoulePerKilogram);
-                yield return new (SpecificEnergyUnit.KilowattDayPerKilogram, SpecificEnergyUnits.KilowattDayPerKilogram);
-                yield return new (SpecificEnergyUnit.KilowattDayPerShortTon, SpecificEnergyUnits.KilowattDayPerShortTon);
-                yield return new (SpecificEnergyUnit.KilowattDayPerTonne, SpecificEnergyUnits.KilowattDayPerTonne);
-                yield return new (SpecificEnergyUnit.KilowattHourPerKilogram, SpecificEnergyUnits.KilowattHourPerKilogram);
-                yield return new (SpecificEnergyUnit.KilowattHourPerPound, SpecificEnergyUnits.KilowattHourPerPound);
-                yield return new (SpecificEnergyUnit.MegajoulePerKilogram, SpecificEnergyUnits.MegajoulePerKilogram);
-                yield return new (SpecificEnergyUnit.MegajoulePerTonne, SpecificEnergyUnits.MegajoulePerTonne);
-                yield return new (SpecificEnergyUnit.MegawattDayPerKilogram, SpecificEnergyUnits.MegawattDayPerKilogram);
-                yield return new (SpecificEnergyUnit.MegawattDayPerShortTon, SpecificEnergyUnits.MegawattDayPerShortTon);
-                yield return new (SpecificEnergyUnit.MegawattDayPerTonne, SpecificEnergyUnits.MegawattDayPerTonne);
-                yield return new (SpecificEnergyUnit.MegawattHourPerKilogram, SpecificEnergyUnits.MegawattHourPerKilogram);
-                yield return new (SpecificEnergyUnit.MegawattHourPerPound, SpecificEnergyUnits.MegawattHourPerPound);
-                yield return new (SpecificEnergyUnit.TerawattDayPerKilogram, SpecificEnergyUnits.TerawattDayPerKilogram);
-                yield return new (SpecificEnergyUnit.TerawattDayPerShortTon, SpecificEnergyUnits.TerawattDayPerShortTon);
-                yield return new (SpecificEnergyUnit.TerawattDayPerTonne, SpecificEnergyUnits.TerawattDayPerTonne);
-                yield return new (SpecificEnergyUnit.WattDayPerKilogram, SpecificEnergyUnits.WattDayPerKilogram);
-                yield return new (SpecificEnergyUnit.WattDayPerShortTon, SpecificEnergyUnits.WattDayPerShortTon);
-                yield return new (SpecificEnergyUnit.WattDayPerTonne, SpecificEnergyUnits.WattDayPerTonne);
-                yield return new (SpecificEnergyUnit.WattHourPerKilogram, SpecificEnergyUnits.WattHourPerKilogram);
-                yield return new (SpecificEnergyUnit.WattHourPerPound, SpecificEnergyUnits.WattHourPerPound);
+                return new UnitDefinition<SpecificEnergyUnit>[]
+                {
+                    new (SpecificEnergyUnit.BtuPerPound, SpecificEnergyUnits.BtuPerPound),
+                    new (SpecificEnergyUnit.CaloriePerGram, SpecificEnergyUnits.CaloriePerGram),
+                    new (SpecificEnergyUnit.GigawattDayPerKilogram, SpecificEnergyUnits.GigawattDayPerKilogram),
+                    new (SpecificEnergyUnit.GigawattDayPerShortTon, SpecificEnergyUnits.GigawattDayPerShortTon),
+                    new (SpecificEnergyUnit.GigawattDayPerTonne, SpecificEnergyUnits.GigawattDayPerTonne),
+                    new (SpecificEnergyUnit.GigawattHourPerKilogram, SpecificEnergyUnits.GigawattHourPerKilogram),
+                    new (SpecificEnergyUnit.GigawattHourPerPound, SpecificEnergyUnits.GigawattHourPerPound),
+                    new (SpecificEnergyUnit.JoulePerKilogram, SpecificEnergyUnits.JoulePerKilogram),
+                    new (SpecificEnergyUnit.KilocaloriePerGram, SpecificEnergyUnits.KilocaloriePerGram),
+                    new (SpecificEnergyUnit.KilojoulePerKilogram, SpecificEnergyUnits.KilojoulePerKilogram),
+                    new (SpecificEnergyUnit.KilowattDayPerKilogram, SpecificEnergyUnits.KilowattDayPerKilogram),
+                    new (SpecificEnergyUnit.KilowattDayPerShortTon, SpecificEnergyUnits.KilowattDayPerShortTon),
+                    new (SpecificEnergyUnit.KilowattDayPerTonne, SpecificEnergyUnits.KilowattDayPerTonne),
+                    new (SpecificEnergyUnit.KilowattHourPerKilogram, SpecificEnergyUnits.KilowattHourPerKilogram),
+                    new (SpecificEnergyUnit.KilowattHourPerPound, SpecificEnergyUnits.KilowattHourPerPound),
+                    new (SpecificEnergyUnit.MegajoulePerKilogram, SpecificEnergyUnits.MegajoulePerKilogram),
+                    new (SpecificEnergyUnit.MegajoulePerTonne, SpecificEnergyUnits.MegajoulePerTonne),
+                    new (SpecificEnergyUnit.MegawattDayPerKilogram, SpecificEnergyUnits.MegawattDayPerKilogram),
+                    new (SpecificEnergyUnit.MegawattDayPerShortTon, SpecificEnergyUnits.MegawattDayPerShortTon),
+                    new (SpecificEnergyUnit.MegawattDayPerTonne, SpecificEnergyUnits.MegawattDayPerTonne),
+                    new (SpecificEnergyUnit.MegawattHourPerKilogram, SpecificEnergyUnits.MegawattHourPerKilogram),
+                    new (SpecificEnergyUnit.MegawattHourPerPound, SpecificEnergyUnits.MegawattHourPerPound),
+                    new (SpecificEnergyUnit.TerawattDayPerKilogram, SpecificEnergyUnits.TerawattDayPerKilogram),
+                    new (SpecificEnergyUnit.TerawattDayPerShortTon, SpecificEnergyUnits.TerawattDayPerShortTon),
+                    new (SpecificEnergyUnit.TerawattDayPerTonne, SpecificEnergyUnits.TerawattDayPerTonne),
+                    new (SpecificEnergyUnit.WattDayPerKilogram, SpecificEnergyUnits.WattDayPerKilogram),
+                    new (SpecificEnergyUnit.WattDayPerShortTon, SpecificEnergyUnits.WattDayPerShortTon),
+                    new (SpecificEnergyUnit.WattDayPerTonne, SpecificEnergyUnits.WattDayPerTonne),
+                    new (SpecificEnergyUnit.WattHourPerKilogram, SpecificEnergyUnits.WattHourPerKilogram),
+                    new (SpecificEnergyUnit.WattHourPerPound, SpecificEnergyUnits.WattHourPerPound),
+                };
             }
         }
 

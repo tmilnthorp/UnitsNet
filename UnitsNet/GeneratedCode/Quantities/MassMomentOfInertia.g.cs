@@ -116,34 +116,37 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MassMomentOfInertiaUnit}"/> representing the default unit mappings for MassMomentOfInertia.</returns>
             public static IEnumerable<UnitDefinition<MassMomentOfInertiaUnit>> GetDefaultMappings()
             {
-                yield return new (MassMomentOfInertiaUnit.GramSquareCentimeter, MassMomentOfInertiaUnits.GramSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.GramSquareDecimeter, MassMomentOfInertiaUnits.GramSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.GramSquareMeter, MassMomentOfInertiaUnits.GramSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.GramSquareMillimeter, MassMomentOfInertiaUnits.GramSquareMillimeter);
-                yield return new (MassMomentOfInertiaUnit.KilogramSquareCentimeter, MassMomentOfInertiaUnits.KilogramSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.KilogramSquareDecimeter, MassMomentOfInertiaUnits.KilogramSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.KilogramSquareMeter, MassMomentOfInertiaUnits.KilogramSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.KilogramSquareMillimeter, MassMomentOfInertiaUnits.KilogramSquareMillimeter);
-                yield return new (MassMomentOfInertiaUnit.KilotonneSquareCentimeter, MassMomentOfInertiaUnits.KilotonneSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.KilotonneSquareDecimeter, MassMomentOfInertiaUnits.KilotonneSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.KilotonneSquareMeter, MassMomentOfInertiaUnits.KilotonneSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.KilotonneSquareMillimeter, MassMomentOfInertiaUnits.KilotonneSquareMillimeter);
-                yield return new (MassMomentOfInertiaUnit.MegatonneSquareCentimeter, MassMomentOfInertiaUnits.MegatonneSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.MegatonneSquareDecimeter, MassMomentOfInertiaUnits.MegatonneSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.MegatonneSquareMeter, MassMomentOfInertiaUnits.MegatonneSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.MegatonneSquareMillimeter, MassMomentOfInertiaUnits.MegatonneSquareMillimeter);
-                yield return new (MassMomentOfInertiaUnit.MilligramSquareCentimeter, MassMomentOfInertiaUnits.MilligramSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.MilligramSquareDecimeter, MassMomentOfInertiaUnits.MilligramSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.MilligramSquareMeter, MassMomentOfInertiaUnits.MilligramSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.MilligramSquareMillimeter, MassMomentOfInertiaUnits.MilligramSquareMillimeter);
-                yield return new (MassMomentOfInertiaUnit.PoundSquareFoot, MassMomentOfInertiaUnits.PoundSquareFoot);
-                yield return new (MassMomentOfInertiaUnit.PoundSquareInch, MassMomentOfInertiaUnits.PoundSquareInch);
-                yield return new (MassMomentOfInertiaUnit.SlugSquareFoot, MassMomentOfInertiaUnits.SlugSquareFoot);
-                yield return new (MassMomentOfInertiaUnit.SlugSquareInch, MassMomentOfInertiaUnits.SlugSquareInch);
-                yield return new (MassMomentOfInertiaUnit.TonneSquareCentimeter, MassMomentOfInertiaUnits.TonneSquareCentimeter);
-                yield return new (MassMomentOfInertiaUnit.TonneSquareDecimeter, MassMomentOfInertiaUnits.TonneSquareDecimeter);
-                yield return new (MassMomentOfInertiaUnit.TonneSquareMeter, MassMomentOfInertiaUnits.TonneSquareMeter);
-                yield return new (MassMomentOfInertiaUnit.TonneSquareMillimeter, MassMomentOfInertiaUnits.TonneSquareMillimeter);
+                return new UnitDefinition<MassMomentOfInertiaUnit>[]
+                {
+                    new (MassMomentOfInertiaUnit.GramSquareCentimeter, MassMomentOfInertiaUnits.GramSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.GramSquareDecimeter, MassMomentOfInertiaUnits.GramSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.GramSquareMeter, MassMomentOfInertiaUnits.GramSquareMeter),
+                    new (MassMomentOfInertiaUnit.GramSquareMillimeter, MassMomentOfInertiaUnits.GramSquareMillimeter),
+                    new (MassMomentOfInertiaUnit.KilogramSquareCentimeter, MassMomentOfInertiaUnits.KilogramSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.KilogramSquareDecimeter, MassMomentOfInertiaUnits.KilogramSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.KilogramSquareMeter, MassMomentOfInertiaUnits.KilogramSquareMeter),
+                    new (MassMomentOfInertiaUnit.KilogramSquareMillimeter, MassMomentOfInertiaUnits.KilogramSquareMillimeter),
+                    new (MassMomentOfInertiaUnit.KilotonneSquareCentimeter, MassMomentOfInertiaUnits.KilotonneSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.KilotonneSquareDecimeter, MassMomentOfInertiaUnits.KilotonneSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.KilotonneSquareMeter, MassMomentOfInertiaUnits.KilotonneSquareMeter),
+                    new (MassMomentOfInertiaUnit.KilotonneSquareMillimeter, MassMomentOfInertiaUnits.KilotonneSquareMillimeter),
+                    new (MassMomentOfInertiaUnit.MegatonneSquareCentimeter, MassMomentOfInertiaUnits.MegatonneSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.MegatonneSquareDecimeter, MassMomentOfInertiaUnits.MegatonneSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.MegatonneSquareMeter, MassMomentOfInertiaUnits.MegatonneSquareMeter),
+                    new (MassMomentOfInertiaUnit.MegatonneSquareMillimeter, MassMomentOfInertiaUnits.MegatonneSquareMillimeter),
+                    new (MassMomentOfInertiaUnit.MilligramSquareCentimeter, MassMomentOfInertiaUnits.MilligramSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.MilligramSquareDecimeter, MassMomentOfInertiaUnits.MilligramSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.MilligramSquareMeter, MassMomentOfInertiaUnits.MilligramSquareMeter),
+                    new (MassMomentOfInertiaUnit.MilligramSquareMillimeter, MassMomentOfInertiaUnits.MilligramSquareMillimeter),
+                    new (MassMomentOfInertiaUnit.PoundSquareFoot, MassMomentOfInertiaUnits.PoundSquareFoot),
+                    new (MassMomentOfInertiaUnit.PoundSquareInch, MassMomentOfInertiaUnits.PoundSquareInch),
+                    new (MassMomentOfInertiaUnit.SlugSquareFoot, MassMomentOfInertiaUnits.SlugSquareFoot),
+                    new (MassMomentOfInertiaUnit.SlugSquareInch, MassMomentOfInertiaUnits.SlugSquareInch),
+                    new (MassMomentOfInertiaUnit.TonneSquareCentimeter, MassMomentOfInertiaUnits.TonneSquareCentimeter),
+                    new (MassMomentOfInertiaUnit.TonneSquareDecimeter, MassMomentOfInertiaUnits.TonneSquareDecimeter),
+                    new (MassMomentOfInertiaUnit.TonneSquareMeter, MassMomentOfInertiaUnits.TonneSquareMeter),
+                    new (MassMomentOfInertiaUnit.TonneSquareMillimeter, MassMomentOfInertiaUnits.TonneSquareMillimeter),
+                };
             }
         }
 

@@ -116,35 +116,38 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RadioactivityUnit}"/> representing the default unit mappings for Radioactivity.</returns>
             public static IEnumerable<UnitDefinition<RadioactivityUnit>> GetDefaultMappings()
             {
-                yield return new (RadioactivityUnit.Becquerel, RadioactivityUnits.Becquerel);
-                yield return new (RadioactivityUnit.Curie, RadioactivityUnits.Curie);
-                yield return new (RadioactivityUnit.Exabecquerel, RadioactivityUnits.Exabecquerel);
-                yield return new (RadioactivityUnit.Gigabecquerel, RadioactivityUnits.Gigabecquerel);
-                yield return new (RadioactivityUnit.Gigacurie, RadioactivityUnits.Gigacurie);
-                yield return new (RadioactivityUnit.Gigarutherford, RadioactivityUnits.Gigarutherford);
-                yield return new (RadioactivityUnit.Kilobecquerel, RadioactivityUnits.Kilobecquerel);
-                yield return new (RadioactivityUnit.Kilocurie, RadioactivityUnits.Kilocurie);
-                yield return new (RadioactivityUnit.Kilorutherford, RadioactivityUnits.Kilorutherford);
-                yield return new (RadioactivityUnit.Megabecquerel, RadioactivityUnits.Megabecquerel);
-                yield return new (RadioactivityUnit.Megacurie, RadioactivityUnits.Megacurie);
-                yield return new (RadioactivityUnit.Megarutherford, RadioactivityUnits.Megarutherford);
-                yield return new (RadioactivityUnit.Microbecquerel, RadioactivityUnits.Microbecquerel);
-                yield return new (RadioactivityUnit.Microcurie, RadioactivityUnits.Microcurie);
-                yield return new (RadioactivityUnit.Microrutherford, RadioactivityUnits.Microrutherford);
-                yield return new (RadioactivityUnit.Millibecquerel, RadioactivityUnits.Millibecquerel);
-                yield return new (RadioactivityUnit.Millicurie, RadioactivityUnits.Millicurie);
-                yield return new (RadioactivityUnit.Millirutherford, RadioactivityUnits.Millirutherford);
-                yield return new (RadioactivityUnit.Nanobecquerel, RadioactivityUnits.Nanobecquerel);
-                yield return new (RadioactivityUnit.Nanocurie, RadioactivityUnits.Nanocurie);
-                yield return new (RadioactivityUnit.Nanorutherford, RadioactivityUnits.Nanorutherford);
-                yield return new (RadioactivityUnit.Petabecquerel, RadioactivityUnits.Petabecquerel);
-                yield return new (RadioactivityUnit.Picobecquerel, RadioactivityUnits.Picobecquerel);
-                yield return new (RadioactivityUnit.Picocurie, RadioactivityUnits.Picocurie);
-                yield return new (RadioactivityUnit.Picorutherford, RadioactivityUnits.Picorutherford);
-                yield return new (RadioactivityUnit.Rutherford, RadioactivityUnits.Rutherford);
-                yield return new (RadioactivityUnit.Terabecquerel, RadioactivityUnits.Terabecquerel);
-                yield return new (RadioactivityUnit.Teracurie, RadioactivityUnits.Teracurie);
-                yield return new (RadioactivityUnit.Terarutherford, RadioactivityUnits.Terarutherford);
+                return new UnitDefinition<RadioactivityUnit>[]
+                {
+                    new (RadioactivityUnit.Becquerel, RadioactivityUnits.Becquerel),
+                    new (RadioactivityUnit.Curie, RadioactivityUnits.Curie),
+                    new (RadioactivityUnit.Exabecquerel, RadioactivityUnits.Exabecquerel),
+                    new (RadioactivityUnit.Gigabecquerel, RadioactivityUnits.Gigabecquerel),
+                    new (RadioactivityUnit.Gigacurie, RadioactivityUnits.Gigacurie),
+                    new (RadioactivityUnit.Gigarutherford, RadioactivityUnits.Gigarutherford),
+                    new (RadioactivityUnit.Kilobecquerel, RadioactivityUnits.Kilobecquerel),
+                    new (RadioactivityUnit.Kilocurie, RadioactivityUnits.Kilocurie),
+                    new (RadioactivityUnit.Kilorutherford, RadioactivityUnits.Kilorutherford),
+                    new (RadioactivityUnit.Megabecquerel, RadioactivityUnits.Megabecquerel),
+                    new (RadioactivityUnit.Megacurie, RadioactivityUnits.Megacurie),
+                    new (RadioactivityUnit.Megarutherford, RadioactivityUnits.Megarutherford),
+                    new (RadioactivityUnit.Microbecquerel, RadioactivityUnits.Microbecquerel),
+                    new (RadioactivityUnit.Microcurie, RadioactivityUnits.Microcurie),
+                    new (RadioactivityUnit.Microrutherford, RadioactivityUnits.Microrutherford),
+                    new (RadioactivityUnit.Millibecquerel, RadioactivityUnits.Millibecquerel),
+                    new (RadioactivityUnit.Millicurie, RadioactivityUnits.Millicurie),
+                    new (RadioactivityUnit.Millirutherford, RadioactivityUnits.Millirutherford),
+                    new (RadioactivityUnit.Nanobecquerel, RadioactivityUnits.Nanobecquerel),
+                    new (RadioactivityUnit.Nanocurie, RadioactivityUnits.Nanocurie),
+                    new (RadioactivityUnit.Nanorutherford, RadioactivityUnits.Nanorutherford),
+                    new (RadioactivityUnit.Petabecquerel, RadioactivityUnits.Petabecquerel),
+                    new (RadioactivityUnit.Picobecquerel, RadioactivityUnits.Picobecquerel),
+                    new (RadioactivityUnit.Picocurie, RadioactivityUnits.Picocurie),
+                    new (RadioactivityUnit.Picorutherford, RadioactivityUnits.Picorutherford),
+                    new (RadioactivityUnit.Rutherford, RadioactivityUnits.Rutherford),
+                    new (RadioactivityUnit.Terabecquerel, RadioactivityUnits.Terabecquerel),
+                    new (RadioactivityUnit.Teracurie, RadioactivityUnits.Teracurie),
+                    new (RadioactivityUnit.Terarutherford, RadioactivityUnits.Terarutherford),
+                };
             }
         }
 

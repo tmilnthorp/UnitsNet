@@ -119,22 +119,25 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricSusceptanceUnit}"/> representing the default unit mappings for ElectricSusceptance.</returns>
             public static IEnumerable<UnitDefinition<ElectricSusceptanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricSusceptanceUnit.Gigamho, ElectricSusceptanceUnits.Gigamho);
-                yield return new (ElectricSusceptanceUnit.Gigasiemens, ElectricSusceptanceUnits.Gigasiemens);
-                yield return new (ElectricSusceptanceUnit.Kilomho, ElectricSusceptanceUnits.Kilomho);
-                yield return new (ElectricSusceptanceUnit.Kilosiemens, ElectricSusceptanceUnits.Kilosiemens);
-                yield return new (ElectricSusceptanceUnit.Megamho, ElectricSusceptanceUnits.Megamho);
-                yield return new (ElectricSusceptanceUnit.Megasiemens, ElectricSusceptanceUnits.Megasiemens);
-                yield return new (ElectricSusceptanceUnit.Mho, ElectricSusceptanceUnits.Mho);
-                yield return new (ElectricSusceptanceUnit.Micromho, ElectricSusceptanceUnits.Micromho);
-                yield return new (ElectricSusceptanceUnit.Microsiemens, ElectricSusceptanceUnits.Microsiemens);
-                yield return new (ElectricSusceptanceUnit.Millimho, ElectricSusceptanceUnits.Millimho);
-                yield return new (ElectricSusceptanceUnit.Millisiemens, ElectricSusceptanceUnits.Millisiemens);
-                yield return new (ElectricSusceptanceUnit.Nanomho, ElectricSusceptanceUnits.Nanomho);
-                yield return new (ElectricSusceptanceUnit.Nanosiemens, ElectricSusceptanceUnits.Nanosiemens);
-                yield return new (ElectricSusceptanceUnit.Siemens, ElectricSusceptanceUnits.Siemens);
-                yield return new (ElectricSusceptanceUnit.Teramho, ElectricSusceptanceUnits.Teramho);
-                yield return new (ElectricSusceptanceUnit.Terasiemens, ElectricSusceptanceUnits.Terasiemens);
+                return new UnitDefinition<ElectricSusceptanceUnit>[]
+                {
+                    new (ElectricSusceptanceUnit.Gigamho, ElectricSusceptanceUnits.Gigamho),
+                    new (ElectricSusceptanceUnit.Gigasiemens, ElectricSusceptanceUnits.Gigasiemens),
+                    new (ElectricSusceptanceUnit.Kilomho, ElectricSusceptanceUnits.Kilomho),
+                    new (ElectricSusceptanceUnit.Kilosiemens, ElectricSusceptanceUnits.Kilosiemens),
+                    new (ElectricSusceptanceUnit.Megamho, ElectricSusceptanceUnits.Megamho),
+                    new (ElectricSusceptanceUnit.Megasiemens, ElectricSusceptanceUnits.Megasiemens),
+                    new (ElectricSusceptanceUnit.Mho, ElectricSusceptanceUnits.Mho),
+                    new (ElectricSusceptanceUnit.Micromho, ElectricSusceptanceUnits.Micromho),
+                    new (ElectricSusceptanceUnit.Microsiemens, ElectricSusceptanceUnits.Microsiemens),
+                    new (ElectricSusceptanceUnit.Millimho, ElectricSusceptanceUnits.Millimho),
+                    new (ElectricSusceptanceUnit.Millisiemens, ElectricSusceptanceUnits.Millisiemens),
+                    new (ElectricSusceptanceUnit.Nanomho, ElectricSusceptanceUnits.Nanomho),
+                    new (ElectricSusceptanceUnit.Nanosiemens, ElectricSusceptanceUnits.Nanosiemens),
+                    new (ElectricSusceptanceUnit.Siemens, ElectricSusceptanceUnits.Siemens),
+                    new (ElectricSusceptanceUnit.Teramho, ElectricSusceptanceUnits.Teramho),
+                    new (ElectricSusceptanceUnit.Terasiemens, ElectricSusceptanceUnits.Terasiemens),
+                };
             }
         }
 

@@ -126,39 +126,42 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MassFlowUnit}"/> representing the default unit mappings for MassFlow.</returns>
             public static IEnumerable<UnitDefinition<MassFlowUnit>> GetDefaultMappings()
             {
-                yield return new (MassFlowUnit.CentigramPerDay, MassFlowUnits.CentigramPerDay);
-                yield return new (MassFlowUnit.CentigramPerSecond, MassFlowUnits.CentigramPerSecond);
-                yield return new (MassFlowUnit.DecagramPerDay, MassFlowUnits.DecagramPerDay);
-                yield return new (MassFlowUnit.DecagramPerSecond, MassFlowUnits.DecagramPerSecond);
-                yield return new (MassFlowUnit.DecigramPerDay, MassFlowUnits.DecigramPerDay);
-                yield return new (MassFlowUnit.DecigramPerSecond, MassFlowUnits.DecigramPerSecond);
-                yield return new (MassFlowUnit.GramPerDay, MassFlowUnits.GramPerDay);
-                yield return new (MassFlowUnit.GramPerHour, MassFlowUnits.GramPerHour);
-                yield return new (MassFlowUnit.GramPerSecond, MassFlowUnits.GramPerSecond);
-                yield return new (MassFlowUnit.HectogramPerDay, MassFlowUnits.HectogramPerDay);
-                yield return new (MassFlowUnit.HectogramPerSecond, MassFlowUnits.HectogramPerSecond);
-                yield return new (MassFlowUnit.KilogramPerDay, MassFlowUnits.KilogramPerDay);
-                yield return new (MassFlowUnit.KilogramPerHour, MassFlowUnits.KilogramPerHour);
-                yield return new (MassFlowUnit.KilogramPerMinute, MassFlowUnits.KilogramPerMinute);
-                yield return new (MassFlowUnit.KilogramPerSecond, MassFlowUnits.KilogramPerSecond);
-                yield return new (MassFlowUnit.MegagramPerDay, MassFlowUnits.MegagramPerDay);
-                yield return new (MassFlowUnit.MegapoundPerDay, MassFlowUnits.MegapoundPerDay);
-                yield return new (MassFlowUnit.MegapoundPerHour, MassFlowUnits.MegapoundPerHour);
-                yield return new (MassFlowUnit.MegapoundPerMinute, MassFlowUnits.MegapoundPerMinute);
-                yield return new (MassFlowUnit.MegapoundPerSecond, MassFlowUnits.MegapoundPerSecond);
-                yield return new (MassFlowUnit.MicrogramPerDay, MassFlowUnits.MicrogramPerDay);
-                yield return new (MassFlowUnit.MicrogramPerSecond, MassFlowUnits.MicrogramPerSecond);
-                yield return new (MassFlowUnit.MilligramPerDay, MassFlowUnits.MilligramPerDay);
-                yield return new (MassFlowUnit.MilligramPerSecond, MassFlowUnits.MilligramPerSecond);
-                yield return new (MassFlowUnit.NanogramPerDay, MassFlowUnits.NanogramPerDay);
-                yield return new (MassFlowUnit.NanogramPerSecond, MassFlowUnits.NanogramPerSecond);
-                yield return new (MassFlowUnit.PoundPerDay, MassFlowUnits.PoundPerDay);
-                yield return new (MassFlowUnit.PoundPerHour, MassFlowUnits.PoundPerHour);
-                yield return new (MassFlowUnit.PoundPerMinute, MassFlowUnits.PoundPerMinute);
-                yield return new (MassFlowUnit.PoundPerSecond, MassFlowUnits.PoundPerSecond);
-                yield return new (MassFlowUnit.ShortTonPerHour, MassFlowUnits.ShortTonPerHour);
-                yield return new (MassFlowUnit.TonnePerDay, MassFlowUnits.TonnePerDay);
-                yield return new (MassFlowUnit.TonnePerHour, MassFlowUnits.TonnePerHour);
+                return new UnitDefinition<MassFlowUnit>[]
+                {
+                    new (MassFlowUnit.CentigramPerDay, MassFlowUnits.CentigramPerDay),
+                    new (MassFlowUnit.CentigramPerSecond, MassFlowUnits.CentigramPerSecond),
+                    new (MassFlowUnit.DecagramPerDay, MassFlowUnits.DecagramPerDay),
+                    new (MassFlowUnit.DecagramPerSecond, MassFlowUnits.DecagramPerSecond),
+                    new (MassFlowUnit.DecigramPerDay, MassFlowUnits.DecigramPerDay),
+                    new (MassFlowUnit.DecigramPerSecond, MassFlowUnits.DecigramPerSecond),
+                    new (MassFlowUnit.GramPerDay, MassFlowUnits.GramPerDay),
+                    new (MassFlowUnit.GramPerHour, MassFlowUnits.GramPerHour),
+                    new (MassFlowUnit.GramPerSecond, MassFlowUnits.GramPerSecond),
+                    new (MassFlowUnit.HectogramPerDay, MassFlowUnits.HectogramPerDay),
+                    new (MassFlowUnit.HectogramPerSecond, MassFlowUnits.HectogramPerSecond),
+                    new (MassFlowUnit.KilogramPerDay, MassFlowUnits.KilogramPerDay),
+                    new (MassFlowUnit.KilogramPerHour, MassFlowUnits.KilogramPerHour),
+                    new (MassFlowUnit.KilogramPerMinute, MassFlowUnits.KilogramPerMinute),
+                    new (MassFlowUnit.KilogramPerSecond, MassFlowUnits.KilogramPerSecond),
+                    new (MassFlowUnit.MegagramPerDay, MassFlowUnits.MegagramPerDay),
+                    new (MassFlowUnit.MegapoundPerDay, MassFlowUnits.MegapoundPerDay),
+                    new (MassFlowUnit.MegapoundPerHour, MassFlowUnits.MegapoundPerHour),
+                    new (MassFlowUnit.MegapoundPerMinute, MassFlowUnits.MegapoundPerMinute),
+                    new (MassFlowUnit.MegapoundPerSecond, MassFlowUnits.MegapoundPerSecond),
+                    new (MassFlowUnit.MicrogramPerDay, MassFlowUnits.MicrogramPerDay),
+                    new (MassFlowUnit.MicrogramPerSecond, MassFlowUnits.MicrogramPerSecond),
+                    new (MassFlowUnit.MilligramPerDay, MassFlowUnits.MilligramPerDay),
+                    new (MassFlowUnit.MilligramPerSecond, MassFlowUnits.MilligramPerSecond),
+                    new (MassFlowUnit.NanogramPerDay, MassFlowUnits.NanogramPerDay),
+                    new (MassFlowUnit.NanogramPerSecond, MassFlowUnits.NanogramPerSecond),
+                    new (MassFlowUnit.PoundPerDay, MassFlowUnits.PoundPerDay),
+                    new (MassFlowUnit.PoundPerHour, MassFlowUnits.PoundPerHour),
+                    new (MassFlowUnit.PoundPerMinute, MassFlowUnits.PoundPerMinute),
+                    new (MassFlowUnit.PoundPerSecond, MassFlowUnits.PoundPerSecond),
+                    new (MassFlowUnit.ShortTonPerHour, MassFlowUnits.ShortTonPerHour),
+                    new (MassFlowUnit.TonnePerDay, MassFlowUnits.TonnePerDay),
+                    new (MassFlowUnit.TonnePerHour, MassFlowUnits.TonnePerHour),
+                };
             }
         }
 

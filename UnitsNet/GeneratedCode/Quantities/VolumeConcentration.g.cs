@@ -121,26 +121,29 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{VolumeConcentrationUnit}"/> representing the default unit mappings for VolumeConcentration.</returns>
             public static IEnumerable<UnitDefinition<VolumeConcentrationUnit>> GetDefaultMappings()
             {
-                yield return new (VolumeConcentrationUnit.CentiliterPerLiter, VolumeConcentrationUnits.CentiliterPerLiter);
-                yield return new (VolumeConcentrationUnit.CentiliterPerMilliliter, VolumeConcentrationUnits.CentiliterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.DeciliterPerLiter, VolumeConcentrationUnits.DeciliterPerLiter);
-                yield return new (VolumeConcentrationUnit.DeciliterPerMilliliter, VolumeConcentrationUnits.DeciliterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.DecimalFraction, VolumeConcentrationUnits.DecimalFraction);
-                yield return new (VolumeConcentrationUnit.LiterPerLiter, VolumeConcentrationUnits.LiterPerLiter);
-                yield return new (VolumeConcentrationUnit.LiterPerMilliliter, VolumeConcentrationUnits.LiterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.MicroliterPerLiter, VolumeConcentrationUnits.MicroliterPerLiter);
-                yield return new (VolumeConcentrationUnit.MicroliterPerMilliliter, VolumeConcentrationUnits.MicroliterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.MilliliterPerLiter, VolumeConcentrationUnits.MilliliterPerLiter);
-                yield return new (VolumeConcentrationUnit.MilliliterPerMilliliter, VolumeConcentrationUnits.MilliliterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.NanoliterPerLiter, VolumeConcentrationUnits.NanoliterPerLiter);
-                yield return new (VolumeConcentrationUnit.NanoliterPerMilliliter, VolumeConcentrationUnits.NanoliterPerMilliliter);
-                yield return new (VolumeConcentrationUnit.PartPerBillion, VolumeConcentrationUnits.PartPerBillion);
-                yield return new (VolumeConcentrationUnit.PartPerMillion, VolumeConcentrationUnits.PartPerMillion);
-                yield return new (VolumeConcentrationUnit.PartPerThousand, VolumeConcentrationUnits.PartPerThousand);
-                yield return new (VolumeConcentrationUnit.PartPerTrillion, VolumeConcentrationUnits.PartPerTrillion);
-                yield return new (VolumeConcentrationUnit.Percent, VolumeConcentrationUnits.Percent);
-                yield return new (VolumeConcentrationUnit.PicoliterPerLiter, VolumeConcentrationUnits.PicoliterPerLiter);
-                yield return new (VolumeConcentrationUnit.PicoliterPerMilliliter, VolumeConcentrationUnits.PicoliterPerMilliliter);
+                return new UnitDefinition<VolumeConcentrationUnit>[]
+                {
+                    new (VolumeConcentrationUnit.CentiliterPerLiter, VolumeConcentrationUnits.CentiliterPerLiter),
+                    new (VolumeConcentrationUnit.CentiliterPerMilliliter, VolumeConcentrationUnits.CentiliterPerMilliliter),
+                    new (VolumeConcentrationUnit.DeciliterPerLiter, VolumeConcentrationUnits.DeciliterPerLiter),
+                    new (VolumeConcentrationUnit.DeciliterPerMilliliter, VolumeConcentrationUnits.DeciliterPerMilliliter),
+                    new (VolumeConcentrationUnit.DecimalFraction, VolumeConcentrationUnits.DecimalFraction),
+                    new (VolumeConcentrationUnit.LiterPerLiter, VolumeConcentrationUnits.LiterPerLiter),
+                    new (VolumeConcentrationUnit.LiterPerMilliliter, VolumeConcentrationUnits.LiterPerMilliliter),
+                    new (VolumeConcentrationUnit.MicroliterPerLiter, VolumeConcentrationUnits.MicroliterPerLiter),
+                    new (VolumeConcentrationUnit.MicroliterPerMilliliter, VolumeConcentrationUnits.MicroliterPerMilliliter),
+                    new (VolumeConcentrationUnit.MilliliterPerLiter, VolumeConcentrationUnits.MilliliterPerLiter),
+                    new (VolumeConcentrationUnit.MilliliterPerMilliliter, VolumeConcentrationUnits.MilliliterPerMilliliter),
+                    new (VolumeConcentrationUnit.NanoliterPerLiter, VolumeConcentrationUnits.NanoliterPerLiter),
+                    new (VolumeConcentrationUnit.NanoliterPerMilliliter, VolumeConcentrationUnits.NanoliterPerMilliliter),
+                    new (VolumeConcentrationUnit.PartPerBillion, VolumeConcentrationUnits.PartPerBillion),
+                    new (VolumeConcentrationUnit.PartPerMillion, VolumeConcentrationUnits.PartPerMillion),
+                    new (VolumeConcentrationUnit.PartPerThousand, VolumeConcentrationUnits.PartPerThousand),
+                    new (VolumeConcentrationUnit.PartPerTrillion, VolumeConcentrationUnits.PartPerTrillion),
+                    new (VolumeConcentrationUnit.Percent, VolumeConcentrationUnits.Percent),
+                    new (VolumeConcentrationUnit.PicoliterPerLiter, VolumeConcentrationUnits.PicoliterPerLiter),
+                    new (VolumeConcentrationUnit.PicoliterPerMilliliter, VolumeConcentrationUnits.PicoliterPerMilliliter),
+                };
             }
         }
 

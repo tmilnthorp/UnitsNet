@@ -123,15 +123,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{KinematicViscosityUnit}"/> representing the default unit mappings for KinematicViscosity.</returns>
             public static IEnumerable<UnitDefinition<KinematicViscosityUnit>> GetDefaultMappings()
             {
-                yield return new (KinematicViscosityUnit.Centistokes, KinematicViscosityUnits.Centistokes);
-                yield return new (KinematicViscosityUnit.Decistokes, KinematicViscosityUnits.Decistokes);
-                yield return new (KinematicViscosityUnit.Kilostokes, KinematicViscosityUnits.Kilostokes);
-                yield return new (KinematicViscosityUnit.Microstokes, KinematicViscosityUnits.Microstokes);
-                yield return new (KinematicViscosityUnit.Millistokes, KinematicViscosityUnits.Millistokes);
-                yield return new (KinematicViscosityUnit.Nanostokes, KinematicViscosityUnits.Nanostokes);
-                yield return new (KinematicViscosityUnit.SquareFootPerSecond, KinematicViscosityUnits.SquareFootPerSecond);
-                yield return new (KinematicViscosityUnit.SquareMeterPerSecond, KinematicViscosityUnits.SquareMeterPerSecond);
-                yield return new (KinematicViscosityUnit.Stokes, KinematicViscosityUnits.Stokes);
+                return new UnitDefinition<KinematicViscosityUnit>[]
+                {
+                    new (KinematicViscosityUnit.Centistokes, KinematicViscosityUnits.Centistokes),
+                    new (KinematicViscosityUnit.Decistokes, KinematicViscosityUnits.Decistokes),
+                    new (KinematicViscosityUnit.Kilostokes, KinematicViscosityUnits.Kilostokes),
+                    new (KinematicViscosityUnit.Microstokes, KinematicViscosityUnits.Microstokes),
+                    new (KinematicViscosityUnit.Millistokes, KinematicViscosityUnits.Millistokes),
+                    new (KinematicViscosityUnit.Nanostokes, KinematicViscosityUnits.Nanostokes),
+                    new (KinematicViscosityUnit.SquareFootPerSecond, KinematicViscosityUnits.SquareFootPerSecond),
+                    new (KinematicViscosityUnit.SquareMeterPerSecond, KinematicViscosityUnits.SquareMeterPerSecond),
+                    new (KinematicViscosityUnit.Stokes, KinematicViscosityUnits.Stokes),
+                };
             }
         }
 

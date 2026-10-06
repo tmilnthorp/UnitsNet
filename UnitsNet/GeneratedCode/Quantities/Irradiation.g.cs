@@ -121,15 +121,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{IrradiationUnit}"/> representing the default unit mappings for Irradiation.</returns>
             public static IEnumerable<UnitDefinition<IrradiationUnit>> GetDefaultMappings()
             {
-                yield return new (IrradiationUnit.BtuPerSquareFoot, IrradiationUnits.BtuPerSquareFoot);
-                yield return new (IrradiationUnit.JoulePerSquareCentimeter, IrradiationUnits.JoulePerSquareCentimeter);
-                yield return new (IrradiationUnit.JoulePerSquareMeter, IrradiationUnits.JoulePerSquareMeter);
-                yield return new (IrradiationUnit.JoulePerSquareMillimeter, IrradiationUnits.JoulePerSquareMillimeter);
-                yield return new (IrradiationUnit.KilobtuPerSquareFoot, IrradiationUnits.KilobtuPerSquareFoot);
-                yield return new (IrradiationUnit.KilojoulePerSquareMeter, IrradiationUnits.KilojoulePerSquareMeter);
-                yield return new (IrradiationUnit.KilowattHourPerSquareMeter, IrradiationUnits.KilowattHourPerSquareMeter);
-                yield return new (IrradiationUnit.MillijoulePerSquareCentimeter, IrradiationUnits.MillijoulePerSquareCentimeter);
-                yield return new (IrradiationUnit.WattHourPerSquareMeter, IrradiationUnits.WattHourPerSquareMeter);
+                return new UnitDefinition<IrradiationUnit>[]
+                {
+                    new (IrradiationUnit.BtuPerSquareFoot, IrradiationUnits.BtuPerSquareFoot),
+                    new (IrradiationUnit.JoulePerSquareCentimeter, IrradiationUnits.JoulePerSquareCentimeter),
+                    new (IrradiationUnit.JoulePerSquareMeter, IrradiationUnits.JoulePerSquareMeter),
+                    new (IrradiationUnit.JoulePerSquareMillimeter, IrradiationUnits.JoulePerSquareMillimeter),
+                    new (IrradiationUnit.KilobtuPerSquareFoot, IrradiationUnits.KilobtuPerSquareFoot),
+                    new (IrradiationUnit.KilojoulePerSquareMeter, IrradiationUnits.KilojoulePerSquareMeter),
+                    new (IrradiationUnit.KilowattHourPerSquareMeter, IrradiationUnits.KilowattHourPerSquareMeter),
+                    new (IrradiationUnit.MillijoulePerSquareCentimeter, IrradiationUnits.MillijoulePerSquareCentimeter),
+                    new (IrradiationUnit.WattHourPerSquareMeter, IrradiationUnits.WattHourPerSquareMeter),
+                };
             }
         }
 

@@ -117,17 +117,20 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{JerkUnit}"/> representing the default unit mappings for Jerk.</returns>
             public static IEnumerable<UnitDefinition<JerkUnit>> GetDefaultMappings()
             {
-                yield return new (JerkUnit.CentimeterPerSecondCubed, JerkUnits.CentimeterPerSecondCubed);
-                yield return new (JerkUnit.DecimeterPerSecondCubed, JerkUnits.DecimeterPerSecondCubed);
-                yield return new (JerkUnit.FootPerSecondCubed, JerkUnits.FootPerSecondCubed);
-                yield return new (JerkUnit.InchPerSecondCubed, JerkUnits.InchPerSecondCubed);
-                yield return new (JerkUnit.KilometerPerSecondCubed, JerkUnits.KilometerPerSecondCubed);
-                yield return new (JerkUnit.MeterPerSecondCubed, JerkUnits.MeterPerSecondCubed);
-                yield return new (JerkUnit.MicrometerPerSecondCubed, JerkUnits.MicrometerPerSecondCubed);
-                yield return new (JerkUnit.MillimeterPerSecondCubed, JerkUnits.MillimeterPerSecondCubed);
-                yield return new (JerkUnit.MillistandardGravitiesPerSecond, JerkUnits.MillistandardGravitiesPerSecond);
-                yield return new (JerkUnit.NanometerPerSecondCubed, JerkUnits.NanometerPerSecondCubed);
-                yield return new (JerkUnit.StandardGravitiesPerSecond, JerkUnits.StandardGravitiesPerSecond);
+                return new UnitDefinition<JerkUnit>[]
+                {
+                    new (JerkUnit.CentimeterPerSecondCubed, JerkUnits.CentimeterPerSecondCubed),
+                    new (JerkUnit.DecimeterPerSecondCubed, JerkUnits.DecimeterPerSecondCubed),
+                    new (JerkUnit.FootPerSecondCubed, JerkUnits.FootPerSecondCubed),
+                    new (JerkUnit.InchPerSecondCubed, JerkUnits.InchPerSecondCubed),
+                    new (JerkUnit.KilometerPerSecondCubed, JerkUnits.KilometerPerSecondCubed),
+                    new (JerkUnit.MeterPerSecondCubed, JerkUnits.MeterPerSecondCubed),
+                    new (JerkUnit.MicrometerPerSecondCubed, JerkUnits.MicrometerPerSecondCubed),
+                    new (JerkUnit.MillimeterPerSecondCubed, JerkUnits.MillimeterPerSecondCubed),
+                    new (JerkUnit.MillistandardGravitiesPerSecond, JerkUnits.MillistandardGravitiesPerSecond),
+                    new (JerkUnit.NanometerPerSecondCubed, JerkUnits.NanometerPerSecondCubed),
+                    new (JerkUnit.StandardGravitiesPerSecond, JerkUnits.StandardGravitiesPerSecond),
+                };
             }
         }
 

@@ -117,12 +117,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{CoefficientOfThermalExpansionUnit}"/> representing the default unit mappings for CoefficientOfThermalExpansion.</returns>
             public static IEnumerable<UnitDefinition<CoefficientOfThermalExpansionUnit>> GetDefaultMappings()
             {
-                yield return new (CoefficientOfThermalExpansionUnit.PerDegreeCelsius, CoefficientOfThermalExpansionUnits.PerDegreeCelsius);
-                yield return new (CoefficientOfThermalExpansionUnit.PerDegreeFahrenheit, CoefficientOfThermalExpansionUnits.PerDegreeFahrenheit);
-                yield return new (CoefficientOfThermalExpansionUnit.PerKelvin, CoefficientOfThermalExpansionUnits.PerKelvin);
-                yield return new (CoefficientOfThermalExpansionUnit.PpmPerDegreeCelsius, CoefficientOfThermalExpansionUnits.PpmPerDegreeCelsius);
-                yield return new (CoefficientOfThermalExpansionUnit.PpmPerDegreeFahrenheit, CoefficientOfThermalExpansionUnits.PpmPerDegreeFahrenheit);
-                yield return new (CoefficientOfThermalExpansionUnit.PpmPerKelvin, CoefficientOfThermalExpansionUnits.PpmPerKelvin);
+                return new UnitDefinition<CoefficientOfThermalExpansionUnit>[]
+                {
+                    new (CoefficientOfThermalExpansionUnit.PerDegreeCelsius, CoefficientOfThermalExpansionUnits.PerDegreeCelsius),
+                    new (CoefficientOfThermalExpansionUnit.PerDegreeFahrenheit, CoefficientOfThermalExpansionUnits.PerDegreeFahrenheit),
+                    new (CoefficientOfThermalExpansionUnit.PerKelvin, CoefficientOfThermalExpansionUnits.PerKelvin),
+                    new (CoefficientOfThermalExpansionUnit.PpmPerDegreeCelsius, CoefficientOfThermalExpansionUnits.PpmPerDegreeCelsius),
+                    new (CoefficientOfThermalExpansionUnit.PpmPerDegreeFahrenheit, CoefficientOfThermalExpansionUnits.PpmPerDegreeFahrenheit),
+                    new (CoefficientOfThermalExpansionUnit.PpmPerKelvin, CoefficientOfThermalExpansionUnits.PpmPerKelvin),
+                };
             }
         }
 

@@ -119,20 +119,23 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{LuminosityUnit}"/> representing the default unit mappings for Luminosity.</returns>
             public static IEnumerable<UnitDefinition<LuminosityUnit>> GetDefaultMappings()
             {
-                yield return new (LuminosityUnit.Decawatt, LuminosityUnits.Decawatt);
-                yield return new (LuminosityUnit.Deciwatt, LuminosityUnits.Deciwatt);
-                yield return new (LuminosityUnit.Femtowatt, LuminosityUnits.Femtowatt);
-                yield return new (LuminosityUnit.Gigawatt, LuminosityUnits.Gigawatt);
-                yield return new (LuminosityUnit.Kilowatt, LuminosityUnits.Kilowatt);
-                yield return new (LuminosityUnit.Megawatt, LuminosityUnits.Megawatt);
-                yield return new (LuminosityUnit.Microwatt, LuminosityUnits.Microwatt);
-                yield return new (LuminosityUnit.Milliwatt, LuminosityUnits.Milliwatt);
-                yield return new (LuminosityUnit.Nanowatt, LuminosityUnits.Nanowatt);
-                yield return new (LuminosityUnit.Petawatt, LuminosityUnits.Petawatt);
-                yield return new (LuminosityUnit.Picowatt, LuminosityUnits.Picowatt);
-                yield return new (LuminosityUnit.SolarLuminosity, LuminosityUnits.SolarLuminosity);
-                yield return new (LuminosityUnit.Terawatt, LuminosityUnits.Terawatt);
-                yield return new (LuminosityUnit.Watt, LuminosityUnits.Watt);
+                return new UnitDefinition<LuminosityUnit>[]
+                {
+                    new (LuminosityUnit.Decawatt, LuminosityUnits.Decawatt),
+                    new (LuminosityUnit.Deciwatt, LuminosityUnits.Deciwatt),
+                    new (LuminosityUnit.Femtowatt, LuminosityUnits.Femtowatt),
+                    new (LuminosityUnit.Gigawatt, LuminosityUnits.Gigawatt),
+                    new (LuminosityUnit.Kilowatt, LuminosityUnits.Kilowatt),
+                    new (LuminosityUnit.Megawatt, LuminosityUnits.Megawatt),
+                    new (LuminosityUnit.Microwatt, LuminosityUnits.Microwatt),
+                    new (LuminosityUnit.Milliwatt, LuminosityUnits.Milliwatt),
+                    new (LuminosityUnit.Nanowatt, LuminosityUnits.Nanowatt),
+                    new (LuminosityUnit.Petawatt, LuminosityUnits.Petawatt),
+                    new (LuminosityUnit.Picowatt, LuminosityUnits.Picowatt),
+                    new (LuminosityUnit.SolarLuminosity, LuminosityUnits.SolarLuminosity),
+                    new (LuminosityUnit.Terawatt, LuminosityUnits.Terawatt),
+                    new (LuminosityUnit.Watt, LuminosityUnits.Watt),
+                };
             }
         }
 

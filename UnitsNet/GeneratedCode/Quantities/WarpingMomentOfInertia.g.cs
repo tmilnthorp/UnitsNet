@@ -116,12 +116,15 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{WarpingMomentOfInertiaUnit}"/> representing the default unit mappings for WarpingMomentOfInertia.</returns>
             public static IEnumerable<UnitDefinition<WarpingMomentOfInertiaUnit>> GetDefaultMappings()
             {
-                yield return new (WarpingMomentOfInertiaUnit.CentimeterToTheSixth, WarpingMomentOfInertiaUnits.CentimeterToTheSixth);
-                yield return new (WarpingMomentOfInertiaUnit.DecimeterToTheSixth, WarpingMomentOfInertiaUnits.DecimeterToTheSixth);
-                yield return new (WarpingMomentOfInertiaUnit.FootToTheSixth, WarpingMomentOfInertiaUnits.FootToTheSixth);
-                yield return new (WarpingMomentOfInertiaUnit.InchToTheSixth, WarpingMomentOfInertiaUnits.InchToTheSixth);
-                yield return new (WarpingMomentOfInertiaUnit.MeterToTheSixth, WarpingMomentOfInertiaUnits.MeterToTheSixth);
-                yield return new (WarpingMomentOfInertiaUnit.MillimeterToTheSixth, WarpingMomentOfInertiaUnits.MillimeterToTheSixth);
+                return new UnitDefinition<WarpingMomentOfInertiaUnit>[]
+                {
+                    new (WarpingMomentOfInertiaUnit.CentimeterToTheSixth, WarpingMomentOfInertiaUnits.CentimeterToTheSixth),
+                    new (WarpingMomentOfInertiaUnit.DecimeterToTheSixth, WarpingMomentOfInertiaUnits.DecimeterToTheSixth),
+                    new (WarpingMomentOfInertiaUnit.FootToTheSixth, WarpingMomentOfInertiaUnits.FootToTheSixth),
+                    new (WarpingMomentOfInertiaUnit.InchToTheSixth, WarpingMomentOfInertiaUnits.InchToTheSixth),
+                    new (WarpingMomentOfInertiaUnit.MeterToTheSixth, WarpingMomentOfInertiaUnits.MeterToTheSixth),
+                    new (WarpingMomentOfInertiaUnit.MillimeterToTheSixth, WarpingMomentOfInertiaUnits.MillimeterToTheSixth),
+                };
             }
         }
 

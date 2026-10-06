@@ -115,16 +115,19 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{TemperatureUnit}"/> representing the default unit mappings for Temperature.</returns>
             public static IEnumerable<UnitDefinition<TemperatureUnit>> GetDefaultMappings()
             {
-                yield return new (TemperatureUnit.DegreeCelsius, TemperatureUnits.DegreeCelsius);
-                yield return new (TemperatureUnit.DegreeDelisle, TemperatureUnits.DegreeDelisle);
-                yield return new (TemperatureUnit.DegreeFahrenheit, TemperatureUnits.DegreeFahrenheit);
-                yield return new (TemperatureUnit.DegreeNewton, TemperatureUnits.DegreeNewton);
-                yield return new (TemperatureUnit.DegreeRankine, TemperatureUnits.DegreeRankine);
-                yield return new (TemperatureUnit.DegreeReaumur, TemperatureUnits.DegreeReaumur);
-                yield return new (TemperatureUnit.DegreeRoemer, TemperatureUnits.DegreeRoemer);
-                yield return new (TemperatureUnit.Kelvin, TemperatureUnits.Kelvin);
-                yield return new (TemperatureUnit.MillidegreeCelsius, TemperatureUnits.MillidegreeCelsius);
-                yield return new (TemperatureUnit.SolarTemperature, TemperatureUnits.SolarTemperature);
+                return new UnitDefinition<TemperatureUnit>[]
+                {
+                    new (TemperatureUnit.DegreeCelsius, TemperatureUnits.DegreeCelsius),
+                    new (TemperatureUnit.DegreeDelisle, TemperatureUnits.DegreeDelisle),
+                    new (TemperatureUnit.DegreeFahrenheit, TemperatureUnits.DegreeFahrenheit),
+                    new (TemperatureUnit.DegreeNewton, TemperatureUnits.DegreeNewton),
+                    new (TemperatureUnit.DegreeRankine, TemperatureUnits.DegreeRankine),
+                    new (TemperatureUnit.DegreeReaumur, TemperatureUnits.DegreeReaumur),
+                    new (TemperatureUnit.DegreeRoemer, TemperatureUnits.DegreeRoemer),
+                    new (TemperatureUnit.Kelvin, TemperatureUnits.Kelvin),
+                    new (TemperatureUnit.MillidegreeCelsius, TemperatureUnits.MillidegreeCelsius),
+                    new (TemperatureUnit.SolarTemperature, TemperatureUnits.SolarTemperature),
+                };
             }
         }
 

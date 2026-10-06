@@ -120,14 +120,17 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricResistanceUnit}"/> representing the default unit mappings for ElectricResistance.</returns>
             public static IEnumerable<UnitDefinition<ElectricResistanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricResistanceUnit.Gigaohm, ElectricResistanceUnits.Gigaohm);
-                yield return new (ElectricResistanceUnit.Kiloohm, ElectricResistanceUnits.Kiloohm);
-                yield return new (ElectricResistanceUnit.Megaohm, ElectricResistanceUnits.Megaohm);
-                yield return new (ElectricResistanceUnit.Microohm, ElectricResistanceUnits.Microohm);
-                yield return new (ElectricResistanceUnit.Milliohm, ElectricResistanceUnits.Milliohm);
-                yield return new (ElectricResistanceUnit.Nanoohm, ElectricResistanceUnits.Nanoohm);
-                yield return new (ElectricResistanceUnit.Ohm, ElectricResistanceUnits.Ohm);
-                yield return new (ElectricResistanceUnit.Teraohm, ElectricResistanceUnits.Teraohm);
+                return new UnitDefinition<ElectricResistanceUnit>[]
+                {
+                    new (ElectricResistanceUnit.Gigaohm, ElectricResistanceUnits.Gigaohm),
+                    new (ElectricResistanceUnit.Kiloohm, ElectricResistanceUnits.Kiloohm),
+                    new (ElectricResistanceUnit.Megaohm, ElectricResistanceUnits.Megaohm),
+                    new (ElectricResistanceUnit.Microohm, ElectricResistanceUnits.Microohm),
+                    new (ElectricResistanceUnit.Milliohm, ElectricResistanceUnits.Milliohm),
+                    new (ElectricResistanceUnit.Nanoohm, ElectricResistanceUnits.Nanoohm),
+                    new (ElectricResistanceUnit.Ohm, ElectricResistanceUnits.Ohm),
+                    new (ElectricResistanceUnit.Teraohm, ElectricResistanceUnits.Teraohm),
+                };
             }
         }
 

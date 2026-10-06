@@ -119,18 +119,21 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{EnergyDensityUnit}"/> representing the default unit mappings for EnergyDensity.</returns>
             public static IEnumerable<UnitDefinition<EnergyDensityUnit>> GetDefaultMappings()
             {
-                yield return new (EnergyDensityUnit.GigajoulePerCubicMeter, EnergyDensityUnits.GigajoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.GigawattHourPerCubicMeter, EnergyDensityUnits.GigawattHourPerCubicMeter);
-                yield return new (EnergyDensityUnit.JoulePerCubicMeter, EnergyDensityUnits.JoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.KilojoulePerCubicMeter, EnergyDensityUnits.KilojoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.KilowattHourPerCubicMeter, EnergyDensityUnits.KilowattHourPerCubicMeter);
-                yield return new (EnergyDensityUnit.MegajoulePerCubicMeter, EnergyDensityUnits.MegajoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.MegawattHourPerCubicMeter, EnergyDensityUnits.MegawattHourPerCubicMeter);
-                yield return new (EnergyDensityUnit.PetajoulePerCubicMeter, EnergyDensityUnits.PetajoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.PetawattHourPerCubicMeter, EnergyDensityUnits.PetawattHourPerCubicMeter);
-                yield return new (EnergyDensityUnit.TerajoulePerCubicMeter, EnergyDensityUnits.TerajoulePerCubicMeter);
-                yield return new (EnergyDensityUnit.TerawattHourPerCubicMeter, EnergyDensityUnits.TerawattHourPerCubicMeter);
-                yield return new (EnergyDensityUnit.WattHourPerCubicMeter, EnergyDensityUnits.WattHourPerCubicMeter);
+                return new UnitDefinition<EnergyDensityUnit>[]
+                {
+                    new (EnergyDensityUnit.GigajoulePerCubicMeter, EnergyDensityUnits.GigajoulePerCubicMeter),
+                    new (EnergyDensityUnit.GigawattHourPerCubicMeter, EnergyDensityUnits.GigawattHourPerCubicMeter),
+                    new (EnergyDensityUnit.JoulePerCubicMeter, EnergyDensityUnits.JoulePerCubicMeter),
+                    new (EnergyDensityUnit.KilojoulePerCubicMeter, EnergyDensityUnits.KilojoulePerCubicMeter),
+                    new (EnergyDensityUnit.KilowattHourPerCubicMeter, EnergyDensityUnits.KilowattHourPerCubicMeter),
+                    new (EnergyDensityUnit.MegajoulePerCubicMeter, EnergyDensityUnits.MegajoulePerCubicMeter),
+                    new (EnergyDensityUnit.MegawattHourPerCubicMeter, EnergyDensityUnits.MegawattHourPerCubicMeter),
+                    new (EnergyDensityUnit.PetajoulePerCubicMeter, EnergyDensityUnits.PetajoulePerCubicMeter),
+                    new (EnergyDensityUnit.PetawattHourPerCubicMeter, EnergyDensityUnits.PetawattHourPerCubicMeter),
+                    new (EnergyDensityUnit.TerajoulePerCubicMeter, EnergyDensityUnits.TerajoulePerCubicMeter),
+                    new (EnergyDensityUnit.TerawattHourPerCubicMeter, EnergyDensityUnits.TerawattHourPerCubicMeter),
+                    new (EnergyDensityUnit.WattHourPerCubicMeter, EnergyDensityUnits.WattHourPerCubicMeter),
+                };
             }
         }
 

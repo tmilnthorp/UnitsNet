@@ -116,15 +116,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{StandardVolumeFlowUnit}"/> representing the default unit mappings for StandardVolumeFlow.</returns>
             public static IEnumerable<UnitDefinition<StandardVolumeFlowUnit>> GetDefaultMappings()
             {
-                yield return new (StandardVolumeFlowUnit.StandardCubicCentimeterPerMinute, StandardVolumeFlowUnits.StandardCubicCentimeterPerMinute);
-                yield return new (StandardVolumeFlowUnit.StandardCubicFootPerHour, StandardVolumeFlowUnits.StandardCubicFootPerHour);
-                yield return new (StandardVolumeFlowUnit.StandardCubicFootPerMinute, StandardVolumeFlowUnits.StandardCubicFootPerMinute);
-                yield return new (StandardVolumeFlowUnit.StandardCubicFootPerSecond, StandardVolumeFlowUnits.StandardCubicFootPerSecond);
-                yield return new (StandardVolumeFlowUnit.StandardCubicMeterPerDay, StandardVolumeFlowUnits.StandardCubicMeterPerDay);
-                yield return new (StandardVolumeFlowUnit.StandardCubicMeterPerHour, StandardVolumeFlowUnits.StandardCubicMeterPerHour);
-                yield return new (StandardVolumeFlowUnit.StandardCubicMeterPerMinute, StandardVolumeFlowUnits.StandardCubicMeterPerMinute);
-                yield return new (StandardVolumeFlowUnit.StandardCubicMeterPerSecond, StandardVolumeFlowUnits.StandardCubicMeterPerSecond);
-                yield return new (StandardVolumeFlowUnit.StandardLiterPerMinute, StandardVolumeFlowUnits.StandardLiterPerMinute);
+                return new UnitDefinition<StandardVolumeFlowUnit>[]
+                {
+                    new (StandardVolumeFlowUnit.StandardCubicCentimeterPerMinute, StandardVolumeFlowUnits.StandardCubicCentimeterPerMinute),
+                    new (StandardVolumeFlowUnit.StandardCubicFootPerHour, StandardVolumeFlowUnits.StandardCubicFootPerHour),
+                    new (StandardVolumeFlowUnit.StandardCubicFootPerMinute, StandardVolumeFlowUnits.StandardCubicFootPerMinute),
+                    new (StandardVolumeFlowUnit.StandardCubicFootPerSecond, StandardVolumeFlowUnits.StandardCubicFootPerSecond),
+                    new (StandardVolumeFlowUnit.StandardCubicMeterPerDay, StandardVolumeFlowUnits.StandardCubicMeterPerDay),
+                    new (StandardVolumeFlowUnit.StandardCubicMeterPerHour, StandardVolumeFlowUnits.StandardCubicMeterPerHour),
+                    new (StandardVolumeFlowUnit.StandardCubicMeterPerMinute, StandardVolumeFlowUnits.StandardCubicMeterPerMinute),
+                    new (StandardVolumeFlowUnit.StandardCubicMeterPerSecond, StandardVolumeFlowUnits.StandardCubicMeterPerSecond),
+                    new (StandardVolumeFlowUnit.StandardLiterPerMinute, StandardVolumeFlowUnits.StandardLiterPerMinute),
+                };
             }
         }
 

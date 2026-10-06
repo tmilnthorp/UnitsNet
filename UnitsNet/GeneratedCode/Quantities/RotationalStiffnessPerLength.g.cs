@@ -117,11 +117,14 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{RotationalStiffnessPerLengthUnit}"/> representing the default unit mappings for RotationalStiffnessPerLength.</returns>
             public static IEnumerable<UnitDefinition<RotationalStiffnessPerLengthUnit>> GetDefaultMappings()
             {
-                yield return new (RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.KilonewtonMeterPerRadianPerMeter);
-                yield return new (RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot, RotationalStiffnessPerLengthUnits.KilopoundForceFootPerDegreesPerFoot);
-                yield return new (RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.MeganewtonMeterPerRadianPerMeter);
-                yield return new (RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.NewtonMeterPerRadianPerMeter);
-                yield return new (RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot, RotationalStiffnessPerLengthUnits.PoundForceFootPerDegreesPerFoot);
+                return new UnitDefinition<RotationalStiffnessPerLengthUnit>[]
+                {
+                    new (RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.KilonewtonMeterPerRadianPerMeter),
+                    new (RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot, RotationalStiffnessPerLengthUnits.KilopoundForceFootPerDegreesPerFoot),
+                    new (RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.MeganewtonMeterPerRadianPerMeter),
+                    new (RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter, RotationalStiffnessPerLengthUnits.NewtonMeterPerRadianPerMeter),
+                    new (RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot, RotationalStiffnessPerLengthUnits.PoundForceFootPerDegreesPerFoot),
+                };
             }
         }
 

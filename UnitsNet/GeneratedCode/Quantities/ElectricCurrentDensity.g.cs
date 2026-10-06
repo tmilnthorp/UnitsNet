@@ -120,9 +120,12 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricCurrentDensityUnit}"/> representing the default unit mappings for ElectricCurrentDensity.</returns>
             public static IEnumerable<UnitDefinition<ElectricCurrentDensityUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricCurrentDensityUnit.AmperePerSquareFoot, ElectricCurrentDensityUnits.AmperePerSquareFoot);
-                yield return new (ElectricCurrentDensityUnit.AmperePerSquareInch, ElectricCurrentDensityUnits.AmperePerSquareInch);
-                yield return new (ElectricCurrentDensityUnit.AmperePerSquareMeter, ElectricCurrentDensityUnits.AmperePerSquareMeter);
+                return new UnitDefinition<ElectricCurrentDensityUnit>[]
+                {
+                    new (ElectricCurrentDensityUnit.AmperePerSquareFoot, ElectricCurrentDensityUnits.AmperePerSquareFoot),
+                    new (ElectricCurrentDensityUnit.AmperePerSquareInch, ElectricCurrentDensityUnits.AmperePerSquareInch),
+                    new (ElectricCurrentDensityUnit.AmperePerSquareMeter, ElectricCurrentDensityUnits.AmperePerSquareMeter),
+                };
             }
         }
 

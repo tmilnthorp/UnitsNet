@@ -124,23 +124,26 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpecificWeightUnit}"/> representing the default unit mappings for SpecificWeight.</returns>
             public static IEnumerable<UnitDefinition<SpecificWeightUnit>> GetDefaultMappings()
             {
-                yield return new (SpecificWeightUnit.KilogramForcePerCubicCentimeter, SpecificWeightUnits.KilogramForcePerCubicCentimeter);
-                yield return new (SpecificWeightUnit.KilogramForcePerCubicMeter, SpecificWeightUnits.KilogramForcePerCubicMeter);
-                yield return new (SpecificWeightUnit.KilogramForcePerCubicMillimeter, SpecificWeightUnits.KilogramForcePerCubicMillimeter);
-                yield return new (SpecificWeightUnit.KilonewtonPerCubicCentimeter, SpecificWeightUnits.KilonewtonPerCubicCentimeter);
-                yield return new (SpecificWeightUnit.KilonewtonPerCubicMeter, SpecificWeightUnits.KilonewtonPerCubicMeter);
-                yield return new (SpecificWeightUnit.KilonewtonPerCubicMillimeter, SpecificWeightUnits.KilonewtonPerCubicMillimeter);
-                yield return new (SpecificWeightUnit.KilopoundForcePerCubicFoot, SpecificWeightUnits.KilopoundForcePerCubicFoot);
-                yield return new (SpecificWeightUnit.KilopoundForcePerCubicInch, SpecificWeightUnits.KilopoundForcePerCubicInch);
-                yield return new (SpecificWeightUnit.MeganewtonPerCubicMeter, SpecificWeightUnits.MeganewtonPerCubicMeter);
-                yield return new (SpecificWeightUnit.NewtonPerCubicCentimeter, SpecificWeightUnits.NewtonPerCubicCentimeter);
-                yield return new (SpecificWeightUnit.NewtonPerCubicMeter, SpecificWeightUnits.NewtonPerCubicMeter);
-                yield return new (SpecificWeightUnit.NewtonPerCubicMillimeter, SpecificWeightUnits.NewtonPerCubicMillimeter);
-                yield return new (SpecificWeightUnit.PoundForcePerCubicFoot, SpecificWeightUnits.PoundForcePerCubicFoot);
-                yield return new (SpecificWeightUnit.PoundForcePerCubicInch, SpecificWeightUnits.PoundForcePerCubicInch);
-                yield return new (SpecificWeightUnit.TonneForcePerCubicCentimeter, SpecificWeightUnits.TonneForcePerCubicCentimeter);
-                yield return new (SpecificWeightUnit.TonneForcePerCubicMeter, SpecificWeightUnits.TonneForcePerCubicMeter);
-                yield return new (SpecificWeightUnit.TonneForcePerCubicMillimeter, SpecificWeightUnits.TonneForcePerCubicMillimeter);
+                return new UnitDefinition<SpecificWeightUnit>[]
+                {
+                    new (SpecificWeightUnit.KilogramForcePerCubicCentimeter, SpecificWeightUnits.KilogramForcePerCubicCentimeter),
+                    new (SpecificWeightUnit.KilogramForcePerCubicMeter, SpecificWeightUnits.KilogramForcePerCubicMeter),
+                    new (SpecificWeightUnit.KilogramForcePerCubicMillimeter, SpecificWeightUnits.KilogramForcePerCubicMillimeter),
+                    new (SpecificWeightUnit.KilonewtonPerCubicCentimeter, SpecificWeightUnits.KilonewtonPerCubicCentimeter),
+                    new (SpecificWeightUnit.KilonewtonPerCubicMeter, SpecificWeightUnits.KilonewtonPerCubicMeter),
+                    new (SpecificWeightUnit.KilonewtonPerCubicMillimeter, SpecificWeightUnits.KilonewtonPerCubicMillimeter),
+                    new (SpecificWeightUnit.KilopoundForcePerCubicFoot, SpecificWeightUnits.KilopoundForcePerCubicFoot),
+                    new (SpecificWeightUnit.KilopoundForcePerCubicInch, SpecificWeightUnits.KilopoundForcePerCubicInch),
+                    new (SpecificWeightUnit.MeganewtonPerCubicMeter, SpecificWeightUnits.MeganewtonPerCubicMeter),
+                    new (SpecificWeightUnit.NewtonPerCubicCentimeter, SpecificWeightUnits.NewtonPerCubicCentimeter),
+                    new (SpecificWeightUnit.NewtonPerCubicMeter, SpecificWeightUnits.NewtonPerCubicMeter),
+                    new (SpecificWeightUnit.NewtonPerCubicMillimeter, SpecificWeightUnits.NewtonPerCubicMillimeter),
+                    new (SpecificWeightUnit.PoundForcePerCubicFoot, SpecificWeightUnits.PoundForcePerCubicFoot),
+                    new (SpecificWeightUnit.PoundForcePerCubicInch, SpecificWeightUnits.PoundForcePerCubicInch),
+                    new (SpecificWeightUnit.TonneForcePerCubicCentimeter, SpecificWeightUnits.TonneForcePerCubicCentimeter),
+                    new (SpecificWeightUnit.TonneForcePerCubicMeter, SpecificWeightUnits.TonneForcePerCubicMeter),
+                    new (SpecificWeightUnit.TonneForcePerCubicMillimeter, SpecificWeightUnits.TonneForcePerCubicMillimeter),
+                };
             }
         }
 

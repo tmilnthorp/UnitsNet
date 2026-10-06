@@ -128,17 +128,20 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricChargeUnit}"/> representing the default unit mappings for ElectricCharge.</returns>
             public static IEnumerable<UnitDefinition<ElectricChargeUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricChargeUnit.AmpereHour, ElectricChargeUnits.AmpereHour);
-                yield return new (ElectricChargeUnit.Coulomb, ElectricChargeUnits.Coulomb);
-                yield return new (ElectricChargeUnit.KiloampereHour, ElectricChargeUnits.KiloampereHour);
-                yield return new (ElectricChargeUnit.Kilocoulomb, ElectricChargeUnits.Kilocoulomb);
-                yield return new (ElectricChargeUnit.MegaampereHour, ElectricChargeUnits.MegaampereHour);
-                yield return new (ElectricChargeUnit.Megacoulomb, ElectricChargeUnits.Megacoulomb);
-                yield return new (ElectricChargeUnit.Microcoulomb, ElectricChargeUnits.Microcoulomb);
-                yield return new (ElectricChargeUnit.MilliampereHour, ElectricChargeUnits.MilliampereHour);
-                yield return new (ElectricChargeUnit.Millicoulomb, ElectricChargeUnits.Millicoulomb);
-                yield return new (ElectricChargeUnit.Nanocoulomb, ElectricChargeUnits.Nanocoulomb);
-                yield return new (ElectricChargeUnit.Picocoulomb, ElectricChargeUnits.Picocoulomb);
+                return new UnitDefinition<ElectricChargeUnit>[]
+                {
+                    new (ElectricChargeUnit.AmpereHour, ElectricChargeUnits.AmpereHour),
+                    new (ElectricChargeUnit.Coulomb, ElectricChargeUnits.Coulomb),
+                    new (ElectricChargeUnit.KiloampereHour, ElectricChargeUnits.KiloampereHour),
+                    new (ElectricChargeUnit.Kilocoulomb, ElectricChargeUnits.Kilocoulomb),
+                    new (ElectricChargeUnit.MegaampereHour, ElectricChargeUnits.MegaampereHour),
+                    new (ElectricChargeUnit.Megacoulomb, ElectricChargeUnits.Megacoulomb),
+                    new (ElectricChargeUnit.Microcoulomb, ElectricChargeUnits.Microcoulomb),
+                    new (ElectricChargeUnit.MilliampereHour, ElectricChargeUnits.MilliampereHour),
+                    new (ElectricChargeUnit.Millicoulomb, ElectricChargeUnits.Millicoulomb),
+                    new (ElectricChargeUnit.Nanocoulomb, ElectricChargeUnits.Nanocoulomb),
+                    new (ElectricChargeUnit.Picocoulomb, ElectricChargeUnits.Picocoulomb),
+                };
             }
         }
 

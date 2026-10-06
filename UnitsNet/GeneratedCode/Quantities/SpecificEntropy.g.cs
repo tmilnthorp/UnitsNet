@@ -118,15 +118,18 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{SpecificEntropyUnit}"/> representing the default unit mappings for SpecificEntropy.</returns>
             public static IEnumerable<UnitDefinition<SpecificEntropyUnit>> GetDefaultMappings()
             {
-                yield return new (SpecificEntropyUnit.BtuPerPoundFahrenheit, SpecificEntropyUnits.BtuPerPoundFahrenheit);
-                yield return new (SpecificEntropyUnit.CaloriePerGramKelvin, SpecificEntropyUnits.CaloriePerGramKelvin);
-                yield return new (SpecificEntropyUnit.JoulePerKilogramDegreeCelsius, SpecificEntropyUnits.JoulePerKilogramDegreeCelsius);
-                yield return new (SpecificEntropyUnit.JoulePerKilogramKelvin, SpecificEntropyUnits.JoulePerKilogramKelvin);
-                yield return new (SpecificEntropyUnit.KilocaloriePerGramKelvin, SpecificEntropyUnits.KilocaloriePerGramKelvin);
-                yield return new (SpecificEntropyUnit.KilojoulePerKilogramDegreeCelsius, SpecificEntropyUnits.KilojoulePerKilogramDegreeCelsius);
-                yield return new (SpecificEntropyUnit.KilojoulePerKilogramKelvin, SpecificEntropyUnits.KilojoulePerKilogramKelvin);
-                yield return new (SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, SpecificEntropyUnits.MegajoulePerKilogramDegreeCelsius);
-                yield return new (SpecificEntropyUnit.MegajoulePerKilogramKelvin, SpecificEntropyUnits.MegajoulePerKilogramKelvin);
+                return new UnitDefinition<SpecificEntropyUnit>[]
+                {
+                    new (SpecificEntropyUnit.BtuPerPoundFahrenheit, SpecificEntropyUnits.BtuPerPoundFahrenheit),
+                    new (SpecificEntropyUnit.CaloriePerGramKelvin, SpecificEntropyUnits.CaloriePerGramKelvin),
+                    new (SpecificEntropyUnit.JoulePerKilogramDegreeCelsius, SpecificEntropyUnits.JoulePerKilogramDegreeCelsius),
+                    new (SpecificEntropyUnit.JoulePerKilogramKelvin, SpecificEntropyUnits.JoulePerKilogramKelvin),
+                    new (SpecificEntropyUnit.KilocaloriePerGramKelvin, SpecificEntropyUnits.KilocaloriePerGramKelvin),
+                    new (SpecificEntropyUnit.KilojoulePerKilogramDegreeCelsius, SpecificEntropyUnits.KilojoulePerKilogramDegreeCelsius),
+                    new (SpecificEntropyUnit.KilojoulePerKilogramKelvin, SpecificEntropyUnits.KilojoulePerKilogramKelvin),
+                    new (SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, SpecificEntropyUnits.MegajoulePerKilogramDegreeCelsius),
+                    new (SpecificEntropyUnit.MegajoulePerKilogramKelvin, SpecificEntropyUnits.MegajoulePerKilogramKelvin),
+                };
             }
         }
 

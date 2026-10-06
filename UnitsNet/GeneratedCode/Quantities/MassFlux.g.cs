@@ -119,18 +119,21 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{MassFluxUnit}"/> representing the default unit mappings for MassFlux.</returns>
             public static IEnumerable<UnitDefinition<MassFluxUnit>> GetDefaultMappings()
             {
-                yield return new (MassFluxUnit.GramPerHourPerSquareCentimeter, MassFluxUnits.GramPerHourPerSquareCentimeter);
-                yield return new (MassFluxUnit.GramPerHourPerSquareMeter, MassFluxUnits.GramPerHourPerSquareMeter);
-                yield return new (MassFluxUnit.GramPerHourPerSquareMillimeter, MassFluxUnits.GramPerHourPerSquareMillimeter);
-                yield return new (MassFluxUnit.GramPerSecondPerSquareCentimeter, MassFluxUnits.GramPerSecondPerSquareCentimeter);
-                yield return new (MassFluxUnit.GramPerSecondPerSquareMeter, MassFluxUnits.GramPerSecondPerSquareMeter);
-                yield return new (MassFluxUnit.GramPerSecondPerSquareMillimeter, MassFluxUnits.GramPerSecondPerSquareMillimeter);
-                yield return new (MassFluxUnit.KilogramPerHourPerSquareCentimeter, MassFluxUnits.KilogramPerHourPerSquareCentimeter);
-                yield return new (MassFluxUnit.KilogramPerHourPerSquareMeter, MassFluxUnits.KilogramPerHourPerSquareMeter);
-                yield return new (MassFluxUnit.KilogramPerHourPerSquareMillimeter, MassFluxUnits.KilogramPerHourPerSquareMillimeter);
-                yield return new (MassFluxUnit.KilogramPerSecondPerSquareCentimeter, MassFluxUnits.KilogramPerSecondPerSquareCentimeter);
-                yield return new (MassFluxUnit.KilogramPerSecondPerSquareMeter, MassFluxUnits.KilogramPerSecondPerSquareMeter);
-                yield return new (MassFluxUnit.KilogramPerSecondPerSquareMillimeter, MassFluxUnits.KilogramPerSecondPerSquareMillimeter);
+                return new UnitDefinition<MassFluxUnit>[]
+                {
+                    new (MassFluxUnit.GramPerHourPerSquareCentimeter, MassFluxUnits.GramPerHourPerSquareCentimeter),
+                    new (MassFluxUnit.GramPerHourPerSquareMeter, MassFluxUnits.GramPerHourPerSquareMeter),
+                    new (MassFluxUnit.GramPerHourPerSquareMillimeter, MassFluxUnits.GramPerHourPerSquareMillimeter),
+                    new (MassFluxUnit.GramPerSecondPerSquareCentimeter, MassFluxUnits.GramPerSecondPerSquareCentimeter),
+                    new (MassFluxUnit.GramPerSecondPerSquareMeter, MassFluxUnits.GramPerSecondPerSquareMeter),
+                    new (MassFluxUnit.GramPerSecondPerSquareMillimeter, MassFluxUnits.GramPerSecondPerSquareMillimeter),
+                    new (MassFluxUnit.KilogramPerHourPerSquareCentimeter, MassFluxUnits.KilogramPerHourPerSquareCentimeter),
+                    new (MassFluxUnit.KilogramPerHourPerSquareMeter, MassFluxUnits.KilogramPerHourPerSquareMeter),
+                    new (MassFluxUnit.KilogramPerHourPerSquareMillimeter, MassFluxUnits.KilogramPerHourPerSquareMillimeter),
+                    new (MassFluxUnit.KilogramPerSecondPerSquareCentimeter, MassFluxUnits.KilogramPerSecondPerSquareCentimeter),
+                    new (MassFluxUnit.KilogramPerSecondPerSquareMeter, MassFluxUnits.KilogramPerSecondPerSquareMeter),
+                    new (MassFluxUnit.KilogramPerSecondPerSquareMillimeter, MassFluxUnits.KilogramPerSecondPerSquareMillimeter),
+                };
             }
         }
 

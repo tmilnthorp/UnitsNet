@@ -120,13 +120,16 @@ namespace UnitsNet
             /// <returns>An <see cref="IEnumerable{T}"/> of <see cref="UnitDefinition{ElectricCapacitanceUnit}"/> representing the default unit mappings for ElectricCapacitance.</returns>
             public static IEnumerable<UnitDefinition<ElectricCapacitanceUnit>> GetDefaultMappings()
             {
-                yield return new (ElectricCapacitanceUnit.Farad, ElectricCapacitanceUnits.Farad);
-                yield return new (ElectricCapacitanceUnit.Kilofarad, ElectricCapacitanceUnits.Kilofarad);
-                yield return new (ElectricCapacitanceUnit.Megafarad, ElectricCapacitanceUnits.Megafarad);
-                yield return new (ElectricCapacitanceUnit.Microfarad, ElectricCapacitanceUnits.Microfarad);
-                yield return new (ElectricCapacitanceUnit.Millifarad, ElectricCapacitanceUnits.Millifarad);
-                yield return new (ElectricCapacitanceUnit.Nanofarad, ElectricCapacitanceUnits.Nanofarad);
-                yield return new (ElectricCapacitanceUnit.Picofarad, ElectricCapacitanceUnits.Picofarad);
+                return new UnitDefinition<ElectricCapacitanceUnit>[]
+                {
+                    new (ElectricCapacitanceUnit.Farad, ElectricCapacitanceUnits.Farad),
+                    new (ElectricCapacitanceUnit.Kilofarad, ElectricCapacitanceUnits.Kilofarad),
+                    new (ElectricCapacitanceUnit.Megafarad, ElectricCapacitanceUnits.Megafarad),
+                    new (ElectricCapacitanceUnit.Microfarad, ElectricCapacitanceUnits.Microfarad),
+                    new (ElectricCapacitanceUnit.Millifarad, ElectricCapacitanceUnits.Millifarad),
+                    new (ElectricCapacitanceUnit.Nanofarad, ElectricCapacitanceUnits.Nanofarad),
+                    new (ElectricCapacitanceUnit.Picofarad, ElectricCapacitanceUnits.Picofarad),
+                };
             }
         }
 
