@@ -27,17 +27,17 @@ Conversion methods like `myLength.As()` and `myLength.ToUnit()` currently only s
 
 ### Convert to and from your own unit
 
-To convert a quantity to or from a unit that UnitsNet doesn't define, describe the unit with a `UnitOf<TQuantity>`. You give the conversion from the base unit of the quantity, and UnitsNet uses it directly, without a unit enum value or any setup.
+To convert a quantity to or from a unit that UnitsNet doesn't define, describe the unit with a `UnitOf<TQuantity>`. You give the value of one of the unit in the base unit of the quantity, and UnitsNet uses it directly, without a unit enum value or any setup.
 
 ```c#
-// 1 furlong = 201.168 m, so there are 1000/201168 furlongs in a meter
-var furlong = new UnitOf<Length>("Furlong", "Furlongs", QuantityValue.FromTerms(1000, 201168));
+// 1 furlong = 201.168 m
+var furlong = new UnitOf<Length>("Furlong", "Furlongs", 201.168);
 
 QuantityValue furlongs = Length.FromMiles(1).As(furlong); // 8
 Length length = Length.Info.From(2, furlong);             // 402.336 m, in the base unit
 ```
 
-The unit is tied to its quantity, so `Mass.FromKilograms(1).As(furlong)` doesn't compile. For units with an offset, such as temperatures, pass both conversion expressions to the constructor. `From` returns the quantity in its base unit, since a quantity can only be in one of its own units.
+The unit is tied to its quantity, so `Mass.FromKilograms(1).As(furlong)` doesn't compile. For units with an offset, such as temperatures, pass the conversion expressions from and to the base unit instead. `From` returns the quantity in its base unit, since a quantity can only be in one of its own units.
 
 ### Can I add a custom unit to an existing quantity in UnitsNet?
 

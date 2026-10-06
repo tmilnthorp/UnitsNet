@@ -26,15 +26,15 @@ public sealed class UnitOf<TQuantity> : IUnitDefinition
     /// </summary>
     /// <param name="singularName">The singular name of the unit, such as "Furlong".</param>
     /// <param name="pluralName">The plural name of the unit, such as "Furlongs".</param>
-    /// <param name="conversionFromBase">
-    ///     The conversion coefficient from the base unit of the quantity to this unit, such as 100 for centimeters of a
-    ///     length.
+    /// <param name="valueInBaseUnit">
+    ///     The value of one of this unit in the base unit of the quantity, such as 201.168 for a furlong, which is 201.168
+    ///     meters.
     /// </param>
     /// <exception cref="ArgumentNullException">
     ///     Thrown when <paramref name="singularName" /> or <paramref name="pluralName" /> is <c>null</c>.
     /// </exception>
-    public UnitOf(string singularName, string pluralName, QuantityValue conversionFromBase)
-        : this(singularName, pluralName, conversionFromBase, QuantityValue.Inverse(conversionFromBase))
+    public UnitOf(string singularName, string pluralName, QuantityValue valueInBaseUnit)
+        : this(singularName, pluralName, QuantityValue.Inverse(valueInBaseUnit), valueInBaseUnit)
     {
     }
 

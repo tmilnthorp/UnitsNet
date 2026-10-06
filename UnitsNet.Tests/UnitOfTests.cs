@@ -9,21 +9,21 @@ namespace UnitsNet.Tests;
 
 public class UnitOfTests
 {
-    // 1 furlong = 201.168 m, so there are 1000/201168 furlongs in a meter.
-    private static readonly UnitOf<Length> Furlong = new("Furlong", "Furlongs", QuantityValue.FromTerms(1000, 201168));
+    // 1 furlong = 201.168 m
+    private static readonly UnitOf<Length> Furlong = new("Furlong", "Furlongs", 201.168);
 
     // Same conversions as TemperatureUnit.DegreeFahrenheit, to compare against.
     private static readonly UnitOf<Temperature> Fahrenheit = new("Fahrenheit", "Fahrenheits",
-        new ConversionExpression(coefficient: QuantityValue.FromTerms(9, 5), constantTerm: QuantityValue.FromTerms(-45967, 100)),
+        new ConversionExpression(coefficient: 1.8, constantTerm: -459.67),
         new ConversionExpression(coefficient: QuantityValue.FromTerms(5, 9), constantTerm: QuantityValue.FromTerms(45967, 180)));
 
     [Fact]
-    public void Constructor_WithCoefficient_DerivesTheInverseConversion()
+    public void Constructor_WithValueInBaseUnit_DerivesTheConversionFromBase()
     {
         Assert.Equal("Furlong", Furlong.Name);
         Assert.Equal("Furlongs", Furlong.PluralName);
+        Assert.Equal<QuantityValue>(201.168m, Furlong.ConversionToBase.Evaluate(QuantityValue.One));
         Assert.Equal(QuantityValue.FromTerms(1000, 201168), Furlong.ConversionFromBase.Evaluate(QuantityValue.One));
-        Assert.Equal(QuantityValue.FromTerms(201168, 1000), Furlong.ConversionToBase.Evaluate(QuantityValue.One));
     }
 
     [Fact]
@@ -74,16 +74,16 @@ public class UnitOfTests
         Length length = Length.Info.From(2, Furlong);
 
         Assert.Equal(LengthUnit.Meter, length.Unit);
-        Assert.Equal(QuantityValue.FromTerms(402336, 1000), length.Value);
+        Assert.Equal<QuantityValue>(402.336m, length.Value);
     }
 
     [Fact]
     public void From_AffineUnit_ReturnsQuantityInBaseUnit()
     {
-        Temperature temperature = Temperature.Info.From(QuantityValue.FromTerms(986, 10), Fahrenheit);
+        Temperature temperature = Temperature.Info.From(98.6, Fahrenheit);
 
         Assert.Equal(Temperature.BaseUnit, temperature.Unit);
-        Assert.Equal(Temperature.FromDegreesFahrenheit(QuantityValue.FromTerms(986, 10)).Kelvins, temperature.Value);
+        Assert.Equal(Temperature.FromDegreesFahrenheit(98.6).Kelvins, temperature.Value);
     }
 
     [Fact]
