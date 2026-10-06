@@ -8,11 +8,22 @@
   <!--
     Projects with GenerateUnitsNetCode=true contain code generated from Common/UnitDefinitions/*.json. They run CodeGen
     before compiling, so building keeps the generated code in sync with the unit definitions. CodeGen runs at most once
-    per build, and only when its inputs changed. Skipped in IDE design-time builds; set SkipUnitsNetCodeGen=true to skip.
+    per build, and only when its inputs changed. Skipped in IDE design-time builds and when not building (NoBuild=true),
+    such as when packing without building; set SkipUnitsNetCodeGen=true to skip.
   -->
   <Target Name="GenerateUnitsNetCode"
           BeforeTargets="PrepareForBuild"
-          Condition="'$(GenerateUnitsNetCode)' == 'true' and '$(DesignTimeBuild)' != 'true' and '$(SkipUnitsNetCodeGen)' != 'true'">
+          Condition="'$(GenerateUnitsNetCode)' == 'true' and '$(DesignTimeBuild)' != 'true' and '$(NoBuild)' != 'true' and '$(SkipUnitsNetCodeGen)' != 'true'">
+    <!--
+      CodeGen isn't restored when building a project or solution that doesn't include it, such as a single test project.
+      Restore it first, in a separate evaluation so that building it sees the restored packages.
+    -->
+    <MSBuild Projects="$(MSBuildThisFileDirectory)CodeGen/CodeGen.csproj"
+             Targets="Restore"
+             Properties="_UnitsNetCodeGenRestore=true"
+             RemoveProperties="TargetFramework;TargetFrameworks;RuntimeIdentifier;SelfContained"
+             Condition="!Exists('$(MSBuildThisFileDirectory)CodeGen/obj/project.assets.json')" />
+
     <!-- Removing the target framework makes every caller share one CodeGen build, so it only runs once. -->
     <MSBuild Projects="$(MSBuildThisFileDirectory)CodeGen/CodeGen.csproj"
              Targets="RunUnitsNetCodeGen"
