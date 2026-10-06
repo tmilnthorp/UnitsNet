@@ -2,6 +2,8 @@
 // Copyright 2013 Andreas Gullberg Larsen (andreas.larsen84@gmail.com). Maintained at https://github.com/angularsen/UnitsNet.
 
 using System;
+using System.Linq;
+using System.Reflection;
 using UnitsNet.Units;
 using Xunit;
 
@@ -100,6 +102,68 @@ public class UnitOfTests
     public void From_RoundTripsWithAs()
     {
         Assert.Equal(new QuantityValue(42), Length.Info.From(42, Furlong).As(Furlong));
+    }
+
+    [Fact]
+    public void BuiltInUnit_HasTheNamesOfTheUnit()
+    {
+        Assert.Equal("Foot", LengthUnits.Foot.Name);
+        Assert.Equal("Feet", LengthUnits.Foot.PluralName);
+    }
+
+    [Fact]
+    public void BuiltInUnit_IsTheSameInstanceEveryTime()
+    {
+        Assert.Same(LengthUnits.Foot, LengthUnits.Foot);
+    }
+
+    [Fact]
+    public void As_BuiltInUnit_ReturnsSameValueAsUnitEnum()
+    {
+        Length length = Length.FromMeters(3);
+
+        Assert.Equal(length.Feet, length.As(LengthUnits.Foot));
+    }
+
+    [Fact]
+    public void As_BuiltInAffineUnit_ReturnsSameValueAsUnitEnum()
+    {
+        Temperature temperature = Temperature.FromDegreesCelsius(37);
+
+        Assert.Equal(temperature.DegreesFahrenheit, temperature.As(TemperatureUnits.DegreeFahrenheit));
+    }
+
+    [Fact]
+    public void From_BuiltInUnit_ReturnsQuantityInThatUnit()
+    {
+        Length length = Length.Info.From(2, LengthUnits.Foot);
+
+        Assert.Equal(Length.FromFeet(2), length);
+        Assert.Equal(LengthUnit.Foot, length.Unit);
+    }
+
+    [Fact]
+    public void BuiltInUnits_MatchTheUnitEnumOfEveryQuantity()
+    {
+        Assert.All(Quantity.Infos, quantityInfo =>
+        {
+            Type unitsType = typeof(LengthUnits).Assembly.GetType($"UnitsNet.Units.{quantityInfo.Name}Units", throwOnError: true)!;
+            FieldInfo[] fields = unitsType.GetFields(BindingFlags.Public | BindingFlags.Static);
+
+            Assert.Equal(quantityInfo.UnitInfos.Select(unitInfo => unitInfo.Name).OrderBy(name => name),
+                fields.Select(field => field.Name).OrderBy(name => name));
+            Assert.All(quantityInfo.UnitInfos, unitInfo =>
+            {
+                object unit = fields.Single(field => field.Name == unitInfo.Name).GetValue(null)!;
+                Assert.Equal(typeof(UnitOf<>).MakeGenericType(quantityInfo.QuantityType), unit.GetType());
+
+                var definition = (IUnitDefinition)unit;
+                Assert.Equal(unitInfo.Name, definition.Name);
+                Assert.Equal(unitInfo.PluralName, definition.PluralName);
+                Assert.Equal(unitInfo.BaseUnits, definition.BaseUnits);
+                Assert.Equal(unitInfo.ConversionFromBase.Evaluate(QuantityValue.One), definition.ConversionFromBase.Evaluate(QuantityValue.One));
+            });
+        });
     }
 
     [Fact]

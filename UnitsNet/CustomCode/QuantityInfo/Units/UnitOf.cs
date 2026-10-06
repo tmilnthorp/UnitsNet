@@ -17,8 +17,7 @@ namespace UnitsNet;
 ///     Since the unit is tied to its quantity, using it with another quantity doesn't compile.
 /// </remarks>
 /// <typeparam name="TQuantity">The quantity this is a unit of, such as <see cref="Length" />.</typeparam>
-[DebuggerDisplay("{Name}")]
-public sealed class UnitOf<TQuantity> : IUnitDefinition
+public sealed class UnitOf<TQuantity> : UnitOf
     where TQuantity : IQuantity
 {
     /// <summary>
@@ -84,6 +83,19 @@ public sealed class UnitOf<TQuantity> : IUnitDefinition
     ///     <c>null</c>.
     /// </exception>
     public UnitOf(string singularName, string pluralName, BaseUnits baseUnits,
+        ConversionExpression conversionFromBase, ConversionExpression conversionToBase)
+        : base(singularName, pluralName, baseUnits, conversionFromBase, conversionToBase)
+    {
+    }
+}
+
+/// <summary>
+///     A unit of a quantity, described by its names and conversions. See <see cref="UnitOf{TQuantity}" />.
+/// </summary>
+[DebuggerDisplay("{Name}")]
+public abstract class UnitOf : IUnitDefinition
+{
+    private protected UnitOf(string singularName, string pluralName, BaseUnits baseUnits,
         ConversionExpression conversionFromBase, ConversionExpression conversionToBase)
     {
         Name = singularName ?? throw new ArgumentNullException(nameof(singularName));

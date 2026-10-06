@@ -123,7 +123,13 @@ public static class QuantityExtensions
         where TQuantity : IQuantity
     {
         if (unit is null) throw new ArgumentNullException(nameof(unit));
-        return unit.ConversionFromBase.Evaluate(quantity.GetUnitInfo().ConvertValueToBaseUnit(quantity.Value));
+        UnitInfo fromUnit = quantity.GetUnitInfo();
+        if (fromUnit.QuantityInfo.FindUnitInfo(unit) is { } toUnit)
+        {
+            return toUnit.GetValueFrom(quantity.Value, fromUnit);
+        }
+
+        return unit.ConversionFromBase.Evaluate(fromUnit.ConvertValueToBaseUnit(quantity.Value));
     }
 
     /// <inheritdoc cref="UnitConverter.ConvertValue{TQuantity,TUnit}" />
