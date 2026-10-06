@@ -31,14 +31,24 @@ public class UnitOfTests
     {
         Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>(null!, "Furlongs", 1));
         Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>("Furlong", null!, 1));
+        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>("Furlong", "Furlongs", (BaseUnits)null!, 1));
     }
 
     [Fact]
-    public void BaseUnits_AsUnitDefinition_IsUndefined()
+    public void BaseUnits_WhenNotGiven_IsUndefined()
     {
-        IUnitDefinition unitDefinition = Furlong;
+        Assert.Equal(BaseUnits.Undefined, Furlong.BaseUnits);
+    }
 
-        Assert.Equal(BaseUnits.Undefined, unitDefinition.BaseUnits);
+    [Fact]
+    public void Constructor_WithBaseUnits_KeepsThem()
+    {
+        var baseUnits = new BaseUnits(length: LengthUnit.Foot, time: DurationUnit.Day);
+        var footPerDay = new UnitOf<Speed>("FootPerDay", "FeetPerDay", baseUnits, (Length.FromFeet(1) / Duration.FromDays(1)).MetersPerSecond);
+
+        Assert.Equal(baseUnits, footPerDay.BaseUnits);
+        Assert.Equal(baseUnits, ((IUnitDefinition)footPerDay).BaseUnits);
+        Assert.Equal(new QuantityValue(86400), Speed.FromFeetPerSecond(1).As(footPerDay));
     }
 
     [Fact]
