@@ -4,4 +4,26 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' or '$(TargetFrameworkIdentifier)' == '.NETFramework'">
     <Compile Include="$(MSBuildThisFileDirectory)NullableAttributes.cs" />
   </ItemGroup>
+
+  <!--
+    Projects with GenerateUnitsNetCode=true contain code generated from Common/UnitDefinitions/*.json. They run CodeGen
+    before compiling, so building keeps the generated code in sync with the unit definitions. CodeGen runs at most once
+    per build, and only when its inputs changed. Skipped in IDE design-time builds; set SkipUnitsNetCodeGen=true to skip.
+  -->
+  <Target Name="GenerateUnitsNetCode"
+          BeforeTargets="PrepareForBuild"
+          Condition="'$(GenerateUnitsNetCode)' == 'true' and '$(DesignTimeBuild)' != 'true' and '$(SkipUnitsNetCodeGen)' != 'true'">
+    <!-- Removing the target framework makes every caller share one CodeGen build, so it only runs once. -->
+    <MSBuild Projects="$(MSBuildThisFileDirectory)CodeGen/CodeGen.csproj"
+             Targets="RunUnitsNetCodeGen"
+             RemoveProperties="TargetFramework;TargetFrameworks;RuntimeIdentifier;SelfContained" />
+
+    <!-- Pick up generated files that were added or removed after this project was evaluated. -->
+    <ItemGroup>
+      <Compile Remove="@(Compile)" Condition="!Exists('%(FullPath)')" />
+      <Compile Include="GeneratedCode/**/*.cs;CustomCode/*.cs" Exclude="@(Compile)" />
+      <EmbeddedResource Remove="@(EmbeddedResource)" Condition="!Exists('%(FullPath)')" />
+      <EmbeddedResource Include="GeneratedCode/Resources/*.restext" Exclude="@(EmbeddedResource)" />
+    </ItemGroup>
+  </Target>
 </Project>

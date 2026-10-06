@@ -9,6 +9,8 @@
     <NoWarn>CS0618</NoWarn><!-- CS0618: 'member' is obsolete: 'text' (we often obsolete things before removal) -->
     <Nullable>enable</Nullable>
     <TestFramework>xunit</TestFramework>
+    <!-- Generates code from Common/UnitDefinitions before compiling, see Directory.Build.targets -->
+    <GenerateUnitsNetCode>true</GenerateUnitsNetCode>
   </PropertyGroup>
 
   <!-- Strong name signing -->
