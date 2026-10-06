@@ -16,8 +16,6 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>UnitsNet Extensions NumberToExtensions NumberToUnitsExtensions NumberExtensions NumberToUnits convert conversion parse</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <!-- Generates code from Common/UnitDefinitions before compiling, see Directory.Build.targets -->
-    <GenerateUnitsNetCode>true</GenerateUnitsNetCode>
   </PropertyGroup>
 
   <!-- Assembly and msbuild properties -->
