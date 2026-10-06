@@ -10,10 +10,10 @@ namespace UnitsNet.Tests;
 public class UnitOfTests
 {
     // 1 furlong = 201.168 m, so there are 1000/201168 furlongs in a meter.
-    private static readonly UnitOf<Length> Furlong = new("Furlong", "Furlongs", BaseUnits.Undefined, QuantityValue.FromTerms(1000, 201168));
+    private static readonly UnitOf<Length> Furlong = new("Furlong", "Furlongs", QuantityValue.FromTerms(1000, 201168));
 
     // Same conversions as TemperatureUnit.DegreeFahrenheit, to compare against.
-    private static readonly UnitOf<Temperature> Fahrenheit = new("Fahrenheit", "Fahrenheits", BaseUnits.Undefined,
+    private static readonly UnitOf<Temperature> Fahrenheit = new("Fahrenheit", "Fahrenheits",
         new ConversionExpression(coefficient: QuantityValue.FromTerms(9, 5), constantTerm: QuantityValue.FromTerms(-45967, 100)),
         new ConversionExpression(coefficient: QuantityValue.FromTerms(5, 9), constantTerm: QuantityValue.FromTerms(45967, 180)));
 
@@ -22,7 +22,6 @@ public class UnitOfTests
     {
         Assert.Equal("Furlong", Furlong.Name);
         Assert.Equal("Furlongs", Furlong.PluralName);
-        Assert.Equal(BaseUnits.Undefined, Furlong.BaseUnits);
         Assert.Equal(QuantityValue.FromTerms(1000, 201168), Furlong.ConversionFromBase.Evaluate(QuantityValue.One));
         Assert.Equal(QuantityValue.FromTerms(201168, 1000), Furlong.ConversionToBase.Evaluate(QuantityValue.One));
     }
@@ -30,9 +29,16 @@ public class UnitOfTests
     [Fact]
     public void Constructor_WithNullArguments_ThrowsArgumentNullException()
     {
-        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>(null!, "Furlongs", BaseUnits.Undefined, 1));
-        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>("Furlong", null!, BaseUnits.Undefined, 1));
-        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>("Furlong", "Furlongs", null!, 1));
+        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>(null!, "Furlongs", 1));
+        Assert.Throws<ArgumentNullException>(() => new UnitOf<Length>("Furlong", null!, 1));
+    }
+
+    [Fact]
+    public void BaseUnits_AsUnitDefinition_IsUndefined()
+    {
+        IUnitDefinition unitDefinition = Furlong;
+
+        Assert.Equal(BaseUnits.Undefined, unitDefinition.BaseUnits);
     }
 
     [Fact]

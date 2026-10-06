@@ -31,7 +31,7 @@ To convert a quantity to or from a unit that UnitsNet doesn't define, describe t
 
 ```c#
 // 1 furlong = 201.168 m, so there are 1000/201168 furlongs in a meter
-var furlong = new UnitOf<Length>("Furlong", "Furlongs", BaseUnits.Undefined, QuantityValue.FromTerms(1000, 201168));
+var furlong = new UnitOf<Length>("Furlong", "Furlongs", QuantityValue.FromTerms(1000, 201168));
 
 QuantityValue furlongs = Length.FromMiles(1).As(furlong); // 8
 Length length = Length.Info.From(2, furlong);             // 402.336 m, in the base unit
