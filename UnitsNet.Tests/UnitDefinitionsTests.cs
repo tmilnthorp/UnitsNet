@@ -128,6 +128,13 @@ public class UnitDefinitionsTests
     }
 
     [Fact]
+    public void AbbreviationCultures_IncludeSatelliteAssemblies()
+    {
+        // Otherwise the abbreviation tests would silently only check en-US.
+        Assert.Contains(AbbreviationCultures, culture => culture.Name == "ru-RU");
+    }
+
+    [Fact]
     public void KnownViolations_AreStillViolations()
     {
         // Keeps the lists of known violations from going stale: remove an entry from its list when fixing it.
@@ -213,8 +220,9 @@ public class UnitDefinitionsTests
         get
         {
             yield return CultureInfo.GetCultureInfo("en-US");
-            string assemblyDirectory = Path.GetDirectoryName(typeof(Length).Assembly.Location)!;
-            foreach (string directory in Directory.GetDirectories(assemblyDirectory).OrderBy(directory => directory, StringComparer.Ordinal))
+            // The test output directory, rather than the assembly location, which test runners on .NET Framework can shadow copy
+            // without the satellite assemblies.
+            foreach (string directory in Directory.GetDirectories(AppContext.BaseDirectory).OrderBy(directory => directory, StringComparer.Ordinal))
             {
                 if (File.Exists(Path.Combine(directory, "UnitsNet.resources.dll")))
                 {
